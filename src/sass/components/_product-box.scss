@@ -2,6 +2,14 @@
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+  &:hover {
+    .photo .buttons {
+      visibility: visible;
+    }
+    .actions .price .btn-main-small {
+      background-color: $primary;
+    }
+  }
 
   .photo {
     position: relative;
@@ -29,6 +37,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: collapse;
     }
   }
 
@@ -46,7 +55,7 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42,42,42);
+        color: rgb(42, 42, 42);
         @extend .far;
         @extend .fa-star;
 
@@ -63,7 +72,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -1px;
       left: 50%;
