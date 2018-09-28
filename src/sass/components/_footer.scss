@@ -17,6 +17,7 @@ footer {
         li {
           a {
             @extend %hover-trans;
+            @extend %hover-trans-text-underline;
             font-size: 14px;
             line-height: 30px;
             color: rgb(169,169,169);
