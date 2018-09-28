@@ -1,0 +1,9 @@
+$tran-base: 250ms;
+$tran-color: $tran-base;
+$tran-bg-color: $tran-base;
+$tran-border-color: $tran-base;
+
+%hover-trans {
+  transition-duration: $tran-color, $tran-bg-color, $tran-border-color;
+  transition-property: color, background-color, border-color;
+}
