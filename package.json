@@ -10,6 +10,7 @@
     "watch:webfonts": "onchange \"src/webfonts/**/*\" -- npm run copy:webfonts",
     "watch:sass": "node-sass src/sass/style.scss --source-map true -w -o dist/css",
     "watch:browsersync": "browser-sync start --server --files ./ --cwd dist",
+	"watch:html": "onchange \"src/**/*.html\" -- npm run copy:html",
     "clean": "rimraf dist",
     "copy:html": "rimraf dist/**/*.html && cpy \"**/*.html\" \"../dist\" --cwd=src --parents",
     "copy:scripts": "rimraf dist/scripts && cpy \"**/*\" \"../../dist/scripts\" --cwd=src/scripts --parents",
