@@ -7,8 +7,10 @@ header {
         display: block;
         position: absolute;
         background-color: $header-topbar-bg;
-        border-top: 1px solid $primary;
-        border-bottom: 1px solid $primary;
+      }
+      li {
+        display: block;
+        z-index: 1;
       }
     }
 
