@@ -119,8 +119,8 @@ header {
           color: rgb(224, 227, 237);
           position: absolute;
           top: 50%;
-          right: 0;
-          transform: translate(50%, -50%);
+          left: 100%;
+          transform: translate(-14px, -50%);
         }
 
         &:hover {
