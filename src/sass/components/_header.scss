@@ -11,6 +11,9 @@ header {
       li {
         display: block;
         z-index: 1;
+        ul li a {
+          margin-left: 10px;
+        }
       }
     }
 
