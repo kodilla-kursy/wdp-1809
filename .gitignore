@@ -4,6 +4,8 @@ dist/
 
 # Created by https://www.gitignore.io/api/node
 
+package-lock.json
+
 ### Node ###
 # Logs
 logs
@@ -42,6 +44,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+dist
 
 # TypeScript v1 declaration files
 typings/
