@@ -2,6 +2,10 @@
 dist/
 
 
+# Build folder
+dist/
+
+
 # Created by https://www.gitignore.io/api/node
 
 package-lock.json
