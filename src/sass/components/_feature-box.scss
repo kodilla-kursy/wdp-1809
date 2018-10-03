@@ -1,4 +1,17 @@
+a.feature-box {
+  color: inherit;
+  text-decoration: none;
+}
+
 .feature-box {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
@@ -7,6 +20,7 @@
     transform: translateY(-50%);
 
     i {
+      @extend %hover-trans;
       width: 60px;
       height: 60px;
       border-radius: 100%;
@@ -34,6 +48,11 @@
   }
 
   .content {
+    @extend %hover-trans;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-transform: uppercase;
     color: rgb(42, 42, 42);
     margin-top: -0.5rem;
