@@ -5,12 +5,9 @@ header {
     .nav {
       li:hover ul {
         display: block;
-        position: absolute;
-        background-color: $header-topbar-bg;
       }
       li {
         display: block;
-        z-index: 1;
         ul li a {
           margin-left: 10px;
         }
@@ -25,8 +22,13 @@ header {
       li {
         display: inline-block;
         line-height: 55px;
+
         ul {
           display: none;
+          //display: block;
+          position: absolute;
+          background-color: black;
+          z-index: 999;
         }
         a {
           @extend %hover-trans;
@@ -246,6 +248,59 @@ header {
           outline: none;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  header .top-bar .text-right > ul {
+    > li:nth-child(2) > a:after {
+      content: "Register";
+    }
+    > li:nth-child(1) > a:after {
+      content: "Login";
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-sm-min) {
+  header .company-claim {
+    padding: 10px 0px;
+    min-width: 360px;
+    .phone-number p {
+      font-size: 14px;
+      min-width: 160px;
+    }
+    .container .row {
+      height: 100px;
+    }
+  }
+
+  .align-items-center {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+
+    .text-center {
+      order: 1; //logo
+      width: 50%;
+      height: 100%;
+      flex-basis: initial;
+    }
+    .text-left {
+      order: 3; //telephone
+      width: 50%;
+      max-height: 50%;
+      flex-basis: initial;
+      text-align: right !important;
+      line-height: 0px;
+    }
+    .text-right {
+      order: 2; //basket
+      width: 50%;
+      max-height: 50%;
+      flex-basis: initial;
     }
   }
 }
