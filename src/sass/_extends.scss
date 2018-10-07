@@ -1,0 +1,17 @@
+$tran-base: 250ms;
+$tran-color: $tran-base;
+$tran-bg-color: $tran-base;
+$tran-border-color: $tran-base;
+$tran-text-decor: $tran-base;
+
+%hover-trans {
+  transition-duration: $tran-color, $tran-bg-color, $tran-border-color, $tran-text-decor;
+  transition-property: color, background-color, border-color, text-decoration;
+}
+
+%hover-trans-text-underline {
+  text-decoration: underline transparent;
+  &:hover {
+    text-decoration-color: inherit;
+  }
+}

@@ -1,10 +1,12 @@
 .btn-main {
+  @extend %hover-trans;
   background-color: #2a2a2a;
   color: #ffffff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+  border: none;
 
   &:not(.no-hover):hover {
     color: #ffffff !important;
@@ -22,6 +24,7 @@
 }
 
 .btn-outline {
+  @extend %hover-trans;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #2a2a2a;
@@ -32,5 +35,10 @@
   &:hover {
     background-color: #2a2a2a;
     color: #ffffff;
+  }
+
+  &.active {
+    background-color: #2a2a2a;
+    color: $primary;
   }
 }

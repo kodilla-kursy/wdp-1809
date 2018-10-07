@@ -2,6 +2,14 @@
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+  &:hover {
+    .photo .buttons {
+      visibility: visible;
+    }
+    .actions .price .btn-main-small {
+      background-color: $primary;
+    }
+  }
 
   .photo {
     position: relative;
@@ -29,6 +37,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: collapse;
     }
   }
 
@@ -46,7 +55,7 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42,42,42);
+        color: rgb(42, 42, 42);
         @extend .far;
         @extend .fa-star;
 
@@ -63,7 +72,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -1px;
       left: 50%;
@@ -78,5 +87,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .old-price {
+        display: block;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #A5A5A5;
+        text-decoration: line-through;
+        text-decoration-color: #2a2a2a;
+        white-space: nowrap;
+      }
+
+      .btn-main-small.no-hover {
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
   }
 }

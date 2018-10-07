@@ -2,6 +2,18 @@ header {
   .top-bar {
     background-color: $header-topbar-bg;
 
+    .nav {
+      li:hover ul {
+        display: block;
+      }
+      li {
+        display: block;
+        ul li a {
+          margin-left: 10px;
+        }
+      }
+    }
+
     ul {
       list-style: none;
       margin: 0;
@@ -11,9 +23,18 @@ header {
         display: inline-block;
         line-height: 55px;
 
+        ul {
+          display: none;
+          //display: block;
+          position: absolute;
+          background-color: black;
+          z-index: 999;
+        }
         a {
+          @extend %hover-trans;
           color: #ffffff;
           font-size: 13px;
+          display: inline-block;
 
           &:hover {
             color: $primary;
@@ -27,7 +48,7 @@ header {
       margin-right: 1.5rem;
 
       i {
-        margin-left: 5px
+        margin-left: 5px;
       }
     }
 
@@ -35,7 +56,7 @@ header {
       margin-left: 1.5rem;
 
       i {
-        margin-right: 5px
+        margin-right: 5px;
       }
     }
   }
@@ -52,7 +73,7 @@ header {
         margin: 0;
         font-size: 17px;
         line-height: 42px;
-        color: rgb(216,216,216);
+        color: rgb(216, 216, 216);
         font-weight: 500;
 
         i {
@@ -66,13 +87,13 @@ header {
     }
 
     .cart {
-
       .cart-box {
         display: inline-block;
         position: relative;
         color: #ffffff;
 
         .cart-icon {
+          @extend %hover-trans;
           background-color: $primary;
           width: 55px;
           height: 50px;
@@ -88,19 +109,21 @@ header {
         }
 
         .cart-counter {
-          width: 28px;
-          height: 27px;
+          min-width: 28px;
+          height: 28px;
+          padding: 0 7px;
           border-radius: 14px;
           background-color: $header-bg;
           display: flex;
           align-items: center;
           justify-content: center;
           font-size: 14px;
-          color: rgb(224,227,237);
+          line-height: 1;
+          color: rgb(224, 227, 237);
           position: absolute;
           top: 50%;
-          right: 0;
-          transform: translate(50%, -50%);
+          left: 100%;
+          transform: translate(-14px, -50%);
         }
 
         &:hover {
@@ -113,7 +136,7 @@ header {
   }
 
   .menu-bar {
-    box-shadow: 2px 3.464px 6px rgba(1,2,2,0.2);
+    box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
 
     .container > .row {
@@ -135,6 +158,7 @@ header {
           align-items: stretch;
 
           a {
+            @extend %hover-trans;
             color: $text-color;
             text-transform: uppercase;
             font-size: 12px;
@@ -195,6 +219,10 @@ header {
           font-size: 14px;
           position: relative;
           z-index: 1;
+
+          &:hover {
+            color: $primary;
+          }
         }
       }
 
@@ -220,6 +248,59 @@ header {
           outline: none;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  header .top-bar .text-right > ul {
+    > li:nth-child(2) > a:after {
+      content: "Register";
+    }
+    > li:nth-child(1) > a:after {
+      content: "Login";
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-sm-min) {
+  header .company-claim {
+    padding: 10px 0px;
+    min-width: 360px;
+    .phone-number p {
+      font-size: 14px;
+      min-width: 160px;
+    }
+    .container .row {
+      height: 100px;
+    }
+  }
+
+  .align-items-center {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+
+    .text-center {
+      order: 1; //logo
+      width: 50%;
+      height: 100%;
+      flex-basis: initial;
+    }
+    .text-left {
+      order: 3; //telephone
+      width: 50%;
+      max-height: 50%;
+      flex-basis: initial;
+      text-align: right !important;
+      line-height: 0px;
+    }
+    .text-right {
+      order: 2; //basket
+      width: 50%;
+      max-height: 50%;
+      flex-basis: initial;
     }
   }
 }

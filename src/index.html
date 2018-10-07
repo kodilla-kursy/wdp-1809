@@ -15,16 +15,34 @@
       <div class="container">
         <div class="row">
           <div class="col text-left">
-            <ul>
-              <li><a href="#">USD <i class="fas fa-caret-down"></i></a></li>
-              <li><a href="#">English <i class="fas fa-caret-down"></i></a></li>
-              <li><a href="#">Help <i class="fas fa-caret-down"></i></a></li>
+            <ul class="nav">
+              <li><a href="#">USD <i class="fas fa-caret-down"></i></a>
+                <ul>
+                  <li><a href="#">Item #1</a></li>
+                  <li><a href="#">Item #2</a></li>
+                  <li><a href="#">Item #3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">English <i class="fas fa-caret-down"></i></a>
+                <ul>
+                  <li><a href="#">Item #1</a></li>
+                  <li><a href="#">Item #2</a></li>
+                  <li><a href="#">Item #3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Help <i class="fas fa-caret-down"></i></a>
+                <ul>
+                  <li><a href="#">Item #1</a></li>
+                  <li><a href="#">Item #2</a></li>
+                  <li><a href="#">Item #3</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div class="col text-right">
             <ul>
-              <li><a href="#"><i class="fas fa-user"></i> Login</a></li>
-              <li><a href="#"><i class="fas fa-lock"></i> Register</a></li>
+              <li><a href="#"><i class="fas fa-user"></i> </a></li>
+              <li><a href="#"><i class="fas fa-lock"></i> </a></li>
               <li><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
           </div>
@@ -45,7 +63,7 @@
               <div class="cart-icon">
                 <i class="fas fa-shopping-basket"></i>
               </div>
-              <div class="cart-counter">0</div>
+              <div class="cart-counter">999</div>
             </a>
           </div>
         </div>
@@ -84,11 +102,12 @@
       </div>
     </div>
   </header>
+
   <div class="section--features">
     <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="feature-box active">
+        <div class="col-6 col-lg-3 feature-box-wrapper">
+          <a href="#!" class="feature-box">
             <div class="icon">
               <i class="fas fa-truck"></i>
             </div>
@@ -96,10 +115,11 @@
               <h5>Free shipping</h5>
               <p>All orders</p>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col">
-          <div class="feature-box">
+
+        <div class="col-6 col-lg-3 feature-box-wrapper">
+          <a href="#!" class="feature-box">
             <div class="icon">
               <i class="fas fa-headphones"></i>
             </div>
@@ -107,10 +127,11 @@
               <h5>24/7 customer</h5>
               <p>support</p>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col">
-          <div class="feature-box">
+
+        <div class="col-6 col-lg-3 feature-box-wrapper">
+          <a href="#!" class="feature-box">
             <div class="icon">
               <i class="fas fa-reply-all"></i>
             </div>
@@ -118,10 +139,11 @@
               <h5>Money back</h5>
               <p>guarantee</p>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col">
-          <div class="feature-box">
+
+        <div class="col-6 col-lg-3 feature-box-wrapper">
+          <a href="#!" class="feature-box">
             <div class="icon">
               <i class="fas fa-bullhorn"></i>
             </div>
@@ -129,11 +151,12 @@
               <h5>Member discount</h5>
               <p>First order</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </div>
+
   <div class="section--products">
     <div class="container">
       <div class="panel-bar">
@@ -160,9 +183,103 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo" style="background-image: url(images/product1.png)">
+              <div class="sale">sale</div>
+              <div class="buttons">
+                <a href="#" class="btn-main-small">Quick View</a>
+                <a href="#" class="btn-main-small"><i class="fa fa-shopping-basket"></i> ADD TO CART</a>
+              </div>
+            </div>
+            <div class="content">
+              <h5>Aenean Ru Bristique</h5>
+              <div class="stars">
+                <a href="#" class="full"></a>
+                <a href="#" class="full"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="actions">
+              <div class="outlines">
+                <a href="#" class="btn-outline active"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
+              </div>
+              <div class="price">
+                <div class="old-price">$ 25.00</div>
+                <div class="btn-main-small no-hover">$ 30.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="product-box">
+            <div class="photo" style="background-image: url(images/product2.png)">
+              <div class="sale">sale</div>
+              <div class="buttons">
+                <a href="#" class="btn-main-small">Quick View</a>
+                <a href="#" class="btn-main-small"><i class="fa fa-shopping-basket"></i> ADD TO CART</a>
+              </div>
+            </div>
+            <div class="content">
+              <h5>Aenean Ru Bristique</h5>
+              <div class="stars">
+                <a href="#" class="full"></a>
+                <a href="#" class="full"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="actions">
+              <div class="outlines">
+                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline active"><i class="fas fa-exchange-alt"></i></a>
+              </div>
+              <div class="price">
+                <div class="btn-main-small no-hover">$ 30.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="product-box">
+            <div class="photo" style="background-image: url(images/product3.png)">
+              <div class="sale">sale</div>
+              <div class="buttons">
+                <a href="#" class="btn-main-small">Quick View</a>
+                <a href="#" class="btn-main-small"><i class="fa fa-shopping-basket"></i> ADD TO CART</a>
+              </div>
+            </div>
+            <div class="content">
+              <h5>Aenean Ru Bristique</h5>
+              <div class="stars">
+                <a href="#" class="full"></a>
+                <a href="#" class="full"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="actions">
+              <div class="outlines">
+                <a href="#" class="btn-outline active"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline active"><i class="fas fa-exchange-alt"></i></a>
+              </div>
+              <div class="price">
+                <div class="btn-main-small no-hover">$ 30.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="product-box">
+            <div class="photo" style="background-image: url(images/product4.png)">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -191,9 +308,9 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo" style="background-image: url(images/product5.png)">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -222,9 +339,9 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo" style="background-image: url(images/product6.png)">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -253,9 +370,9 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo" style="background-image: url(images/product7.png)">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -284,102 +401,9 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <div class="product-box">
-            <div class="photo">
-              <div class="sale">sale</div>
-              <div class="buttons">
-                <a href="#" class="btn-main-small">Quick View</a>
-                <a href="#" class="btn-main-small"><i class="fa fa-shopping-basket"></i> ADD TO CART</a>
-              </div>
-            </div>
-            <div class="content">
-              <h5>Aenean Ru Bristique</h5>
-              <div class="stars">
-                <a href="#" class="full"></a>
-                <a href="#" class="full"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="actions">
-              <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
-                <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
-              </div>
-              <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="product-box">
-            <div class="photo">
-              <div class="sale">sale</div>
-              <div class="buttons">
-                <a href="#" class="btn-main-small">Quick View</a>
-                <a href="#" class="btn-main-small"><i class="fa fa-shopping-basket"></i> ADD TO CART</a>
-              </div>
-            </div>
-            <div class="content">
-              <h5>Aenean Ru Bristique</h5>
-              <div class="stars">
-                <a href="#" class="full"></a>
-                <a href="#" class="full"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="actions">
-              <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
-                <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
-              </div>
-              <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="product-box">
-            <div class="photo">
-              <div class="sale">sale</div>
-              <div class="buttons">
-                <a href="#" class="btn-main-small">Quick View</a>
-                <a href="#" class="btn-main-small"><i class="fa fa-shopping-basket"></i> ADD TO CART</a>
-              </div>
-            </div>
-            <div class="content">
-              <h5>Aenean Ru Bristique</h5>
-              <div class="stars">
-                <a href="#" class="full"></a>
-                <a href="#" class="full"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="actions">
-              <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
-                <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
-              </div>
-              <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="product-box">
-            <div class="photo">
+            <div class="photo" style="background-image: url(images/product8.png)">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -430,70 +454,76 @@
       </div>
       <div class="row">
         <div class="col-4">
-          <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+          <a href="#">
+            <div class="post-box">
+              <div class="cover" style="background-image: url(images/blog1.png)">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+              </div>
+              <div class="post-info">
+                <h5>Products That Fight Static </h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <button class="btn-main">Read more</button>
                 </div>
               </div>
             </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
         <div class="col-4">
-          <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+          <a href="#">
+            <div class="post-box">
+              <div class="cover" style="background-image: url(images/blog2.png)">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+              </div>
+              <div class="post-info">
+                <h5>Products That Fight Static </h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <button class="btn-main">Read more</button>
                 </div>
               </div>
             </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
         <div class="col-4">
-          <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+          <a href="#">
+            <div class="post-box">
+              <div class="cover" style="background-image: url(images/blog3.png)">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+              </div>
+              <div class="post-info">
+                <h5>Products That Fight Static </h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <button class="btn-main">Read more</button>
                 </div>
               </div>
             </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
