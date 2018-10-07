@@ -2,8 +2,7 @@ footer {
   .footer-menu {
     background-color: $footer-bg;
     padding: 3rem 0;
-    text-align: center;
-    
+
     .menu-wrapper {
       h6 {
         color: #ffffff;
@@ -85,6 +84,27 @@ footer {
       }
     }
   }
-}
 
- 
+  @media only screen and (max-width: $screen-sm-min) {
+    .bottom-bar .socialmedia ul {
+      display: flex;
+      justify-content: center;
+    }
+    .footer-menu {
+      text-align: center;
+      .container .row img {
+        float: none;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-md-min) {
+    .bottom-bar .socialmedia ul {
+      justify-content: center;
+    }
+    div:empty {
+      display: none;
+    }
+  }
+}
