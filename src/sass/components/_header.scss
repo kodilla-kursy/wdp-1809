@@ -137,10 +137,6 @@ header {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
 
-    .container > .row {
-      //height: 84px;
-    }
-
     .menu {
       display: flex;
       align-self: stretch;
@@ -186,7 +182,6 @@ header {
     .search-form {
       border: 1px solid $form-border-color;
       display: inline-flex;
-      //height: 45px;
       color: $text-color;
 
       .category {
