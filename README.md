@@ -1,5 +1,7 @@
 # WDP-1809-03
 
+[changelog](./changelog.md)
+
 ## Git dobre praktyki
 
 #### Start z mastera
