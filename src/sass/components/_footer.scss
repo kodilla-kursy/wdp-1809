@@ -20,7 +20,7 @@ footer {
             @extend %hover-trans-text-underline;
             font-size: 14px;
             line-height: 30px;
-            color: rgb(169,169,169);
+            color: rgb(169, 169, 169);
 
             &:hover {
               color: #ffffff;
@@ -39,6 +39,10 @@ footer {
         display: inline-block;
       }
     }
+
+    img {
+      float: right;
+    }
   }
 
   .bottom-bar {
@@ -51,7 +55,7 @@ footer {
     .copyright {
       p {
         margin: 0;
-        color: rgb(169,169,169);
+        color: rgb(169, 169, 169);
         font-size: 14px;
         line-height: 26px;
       }
@@ -69,7 +73,7 @@ footer {
 
           a {
             @extend %hover-trans;
-            color: rgb(169,169,169);
+            color: rgb(169, 169, 169);
             text-decoration: none;
 
             &:hover {
@@ -78,6 +82,29 @@ footer {
           }
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: $screen-sm-min) {
+    .bottom-bar .socialmedia ul {
+      display: flex;
+      justify-content: center;
+    }
+    .footer-menu {
+      text-align: center;
+      .container .row img {
+        float: none;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-md-min) {
+    .bottom-bar .socialmedia ul {
+      justify-content: center;
+    }
+    div:empty {
+      display: none;
     }
   }
 }
