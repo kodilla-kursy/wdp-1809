@@ -139,10 +139,6 @@ header {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
 
-    .container > .row {
-      height: 84px;
-    }
-
     .menu {
       display: flex;
       align-self: stretch;
@@ -188,7 +184,6 @@ header {
     .search-form {
       border: 1px solid $form-border-color;
       display: inline-flex;
-      height: 45px;
       color: $text-color;
 
       .category {
@@ -257,8 +252,37 @@ header {
     > li:nth-child(2) > a:after {
       content: "Register";
     }
+
     > li:nth-child(1) > a:after {
       content: "Login";
+
+      .menu-bar .container .align-items-center {
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 5px 0px;
+
+          .category {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #292929;
+
+            select {
+              width: 100%;
+            }
+          }
+
+          .search-field {
+            height: 31px;
+            width: 100%;
+
+            input {
+              width: 100%;
+              margin-left: 1px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -267,10 +291,12 @@ header {
   header .company-claim {
     padding: 10px 0px;
     min-width: 360px;
+
     .phone-number p {
       font-size: 14px;
       min-width: 160px;
     }
+
     .container .row {
       height: 100px;
     }
@@ -288,6 +314,7 @@ header {
       height: 100%;
       flex-basis: initial;
     }
+
     .text-left {
       order: 3; //telephone
       width: 50%;
@@ -296,11 +323,39 @@ header {
       text-align: right !important;
       line-height: 0px;
     }
+
     .text-right {
       order: 2; //basket
       width: 50%;
       max-height: 50%;
       flex-basis: initial;
     }
+  }
+  .menu-bar .container .align-items-center {
+    .search-form {
+      .category {
+        width: 100%;
+
+        select {
+          width: 100%;
+        }
+        .fa-caret-down {
+          display: none;
+        }
+      }
+
+      .search-field {
+        width: calc(100% - 135px);
+        right: 15px;
+        position: absolute;
+        z-index: 999;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-md-min) {
+  header .menu-bar .menu {
+    display: none;
   }
 }
