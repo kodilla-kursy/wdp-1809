@@ -71,21 +71,19 @@
       transform: translateY(15px);
 
       li {
+        @extend %hover-trans;
         display: inline-block;
         margin-left: 0.5rem;
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #e1e1e1;
+        cursor: pointer;
+        outline: none;
 
-        a {
-          @extend %hover-trans;
-          display: block;
-          width: 13px;
-          height: 13px;
-          border-radius: 6px;
-          background-color: #e1e1e1;
-
-          &.active,
-          &:hover {
-            background-color: $primary;
-          }
+        &.active,
+        &:hover {
+          background-color: $primary;
         }
       }
     }
