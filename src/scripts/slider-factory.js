@@ -4,9 +4,11 @@ function sliderFactory(sliderType, sliderSelector, extraOpts = null) {
   
   switch (sliderType) {
     case 'products-slider':
-      if (typeof extraOpts.sliderNavSelector === 'undefined') throw new Error('Missing slider nav selector!');
-
       return new ProductsSlider(sliderSelector, extraOpts.sliderNavSelector);
+
+    case 'posts-slider':
+      return new PostsSlider(sliderSelector, extraOpts.sliderNavSelector); 
+
     default:
         throw new Error('Slider type not found!');
   }
@@ -21,6 +23,7 @@ class Slider {
 class SliderWithNav extends Slider {
   constructor(opts, sliderNavSelector) {
     super(opts);
+    if (typeof sliderNavSelector === 'undefined') throw new Error('Missing slider nav selector!');
     this.navContainer = document.querySelector(sliderNavSelector);
     if (this.navContainer === null) throw new Error('Slider nav container not found!');
     this.tns.events.on('indexChanged', () => this.updateNav());
@@ -75,6 +78,27 @@ class ProductsSlider extends SliderWithNav {
         576: {items: 2},
         992: {items: 3},
         1200: {items: 4}
+      },
+    };
+    super(opts, sliderNavSelector);
+  }
+}
+
+class PostsSlider extends SliderWithNav {
+  constructor(sliderSelector, sliderNavSelector) {
+    const opts = {
+      container: sliderSelector,
+      nav: false,
+      controls: false,
+      autoplay: false,
+      loop: false,
+      slideBy: 'page',
+      mouseDrag: true,
+      swipeAngle: 90,
+      gutter: 30,
+      responsive: {
+        768: {items: 2},
+        1200: {items: 3}
       },
     };
     super(opts, sliderNavSelector);
