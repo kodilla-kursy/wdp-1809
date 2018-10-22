@@ -1,81 +1,88 @@
-a {
+.post-box {
+  display: block;
+  margin-bottom: 2rem;
   
-  .post-box {
-    margin-bottom: 2rem;
-    
-    .cover {
-      padding: 70% 25px 0 25px;
-      background: {
-        color: #f4f5f7;
-        size: cover;
-        position: center;
-      }
-
-      .details {
-        padding: 15px 20px;
-        display: flex;
-        background-color: #ffffff;
-        font-size: 14px;
-        color: #000;
-
-        & > * {
-          flex: 1 1 auto;
-        }
-
-        .date {
-          text-align: left;
-        }
-
-        .comments {
-          text-align: right;
-        }
-      }
+  .cover {
+    padding: 70% 25px 0 25px;
+    background: {
+      color: #f4f5f7;
+      size: cover;
+      position: center;
     }
 
-    .post-info {
-      padding: 25px;
+    .details {
+      padding: 15px 20px;
+      display: flex;
+      background-color: #ffffff;
+      font-size: 14px;
+      color: #000;
 
-      h5 {
-        color: #000;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 1px;
+      & > * {
+        flex: 1 1 auto;
       }
 
-      p {
-        font-size: 14px;
-        line-height: 24px;
-        color: rgb(103,103,103);
-        text-align: justify;
+      .date {
+        text-align: left;
+      }
+
+      .comments {
+        text-align: right;
+      }
+    }
+  }
+
+  .post-info {
+    padding: 25px;
+
+    h5 {
+      color: #000;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      color: rgb(103,103,103);
+      text-align: justify;
+    }
+
+    .more {
+      text-align: center;
+      padding-top: 30px;
+    }
+  }
+
+  
+  &:hover {
+    .post-info {
+      h5 {
+        color: $primary;
       }
 
       .more {
-        text-align: center;
-        padding-top: 30px;
-      }
-    }
+        button {
+          background-color: $primary;
 
-    
-    &:hover {
-      .post-info {
-        h5 {
-          color: $primary;
-        }
-
-        .more {
-          button {
-            background-color: $primary;
-
-            &:hover {
-              cursor: pointer;
-            }
+          &:hover {
+            cursor: pointer;
           }
         }
       }
     }
   }
+}
+
+a.post-box {
+  -webkit-user-select: none; /* Safari 3.1+ */ 
+  -moz-user-select: none; /* Firefox 2+ */ 
+  -ms-user-select: none; /* IE 10+ */ 
+  user-select: none; /* Standard syntax */ 
+  user-drag: none; 
+  -webkit-user-drag: none; 
 
   &:hover {
-    text-decoration: none;    
+    text-decoration: none;
   }
 }
