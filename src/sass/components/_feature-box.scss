@@ -48,14 +48,18 @@
       font-weight: 300;
     }
   }
-
-  &.active {
-    i {
+  
+  &.active,
+  &:hover {
+    i, 
+    .feature-box-link {
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
+      cursor: pointer;
+      text-decoration: none;
     }
-
+        
     .content {
       color: $primary;
     }
