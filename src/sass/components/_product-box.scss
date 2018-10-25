@@ -34,8 +34,15 @@
 
 
     }
-    &:hover .buttons {
+    &:hover {
+      
+      .buttons {
       visibility: visible;
+      }
+
+      .price .btn-main-small {
+        background-color: $primary;
+      }
   }
 
   .content {
