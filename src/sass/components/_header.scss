@@ -196,6 +196,10 @@ header {
           position: relative;
           z-index: 1;
         }
+
+        select:hover {
+          cursor: pointer;
+        }
       }
 
       .search-field {
