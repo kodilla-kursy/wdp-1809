@@ -65,6 +65,10 @@
     }
   }
 
+  :hover {
+    cursor: pointer;
+  }
+
   .post-info:hover {
     cursor: pointer;
     color: $primary;
@@ -78,9 +82,8 @@
     }
   }
 }
-  
-/*
-a:hover + img,
-img:hover {
-    display: block;
-}*/
+
+.col-4 a {
+  text-decoration: none;
+  color: black;
+}
