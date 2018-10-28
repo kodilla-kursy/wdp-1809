@@ -16,6 +16,7 @@ header {
           font-size: 13px;
 
           &:hover {
+            @extend %anim-text-color;
             color: $primary;
             text-decoration: none;
           }
@@ -105,6 +106,7 @@ header {
 
         &:hover {
           .cart-icon {
+            @extend %anim-bg-color;
             background-color: lighten($primary, 10%);
           }
         }
@@ -148,6 +150,7 @@ header {
 
             &:hover,
             &.active {
+              @extend %anim-bg-color;
               background-color: $primary;
               color: #ffffff;
               border-color: $primary;
