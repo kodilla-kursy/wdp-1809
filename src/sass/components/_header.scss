@@ -89,18 +89,21 @@ header {
         }
 
         .cart-counter {
-          width: 28px;
+          width: 53px;
           height: 27px;
           border-radius: 14px;
-          background-color: $header-bg;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          background-color: #363636;
+          padding-left: 11px;
+          white-space: nowrap;
+          padding-top: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
           font-size: 14px;
-          color: rgb(224,227,237);
+          color: #e0e3ed;
           position: absolute;
           top: 50%;
-          right: 0;
+          margin-left: 14px;
+          text-align: left;
           transform: translate(50%, -50%);
         }
 
