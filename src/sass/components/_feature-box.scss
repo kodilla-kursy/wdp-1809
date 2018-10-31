@@ -52,11 +52,10 @@
   &.active,
   &:hover {
     i, 
-    .feature-box-link {
+    a {
       background-color: $primary;
       color: #ffffff;
-      border-color: $primary;
-      cursor: pointer;
+      border-color: $primary;      
       text-decoration: none;
     }
         

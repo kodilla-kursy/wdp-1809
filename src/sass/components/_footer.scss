@@ -21,6 +21,7 @@ footer {
             color: rgb(169,169,169);
 
             &:hover {
+              @extend %anim-text-color;
               color: #ffffff;
             }
           }
@@ -70,6 +71,7 @@ footer {
             text-decoration: none;
 
             &:hover {
+              @extend %anim-text-color;
               color: $primary;
             }
           }
