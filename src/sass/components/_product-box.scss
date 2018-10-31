@@ -83,6 +83,12 @@
     }
   }
 
+  .old-price {   
+      text-decoration: line-through;
+      color: $old-pirce-color;
+      font-size: 13px;    
+  }
+
   .actions {
     padding: 15px 10px 10px 10px;
     display: flex;
