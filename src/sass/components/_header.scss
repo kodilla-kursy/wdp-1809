@@ -220,12 +220,13 @@ header {
             text-decoration: none;
             color: #636363;
           }
-
-          li:hover {
+          
+          li:hover ul li:hover {
             color: black;
             background-color: #d58e32;
+            border-top: 3px solid black;
           }
-
+          
           li ul {
             position: absolute;
             display: none;
@@ -237,13 +238,10 @@ header {
 
           li:hover ul {
             display: block;
+            border: 1px solid black;
             background-color: white;
             width: 190px;
           }
-        }
-
-        select:hover {
-          cursor: pointer;
         }
       }
 
