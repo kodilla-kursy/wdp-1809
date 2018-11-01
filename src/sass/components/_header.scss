@@ -10,6 +10,10 @@ header {
       li {
         display: inline-block;
         line-height: 55px;
+        
+        i {
+          color: #ffffff;
+        }
 
         a {
           color: #ffffff;
@@ -267,4 +271,38 @@ header {
       }
     }
   }
+}
+
+@media only screen and (max-width: 766px) {
+  header .top-bar ul li {
+    display: block;
+  }
+  .phone-number {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  header .text-right ul li a {
+    display: none;
+  }
+
+  .company-claim {
+    position: relative;
+    padding-bottom: 35px;
+  }
+ 
+  .text-center-top {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+
+  .cart {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+  } 
 }
