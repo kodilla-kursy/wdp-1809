@@ -16,6 +16,7 @@ header {
           font-size: 13px;
 
           &:hover {
+            @extend %anim-text-color;
             color: $primary;
             text-decoration: none;
           }
@@ -88,23 +89,27 @@ header {
         }
 
         .cart-counter {
-          width: 28px;
+          width: 53px;
           height: 27px;
           border-radius: 14px;
-          background-color: $header-bg;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          background-color: #363636;
+          padding-left: 11px;
+          white-space: nowrap;
+          padding-top: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
           font-size: 14px;
-          color: rgb(224,227,237);
+          color: #e0e3ed;
           position: absolute;
           top: 50%;
-          right: 0;
+          margin-left: 14px;
+          text-align: left;
           transform: translate(50%, -50%);
         }
 
         &:hover {
           .cart-icon {
+            @extend %anim-bg-color;
             background-color: lighten($primary, 10%);
           }
         }
@@ -148,6 +153,7 @@ header {
 
             &:hover,
             &.active {
+              @extend %anim-bg-color;
               background-color: $primary;
               color: #ffffff;
               border-color: $primary;
@@ -186,15 +192,54 @@ header {
           z-index: 0;
         }
 
-        select {
-          -webkit-appearance: none;
+        .navigation {
           border: 0;
           background-color: transparent;
           outline: none;
-          padding: 5px 30px 5px 35px;
+          padding: 20px 6px 5px 15px;
           font-size: 14px;
           position: relative;
           z-index: 1;
+
+          ul {
+            font-size: 0;
+          }
+          li {
+            display: block;
+            font-size: 16px;
+          }
+
+          ul {
+            padding: 0;
+            text-align: center;
+          }
+
+          a {
+            padding: 10px 25px;
+            display: block;
+            text-decoration: none;
+            color: #636363;
+          }
+
+          li:hover {
+            color: black;
+            background-color: #d58e32;
+          }
+
+          li ul {
+            position: absolute;
+            display: none;
+          }
+
+          li li {
+            display: block;
+          }
+
+          li:hover ul {
+            display: block;
+            background-color: white;
+            width: 190px;
+          }
         }
 
         select:hover {

@@ -1,7 +1,7 @@
 .product-box {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; 
 
   .photo {
     position: relative;
@@ -29,7 +29,17 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;      
     }
+  }
+
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .btn-price {
+      background-color: $primary;
+    }    
   }
 
   .content {
@@ -71,6 +81,12 @@
       border-bottom: 4px solid $primary;
       transform: translateX(-50%);
     }
+  }
+
+  .old-price {   
+      text-decoration: line-through;
+      color: $old-pirce-color;
+      font-size: 13px;    
   }
 
   .actions {

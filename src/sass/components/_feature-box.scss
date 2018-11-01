@@ -48,14 +48,17 @@
       font-weight: 300;
     }
   }
-
-  &.active {
-    i {
+  
+  &.active,
+  &:hover {
+    i, 
+    a {
       background-color: $primary;
       color: #ffffff;
-      border-color: $primary;
+      border-color: $primary;      
+      text-decoration: none;
     }
-
+        
     .content {
       color: $primary;
     }
