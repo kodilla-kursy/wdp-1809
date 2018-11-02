@@ -1,19 +1,19 @@
-.product-box {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+  .product-box {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1e1;
+    margin-bottom: 2rem; 
 
-  .photo {
-    position: relative;
-    padding: 80% 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
-    overflow: hidden;
-    align-items: flex-end;
+    .photo {
+      position: relative;
+      padding: 0 10px 0 10px;
+      background: {
+        color: #f4f5f7;
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      overflow: hidden;
+      align-items: flex-end;
 
     .sale {
       position: absolute;
@@ -29,7 +29,17 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;
     }
+  }
+
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .btn-price {
+      background-color: $primary;
+    }    
   }
 
   .content {
