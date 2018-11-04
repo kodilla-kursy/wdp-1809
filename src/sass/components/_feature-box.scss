@@ -64,3 +64,31 @@
     }
   }
 }
+
+.row {
+  justify-content: center;
+  flex-direction: row;
+
+  .row-rwd {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .row {
+    justify-content: center;
+    flex-direction: column;
+
+    .row-rwd {
+      width: 100%;
+
+      .feature-box {
+        height: 75%;
+      }
+    }
+  }
+}
+
