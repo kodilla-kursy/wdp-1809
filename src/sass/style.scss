@@ -22,3 +22,69 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  header 
+  .menu-bar {
+    box-shadow: none;
+    .search-form {
+      display: block;
+      height: 60px;
+      .category {
+        border-right: none;
+        border-bottom: 1px solid #292929;
+      }
+      .search-field {
+        input {
+          padding-left: 35px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  header 
+  .menu-bar {
+    box-shadow: none;
+    .search-form {
+      display: block;
+      height: 60px;
+      .category {
+        border-right: none;
+        border-bottom: 1px solid #292929;
+      }
+      .search-field {
+        input {
+          padding-left: 35px;
+        }
+      }
+    }
+  .mobile_menu {
+    font-size: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
+    padding-top: 5px;
+  }
+}
+  header .menu-bar .menu ul, li, a {
+    display: block;
+  }
+  #col-menu {
+    display: none;
+  }
+  .section--features, 
+  .section--products, 
+  .section--blog-posts,
+  footer {
+    display: none;
+  }
+}
+
