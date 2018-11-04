@@ -50,10 +50,14 @@ body {
             }
           }
         }
-        .photo {
-          width: 94%;
-          height: 100%;
+        .image {
+          width: 100%;
           margin-left: 15px;
+          opacity: 1;
+          display: block;
+          height: auto;
+          transition: .5s ease;
+          backface-visibility: hidden;
         }
         .buttons {
           padding: 10px 130px;
