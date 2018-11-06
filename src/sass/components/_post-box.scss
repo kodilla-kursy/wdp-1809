@@ -2,6 +2,7 @@
   margin-bottom: 2rem;
   
   .cover {
+      position: relative;
       background: {
       color: #f4f5f7;
       size: cover;
@@ -10,10 +11,13 @@
 
     img {
       width: 100%;
-      height: 250px;
+      height: 300px;
     }
 
     .details {
+      left: 10%;
+      top: 250px;
+      position: absolute;
       padding: 15px 20px;
       display: flex;
       background-color: #ffffff;
@@ -24,11 +28,13 @@
       }
 
       .date {
+        padding: 0 20px 0 0;
         text-align: left;
       }
 
       .comments {
         text-align: right;
+        padding: 0 0 0 20px
       }
     }
   }
