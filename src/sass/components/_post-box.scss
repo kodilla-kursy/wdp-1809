@@ -52,19 +52,22 @@
     }
   }
 
-  :hover + .post-info {
-    cursor: pointer;
-    color: $primary;
+  &:hover {
 
-    h5 {
-      color: $primary;
-    }
+    .post-info {
+        cursor: pointer;
+        color: $primary;
 
-    .btn-main {
-      background: $primary;
+      h5 {
+        color: $primary;
+      }
+
+      .btn-main {
+        background: $primary;
+      }
     }
   }
-
+  
   :hover {
     cursor: pointer;
   }
