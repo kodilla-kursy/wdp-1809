@@ -277,6 +277,7 @@ header {
   header .top-bar ul li {
     display: block;
   }
+
   .phone-number {
     position: absolute;
     bottom: 0;
@@ -285,8 +286,12 @@ header {
     font-size: 14px;
   }
   
-  header .text-right ul li a {
-    display: none;
+  .icon-desc {
+    visibility: hidden;
+  }
+
+  .icon-desc i {
+    visibility: visible;
   }
 
   .company-claim {
