@@ -1,7 +1,7 @@
 .feature-box {
   border: 1px solid #b6b6b6;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 40px;  
 
   .icon {
     transform: translateY(-50%);
@@ -51,8 +51,7 @@
   
   &.active,
   &:hover {
-    i, 
-    a {
+    i, a{
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;      
@@ -65,30 +64,34 @@
   }
 }
 
-.row {
-  justify-content: center;
-  flex-direction: row;
-
-  .row-rwd {
+@media only screen and (max-width: 1024px) {
+  .cont-flex {
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    width: 50%;
   }
-}
 
-@media only screen and (max-width: 1024px) {
-  .row {
+  .row-rwd {
     justify-content: center;
-    flex-direction: column;
+    width: 43%;
 
-    .row-rwd {
-      width: 100%;
-
-      .feature-box {
-        height: 75%;
-      }
+    .feature-box {
+      height: 75%;
     }
-  }
+  }  
 }
 
+@media only screen and (max-width: 766px) {
+  .cont-flex {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row-rwd {
+    justify-content: center;
+    width: 75%;
+
+    .feature-box {
+      height: 75%;
+    }
+  }  
+}
