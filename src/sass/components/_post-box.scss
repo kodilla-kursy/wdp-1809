@@ -53,6 +53,7 @@
   }
 
   &:hover {
+    cursor: pointer;
 
     .post-info {
         cursor: pointer;
@@ -66,10 +67,6 @@
         background: $primary;
       }
     }
-  }
-  
-  :hover {
-    cursor: pointer;
   }
 
   .post-info:hover {
