@@ -43,7 +43,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: black;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -61,4 +61,39 @@
       padding-top: 30px;
     }
   }
+
+  &:hover {
+    cursor: pointer;
+
+    .post-info {
+        cursor: pointer;
+        color: $primary;
+
+      h5 {
+        color: $primary;
+      }
+
+      .btn-main {
+        background: $primary;
+      }
+    }
+  }
+
+  .post-info:hover {
+    cursor: pointer;
+    color: $primary;
+
+    h5 {
+      color: $primary;
+    }
+
+    .btn-main {
+      background: $primary;
+    }
+  }
+}
+
+.col-4 a {
+  text-decoration: none;
+  color: black;
 }
