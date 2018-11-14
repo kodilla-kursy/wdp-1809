@@ -80,18 +80,8 @@
   }  
 }
 
-@media only screen and (max-width: 766px) {
-  .cont-flex {
-    display: flex;
-    justify-content: center;
-  }
-  
+@media only screen and (max-width: 767px) {
   .row-rwd {
-    justify-content: center;
-    width: 75%;
-
-    .feature-box {
-      height: 75%;
-    }
+    width: 100%;
   }  
 }
