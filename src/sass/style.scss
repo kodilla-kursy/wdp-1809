@@ -51,7 +51,6 @@ body {
     display: block;
     transition: .5s ease;
     backface-visibility: hidden;
-    backface-visibility: hidden;
   }
   .buttons {
     display: flex;
@@ -168,4 +167,5 @@ body {
   }
   .photos:hover .icons {
     opacity: 1;
-  }}
+  }
+}
