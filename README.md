@@ -4,7 +4,7 @@ This is an online store app.
 
 # Preview
 
-You can see the preview here [https://affectionate-snyder-c9bfc8.netlify.com/](https://affectionate-snyder-c9bfc8.netlify.com/)
+You can see the preview here [https://romantic-volhard-ce5aef.netlify.com/](https://romantic-volhard-ce5aef.netlify.com/)
 
 # Instruction
 
