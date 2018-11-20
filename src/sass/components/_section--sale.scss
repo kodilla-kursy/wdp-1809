@@ -1,0 +1,100 @@
+.big-sale {
+	margin: 25px 0 25px 0;
+	width: auto;
+	height: 400px;	
+	
+	
+	.photo {		
+		position: relative;		
+	}
+
+	.sale-off {
+		background-color: rgba(50, 50, 50, 0.3);
+		color: #fff;
+		top: 20px;
+		left: 20px;		
+		width: 92%;
+		height: 88%;
+		position: absolute;
+		padding: 10px;
+		.sale-off-text {
+			text-transform: uppercase;
+			position: absolute;
+			top: 130px;
+			h3 {
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 48px;
+				font-weight: bold;
+			}
+			.sale-off-border {
+				width: 125px;
+				text-align: center;
+				border: 5px #fff solid;
+			}
+		}	
+	}
+	img {		
+		max-width: 100%;
+		max-height: 100%;
+	}	
+}
+
+.small-sale {	
+	margin: 25px 0 25px 0;
+	width: auto;
+	height: 162px;
+	background-color: #e9edf8;
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.sale-box-one {
+		left: 50%;		
+		text-transform: uppercase;
+		top: 10%;
+		text-align: right;
+		position: absolute;
+		p {
+			line-height: 30px;		
+		}
+
+		p:nth-child(1) {
+			font-size: 36px;
+		}
+
+		p:nth-child(2){
+			font-weight: bold;
+		}	
+
+		p:nth-child(3) {
+			font-weight: bold;
+			font-size: 36px;
+			color: $primary;
+		}
+	}	
+}
+
+.small-sale:nth-child(2) {
+	position: relative;
+	background-color: #faf3f8;
+	img{
+		margin-left: 55%;		
+	}
+	.sale-box-two {
+		text-transform: uppercase;
+		position: absolute;
+		left: 20px;
+		top: 25%;
+		text-align: center;
+		p:nth-child(1) {
+			font-size: 26px;
+			color: $primary;
+		}
+
+		p:nth-child(2){
+			font-size: 18px;
+		}	
+	}
+}
