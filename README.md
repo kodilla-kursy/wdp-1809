@@ -2,10 +2,6 @@
 
 This is an online store app.
 
-# Preview
-
-You can see the preview here [https://romantic-volhard-ce5aef.netlify.com/](https://romantic-volhard-ce5aef.netlify.com/)
-
 # Instruction
 
 In order to start the project:
