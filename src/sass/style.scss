@@ -65,3 +65,26 @@ body {
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .col-4 {
+    width: 100%;
+    margin: 0 50px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .col-4 {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .post-box .cover {
+    .details {
+    left: 0;
+    }
+    img {
+      height: 300px;
+    }
+  }
+}
