@@ -2,13 +2,20 @@
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
-
-  .photo {
+  
+  .photo1 {background-image: url('../images/new-furniture/1.jpg');}
+  .photo2 {background-image: url('../images/new-furniture/2.jpeg');}
+  .photo3 {background-image: url('../images/new-furniture/3.jpg');}
+  .photo4 {background-image: url('../images/new-furniture/4.jpeg');}
+  .photo5 {background-image: url('../images/new-furniture/5.jpeg');}
+  .photo6 {background-image: url('../images/new-furniture/6.jpg');}
+  .photo7 {background-image: url('../images/new-furniture/7.jpg');}
+  .photo8 {background-image: url('../images/new-furniture/8.jpeg');}
+  [class^="photo"] {
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: #f4f5f7;
-      size: contain;
+      size: cover;
       position: center;
       repeat: no-repeat;
     }
