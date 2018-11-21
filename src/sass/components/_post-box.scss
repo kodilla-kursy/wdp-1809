@@ -1,6 +1,22 @@
 .post-box {
   margin-bottom: 2rem;
-  
+    
+  &:hover {
+    cursor: pointer;
+
+    .post-info {
+      h5 {
+        color: $primary;
+      }
+      .more {
+        .btn-main {
+          background-color: $primary;
+        }
+      }
+    }
+
+  }
+
   .cover {
     padding: 70% 25px 0 25px;
     background: {
@@ -33,7 +49,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: $text-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
