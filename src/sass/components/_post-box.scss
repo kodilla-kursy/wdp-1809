@@ -1,9 +1,16 @@
 .post-box {
   margin-bottom: 2rem;
   
-  .cover1 {background-image: url('../images/latest-blog/1.jpeg');}
-  .cover2 {background-image: url('../images/latest-blog/2.jpeg');}
-  .cover3 {background-image: url('../images/latest-blog/3.jpeg');}
+  .cover1 {
+    background-image: url('../images/latest-blog/1.jpeg');
+  }
+  .cover2 {
+    background-image: url('../images/latest-blog/2.jpeg');
+  }
+  .cover3 {
+    background-image: url('../images/latest-blog/3.jpeg');
+  }
+  
   [class^="cover"] {
     padding: 70% 25px 0 25px;
     background: {
