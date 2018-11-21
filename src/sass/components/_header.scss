@@ -230,3 +230,9 @@ header {
     }
   }
 }
+
+@media (max-width: 860px) {
+header .text-right ul li a span {
+    display: none;
+  }
+}
