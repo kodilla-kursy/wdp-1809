@@ -49,11 +49,15 @@
     }
   }
 
-  &.active {
+  &:active,
+  &:hover {
     i {
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
+    }
+    a {
+      text-decoration: none;
     }
 
     .content {
