@@ -231,8 +231,26 @@ header {
   }
 }
 
-@media (max-width: 860px) {
-header .text-right ul li a span {
-    display: none;
+@media (max-width: 768px) {
+  header .text-right ul li a span {
+      display: none;
+    }
+
+  header .company-claim {
+    .container {
+      position: relative;
+    }
+    .phone-number { 
+      position: absolute;
+      bottom: 20px;
+      p {
+        font-size: 14px;
+      }
+    }
+    .cart {
+      position: absolute;
+      top: 20px;
+    } 
   }
+
 }
