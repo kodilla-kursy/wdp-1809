@@ -10518,7 +10518,9 @@ footer .bottom-bar {
       padding: 30px 15px 5px 15px; }
     .product-box .photo .buttons {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      opacity: 0;
+      transition: .5s ease; }
   .product-box .content {
     text-align: center;
     padding: 20px; }
@@ -10547,6 +10549,13 @@ footer .bottom-bar {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+
+.product-box:hover .buttons {
+  opacity: 1; }
+
+.product-box:hover .price .btn-main-small {
+  transition: .5s ease;
+  background-color: #d58e32; }
 
 .section--features {
   padding: 5rem 0; }
