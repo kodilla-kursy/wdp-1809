@@ -240,15 +240,16 @@ header {
     .container {
       position: relative;
     }
-    .phone-number { 
+    .phone-number, .cart { 
       position: absolute;
+    }
+    .phone-number {
       bottom: 20px;
       p {
         font-size: 14px;
       }
     }
     .cart {
-      position: absolute;
       top: 20px;
     } 
   }
