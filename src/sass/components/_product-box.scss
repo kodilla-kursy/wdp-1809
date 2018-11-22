@@ -78,5 +78,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .price {
+      div {
+        display: inline;
+      }
+      
+      .oldprice {
+        font-size: 12px;
+        text-decoration: line-through;
+      }
+    }
   }
 }
