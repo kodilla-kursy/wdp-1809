@@ -194,7 +194,8 @@ header {
           }
         }
         
-        ul {
+        .category-first,
+        .category-second {
           margin: 0;
           padding: 0;
           border: 1px solid #292929;
@@ -215,7 +216,7 @@ header {
           border-top: none;
 
           
-          li {
+          .category-element {
             font-size: 14px;
             line-height: 43px;
             padding: 0 10px;
