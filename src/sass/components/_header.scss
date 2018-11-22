@@ -101,6 +101,13 @@ header {
           top: 50%;
           right: 0;
           transform: translate(50%, -50%);
+
+          p {
+            position: absolute;
+            left: 13px;
+            text-align: left;
+            margin: 0;
+          }
         }
 
         &:hover {
