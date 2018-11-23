@@ -25,7 +25,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "browsersync": "0.0.1-security",
     "cpy-cli": "^2.0.0",
     "node-sass": "^4.9.3",
