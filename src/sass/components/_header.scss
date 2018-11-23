@@ -115,9 +115,71 @@ header {
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1,2,2,0.2);
     background-color: #ffffff;
-
+    
     .container > .row {
       height: 84px;
+    }
+    
+    .menu-category {
+      border-right: 1px solid $form-border-color;
+      
+      
+      ul {
+        line-height: 43px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      &--header {
+        display: inline-block;
+        height: 43px;
+        width: 198px;
+        text-align: center;
+        
+        &:hover {
+          background: $primary;
+          color: #ffffff;
+          cursor: pointer;
+          
+          .menu-category--menu {
+            display: block;
+            position: absolute;
+            color: $primary;
+            background: #ffffff;
+            z-index: 100;
+          }
+        }
+      }
+      
+      &--text {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+      
+      .menu-category--menu {
+        display: none;
+        margin-left: -1px;
+      }
+      
+      &--item a {
+        border: solid 1px $form-border-color;
+        border-top: none;
+        font-size: 14px;
+        display: inline-block;
+        height: 44px;
+        width: 200px;
+        line-height: 44px;
+        padding-left: 16px;
+        text-align: left;
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $primary;
+          color: #ffffff;
+        }
+      }
     }
 
     .menu {
