@@ -14,6 +14,7 @@
       display: flex;
       background-color: #ffffff;
       font-size: 14px;
+      color: $text-color;
 
       & > * {
         flex: 1 1 auto;
@@ -57,8 +58,6 @@
   }
   
   &:hover {
-    cursor: pointer;
-
     h5 {
       color: $primary;
     }
@@ -67,4 +66,8 @@
       background-color: #d58e32;
     }
   }
+}
+
+.section--blog-posts a:hover {
+  text-decoration: none;
 }

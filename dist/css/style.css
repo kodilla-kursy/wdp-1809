@@ -10352,6 +10352,9 @@ footer .bottom-bar {
     background-color: #2a2a2a;
     color: #ffffff; }
 
+a .post-box * {
+  text-decoration: none; }
+
 .feature-box {
   border: 1px solid #b6b6b6;
   text-align: center;
@@ -10469,7 +10472,8 @@ footer .bottom-bar {
       padding: 15px 20px;
       display: flex;
       background-color: #ffffff;
-      font-size: 14px; }
+      font-size: 14px;
+      color: #2a2a2a; }
       .post-box .cover .details > * {
         flex: 1 1 auto; }
       .post-box .cover .details .date {
@@ -10493,12 +10497,13 @@ footer .bottom-bar {
       padding-top: 30px; }
       .post-box .post-info .more a {
         color: white; }
-  .post-box:hover {
-    cursor: pointer; }
-    .post-box:hover h5 {
-      color: #d58e32; }
-    .post-box:hover .btn-main, .post-box:hover .btn-main-small {
-      background-color: #d58e32; }
+  .post-box:hover h5 {
+    color: #d58e32; }
+  .post-box:hover .btn-main, .post-box:hover .btn-main-small {
+    background-color: #d58e32; }
+
+.section--blog-posts a:hover {
+  text-decoration: none; }
 
 .product-box {
   background-color: #ffffff;
