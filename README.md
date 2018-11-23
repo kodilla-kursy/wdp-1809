@@ -2,10 +2,6 @@
 
 This is an online store app.
 
-# Preview
-
-You can see the preview here [https://affectionate-snyder-c9bfc8.netlify.com/](https://affectionate-snyder-c9bfc8.netlify.com/)
-
 # Instruction
 
 In order to start the project:
