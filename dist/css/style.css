@@ -10184,8 +10184,9 @@ header .company-claim {
       header .company-claim .cart .cart-box .cart-icon i {
         margin-right: 5px; }
     header .company-claim .cart .cart-box .cart-counter {
-      width: 50px;
+      max-width: 60px;
       height: 27px;
+      padding: 0 3px;
       border-radius: 14px;
       background-color: #723636;
       display: flex;
