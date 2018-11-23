@@ -101,6 +101,13 @@ header {
           top: 50%;
           right: 0;
           transform: translate(50%, -50%);
+
+          p {
+            position: absolute;
+            left: 13px;
+            text-align: left;
+            margin: 0;
+          }
         }
 
         &:hover {
@@ -280,4 +287,25 @@ header {
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+  header .company-claim {
+    .container {
+      position: relative;
+    }
+    .phone-number, .cart { 
+      position: absolute;
+    }
+    .phone-number {
+      bottom: 20px;
+      p {
+        font-size: 14px;
+      }
+    }
+    .cart {
+      top: 20px;
+    } 
+  }
+
 }
