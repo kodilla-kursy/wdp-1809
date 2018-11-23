@@ -251,3 +251,9 @@ header {
   }
 
 }
+
+@media (max-width: 576px) {
+  header .top-bar .text-right ul li {
+    margin-left: 0.2rem;
+  }
+}
