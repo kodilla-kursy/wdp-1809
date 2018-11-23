@@ -1,17 +1,17 @@
 .post-box {
   margin-bottom: 2rem;
   
-  .cover1 {
+  .cov1 {
     background-image: url('../images/latest-blog/1.jpeg');
   }
-  .cover2 {
+  .cov2 {
     background-image: url('../images/latest-blog/2.jpeg');
   }
-  .cover3 {
+  .cov3 {
     background-image: url('../images/latest-blog/3.jpeg');
   }
   
-  [class^="cover"] {
+  .cover {
     padding: 70% 25px 0 25px;
     background: {
       color: #f4f5f7;
