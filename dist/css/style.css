@@ -10356,6 +10356,10 @@ footer .bottom-bar {
   .btn-outline:hover {
     background-color: #2a2a2a;
     color: #ffffff; }
+  .btn-outline.active {
+    background-color: #d58e32;
+    border-color: #d58e32;
+    color: #ffffff; }
 
 .feature-box {
   border: 1px solid #b6b6b6;

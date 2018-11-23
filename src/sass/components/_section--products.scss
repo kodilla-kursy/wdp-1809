@@ -1,0 +1,18 @@
+.section--products {
+    .container {
+        .panel-bar {
+
+        }
+
+        .active {
+            display: flex;       
+        }
+
+        .tabContainer {
+            &-tab {
+                display: none;
+            }
+
+        }
+    }
+}
