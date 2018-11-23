@@ -172,6 +172,7 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        padding: 0 30px 0 35px;
 
         i:first-child {
           color: $primary;
@@ -186,15 +187,72 @@ header {
           z-index: 0;
         }
 
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
-          z-index: 1;
+        .select-cta {
+          p {
+            font-size: 14px;
+            margin: 0;
+          }
+        }
+        
+        .category-first,
+        .category-second {
+          margin: 0;
+          padding: 0;
+          border: 1px solid #292929;
+          background: #ffffff;
+          width: calc(100% + 2px);
+          position: absolute;
+          list-style: none;
+          transition: 300ms;
+          transition-delay: 300ms;
+        }
+
+        .category-first {
+          z-index: 99;
+          left: -1px;
+          top: 43px;
+          transform: scaleY(0);
+          transform-origin: top;
+          border-top: none;
+
+          
+          .category-element {
+            font-size: 14px;
+            line-height: 43px;
+            padding: 0 10px;
+            height: 43px;
+            text-align: center;
+            text-overflow: ellipsis;
+            position: relative;
+
+            &:hover {
+              background: $primary;
+              color: white;
+              transition: 300ms;
+            }
+
+            .category-second {
+              top: -1px;
+              transform: scaleX(0);
+              transform-origin: 0%;
+              left: 188px;
+              color: $text-color;
+            }
+
+            &:hover .category-second {
+              transform: scaleX(1);
+            }
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:hover .category-first {
+          cursor: pointer;
+          transform: scaleY(1);
+          transition: 300ms;
         }
       }
 
