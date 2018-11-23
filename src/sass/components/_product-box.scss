@@ -6,12 +6,14 @@
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
+
     background: {
       color: #f4f5f7;
       size: contain;
       position: center;
       repeat: no-repeat;
     }
+
     overflow: hidden;
     align-items: flex-end;
 
@@ -29,6 +31,8 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      opacity: 0;
+      transition: .5s ease;
     }
   }
 
@@ -46,7 +50,7 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42,42,42);
+        color: rgb(42, 42, 42);
         @extend .far;
         @extend .fa-star;
 
@@ -78,5 +82,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.product-box:hover {
+
+  .buttons {
+    opacity: 1;
+  }
+
+  .price {
+    .btn-main-small {
+      transition: .5s ease;
+      background-color: $primary;
+    }
   }
 }
