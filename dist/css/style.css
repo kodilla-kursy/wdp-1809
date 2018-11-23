@@ -10343,7 +10343,7 @@ footer .bottom-bar {
   opacity: 0;
   transition: .7s ease; }
 
-.no-hover {
+.price {
   opacity: 1;
   transition: .7s ease; }
 
@@ -10554,7 +10554,7 @@ footer .bottom-bar {
   .product-box:hover .btn-main-small {
     opacity: 1; }
   .product-box:hover .no-hover {
-    background-color: #d32525; }
+    background-color: #d58e32; }
 
 .section--features {
   padding: 5rem 0; }
