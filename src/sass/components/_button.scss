@@ -33,4 +33,14 @@
     background-color: #2a2a2a;
     color: #ffffff;
   }
+
+  &:active {
+    @extend .active;
+  }
+}
+
+.active {
+  background-color: $primary;
+  color: #ffffff;
+  border: 1px solid $primary;
 }
