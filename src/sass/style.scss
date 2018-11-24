@@ -66,25 +66,41 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .col-4 {
-    width: 100%;
-    margin: 0 50px;
+@media (min-width: 480px) and (max-width: 1024px) {
+  .container {
+    max-width: 130%;
+    .col-4 {
+      margin-left: 70px;
+    }
+  }
+  .post-box .cover {
+    width: 130%;
+    .details {
+      left: 7px;
+    }
+  }
+  .post-box .post-info {
+    line-height: 2px;
+  }
+}
+
+@media (max-width: 320px) {
+  .row {
+    display: block;
+    .col-4 {
+      margin: 0 auto;
+    }
+  }
+  .post-box .cover {
+    width: 250%;
+    .details {
+      left: auto;
+    }
+  }
+   .post-box .post-info {
+    width: 250%;
+    padding: 25px auto; 
     text-align: center;
   }
 }
 
-@media (min-width: 320px) and (max-width: 568px) {
-  .col-4 {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .post-box .cover {
-    .details {
-    left: 0;
-    }
-    img {
-      height: 300px;
-    }
-  }
-}
