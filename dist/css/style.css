@@ -10465,7 +10465,7 @@ footer .bottom-bar {
     .post-box-link:hover {
       text-decoration: none;
       color: #2a2a2a; }
-      .post-box-link:hover .post-info h5 {
+      .post-box-link:hover .post-info-header {
         color: #d58e32; }
       .post-box-link:hover .post-info .more .btn-main, .post-box-link:hover .post-info .more .btn-main-small {
         background-color: #d58e32; }

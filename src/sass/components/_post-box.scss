@@ -9,7 +9,7 @@
       color: $text-color;
 
       .post-info {
-        h5 {
+        &-header {
           color: $primary;
         }
         .more {
