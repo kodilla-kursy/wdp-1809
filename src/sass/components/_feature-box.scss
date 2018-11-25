@@ -51,12 +51,12 @@
 
   &:active,
   &:hover {
-    i {
+    .icon i {
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
     }
-    a {
+    .feature-link {
       text-decoration: none;
     }
 

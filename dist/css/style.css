@@ -10390,11 +10390,11 @@ footer .bottom-bar {
       margin: 0; }
     .feature-box .content p {
       font-weight: 300; }
-  .feature-box:active i, .feature-box:hover i {
+  .feature-box:active .icon i, .feature-box:hover .icon i {
     background-color: #d58e32;
     color: #ffffff;
     border-color: #d58e32; }
-  .feature-box:active a, .feature-box:hover a {
+  .feature-box:active .feature-link, .feature-box:hover .feature-link {
     text-decoration: none; }
   .feature-box:active .content, .feature-box:hover .content {
     color: #d58e32; }
