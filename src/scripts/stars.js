@@ -7,34 +7,55 @@ for (i=0; i<starBoxes.length; i++) {
     starBoxesId.push(`rate${i+1}`);
 }
 
+
 section.addEventListener("mouseover", function(e) {
-    //for (i=0; i<starBoxesId.length; i++) {
-        if (event.target.classList.contains('s1')) {
-            event.target.parentElement.children[0].classList.add("active");
-            console.log(event.relatedTarget)
-        }
-        else if (event.target.classList.contains('s2')) {
-            event.relatedTarget.children[0].classList.add("active");
-            event.relatedTarget.children[1].classList.add("active");
-        }
-        else if (event.target.classList.contains('s3')) {
-            event.relatedTarget.children[0].classList.add("active");
-            event.relatedTarget.children[1].classList.add("active");
-            event.relatedTarget.children[2].classList.add("active");
-        }
-        else if (event.target.classList.contains('s4')) {
-            event.relatedTarget.children[0].classList.add("active");
-            event.relatedTarget.children[1].classList.add("active");
-            event.relatedTarget.children[2].classList.add("active");
-            event.relatedTarget.children[3].classList.add("active");
-        }
-        else if (event.target.classList.contains('s5')) {
-            event.relatedTarget.children[0].classList.add("active");
-            event.relatedTarget.children[1].classList.add("active");
-            event.relatedTarget.children[2].classList.add("active");
-            event.relatedTarget.children[3].classList.add("active");
-            event.relatedTarget.children[4].classList.add("active");
-        }
+    if (event.target.classList.contains('s1')) {
+        desactiveStars();
+        selectStars(0);
+    }
+    else if (event.target.classList.contains('s2')) {
+        desactiveStars();
+        selectStars(1);
+    }
+    else if (event.target.classList.contains('s3')) {
+        desactiveStars();
+        selectStars(2);
+    }
+    else if (event.target.classList.contains('s4')) {
+        desactiveStars();
+        selectStars(3);
+    }
+    else if (event.target.classList.contains('s5')) {
+        desactiveStars();
+        selectStars(4);
+    }
+    else if (event.target.classList.contains('stars')) {
+        console.log('out')
+        deselectStars();
     }   
-//}
-);
+});
+
+
+
+// temporary selecting stars
+function selectStars(num) {
+    for (i=0; i<=num; i++) {
+        event.relatedTarget.children[i].classList.add("active")
+    }
+}
+
+// deselecting stars
+function deselectStars() {
+    for (i=0; i<=1; i++) {
+        event.target.children[i].classList.add("full");
+    }
+    for (i=0; i<=4; i++) {
+        event.target.children[i].classList.remove("active");
+    }
+}
+// remove stars showing avg value
+function desactiveStars() {
+    for (i=0; i<=4; i++) {
+        event.target.parentElement.children[i].classList.remove("full");
+    }
+}
