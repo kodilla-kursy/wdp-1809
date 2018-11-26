@@ -1,4 +1,5 @@
 .section--deals {
+    padding: 0 0 5rem 0;
 
     .container {
         display: flex;
@@ -26,6 +27,7 @@
 
                     &:first-child {
                         font-weight: 700;
+                        margin-bottom: 0;
 
                         span {
                             font-size: 3rem;
@@ -33,8 +35,8 @@
                     }
                     
                     &:last-child {
-                    padding: 8px 12px;
-                    border: 4px solid #ffffff;
+                    padding: 6px 12px;
+                    border: 5px solid #ffffff;
                     align-self: start;
                     font-weight: 600;
                     font-size: 2.5rem;
@@ -107,6 +109,61 @@
                         }
                     }
 
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .section--deals {
+
+        .container {
+    
+            .deals-thumbnails-small {
+    
+                .deals-thumbnail-bottom {
+                    background-position-x: -120%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .section--deals {
+
+        .container {
+
+            .deals-thumbnail-big {
+                margin-bottom: 30px;
+            }
+    
+            .deals-thumbnails-small {
+                padding: 0;
+
+                .deals-thumbnail-top {
+                    margin-bottom: 30px;
+                }
+    
+                .deals-thumbnail-bottom {
+                    background-position-x: 10%;
+
+                    .thumbnail-bottom-text {
+                        background: rgba(0, 0, 0, .3);
+                        padding: 20px;
+
+                        h4 {
+                            &:first-child {
+                                color: #ffffff;
+                            }
+    
+                            &:last-child {
+                                margin-bottom: 0;
+                                color: #ffffff;
+                            }
+                        }
+                    }
                 }
             }
         }
