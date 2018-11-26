@@ -54,7 +54,7 @@
     <div class="menu-bar">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col">
+          <div class="col search-wrapper">
             <form action="" class="search-form">
               <div class="category">
                 <i class="fas fa-list-ul"></i>
@@ -89,8 +89,11 @@
                 <button><i class="fa fa-search"></i></button>
               </div>
             </form>
+            <div class="category-list-show">
+              <i class="fas fa-angle-double-down"></i>
+            </div>
           </div>
-          <div class="col-auto menu">
+          <div id="menu-dropdown" class="col-auto menu">
             <ul>
               <li><a href="#" class="active">Home</a></li>
               <li><a href="#">Furniture</a></li>
@@ -183,7 +186,7 @@
       <div class="row">
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg1">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -214,7 +217,7 @@
         </div>
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg2">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -246,7 +249,7 @@
         </div>
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg3">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -278,7 +281,7 @@
         </div>
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg4">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -309,7 +312,7 @@
         </div>
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg5">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -341,7 +344,7 @@
         </div>
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg6">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -372,7 +375,7 @@
         </div>
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg7">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -403,7 +406,7 @@
         </div>
         <div class="col-3">
           <div class="product-box">
-            <div class="photo">
+            <div class="photo bg8">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -456,68 +459,74 @@
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
-                </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+            <a href="#" class="post-box-link">
+              <div class="cover cov1">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
+              <div class="post-info">
+                <h5 class="post-info-header">Products That Fight Static</h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <span class="btn-main no-hover">Read more</span>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
-                </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+            <a href="#" class="post-box-link">
+              <div class="cover cov2">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
+              <div class="post-info">
+                <h5 class="post-info-header">Products That Fight Static </h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <span class="btn-main no-hover">Read more</span>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
-                </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+            <a href="#" class="post-box-link">
+              <div class="cover cov3">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
+              <div class="post-info">
+                <h5 class="post-info-header">Products That Fight Static </h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <span class="btn-main no-hover">Read more</span>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
