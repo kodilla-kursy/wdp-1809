@@ -73,7 +73,7 @@
         &.full {
           @extend .fas;
         }
-        &.active {
+        &.active, &.permanent {
           @extend .fas;
           color: $primary;
         }
