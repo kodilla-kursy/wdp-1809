@@ -1,0 +1,114 @@
+.section--deals {
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+
+        .deals-thumbnail-big {
+            background: url('https://images.pexels.com/photos/276534/pexels-photo-276534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') 0/cover;
+            height: 415px;
+
+            .thumbnail-big-overlay {
+                background: rgba(0, 0, 0, .3);
+                position: absolute;
+                left: 15px;
+                right: 15px;
+                top: 15px;
+                bottom: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 15px;
+                color: #ffffff;
+
+                h2 {
+
+                    &:first-child {
+                        font-weight: 700;
+
+                        span {
+                            font-size: 3rem;
+                        }
+                    }
+                    
+                    &:last-child {
+                    padding: 8px 12px;
+                    border: 4px solid #ffffff;
+                    align-self: start;
+                    font-weight: 600;
+                    font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        .deals-thumbnails-small {
+            display: flex;
+            flex-direction: column;
+
+            .deals-thumbnail-top,
+            .deals-thumbnail-bottom {
+                height: 200px;
+                display: flex;
+                align-items: center;
+            }
+
+            .deals-thumbnail-top {
+                background: #ffffff url('https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd7421500ebb37b5081ae17c3b77a8f4&auto=format&fit=crop&w=2550&q=80') 0/cover;
+                margin-bottom: 7.5px;
+                justify-content: center;
+
+                .thumbnail-top-text {
+
+                    h2 {
+                        font-weight: 600;
+                        margin-bottom: 0;
+
+                        span {
+                            font-weight: 300;
+                        }
+                    }
+
+                    h5 {
+                        font-weight: 600;
+                        margin-bottom: 3px;
+                    }
+
+                    h3 {
+                        color: $primary;
+                        font-weight: 600;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .deals-thumbnail-bottom {
+                background: #ffffff url('https://purepng.com/public/uploads/large/purepng.com-bedbedpadsackdossbedstead-1701527921439pfuvk.png') -35% 40px no-repeat;
+                background-size: contain;
+                margin-top: 7.5px;
+                justify-content: flex-end;
+
+                .thumbnail-bottom-text {
+
+                    h4 {
+                        &:first-child {
+                            color: $primary;
+                            font-weight: 700;
+                            margin-bottom: 3px;
+
+                            span {
+                                font-weight: 300;
+                            }
+                        }
+
+                        &:last-child {
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
