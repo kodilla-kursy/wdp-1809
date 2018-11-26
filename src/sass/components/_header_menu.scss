@@ -84,6 +84,11 @@
     display: flex;
     align-items: stretch;
     position: relative;
+
+    &:hover {
+        background-color: $primary;
+        border-top: 4px solid #ffffff;
+    }
 }
 
 .menu_overlist_item_link {
@@ -94,7 +99,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    border-top: 4px solid #ffffff;
+
     font-weight: 500;
     letter-spacing: 1px;
 
@@ -117,12 +122,13 @@
 
 .menu_dropdown_list {
     padding: 0;
-    top: 82px;
+    top: 81px;
     display: none;
     list-style: none;
     width: 100%;
     position: absolute;
     z-index: 1;
+    transition: all .5s ease-in-out;
 
     a:hover {
         text-decoration: none;
