@@ -1,3 +1,111 @@
 .section--features {
   padding: 5rem 0;
+
+  .features {
+    height: 530px;
+    padding: 15px 0;
+    .hot-deals {
+      .top-bar {
+        background: $footer-claim-bg;
+        height: 50px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 7px 30px;
+        span {}
+      }
+      .photo {
+        background-image: url('../images/features/armchair.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        .hover {
+          opacity: 0;
+          height: 100%;
+          transition: .3s;
+          &:hover {
+            opacity: 1;
+          }
+          .btn-main {
+            transition: .2s;
+          }
+          .counter {
+            margin-top: 40px;
+            div {
+              display: inline-block;
+              width: 70px;
+              height: 70px;
+              background: rgba(42, 42, 42, 0.8);
+              border-radius: 50%;
+              margin: 2px;
+              color: white;
+              text-transform: uppercase;
+              padding-top: 15px;
+              h1 {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+              }
+              h2 {
+                font-size: 0.9rem;
+                line-height: 8px;
+              }
+              
+            }
+          }
+          .btn-main {
+            margin-top: 100px;
+            text-transform: uppercase;
+            font-weight: 400;
+            border: none;
+          }
+        }
+      }
+      .bottom-bar {}
+    }
+    .furniture {
+      max-height: 490px;
+      background: url('../images/features/sofa.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 0;
+      .content {
+        color: white;
+        text-transform: uppercase;
+        margin-top: 145px;
+        padding: 55px 0 45px 0;
+        background: rgba(42, 42, 42, 0.8);
+        position: relative;
+        h1, h2 {
+          font-weight: 400;
+        }
+        h1 span {
+            font-weight: 600;
+        }
+        .btn-main {
+          position: absolute;
+          bottom: -20px;
+          left: 40%;
+          border-radius: 3px;
+          border: 1px solid white;
+          background: white;
+          line-height: 30px;
+          color: $footer-claim-bg;
+        }
+      }
+      .buttons {
+        position: relative;
+        background: $footer-claim-bg;
+        height: 40px;
+        top: 100px;
+        .btn-main {
+          height: 40px;
+          border: none;
+          transition: .2s;
+          width: 49.7%;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
