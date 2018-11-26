@@ -1,0 +1,9 @@
+%hover-element {
+    transition: color ease-in $hover-element-transition;
+}
+
+%hover-bg {
+    transition: background-color ease-in $hover-bg-transition;
+  
+}
+

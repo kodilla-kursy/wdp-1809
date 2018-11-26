@@ -52,15 +52,18 @@
   &:active,
   &:hover {
     i {
+      @extend %hover-bg;
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
     }
     a {
+      @extend %hover-element;
       text-decoration: none;
     }
 
     .content {
+      @extend %hover-element;
       color: $primary;
     }
   }
