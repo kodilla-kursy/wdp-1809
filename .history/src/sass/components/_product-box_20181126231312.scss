@@ -7,16 +7,12 @@
     &:hover {
         .photo {
             .buttons {
-                opacity: 1;
+                visibility: visible;
             }
         }
 
         .actions {
-            .price {
-                .btn-main-small {
-                    background: $primary;
-                }
-            }
+            
         }
     }
 
@@ -76,9 +72,9 @@
 
         .buttons {
             display: flex;
+            visibility: hidden;
             justify-content: space-between;
-            opacity: 0;
-            @extend %transitionsAll;
+
         }
     }
 

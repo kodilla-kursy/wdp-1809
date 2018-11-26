@@ -7,6 +7,7 @@
     &:hover {
         .photo {
             .buttons {
+                visibility: visible;
                 opacity: 1;
             }
         }
@@ -76,9 +77,9 @@
 
         .buttons {
             display: flex;
+            visibility: hidden;
             justify-content: space-between;
-            opacity: 0;
-            @extend %transitionsAll;
+
         }
     }
 

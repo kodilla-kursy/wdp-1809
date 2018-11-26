@@ -258,7 +258,7 @@ header {
               text-align: center;
               text-overflow: ellipsis;
               position: relative;
-              @extend %transitionsAll;
+              
   
               &:hover {
                 @extend %category-hover;

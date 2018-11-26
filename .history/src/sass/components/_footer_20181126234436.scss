@@ -68,7 +68,6 @@ footer {
           a {
             color: rgb(169,169,169);
             text-decoration: none;
-            @extend %transitionsAll;
 
             &:hover {
               color: $primary;
