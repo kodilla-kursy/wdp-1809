@@ -1,3 +1,10 @@
+%category-hover {
+  cursor: pointer;
+  background: $primary;
+  color: #ffffff;
+  transition: 300ms;
+}
+
 header {
   .top-bar {
     background-color: $header-topbar-bg;
@@ -183,13 +190,6 @@ header {
         display: inline-flex;
         height: 45px;
         color: $text-color;
-
-        %category-hover {
-          cursor: pointer;
-          background: $primary;
-          color: #ffffff;
-          transition: 300ms;
-        }
   
         .category {
           border-right: 1px solid $form-border-color;
