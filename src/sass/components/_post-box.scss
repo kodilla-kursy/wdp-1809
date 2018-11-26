@@ -1,6 +1,6 @@
 .post-box {
   margin-bottom: 2rem;
-   
+  
   &-link {
     color: $text-color;
 
@@ -20,6 +20,16 @@
       }
     }
 
+  .cov1 {
+    background-image: url('../images/latest-blog/1.jpeg');
+  }
+  .cov2 {
+    background-image: url('../images/latest-blog/2.jpeg');
+  }
+  .cov3 {
+    background-image: url('../images/latest-blog/3.jpeg');
+  }
+    
     .cover {
       padding: 70% 25px 0 25px;
       background: {
