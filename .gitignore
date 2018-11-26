@@ -84,3 +84,5 @@ dist/
 #dist folder
 dist/
 
+#history
+.history/
