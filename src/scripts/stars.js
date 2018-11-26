@@ -1,44 +1,25 @@
-const section = document.querySelector(".section--products")
+const section = document.querySelector(".section--products");
 const starBoxes = document.querySelectorAll(".stars");
 
 section.addEventListener("mouseover", function(e) {
-    if (event.target.classList.contains('s1')) {
-        selectStars(0);
+    for (i=0; i<=4; i++) {
+        if (event.target.classList.contains(`s${i+1}`)) {
+            selectStars(i);
+        }
+        else if (event.target.classList.contains('stars')) {
+            deselectStars();
+        }   
     }
-    else if (event.target.classList.contains('s2')) {
-        selectStars(1);
-    }
-    else if (event.target.classList.contains('s3')) {
-        selectStars(2);
-    }
-    else if (event.target.classList.contains('s4')) {
-        selectStars(3);
-    }
-    else if (event.target.classList.contains('s5')) {
-        selectStars(4);
-    }
-    else if (event.target.classList.contains('stars')) {
-        deselectStars();
-    }   
 });
 
 section.addEventListener("click", function(e) {
-    if (event.target.classList.contains('s1')) {
-        markStars(0);
+    for (i=0; i<=4; i++) {
+        if (event.target.classList.contains(`s${i+1}`)) {
+            markStars(i);
+        }
     }
-    else if (event.target.classList.contains('s2')) {
-        markStars(1);
-    }
-    else if (event.target.classList.contains('s3')) {
-        markStars(2);
-    }
-    else if (event.target.classList.contains('s4')) {
-        markStars(3);
-    }
-    else if (event.target.classList.contains('s5')) {
-        markStars(4);
-    } 
 });
+
 
 // temporary selecting stars
 function selectStars(num) {
@@ -75,7 +56,7 @@ function markStars(num) {
     }
 }
 // unmarking stars (for changing vote)
-function unmarkStars(num) {
+function unmarkStars() {
     for (i=0; i<=4; i++) {
         event.target.parentElement.children[i].classList.remove("permanent");
     }
