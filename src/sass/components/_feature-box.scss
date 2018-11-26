@@ -1,5 +1,6 @@
 .feature-box {
   border: 1px solid #b6b6b6;
+  display: block;
   text-align: center;
   margin-top: 40px;
 
@@ -49,15 +50,19 @@
     }
   }
 
-  &.active {
+  &:hover {
+    text-decoration: none;
+
     i {
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
+      transition: 500ms;
     }
 
     .content {
       color: $primary;
+      transition: 500ms;
     }
   }
 }
