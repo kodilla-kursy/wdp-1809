@@ -2,13 +2,53 @@
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+  
+    &:hover {
+    .photo {
+      .buttons {
+        visibility: visible;
+      }
+    }
 
+    .actions {
+      .price {
+        .btn-main-small {
+          background-color: $primary;
+        }
+      } 
+    } 
+  }
+  
+  .bg1 {
+    background-image: url('../images/new-furniture/1.jpg');
+  }
+  .bg2 {
+    background-image: url('../images/new-furniture/2.jpeg');
+  }
+  .bg3 {
+    background-image: url('../images/new-furniture/3.jpg');
+  }
+  .bg4 {
+    background-image: url('../images/new-furniture/4.jpeg');
+  }
+  .bg5 {
+    background-image: url('../images/new-furniture/5.jpeg');
+  }
+  .bg6 {
+    background-image: url('../images/new-furniture/6.jpg');
+  }
+  .bg7 {
+    background-image: url('../images/new-furniture/7.jpg');
+  }
+  .bg8 {
+    background-image: url('../images/new-furniture/8.jpeg');
+  }
+  
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: #f4f5f7;
-      size: contain;
+      size: cover;
       position: center;
       repeat: no-repeat;
     }
@@ -28,6 +68,7 @@
 
     .buttons {
       display: flex;
+      visibility: hidden;
       justify-content: space-between;
     }
   }
@@ -78,5 +119,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .price {
+      display: flex;
+      align-items: center;
+
+      .price-old {
+        font-size: 13px;
+        color: $text-inactive-color;
+        padding: 5px 10px;
+        text-decoration: line-through $text-color;
+      }
+    }
   }
+
+  &:hover {
+    .photo {
+      .buttons {
+        visibility: visible;
+      }
+    }
+
+    .actions {
+      .price {
+        .btn-main-small {
+          background-color: $primary;
+        }
+      }  
+    }
+  }
+
 }

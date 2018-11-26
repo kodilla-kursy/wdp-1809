@@ -14,17 +14,17 @@
     <div class="top-bar">
       <div class="container">
         <div class="row">
-          <div class="col text-left">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-9 text-left">
             <ul>
               <li><a href="#">USD <i class="fas fa-caret-down"></i></a></li>
               <li><a href="#">English <i class="fas fa-caret-down"></i></a></li>
               <li><a href="#">Help <i class="fas fa-caret-down"></i></a></li>
             </ul>
           </div>
-          <div class="col text-right">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-3 text-right">
             <ul>
-              <li><a href="#"><i class="fas fa-user"></i> Login</a></li>
-              <li><a href="#"><i class="fas fa-lock"></i> Register</a></li>
+              <li><a href="#"><i class="fas fa-user"></i><span class="d-sm-none d-none d-md-inline-block">Login</span></a></li>
+              <li><a href="#"><i class="fas fa-lock"></i><span class="d-sm-none d-none d-md-inline-block">Register</span></a></li>
               <li><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
           </div>
@@ -34,13 +34,13 @@
     <div class="company-claim">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col text-left phone-number">
+          <div class="col text-md-left text-sm-right text-right phone-number order-md-1 order-sm-2">
             <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
           </div>
-          <div class="col text-center">
+          <div class="col text-md-center text-sm-left logo order-md-2 order-sm-1">
             <a href="#"><img src="./images/logo.png"></a>
           </div>
-          <div class="col text-right cart">
+          <div class="col text-right cart order-md-3 order-sm-2">
             <a href="#" class="cart-box">
               <div class="cart-icon">
                 <i class="fas fa-shopping-basket"></i>
@@ -56,13 +56,34 @@
     <div class="menu-bar">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col">
+          <div class="col search-wrapper">
             <form action="" class="search-form">
               <div class="category">
                 <i class="fas fa-list-ul"></i>
-                <select name="" id="">
-                  <option value="">Select a category</option>
-                </select>
+                <div class="select-cta">
+                  <p>Select a category</p>
+                </div>
+                <ul class="category-first">
+                  <li class="category-element">Option 1</li>
+                  <li class="category-element">
+                    <p>Option 2</p>
+                    <ul class="category-second">
+                      <li class="category-element">Option 2.1</li>
+                      <li class="category-element">Option 2.2</li>
+                      <li class="category-element">Option 2.3</li>
+                      <li class="category-element">Option 2.4</li>
+                    </ul>
+                  </li>
+                  <li class="category-element">Option 3</li>
+                  <li class="category-element">
+                    <p>Option 4</p>
+                    <ul class="category-second">
+                      <li class="category-element">Option 4.1</li>
+                      <li class="category-element">Option 4.2</li>
+                    </ul>
+                  </li>
+                  <li class="category-element">Option 5</li>
+                </ul>
                 <i class="fas fa-caret-down"></i>
               </div>
               <div class="search-field">
@@ -70,8 +91,11 @@
                 <button><i class="fa fa-search"></i></button>
               </div>
             </form>
+            <div class="category-list-show">
+              <i class="fas fa-angle-double-down"></i>
+            </div>
           </div>
-          <div class="col-auto menu">
+          <div id="menu-dropdown" class="col-auto menu">
             <ul>
               <li><a href="#" class="active">Home</a></li>
               <li><a href="#">Furniture</a></li>
@@ -90,7 +114,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="feature-box active">
+          <a href ="#" class="feature-box active">
             <div class="icon">
               <i class="fas fa-truck"></i>
             </div>
@@ -98,10 +122,10 @@
               <h5>Free shipping</h5>
               <p>All orders</p>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col">
-          <div class="feature-box">
+          <a href ="#" class="feature-box">
             <div class="icon">
               <i class="fas fa-headphones"></i>
             </div>
@@ -109,10 +133,10 @@
               <h5>24/7 customer</h5>
               <p>support</p>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col">
-          <div class="feature-box">
+          <a href ="#" class="feature-box">
             <div class="icon">
               <i class="fas fa-reply-all"></i>
             </div>
@@ -120,10 +144,10 @@
               <h5>Money back</h5>
               <p>guarantee</p>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col">
-          <div class="feature-box">
+          <a href ="#" class="feature-box">
             <div class="icon">
               <i class="fas fa-bullhorn"></i>
             </div>
@@ -131,7 +155,7 @@
               <h5>Member discount</h5>
               <p>First order</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -184,7 +208,7 @@
                 <div class="row">
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg1">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -215,7 +239,7 @@
                   </div>
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg2">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -239,6 +263,7 @@
                           <a href="#" class="btn-outline active"><i class="fas fa-exchange-alt"></i></a>
                         </div>
                         <div class="price">
+                          <div class="price-old">$ 35.00</div>
                           <div class="btn-main-small no-hover">$ 30.00</div>
                         </div>
                       </div>
@@ -246,7 +271,7 @@
                   </div>
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg3">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -270,6 +295,7 @@
                           <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
                         </div>
                         <div class="price">
+                          <div class="price-old">$ 50.00</div>
                           <div class="btn-main-small no-hover">$ 30.00</div>
                         </div>
                       </div>
@@ -277,7 +303,7 @@
                   </div>
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg4">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -312,7 +338,7 @@
                 <div class="row">
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg5">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -336,6 +362,7 @@
                           <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
                         </div>
                         <div class="price">
+                          <div class="price-old">$ 50.00</div>
                           <div class="btn-main-small no-hover">$ 30.00</div>
                         </div>
                       </div>
@@ -343,7 +370,7 @@
                   </div>
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg6">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -374,7 +401,7 @@
                   </div>
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg7">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -405,7 +432,7 @@
                   </div>
                   <div class="col-3">
                     <div class="product-box">
-                      <div class="photo">
+                      <div class="photo bg8">
                         <div class="sale">sale</div>
                         <div class="buttons">
                           <a href="#" class="btn-main-small">Quick View</a>
@@ -429,6 +456,7 @@
                           <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
                         </div>
                         <div class="price">
+                          <div class="price-old">$ 40.00</div>
                           <div class="btn-main-small no-hover">$ 30.00</div>
                         </div>
                       </div>
@@ -2169,70 +2197,76 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
-                </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+            <a href="#" class="post-box-link">
+              <div class="cover cov1">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
+              <div class="post-info">
+                <h5 class="post-info-header">Products That Fight Static</h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <span class="btn-main no-hover">Read more</span>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
-                </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+            <a href="#" class="post-box-link">
+              <div class="cover cov2">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
+              <div class="post-info">
+                <h5 class="post-info-header">Products That Fight Static </h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <span class="btn-main no-hover">Read more</span>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
-                </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+            <a href="#" class="post-box-link">
+              <div class="cover cov3">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
+              <div class="post-info">
+                <h5 class="post-info-header">Products That Fight Static </h5>
+                <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="more">
+                  <span class="btn-main no-hover">Read more</span>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -2241,8 +2275,8 @@
   <footer>
     <div class="footer-menu">
       <div class="container">
-        <div class="row">
-          <div class="col">
+        <div class="row text-center text-sm-left">
+          <div class="col col-12 col-sm-6 col-md-3">
             <div class="menu-wrapper">
               <h6>Information</h6>
               <ul>
@@ -2253,7 +2287,7 @@
               </ul>
             </div>
           </div>
-          <div class="col">
+          <div class="col col-12 col-sm-6 col-md-3">
             <div class="menu-wrapper">
               <h6>My account</h6>
               <ul>
@@ -2264,7 +2298,7 @@
               </ul>
             </div>
           </div>
-          <div class="col">
+          <div class="col col-12 col-sm-6 col-md-3">
             <div class="menu-wrapper">
               <h6>Information</h6>
               <ul>
@@ -2275,7 +2309,7 @@
               </ul>
             </div>
           </div>
-          <div class="col">
+          <div class="col col-12 col-sm-6 col-md-3">
             <div class="menu-wrapper">
               <h6>Orders</h6>
               <ul>
@@ -2285,19 +2319,21 @@
                 <li><a href="#">Shipping</a></li>
               </ul>
             </div>
-            <img src="./images/cards.png">
           </div>
+        </div>
+        <div class="row justify-content-center justify-content-sm-end">
+          <img src="./images/cards.png"/>
         </div>
       </div>
     </div>
     <div class="bottom-bar">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col"></div>
-          <div class="col copyright text-center">
+          <div class="col col-12 col-md-12 col-lg-4"></div>
+          <div class="col col-12 col-md-6 col-lg-4 copyright text-center text-md-left text-lg-center">
             <p>©Copyright 2016 Bazar | All Rights Reserved</p>
           </div>
-          <div class="col socialmedia text-right">
+          <div class="col col-12 col-md-6 col-lg-4 socialmedia text-center text-md-right">
             <ul>
               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
