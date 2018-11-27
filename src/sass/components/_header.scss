@@ -126,10 +126,17 @@ header {
   line-height: 55px;
 }
 
+@media (max-width: 846px) {
+  .phone_number_text {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+}
+
 @media screen and (max-width: 641px) {
 
   .header_icon_fullscreen,
-  .phone-number {
+  .phone_number {
     display: none;
   }
 
@@ -172,6 +179,7 @@ header {
     font-size: 13px;
     line-height: 20px;
     margin-right: 10px;
+    white-space: normal;
   }
 
   .phone_number_icon {
@@ -190,10 +198,11 @@ header {
 
     img {
       width: 100%;
-    max-width: 165px; 
+      max-width: 165px;
     }
   }
-  header .top-bar .text-right ul li{
+
+  header .top-bar .text-right ul li {
     margin-left: 1rem;
   }
 }
