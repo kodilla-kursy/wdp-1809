@@ -65,6 +65,11 @@ header {
       }
     }
 
+    .mobile-visible {
+      display: none;
+    }
+
+
     .cart {
 
       .cart-box {
@@ -223,3 +228,59 @@ header {
     }
   }
 }
+
+@media (max-width: 767px) {
+  header .top-bar {
+    .col.text-left {
+    min-width: 70%; 
+    padding-right: 5px;
+    }
+    .col.text-right {
+      padding-left: 5px;
+    }
+    .text-left ul li {
+      margin-right: 0.2rem;
+    }
+    .text-right ul li {
+      margin-left: 0.2rem;
+    }
+  }
+    .top-bar-text {
+    display: none;
+  }
+  
+  header .company-claim {
+    .col.text-right {
+      padding-left: 5px;
+    }
+    .col.text-center {
+      padding-right: 5px;
+    }
+    .cart {
+      position: relative;
+      top: 10px;
+    }
+    .phone-number {
+      p {
+        font-size: 3.5vw;
+        float: right;
+        i {
+          font-size: 20px;
+          margin-top: -3px;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+    .mobile-invisible {
+      display: none;
+    }
+    .mobile-visible {
+      display: block;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+ 
+}
+
+
