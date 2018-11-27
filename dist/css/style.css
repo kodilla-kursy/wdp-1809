@@ -10545,11 +10545,14 @@ footer .bottom-bar {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .product-box .actions .price div {
-      display: inline; }
-    .product-box .actions .price .oldprice {
-      font-size: 12px;
-      text-decoration: line-through; }
+    .product-box .actions .price {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      .product-box .actions .price__oldprice {
+        padding: 0 10px;
+        font-size: 13px;
+        text-decoration: line-through; }
 
 .section--features {
   padding: 5rem 0; }

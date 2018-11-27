@@ -80,12 +80,13 @@
     align-items: center;
 
     .price {
-      div {
-        display: inline;
-      }
-      
-      .oldprice {
-        font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &__oldprice {
+        padding: 0 10px;
+        font-size: 13px;
         text-decoration: line-through;
       }
     }
