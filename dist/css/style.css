@@ -10497,9 +10497,9 @@ a .post-box * {
       padding-top: 30px; }
       .post-box .post-info .more a {
         color: white; }
-  .post-box:hover h5 {
+  .post-box:hover .post-info__header {
     color: #d58e32; }
-  .post-box:hover .btn-main, .post-box:hover .btn-main-small {
+  .post-box:hover .post-info__btn-more {
     background-color: #d58e32; }
 
 .section--blog-posts a:hover {

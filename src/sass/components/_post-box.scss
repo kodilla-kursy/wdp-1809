@@ -58,12 +58,15 @@
   }
   
   &:hover {
-    h5 {
-      color: $primary;
-    }
+    .post-info
+    {
+      &__header {
+        color: $primary;
+      }
 
-    .btn-main {
-      background-color: #d58e32;
+      &__btn-more {
+        background-color: $primary;
+      }
     }
   }
 }
