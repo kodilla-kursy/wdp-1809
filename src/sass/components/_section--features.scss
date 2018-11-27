@@ -13,7 +13,26 @@
         font-size: 24px;
         font-weight: 500;
         padding: 7px 30px;
-        span {}
+        position: relative;
+        .dots {
+          position: absolute;
+          top: 8px;
+          right: 30px;
+          li {
+            width: 15px;
+            height: 15px;
+            background: $text-inactive-color;
+            display: inline-block;
+            margin: 2px;
+            border-radius: 50%;
+            &:hover {
+              background: $primary;
+            }
+          }
+          .active {
+            background: $primary;
+          }
+        }
       }
       .photo {
         background-image: url('../images/features/armchair.jpg');
@@ -146,6 +165,10 @@
           background: white;
           line-height: 30px;
           color: $footer-claim-bg;
+          transition: .2s;
+          &:hover {
+            background: $footer-claim-bg;
+          }
         }
       }
       .buttons {
