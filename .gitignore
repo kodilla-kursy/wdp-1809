@@ -83,3 +83,6 @@ typings/
 
 #dist folder
 dist/
+
+#history
+.history/
