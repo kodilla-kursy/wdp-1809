@@ -87,7 +87,6 @@
 
     &:hover {
         background-color: $primary;
-        border-top: 4px solid #ffffff;
     }
 }
 
@@ -122,7 +121,7 @@
 
 .menu_dropdown_list {
     padding: 0;
-    top: 81px;
+    top: 83px;
     display: none;
     list-style: none;
     width: 100%;
@@ -159,6 +158,5 @@
 
 .menu_dropdown_list_item_link:hover {
     background-color: white;
-    border-radius: 50% 0 50% 0;
-    border-left: 1px solid $primary;
+    border: 1px solid $primary;
 }
