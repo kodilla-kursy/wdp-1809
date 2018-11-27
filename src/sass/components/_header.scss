@@ -120,18 +120,20 @@ header {
       height: 84px;
     }
     
-    .menu-category {
+    .select-category {
       border-right: 1px solid $form-border-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       
-      
-      ul {
+      &__list, .menu-categories {
         line-height: 43px;
         list-style-type: none;
         margin: 0;
         padding: 0;
       }
       
-      &--header {
+      &__item {
         display: inline-block;
         height: 43px;
         width: 198px;
@@ -142,9 +144,10 @@ header {
           color: #ffffff;
           cursor: pointer;
           
-          .menu-category--menu {
+          .menu-categories {
             display: block;
             position: absolute;
+            margin-left: -1px;
             color: $primary;
             background: #ffffff;
             z-index: 100;
@@ -152,17 +155,16 @@ header {
         }
       }
       
-      &--text {
+      &__text {
         font-size: 14px;
         padding: 0 10px;
       }
+    }
+
+    .menu-categories {
+      display: none;
       
-      .menu-category--menu {
-        display: none;
-        margin-left: -1px;
-      }
-      
-      &--item a {
+      &__item-link {
         border: solid 1px $form-border-color;
         border-top: none;
         font-size: 14px;
@@ -170,7 +172,7 @@ header {
         height: 44px;
         width: 200px;
         line-height: 44px;
-        padding-left: 16px;
+        padding-left: 30px;
         text-align: left;
         color: $text-color;
         text-decoration: none;

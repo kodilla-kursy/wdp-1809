@@ -10205,35 +10205,38 @@ header .menu-bar {
   background-color: #ffffff; }
   header .menu-bar .container > .row {
     height: 84px; }
-  header .menu-bar .menu-category {
-    border-right: 1px solid #292929; }
-    header .menu-bar .menu-category ul {
+  header .menu-bar .select-category {
+    border-right: 1px solid #292929;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header .menu-bar .select-category__list, header .menu-bar .select-category .menu-categories {
       line-height: 43px;
       list-style-type: none;
       margin: 0;
       padding: 0; }
-    header .menu-bar .menu-category--header {
+    header .menu-bar .select-category__item {
       display: inline-block;
       height: 43px;
       width: 198px;
       text-align: center; }
-      header .menu-bar .menu-category--header:hover {
+      header .menu-bar .select-category__item:hover {
         background: #d58e32;
         color: #ffffff;
         cursor: pointer; }
-        header .menu-bar .menu-category--header:hover .menu-category--menu {
+        header .menu-bar .select-category__item:hover .menu-categories {
           display: block;
           position: absolute;
+          margin-left: -1px;
           color: #d58e32;
           background: #ffffff;
           z-index: 100; }
-    header .menu-bar .menu-category--text {
+    header .menu-bar .select-category__text {
       font-size: 14px;
       padding: 0 10px; }
-    header .menu-bar .menu-category .menu-category--menu {
-      display: none;
-      margin-left: -1px; }
-    header .menu-bar .menu-category--item a {
+  header .menu-bar .menu-categories {
+    display: none; }
+    header .menu-bar .menu-categories__item-link {
       border: solid 1px #292929;
       border-top: none;
       font-size: 14px;
@@ -10241,11 +10244,11 @@ header .menu-bar {
       height: 44px;
       width: 200px;
       line-height: 44px;
-      padding-left: 16px;
+      padding-left: 30px;
       text-align: left;
       color: #2a2a2a;
       text-decoration: none; }
-      header .menu-bar .menu-category--item a:hover {
+      header .menu-bar .menu-categories__item-link:hover {
         background-color: #d58e32;
         color: #ffffff; }
   header .menu-bar .menu {
