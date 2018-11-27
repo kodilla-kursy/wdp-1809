@@ -61,7 +61,55 @@
           }
         }
       }
-      .bottom-bar {}
+      .bottom-bar {
+        .price {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          right: 15px;
+          bottom: 0;
+          .price-old {
+            font-size: 13px;
+            color: $text-inactive-color;
+            padding: 5px 10px;
+            text-decoration: line-through $text-color;
+          }
+        }
+        p {
+          font-weight: 700;
+          font-size: 1.2em;
+          margin: 10px 0;
+          text-align: center;
+        }
+        .slider {
+          width: 100%;
+          height: 1px;
+          background: black;
+          margin: 15px 0;
+          position: relative;
+          .slide1 {
+            width: 20%;
+            height: 5px;
+            background: $primary;
+            position: absolute;
+            top: 0;
+            left: 40%;
+          }
+        }
+        .stars {
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: rgb(42,42,42);
+            @extend .far;
+            @extend .fa-star;
+    
+            &.full {
+              @extend .fas;
+            }
+          }
+        }
+      }
     }
     .furniture {
       max-height: 490px;
@@ -69,6 +117,13 @@
       background-size: cover;
       background-position: center;
       padding: 0;
+      &:hover {
+        .price {
+          .btn-main-small {
+            background-color: $primary;
+          }
+        }  
+      }
       .content {
         color: white;
         text-transform: uppercase;
