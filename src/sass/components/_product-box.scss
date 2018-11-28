@@ -91,4 +91,12 @@
       }
     }
   }
+
+  &:hover .btn-main-small{
+    opacity: 1;
+  }
+
+  &:hover .no-hover {
+    background-color: $primary; 
+  }
 }

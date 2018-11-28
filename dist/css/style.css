@@ -10339,7 +10339,13 @@ footer .bottom-bar {
   font-size: 13px;
   line-height: 24px;
   padding: 5px 10px;
-  font-weight: 400; }
+  font-weight: 400;
+  opacity: 0;
+  transition: .7s ease; }
+
+.price {
+  opacity: 1;
+  transition: .7s ease; }
 
 .btn-outline {
   display: inline-block;
@@ -10553,6 +10559,10 @@ footer .bottom-bar {
         padding: 0 10px;
         font-size: 13px;
         text-decoration: line-through; }
+  .product-box:hover .btn-main-small {
+    opacity: 1; }
+  .product-box:hover .no-hover {
+    background-color: #d58e32; }
 
 .section--features {
   padding: 5rem 0; }
