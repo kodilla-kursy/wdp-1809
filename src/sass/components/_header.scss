@@ -181,7 +181,7 @@ header {
     
     .search-wrapper {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
 
       .category-list-show {
@@ -346,6 +346,7 @@ header {
       }
   
       .search-wrapper {
+        justify-content: center;
         padding: 20px 0;
       }
     }
