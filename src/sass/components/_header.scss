@@ -83,12 +83,12 @@ header {
           font-size: 20px;
 
           i {
-            margin-right: 5px;
-          }
+            margin-right: 10px;
+            }
         }
 
         .cart-counter {
-          max-width: 60px;
+          width: auto;
           height: 27px;
           padding: 0 9px;          
           border-radius: 40px;
@@ -101,9 +101,9 @@ header {
           position: absolute;
           top: 50%;
           right: 0;
-          transform: translate(50%, -50%);
+          transform: translate(70%, -50%);
         }
-
+        
         &:hover {
           .cart-icon {
             background-color: lighten($primary, 10%);
