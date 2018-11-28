@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+header .top-bar ul li a:hover, header .company-claim .cart .cart-box:hover .cart-icon, header .menu-bar .menu ul li a:hover, header .menu-bar .menu ul li a.active, footer .footer-menu .menu-wrapper ul li a:hover, footer .bottom-bar .socialmedia ul li a:hover, .btn-outline:hover, .feature-box:active a, .feature-box:hover a, .feature-box:active .content, .feature-box:hover .content, .panel-bar .menu ul li a.active, .panel-bar .menu ul li a:hover {
+  transition: color ease 0.25s; }
+
+header .menu-bar .menu ul li a:hover, header .menu-bar .menu ul li a.active, .btn-main:not(.no-hover):hover, .btn-main-small:not(.no-hover):hover, .btn-outline:hover, .feature-box:active i, .feature-box:hover i, .panel-bar .dots ul li a.active, .panel-bar .dots ul li a:hover {
+  transition: background-color ease 0.25s; }
+
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -10390,11 +10396,11 @@ footer .bottom-bar {
       margin: 0; }
     .feature-box .content p {
       font-weight: 300; }
-  .feature-box:active .icon i, .feature-box:hover .icon i {
+  .feature-box:active i, .feature-box:hover i {
     background-color: #d58e32;
     color: #ffffff;
     border-color: #d58e32; }
-  .feature-box:active .feature-link, .feature-box:hover .feature-link {
+  .feature-box:active a, .feature-box:hover a {
     text-decoration: none; }
   .feature-box:active .content, .feature-box:hover .content {
     color: #d58e32; }
