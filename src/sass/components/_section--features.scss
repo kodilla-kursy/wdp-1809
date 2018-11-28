@@ -2,14 +2,29 @@
   padding: 5rem 0;
     a {
     text-decoration:none;
+    
     i {
-      background-color: $primary;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: $text-color;
       border-color: $primary;
     }
 
     .content {
-      color: $primary;
+      color: $text-color;
+    }
+    &:hover, &:focus {
+          .content {
+      		color: $secondary;
+    	}
+          i {
+      		background-color: $primary;
+        }
+        .icon
+         {
+         	&:before {
+        	border: 1px solid $primary;
+        }
     }
   }
+}
 }
