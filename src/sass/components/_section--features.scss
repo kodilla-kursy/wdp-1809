@@ -1,3 +1,15 @@
 .section--features {
   padding: 5rem 0;
+    a {
+    text-decoration:none;
+    i {
+      background-color: $primary;
+      color: #ffffff;
+      border-color: $primary;
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
 }
