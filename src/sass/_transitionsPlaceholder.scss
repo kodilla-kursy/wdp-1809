@@ -1,0 +1,24 @@
+@mixin transitionsAll($trDuration) {
+    transition: all $trDuration linear; 
+}
+
+@mixin transitionsBg($trDuration) {
+    transition: background-color $trDuration linear; 
+}
+
+@mixin transitionsColor($trDuration) {
+    transition: color $trDuration linear; 
+}
+
+
+%transitionsAll {
+    @include transitionsAll($transitionDuration);
+}
+
+%transitionsBg {
+    @include transitionsBg($transitionDuration-bg);
+}
+
+%transitionsColor {
+    @include transitionsColor($transitionDuration-color);
+}

@@ -19,3 +19,7 @@ $ cd wdp-1811-03
 $ npm install
 ```
 
+# Preview
+
+You can see a preview of the project here - [https://romantic-volhard-ce5aef.netlify.com/#](https://romantic-volhard-ce5aef.netlify.com/#)
+

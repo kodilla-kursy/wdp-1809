@@ -3,6 +3,7 @@
   
   &-link {
     color: $text-color;
+    @extend %transitionsAll;
 
     &:hover {
       text-decoration: none;
@@ -66,6 +67,7 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 1px;
+        @extend %transitionsAll;
       }
   
       p {
