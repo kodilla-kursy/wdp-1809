@@ -10168,7 +10168,7 @@ header .company-claim {
       vertical-align: middle;
       margin-top: -3px;
       margin-right: 0.8rem; }
-  header .company-claim .mobile-visible {
+  header .company-claim .lowresolution-show {
     display: none; }
   header .company-claim .cart .cart-box {
     display: inline-block;
@@ -10305,9 +10305,9 @@ header .menu-bar {
       font-size: 20px;
       margin-top: -3px;
       margin-right: 0.2rem; }
-  header .company-claim .mobile-invisible {
+  header .company-claim .lowresolution-hide {
     display: none; }
-  header .company-claim .mobile-visible {
+  header .company-claim .lowresolution-show {
     display: block;
     padding-right: 0;
     padding-left: 0; } }

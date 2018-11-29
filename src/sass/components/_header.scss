@@ -65,7 +65,7 @@ header {
       }
     }
 
-    .mobile-visible {
+    .lowresolution-show {
       display: none;
     }
 
@@ -271,10 +271,10 @@ header {
         }
       }
     }
-    .mobile-invisible {
+    .lowresolution-hide {
       display: none;
     }
-    .mobile-visible {
+    .lowresolution-show {
       display: block;
       padding-right: 0;
       padding-left: 0;
