@@ -61,11 +61,14 @@
               color: white;
               text-transform: uppercase;
               padding-top: 15px;
-              h1 {
+              p {
+                margin-bottom: 5px;
+              }
+              .number {
                 font-size: 1.5rem;
                 line-height: 1.5rem;
               }
-              h2 {
+              .text {
                 font-size: 0.9rem;
                 line-height: 8px;
               }
