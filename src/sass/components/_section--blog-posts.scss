@@ -1,7 +1,9 @@
-.post-box {
-  margin-bottom: 2rem;
-  a {
+.section--blog-posts {
+a {
     text-decoration: none;
+    .post-box {
+  margin-bottom: 2rem;
+  
   
   .cover {
     padding: 0;
@@ -53,5 +55,6 @@
       padding-top: 30px;
     }
   }
+}
 }
 }
