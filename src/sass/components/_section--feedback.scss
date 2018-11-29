@@ -1,0 +1,55 @@
+.section--feedback {
+
+    .feedback-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+
+        .quote-mark {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .feedback-text {
+            text-align: center;
+            width: 90%;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .feedback-client {
+            display: flex;
+            align-items: center;
+
+            .feedback-client-photo {
+                height: 50px;
+                width: 50px;
+
+                .feedback-client-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .feedback-client-info {
+                margin-left: 15px;
+
+                .client-name,
+                .client-origin {
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .client-name {
+                    font-weight: 600;
+                }
+
+                .client-origin {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
