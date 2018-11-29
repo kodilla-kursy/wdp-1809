@@ -2,8 +2,19 @@
 a {
     text-decoration: none;
     .post-box {
-  margin-bottom: 2rem;
-  
+      margin-bottom: 2rem;
+      &:hover {
+        .btn-main {
+          color: #ffffff !important;
+          background-color: $primary;
+          text-decoration: none;
+        }
+        .post-info {
+          h5 {
+          color: $primary;
+          }
+        }  
+      }
   
   .cover {
     padding: 0;
@@ -25,10 +36,12 @@ a {
 
       .date {
         text-align: left;
+        color: #212529;
       }
 
       .comments {
         text-align: right;
+        color: #212529;
       }
     }
   }
