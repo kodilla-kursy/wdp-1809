@@ -6,10 +6,7 @@
         height: 84px;
     }
 
-    .menu {
-        display: flex;
-        align-self: stretch;
-    }
+    // .menu {}
 
     .search-form {
         border: 1px solid $form-border-color;
@@ -70,23 +67,34 @@
                 outline: none;
             }
         }
+
     }
+}
+
+.menu_bar_box_menu {
+    display: flex;
+    align-self: stretch;
 }
 
 .menu_overlist {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: inline-flex;
 }
 
 .menu_overlist_item {
-    list-style: none;
-    display: flex;
-    align-items: stretch;
+    display: inline-flex;
     position: relative;
+    min-width: 62px;
+    justify-content: center;
 
-    &:hover {
+    &:hover,
+    &.active {
         background-color: $primary;
+    }
+
+    &.active {
+        border-color: $text-color;
     }
 }
 
@@ -95,27 +103,14 @@
     text-transform: uppercase;
     font-size: 12px;
     padding: 1rem;
-    text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-
     font-weight: 500;
     letter-spacing: 1px;
-
-    a:hover {
-        text-decoration: none;
-        color: #fff;
-    }
 
     &:hover,
     &.active {
         background-color: $primary;
-        color: #ffffff;
-        border-color: $primary;
-    }
-
-    &.active {
-        border-color: $text-color;
     }
 }
 
@@ -123,11 +118,9 @@
     padding: 0;
     top: 83px;
     display: none;
-    list-style: none;
     width: 100%;
     position: absolute;
     z-index: 1;
-    transition: all .5s ease-in-out;
 
     a:hover {
         text-decoration: none;
@@ -136,10 +129,10 @@
 }
 
 .menu_dropdown_list_item {
-    list-style: none;
-    text-align: center;
     background-color: $primary;
     border-top: 1px solid white;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .menu_dropdown_list_item_link {
@@ -147,24 +140,33 @@
     text-transform: uppercase;
     font-size: 12px;
     padding: 0.5rem;
-    display: flex;
     font-weight: 500;
     letter-spacing: 1px;
+    text-align: center;
 }
 
-.menu_overlist_item:hover .menu_dropdown_list {
-    display: block;
+.menu_overlist_item:hover {
+    .menu_overlist_item_link {
+        color: #ffffff;
+    }
+
+    .menu_dropdown_list {
+        display: inline-flex;
+        flex-direction: column;
+    }
 }
 
-.menu_dropdown_list_item_link:hover {
+.menu_dropdown_list_item:hover {
     background-color: white;
     border: 1px solid $primary;
 }
 
+.menu_bar_box_hamburger {
+    display: none;
+}
 
 @media (max-width: 1200px) {
     .menu_bar_box {
-        display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
@@ -180,32 +182,91 @@
     .menu_overlist_item_link {
         padding: 0.5rem;
     }
+
+    .menu_overlist_item_link,
+    .menu_dropdown_list_item_link {
+        letter-spacing: 0.5px
+    }
 }
 
-@media (max-width: 1025px) {
+@media (min-width: 651px) and (max-width: 1025px) {
+
     .menu_bar_box {
         flex-direction: column-reverse;
+    }
+
+    .menu_bar_box_menu {
         justify-content: center;
-        align-items: center;
-        align-content: center;
-        //    height: 140px;
     }
 
     .menu-bar {
         height: 140px;
-
     }
 
+    .menu_overlist,
     .menu_bar_container,
     .menu-bar .container>.row {
         height: 100%;
     }
 
     .menu_bar_box_search {
-        height: 50%;
+        height: 40%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .menu_bar_box_menu {
-        height: 50%;
+        height: 60%;
+        max-width: 100%;
     }
+
+    .menu_dropdown_list_item_link,
+    .menu_overlist_item_link {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .menu_bar_box_menu {
+        display: none;
+    }
+
+    .menu_bar_box_hamburger {
+        display: flex;
+        padding: 1.5rem 2rem;
+    }
+
+    .menu_bar_box_hamburger_icon {
+        color: $primary;
+    }
+
+    .menu_bar_box_search {
+        max-width: 80vw;
+    }
+
+    .menu-bar .search-form {
+        flex-direction: column;
+        height: 80px;
+        justify-content: space-between;
+
+        .category {
+            border-right: 0;
+            border-bottom: 1px solid $text-color;
+            height: 50%;
+        }
+
+        .search-field {
+            height: 50%;
+        }
+    }
+    .menu_bar_box_hamburger:hover,
+    .menu_bar_box_hamburger:active{
+        background-color: $primary;
+        .menu_bar_box_hamburger_icon {
+            color: #fff;
+        }
+    }
+
 }
