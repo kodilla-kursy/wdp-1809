@@ -53,8 +53,8 @@
     </div>
     <div class="menu-bar">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col">
+        <div class="d-flex flex-row flex-md-column-reverse flex-lg-row align-items-center">
+          <div class="col-10 col-md-12 col-lg-6 d-flex flex-column-reverse flex-md-row">
             <form action="" class="search-form">
               <div class="category">
                 <i class="fas fa-list-ul"></i>
@@ -69,7 +69,20 @@
               </div>
             </form>
           </div>
-          <div class="col-auto menu">
+          <div class="menu-mobile col-auto d-flex d-md-none">
+            <button class="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#" class="active">Home</a>
+              <a class="dropdown-item" href="#">Furniture</a>
+              <a class="dropdown-item" href="#">Chair</a>
+              <a class="dropdown-item" href="#">Table</a>
+              <a class="dropdown-item" href="#">Sofa</a>
+              <a class="dropdown-item" href="#">Bedroom</a>
+              <a class="dropdown-item" href="#">Blog</a>
+            </div>
+          </div>    
+
+          <div class="menu col-auto col-md-12 col-lg-6 d-none d-md-block">
             <ul>
               <li><a href="#" class="active">Home</a></li>
               <li><a href="#">Furniture</a></li>

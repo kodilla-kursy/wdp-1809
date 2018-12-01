@@ -161,6 +161,26 @@ header {
       }
     }
 
+    .menu-mobile {
+      align-self: stretch;
+      padding: 0;
+      min-width: 45px;
+      &:hover,
+      &.active {
+        background-color: $primary;
+        border-color: $primary;
+        button {
+          color: #ffffff;
+        }
+      }
+      button {
+        margin: auto;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+      }
+    }
+
     .search-form {
       border: 1px solid $form-border-color;
       display: inline-flex;
@@ -202,12 +222,18 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
 
         input {
           border: 0;
           padding-left: 10px;
           font-size: 14px;
           outline: none;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
 
           &::placeholder {
             color: $text-color;

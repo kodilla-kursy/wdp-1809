@@ -10233,6 +10233,20 @@ header .menu-bar {
             border-color: #d58e32; }
           header .menu-bar .menu ul li a.active {
             border-color: #2a2a2a; }
+  header .menu-bar .menu-mobile {
+    align-self: stretch;
+    padding: 0;
+    min-width: 45px; }
+    header .menu-bar .menu-mobile:hover, header .menu-bar .menu-mobile.active {
+      background-color: #d58e32;
+      border-color: #d58e32; }
+      header .menu-bar .menu-mobile:hover button, header .menu-bar .menu-mobile.active button {
+        color: #ffffff; }
+    header .menu-bar .menu-mobile button {
+      margin: auto;
+      border: 0;
+      background-color: transparent;
+      outline: none; }
   header .menu-bar .search-form {
     border: 1px solid #292929;
     display: inline-flex;
@@ -10264,12 +10278,18 @@ header .menu-bar {
     header .menu-bar .search-form .search-field {
       display: flex;
       align-items: center;
-      position: relative; }
+      position: relative;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
       header .menu-bar .search-form .search-field input {
         border: 0;
         padding-left: 10px;
         font-size: 14px;
-        outline: none; }
+        outline: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
         header .menu-bar .search-form .search-field input::placeholder {
           color: #2a2a2a; }
       header .menu-bar .search-form .search-field button {
