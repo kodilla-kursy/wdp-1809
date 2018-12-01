@@ -1,5 +1,3 @@
-use strict;
-
 // PRODUCT SECTION RATING STAR MECHANISM -- WDP181103-19
 
 const productsSection = document.querySelector(".section--products");
@@ -21,6 +19,7 @@ productsSection.addEventListener("click", function(e) {
     if (event.target.classList.contains('star')) {
         let arr = Object.values(event.target.parentElement.children);
         let index = arr.indexOf(event.target);
+        event.preventDefault();
         deactivateStars();
         unsetStarsClass(4, "parentElement", "permanent");
         setStarsClass(index,"parentElement","permanent");
