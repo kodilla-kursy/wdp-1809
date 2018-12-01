@@ -14,7 +14,6 @@
 //TINY-SLIDER - NEW FURNITURE
 
 (function(){
-
     var productsSlider = tns({
         container: '.products-slider',
         items: 1,
