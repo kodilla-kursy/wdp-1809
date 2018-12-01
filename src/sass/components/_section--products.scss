@@ -1,0 +1,43 @@
+.section--products {
+    .container {
+        .panel-bar {
+            .dots {
+                min-width: 86.91px;
+            }
+        }
+
+        .tab-content {
+            .tab-pane {
+                .carousel {
+                    &-indicators{
+                        margin: 0;
+                        padding: 0 0 0 1rem;
+                        width: fit-content;
+                        height: fit-content;
+                        position: absolute;
+                        top: -54px;
+                        right: 0px;
+                        left: inherit;
+                        list-style: none;
+                        background-color: #ffffff;
+                        transform: translateY(15px);
+
+                        &-li {
+                            display: inline-block;
+                            margin-left: 0.5rem;
+                            width: 13px;
+                            height: 13px;
+                            border-radius: 6px;
+                            background-color: #e1e1e1;
+                            
+                            &.active,
+                            &:hover {
+                                background-color: $primary;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}

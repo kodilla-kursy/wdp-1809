@@ -1,3 +1,5 @@
+use strict;
+
 // PRODUCT SECTION RATING STAR MECHANISM -- WDP181103-19
 
 const productsSection = document.querySelector(".section--products");
@@ -69,3 +71,15 @@ function unsetStarsClass(limit, elem, className) {
         }
     }
 }
+
+
+// MENU-BAR small screen dropdown
+(function(){ 
+    var showBtn = document.querySelector('.category-list-show');
+    var dropdownList = document.getElementById('menu-dropdown');
+
+    showBtn.addEventListener('click', function() {
+        dropdownList.classList.toggle('drop');
+        showBtn.classList.toggle('active');
+    });
+})();  
