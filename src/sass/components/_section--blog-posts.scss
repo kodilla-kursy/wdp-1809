@@ -1,13 +1,29 @@
 .section--blog-posts {
-a {
+  @media (max-width: 800px) {
+        .mobile-container {
+          display: block;
+          text-align: center;
+        }
+        .row {
+          display: block;
+          text-align: center;
+        }
+        a {
+        .post-box {
+          display: block;
+          text-align: center;
+        }
+      }
+    }   
+  a {
     text-decoration: none;
-    .post-box {
+   .post-box {
       margin-bottom: 2rem;
       &:hover {
-        .btn-main {
-          color: #ffffff !important;
-          background-color: $primary;
-          text-decoration: none;
+       .btn-main {
+         color: #ffffff !important;
+         background-color: $primary;
+         text-decoration: none;
         }
         .post-info {
           h5 {
