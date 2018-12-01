@@ -61,19 +61,16 @@
               color: white;
               text-transform: uppercase;
               padding-top: 15px;
-              p {
-                margin-bottom: 5px;
-              }
-              .number {
-                font-size: 1.5rem;
-                line-height: 1.5rem;
-              }
-              .text {
-                font-size: 0.9rem;
-                line-height: 8px;
+              font-size: 1.5rem;
+              line-height: 1.5rem;
+                span {
+                  margin-top: 5px;
+                  display: block;
+                  font-size: 0.9rem;
+                  line-height: 8px;
+                }
               }
             }
-          }
           .btn-main {
             margin-top: 100px;
             text-transform: uppercase;
