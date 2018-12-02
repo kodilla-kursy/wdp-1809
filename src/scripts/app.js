@@ -30,16 +30,16 @@
         navContainer: '.products-carousel-indicators',
         responsive: {
             768: {
-            items: 2,
-            slideBy: 2,
+                items: 2,
+                slideBy: 2,
             },
             992: {
-            items: 3,
-            slideBy: 3,
+                items: 3,
+                slideBy: 3,
             },
             1200: {
-            items: 4,
-            slideBy: 4,
+                items: 4,
+                slideBy: 4,
             }
           }
     });
