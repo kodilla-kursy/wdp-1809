@@ -19,6 +19,13 @@
   line-height: 24px;
   padding: 5px 10px;
   font-weight: 400;
+  opacity: 0;
+  transition: .7s ease;
+}
+
+.price {
+  opacity: 1;
+  transition: .7s ease;
 }
 
 .btn-outline {
