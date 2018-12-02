@@ -8,7 +8,7 @@ productsSection.addEventListener("mouseover", function(e) {
         let arr = Object.values(event.relatedTarget.children);
         let index = arr.indexOf(event.target);
         deactivateStars();
-        setStarsClass(index, "relatedTarget", "active");
+        setStarsClass(index, event.relatedTarget, "active");
     }
     else if (event.target.classList.contains('stars')) {
         deselectStars();
@@ -21,54 +21,35 @@ productsSection.addEventListener("click", function(e) {
         let index = arr.indexOf(event.target);
         event.preventDefault();
         deactivateStars();
-        unsetStarsClass(4, "parentElement", "permanent");
-        setStarsClass(index,"parentElement","permanent");
+        unsetStarsClass(4, event.target.parentElement, "permanent");
+        setStarsClass(index, event.target.parentElement,"permanent");
     }
 });
 
 // deselecting stars
 function deselectStars() {
     if (! event.target.children[0].classList.contains("permanent")){
-        setStarsClass(1, "target", "full");
+        setStarsClass(1, event.target, "full");
     }
-    unsetStarsClass (4, "target", "active");
+    unsetStarsClass (4, event.target, "active");
 }
 // remove stars showing avg value
 function deactivateStars() {
-    unsetStarsClass (4, "parentElement", "full");
+    unsetStarsClass (4, event.target.parentElement, "full");
 }
 
 // helper functions
 
 function setStarsClass(limit, elem, className) {
-    if (elem=="relatedTarget") {
         for (i=0; i<=limit; i++) {
-            event.relatedTarget.children[i].classList.add(className);
+            elem.children[i].classList.add(className);
         }
-    }
-    else if (elem=="target") {
-        for (i=0; i<=limit; i++) {
-            event.target.children[i].classList.add(className);
-        }
-    }
-    else if (elem=="parentElement") {
-        for (i=0; i<=limit; i++) {
-            event.target.parentElement.children[i].classList.add(className);
-        }
-    }
 }
 
 function unsetStarsClass(limit, elem, className) {
-    if (elem=="target") {
         for (i=0; i<=limit; i++) {
-            event.target.children[i].classList.remove(className);
+            elem.children[i].classList.remove(className);
         }
-    }
-    else if (elem=="parentElement") {
-        for (i=0; i<=limit; i++) {
-            event.target.parentElement.children[i].classList.remove(className);
-        }
-    }
 }
 
 
