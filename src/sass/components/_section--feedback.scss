@@ -1,53 +1,111 @@
 .section--feedback {
 
-    .feedback-wrapper {
+    .feedback {
+        
+        &-indicators {
+
+            .carousel-indicator {
+
+                &:focus {
+                    outline: none;
+                }
+
+                &.active,
+                &:hover {
+                background-color: $primary;
+                }
+            }
+
+            .tns-nav-active {
+
+                .carousel-indicator {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+
+    .feedback {
+        
+        &-slide {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 60px;
 
-        .quote-mark {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            .quote-mark {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
         }
 
-        .feedback-text {
+        &-text {
             text-align: center;
             width: 90%;
             margin-bottom: 30px;
             font-weight: 300;
         }
 
-        .feedback-client {
+        &-client {
             display: flex;
             align-items: center;
 
-            .feedback-client-photo {
+            &-photo {
                 height: 50px;
                 width: 50px;
 
-                .feedback-client-img {
+                .client-img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
             }
 
-            .feedback-client-info {
+            &-info {
                 margin-left: 15px;
 
-                .client-name,
-                .client-origin {
-                    margin: 0;
-                    text-align: center;
-                }
+                .client {
 
-                .client-name {
-                    font-weight: 600;
+                    &-name,
+                    &-origin {
+                        margin: 0;
+                        text-align: center;
+                    }
+    
+                    &-name {
+                        font-weight: 600;
+                    }
+    
+                    &-origin {
+                        font-size: .9rem;
+                    }
                 }
+            }
+        }
+    }
+}
 
-                .client-origin {
-                    font-size: .9rem;
+@media(max-width: 1200px){
+    
+    .section--feedback {
+
+        .feedback {
+            
+            &-indicators {
+    
+                .carousel-indicator {
+        
+                    &.active,
+                    &:hover {
+                        background-color: #e1e1e1;
+                    }
+                }
+        
+                .tns-nav-active {
+        
+                    .carousel-indicator {
+                        background-color: $primary;
+                    }
                 }
             }
         }

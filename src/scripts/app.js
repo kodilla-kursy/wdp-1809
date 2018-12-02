@@ -14,6 +14,13 @@
 //TINY-SLIDER - NEW FURNITURE
 
 (function(){
+    var indicators = document.querySelectorAll('.carousel-indicator');
+    indicators.forEach(function(item){
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+        });
+    });
+
     var productsSlider = tns({
         container: '.products-slider',
         items: 1,
@@ -35,5 +42,15 @@
             slideBy: 4,
             }
           }
+    });
+
+    var feedbackSlider = tns({
+        container: '.feedback-wrapper',
+        autoWidth: true,
+        mouseDrag: true,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        controls: false,
+        navContainer: '.feedback-indicators',
     });
 })();  
