@@ -6,10 +6,13 @@
             }
         }
 
-        .products-carousel-wrapper {
+        .products-carousel {
+            
+            &-wrapper {
             position: relative;
+            }
 
-            .products-carousel-indicators {
+            &-indicators {
                 margin: 0;
                 padding: 0 0 0 1rem;
                 width: fit-content;
@@ -30,10 +33,12 @@
                     border-radius: 6px;
                     background-color: #e1e1e1;
                     
+                    &:active,
                     &:hover {
                         cursor: pointer;
                         background-color: $primary;
                     }
+                    
                     &:focus {
                         outline: none;
                     }
@@ -52,9 +57,9 @@
 
         .container {
             
-            .products-carousel-wrapper {
+            .products-carousel {
                     
-                .products-carousel-indicators {
+                &-indicators {
 
                     &-li {
 
@@ -77,9 +82,9 @@
 
         .container {
             
-            .products-carousel-wrapper {
+            .products-carousel {
                     
-                .products-carousel-indicators {
+                &-indicators {
                     top: -79px;
                 }
             }
