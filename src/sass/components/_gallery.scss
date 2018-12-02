@@ -1,0 +1,60 @@
+.section--gallery {
+    
+    .gallery-tabs {
+        
+        &-tabItem {
+            width: 135px;
+            border-top: 1px solid $gallery-tabs-border;
+            border-left: 1px solid $gallery-tabs-border;
+            
+            &:last-child {
+                border-right: 1px solid $gallery-tabs-border;
+            }
+
+            &-tabLink {
+                border-radius: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: $text-color;           
+            }
+
+            & > .active {
+                border-top: 3px solid $primary;
+                border-left: 0;
+                border-right: 0;
+                background-color: $gallery-tabs-active;
+                color: $primary;
+                
+            }
+        }
+    }
+    
+    .gallery-ad {
+        padding: 15px;
+        height: 605px;
+        background-image: url('../images/gallery/ad.jpeg');
+        background-size: cover;
+        background-position: center;
+        
+        &-from {
+            padding: 60px 0 0 60px;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        &-price, &-product {
+            padding: 0 10px;
+            font-weight: 600;
+            font-size: 48px;
+            color: $gallery-price;
+        }
+
+        &-product {
+            padding: 0 60px;
+            text-transform: capitalize;
+            color: $primary;
+        }
+    }
+}

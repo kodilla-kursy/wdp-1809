@@ -45,4 +45,15 @@
   }
 }
 
+.btn-green {
+  @extend .btn-main;
+  margin: 5px 60px;
+  padding: 20px 30px;
+  display: inline-block;
+  background-color: $gallery-price;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
 
