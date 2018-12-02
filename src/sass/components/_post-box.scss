@@ -23,6 +23,7 @@
       display: flex;
       background-color: #ffffff;
       font-size: 14px;
+      color: $text-color;
       position: relative;
 
       & > * {
@@ -42,23 +43,40 @@
   .post-info {
     padding: 25px;
 
-    h5 {
-      color: $primary;
+    &__header {
+      color: $text-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
     }
 
-    p {
+    &__text {
       font-size: 14px;
       line-height: 24px;
       color: rgb(103,103,103);
       text-align: justify;
     }
 
-    .more {
+    &__more {
       text-align: center;
       padding-top: 30px;
     }
   }
+  
+  &:hover {
+    .post-info
+    {
+      &__header {
+        color: $primary;
+      }
+
+      &__btn-more {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.section--blog-posts .post-box-link:hover {
+  text-decoration: none;
 }
