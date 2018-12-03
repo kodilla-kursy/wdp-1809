@@ -1,4 +1,57 @@
-'use strict';
+// PRODUCT SECTION RATING STAR MECHANISM -- WDP181103-19
+
+const productsSection = document.querySelector(".section--products");
+const starBoxes = document.querySelectorAll(".stars");
+
+productsSection.addEventListener("mouseover", function(e) {
+    if (event.target.classList.contains('star')) {
+        let arr = Object.values(event.relatedTarget.children);
+        let index = arr.indexOf(event.target);
+        deactivateStars();
+        setStarsClass(index, event.relatedTarget, "active");
+    }
+    else if (event.target.classList.contains('stars')) {
+        deselectStars();
+    }   
+});
+
+productsSection.addEventListener("click", function(e) {
+    if (event.target.classList.contains('star')) {
+        let arr = Object.values(event.target.parentElement.children);
+        let index = arr.indexOf(event.target);
+        event.preventDefault();
+        deactivateStars();
+        unsetStarsClass(4, event.target.parentElement, "permanent");
+        setStarsClass(index, event.target.parentElement,"permanent");
+    }
+});
+
+// deselecting stars
+function deselectStars() {
+    if (! event.target.children[0].classList.contains("permanent")){
+        setStarsClass(1, event.target, "full");
+    }
+    unsetStarsClass (4, event.target, "active");
+}
+// remove stars showing avg value
+function deactivateStars() {
+    unsetStarsClass (4, event.target.parentElement, "full");
+}
+
+// helper functions
+
+function setStarsClass(limit, elem, className) {
+        for (i=0; i<=limit; i++) {
+            elem.children[i].classList.add(className);
+        }
+}
+
+function unsetStarsClass(limit, elem, className) {
+        for (i=0; i<=limit; i++) {
+            elem.children[i].classList.remove(className);
+        }
+}
+
 
 // MENU-BAR small screen dropdown
 (function(){ 
