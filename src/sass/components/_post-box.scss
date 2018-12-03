@@ -2,18 +2,29 @@
   margin-bottom: 2rem;
   
   .cover {
-    padding: 70% 25px 0 25px;
+    padding-top: 70%;
     background: {
       color: #f4f5f7;
       size: cover;
       position: center;
     }
+    position: relative;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
 
     .details {
+      margin: 0 25px;
       padding: 15px 20px;
       display: flex;
       background-color: #ffffff;
       font-size: 14px;
+      color: $text-color;
+      position: relative;
 
       & > * {
         flex: 1 1 auto;
@@ -32,23 +43,40 @@
   .post-info {
     padding: 25px;
 
-    h5 {
-      color: $primary;
+    &__header {
+      color: $text-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
     }
 
-    p {
+    &__text {
       font-size: 14px;
       line-height: 24px;
       color: rgb(103,103,103);
       text-align: justify;
     }
 
-    .more {
+    &__more {
       text-align: center;
       padding-top: 30px;
     }
   }
+  
+  &:hover {
+    .post-info
+    {
+      &__header {
+        color: $primary;
+      }
+
+      &__btn-more {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.section--blog-posts .post-box-link:hover {
+  text-decoration: none;
 }
