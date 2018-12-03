@@ -1,3 +1,194 @@
 .section--features {
   padding: 5rem 0;
+
+  .features {
+    height: 530px;
+    padding: 15px 0;
+    .hot-deals {
+      .top-bar {
+        background: $footer-claim-bg;
+        height: 50px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 7px 30px;
+        position: relative;
+        .dots {
+          position: absolute;
+          top: 8px;
+          right: 30px;
+          li {
+            width: 15px;
+            height: 15px;
+            background: $text-inactive-color;
+            display: inline-block;
+            margin: 2px;
+            border-radius: 50%;
+            &:hover {
+              background: $primary;
+            }
+          }
+          .active {
+            background: $primary;
+          }
+        }
+      }
+      .photo {
+        background-image: url('../images/features/armchair.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        .hover {
+          opacity: 0;
+          height: 100%;
+          transition: .3s;
+          &:hover {
+            opacity: 1;
+          }
+          .btn-main {
+            transition: .2s;
+          }
+          .counter {
+            margin-top: 40px;
+            div {
+              display: inline-block;
+              width: 70px;
+              height: 70px;
+              background: rgba(42, 42, 42, 0.8);
+              border-radius: 50%;
+              margin: 2px;
+              color: white;
+              text-transform: uppercase;
+              padding-top: 15px;
+              font-size: 1.5rem;
+              line-height: 1.5rem;
+                span {
+                  margin-top: 5px;
+                  display: block;
+                  font-size: 0.9rem;
+                  line-height: 8px;
+                }
+              }
+            }
+          .btn-main {
+            margin-top: 100px;
+            text-transform: uppercase;
+            font-weight: 400;
+            border: none;
+          }
+        }
+      }
+      .bottom-bar {
+        .price {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          right: 15px;
+          bottom: 0;
+          .price-old {
+            font-size: 13px;
+            color: $text-inactive-color;
+            padding: 5px 10px;
+            text-decoration: line-through $text-color;
+          }
+        }
+        p {
+          font-weight: 700;
+          font-size: 1.2em;
+          margin: 10px 0;
+          text-align: center;
+        }
+        .slider {
+          width: 100%;
+          height: 1px;
+          background: black;
+          margin: 15px 0;
+          position: relative;
+          .slide1 {
+            width: 20%;
+            height: 5px;
+            background: $primary;
+            position: absolute;
+            top: 0;
+            left: 40%;
+          }
+        }
+        .stars {
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: rgb(42,42,42);
+            @extend .far;
+            @extend .fa-star;
+    
+            &.full {
+              @extend .fas;
+            }
+          }
+        }
+      }
+    }
+    .furniture {
+      max-height: 490px;
+      background: url('../images/features/sofa.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 0;
+      &:hover {
+        .price {
+          .btn-main-small {
+            background-color: $primary;
+          }
+        }  
+      }
+      .content {
+        color: white;
+        text-transform: uppercase;
+        margin-top: 145px;
+        padding: 55px 0 45px 0;
+        background: rgba(42, 42, 42, 0.8);
+        position: relative;
+        h1, h2 {
+          font-weight: 400;
+        }
+        h1 span {
+            font-weight: 600;
+        }
+        .btn-main {
+          position: absolute;
+          bottom: -20px;
+          left: 40%;
+          border-radius: 3px;
+          border: 1px solid white;
+          background: white;
+          line-height: 30px;
+          color: $footer-claim-bg;
+          transition: .2s;
+          &:hover {
+            background: $footer-claim-bg;
+          }
+        }
+      }
+      .buttons {
+        position: relative;
+        background: $footer-claim-bg;
+        height: 40px;
+        top: 100px;
+        .btn-main {
+          height: 40px;
+          border: none;
+          transition: .2s;
+          width: 49.7%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .section--features {
+    padding: 1rem 0 3rem 0;
+  }
 }
