@@ -12,19 +12,89 @@
             }
 
             &-tabLink {
+                border-top: 3px solid transparent;
                 border-radius: 0;
                 text-transform: uppercase;
                 font-weight: 600;
-                color: $text-color;           
+                font-size: 18px;
+                color: $text-color; 
+                text-align: center;
+                
+                &:hover {
+                    border: none;
+                    border-top: 3px solid $primary;
+                }
             }
 
             & > .active {
                 border-top: 3px solid $primary;
+                border-bottom: 1px solid $gallery-tabs-active;
                 border-left: 0;
                 border-right: 0;
                 background-color: $gallery-tabs-active;
-                color: $primary;
-                
+                color: $primary;           
+            }
+        }
+    }
+
+    //content for tabs
+    .gallery-tabContent {
+        width: 100%;
+        height: 100%;   // why?
+        background-color: $gallery-tabs-active;
+        border: 1px solid red;
+
+        //content for tab
+        &-tabPane {
+            
+
+            &-carousel {
+
+                &-inner {
+                    
+
+                    .gallery-item-bg1 {
+                        background-image: url('../images/gallery/1.jpg');
+                    }
+
+                    &-item {
+                        height: 410px;
+                        background-size: cover;
+                        
+                        &-productInfo {
+                            display: flex;
+                            
+
+                            &-outlines {
+                                width: 200px;
+                                flex-direction: column;  
+                                border: 1px solid red;
+
+                                &-btnContainer {
+                                      
+                                }
+                            }    
+                            
+                        }
+                    }
+                }
+
+                &-control--prev {
+                    margin: 8px;
+                    width: 33px;
+                    height: 70px;
+                    top: 410px;
+                    
+                    border: 1px solid green;
+                }
+
+                &-control--next {
+                    border: 1px solid green;
+                }
+
+                &-indicators {
+                    border: 1px solid green;
+                }
             }
         }
     }

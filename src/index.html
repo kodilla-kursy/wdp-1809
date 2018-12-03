@@ -691,10 +691,10 @@
           </div>
           <ul class="gallery-tabs nav nav-tabs" id="galleryTab" role="tablist">
             <li class="gallery-tabs-tabItem nav-item">
-              <a href="#featured" class="gallery-tabs-tabItem-tabLink nav-link" id="featured-tab" data-toggle="tab" role="tab" aria-controls="featured" aria-selected="false">Featured</a>
+              <a href="#featured" class="gallery-tabs-tabItem-tabLink nav-link active" id="featured-tab" data-toggle="tab" role="tab" aria-controls="featured" aria-selected="false">Featured</a>
             </li>
             <li class="gallery-tabs-tabItem nav-item">
-              <a href="#topSeller" class="gallery-tabs-tabItem-tabLink nav-link active" id="topSeller-tab" data-toggle="tab" role="tab" aria-controls="topSeller" aria-selected="true">Top seller</a>
+              <a href="#topSeller" class="gallery-tabs-tabItem-tabLink nav-link" id="topSeller-tab" data-toggle="tab" role="tab" aria-controls="topSeller" aria-selected="true">Top seller</a>
             </li>
             <li class="gallery-tabs-tabItem nav-item">
               <a href="#saleOff" class="gallery-tabs-tabItem-tabLink nav-link" id="saleOff-tab" data-toggle="tab" role="tab" aria-controls="saleOff" aria-selected="false">Sale off</a>
@@ -703,17 +703,21 @@
               <a href="#topRated" class="gallery-tabs-tabItem-tabLink nav-link" id="topRated-tab" data-toggle="tab" role="tab" aria-controls="topRated" aria-selected="false">Top rated</a>
             </li>
           </ul> 
-          <div class="gallery-tabContent" id="galleryTabContent">
-            <div class="gallery-tabContent-tabPane tab-pane fade" id="featured" role="tabpanel" aria-labelledby="featured-tab"> 
-              <div id="galleryFeaturedCarousel" class="gallery-tabContent-tabPane-carousel carousel slide" data-ride="carousel">
+          <div class="gallery-tabContent tab-content" id="galleryTabContent">
+            <div class="gallery-tabContent-tabPane tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="featured-tab"> 
+              <div id="galleryFeaturedCarousel" class="gallery-tabContent-tabPane-carousel carousel slide" > 
+              
                 <div class="gallery-tabContent-tabPane-carousel-inner carousel-inner">
-                  <div class="gallery-tabContent-tabPane-carousel-inner-item carousel-item active">
+                  <div class="gallery-tabContent-tabPane-carousel-inner-item gallery-item-bg1 carousel-item active">
                     <div class="gallery-tabContent-tabPane-carousel-inner-item-productInfo ">
-                      <div class="outlines">
-                        <div class="btnContainer">
+                      <div class="gallery-tabContent-tabPane-carousel-inner-item-productInfo-outlines">
+                        <div class="gallery-tabContent-tabPane-carousel-inner-item-productInfo-btnContainer ">
                           <a href="#" class="btn-outline" data-toggle="tooltip" data-placement="right" title="Add To Favorites"><i class="far fa-heart"></i></a>
-
                         </div>
+                        <div class="gallery-tabContent-tabPane-carousel-inner-item-productInfo-btnContainer ">
+                            <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
+                        </div>
+  
                       </div>
                     </div>  
                   </div>
@@ -737,7 +741,7 @@
                   </div>
                 </div>
                 
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="gallery-tabContent-tabPane-carousel-control--prev carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
                 </a>
@@ -746,7 +750,7 @@
                   <li data-target="#carouselExampleIndicators" data-slide-to="1" class="gallery-tabContent-tabPane-carousel-indicators-item"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2" class="gallery-tabContent-tabPane-carousel-indicators-item"></li>
                 </ol>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="gallery-tabContent-tabPane-carousel-control--next carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
