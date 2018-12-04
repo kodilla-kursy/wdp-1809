@@ -57,12 +57,23 @@
         <div class="row align-items-center">
           <div class="col">
             <form action="" class="search-form">
-              <div class="category">
-                <i class="fas fa-list-ul"></i>
-                <select name="" id="">
-                  <option value="">Select a category</option>
-                </select>
-                <i class="fas fa-caret-down"></i>
+              <div class="select-category">
+                <ul class="select-category__list">
+                  <li class="select-category__item">
+                    <i class="fas fa-list-ul"></i>
+                    <span class="select-category__text">Select a category</span>
+                    <i class="fas fa-caret-down"></i>
+                    
+                    <ul class="menu-categories">
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bed</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Chair</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Table</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Sofa</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bedroom</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Dinning</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
               <div class="search-field">
                 <input placeholder="Search products..." type="text">
