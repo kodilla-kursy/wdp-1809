@@ -1,6 +1,10 @@
 
 # Created by https://www.gitignore.io/api/node
 
+#dist catalog
+dist/
+
+
 ### Node ###
 # Logs
 logs
@@ -39,6 +43,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+dist/
 
 # TypeScript v1 declaration files
 typings/

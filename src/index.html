@@ -43,9 +43,10 @@
           <div class="col text-right cart">
             <a href="#" class="cart-box">
               <div class="cart-icon">
-                <i class="fas fa-shopping-basket"></i>
+                <i class="fas fa-shopping-basket">
+                </i>
               </div>
-              <div class="cart-counter">0</div>
+              <div class="cart-counter">99999</div>
             </a>
           </div>
         </div>
@@ -56,12 +57,23 @@
         <div class="row align-items-center">
           <div class="col">
             <form action="" class="search-form">
-              <div class="category">
-                <i class="fas fa-list-ul"></i>
-                <select name="" id="">
-                  <option value="">Select a category</option>
-                </select>
-                <i class="fas fa-caret-down"></i>
+              <div class="select-category">
+                <ul class="select-category__list">
+                  <li class="select-category__item">
+                    <i class="fas fa-list-ul"></i>
+                    <span class="select-category__text">Select a category</span>
+                    <i class="fas fa-caret-down"></i>
+                    
+                    <ul class="menu-categories">
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bed</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Chair</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Table</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Sofa</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bedroom</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Dinning</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
               <div class="search-field">
                 <input placeholder="Search products..." type="text">
@@ -100,35 +112,41 @@
         </div>
         <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
           <div class="feature-box">
-            <div class="icon">
-              <i class="fas fa-headphones"></i>
-            </div>
-            <div class="content">
-              <h5>24/7 customer</h5>
-              <p>support</p>
-            </div>
+            <a class="feature-link" href="#">
+              <div class="icon">
+                <i class="fas fa-headphones"></i>
+              </div>
+              <div class="content">
+                <h5>24/7 customer</h5>
+                <p>support</p>
+              </div>
+            </a>
           </div>
         </div>
         <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
           <div class="feature-box">
-            <div class="icon">
-              <i class="fas fa-reply-all"></i>
-            </div>
-            <div class="content">
-              <h5>Money back</h5>
-              <p>guarantee</p>
-            </div>
+            <a class="feature-link" href="#">
+              <div class="icon">
+                <i class="fas fa-reply-all"></i>
+              </div>
+              <div class="content">
+                <h5>Money back</h5>
+                <p>guarantee</p>
+              </div>
+            </a>
           </div>
         </div>
         <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
           <div class="feature-box">
-            <div class="icon">
-              <i class="fas fa-bullhorn"></i>
-            </div>
-            <div class="content">
-              <h5>Member discount</h5>
-              <p>First order</p>
-            </div>
+            <a class="feature-link" href="#">
+              <div class="icon">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <div class="content">
+                <h5>Member discount</h5>
+                <p>First order</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -160,7 +178,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/01.jpg">
@@ -187,12 +205,13 @@
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
+                <div class="price__oldprice">$ 50.00</div>
                 <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/02.jpg">
@@ -219,12 +238,13 @@
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
+                <div class="price__oldprice">$ 50.00</div>
                 <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/03.jpg">
@@ -256,7 +276,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/04.jpg">
@@ -283,12 +303,13 @@
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
+                <div class="price__oldprice">$ 50.00</div>
                 <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/05.jpg">
@@ -320,7 +341,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/06.jpg">
@@ -352,7 +373,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/07.jpg">
@@ -379,12 +400,13 @@
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
+                <div class="price__oldprice">$ 50.00</div>
                 <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
               <img class="photo__image" src="./images/new/bed/08.jpg">
@@ -437,7 +459,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-4">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
           <a class="post-box-link" href="#">
             <div class="post-box">
               <div class="cover">
@@ -462,7 +484,7 @@
             </div>
           </a>
         </div>
-        <div class="col-4">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
           <a class="post-box-link" href="#">
             <div class="post-box">
               <div class="cover">
@@ -487,7 +509,7 @@
             </div>
           </a>
         </div>
-        <div class="col-4">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
           <a class="post-box-link" href="#">
             <div class="post-box">
               <div class="cover">

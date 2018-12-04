@@ -50,11 +50,15 @@
     }
   }
 
-  &.active {
-    i {
+  &:active,
+  &:hover {
+    .fas {
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
+    }
+    .feature-link {
+      text-decoration: none;
     }
 
     .content {
