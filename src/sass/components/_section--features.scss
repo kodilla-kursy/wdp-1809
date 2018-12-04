@@ -15,15 +15,15 @@
         padding: 7px 30px;
         position: relative;
         .dots {
-          position: absolute;
-          top: 8px;
-          right: 30px;
+          position: relative;
+          top: 20px;
+          right: -120px;
           li {
             width: 15px;
             height: 15px;
             background: $text-inactive-color;
             display: inline-block;
-            margin: 2px;
+            margin: 4px;
             border-radius: 50%;
             &:hover {
               background: $primary;
@@ -34,8 +34,10 @@
           }
         }
       }
+      .ph1 {background-image: url('../images/features/armchair.jpg');}
+      .ph2 {background-image: url('../images/features/desk.png');}
+      .ph3 {background-image: url('../images/features/sofa2.png');}
       .photo {
-        background-image: url('../images/features/armchair.jpg');
         background-size: cover;
         background-position: center;
         height: 300px;
