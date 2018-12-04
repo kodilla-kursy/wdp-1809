@@ -40,4 +40,12 @@
     background-color: #2a2a2a;
     color: #ffffff;
   }
+  &.active {
+      background-color: $primary;
+      color: #ffffff;
+    &:hover {
+      background-color: #ffffff;
+      color: $header-topbar-bg ;
+    }
+  }
 }
