@@ -82,7 +82,7 @@ footer {
   }
 }
 
-@media (min-width: map-get($grid-breakpoints, lg)) and (max-width: map-get($grid-breakpoints, xl))  {
+@media (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg))  {
   .copyright {
     text-align: left !important;
   }
