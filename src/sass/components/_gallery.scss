@@ -1,5 +1,6 @@
 .section--gallery {
-    
+    padding: 0 0 20px 0;
+
     .gallery-tabs {
         
         &-tabItem {
@@ -47,12 +48,10 @@
         //content for tab
         &-tabPane {
             
-
             &-carousel {
 
                 &-inner {
                     
-
                     .gallery-item-bg1 {
                         background-image: url('../images/gallery/1.jpg');
                     }
@@ -62,16 +61,19 @@
                         background-size: cover;
                         
                         &-productInfo {
+                            height: 100%;
                             display: flex;
                             
 
                             &-outlines {
-                                width: 200px;
+                                padding: 10px;
                                 flex-direction: column;  
-                                border: 1px solid red;
-
+                                // align-items: center;
+                                
                                 &-btnContainer {
-                                      
+                                    padding: 5px 0;
+                                    
+                                    
                                 }
                             }    
                             
@@ -79,22 +81,60 @@
                     }
                 }
 
-                &-control--prev {
-                    margin: 8px;
+                %control {
+                    margin: 7px;
                     width: 33px;
-                    height: 70px;
+                    height: 68px;
                     top: 410px;
-                    
-                    border: 1px solid green;
+                    z-index: 500;
+                    background-color: $text-color;
+                }
+
+                &-control--prev {
+                    @extend %control;
+
+                    // border: 1px solid green;
                 }
 
                 &-control--next {
-                    border: 1px solid green;
+                    @extend %control;
+                    // border: 1px solid green;
                 }
 
-                &-indicators {
+                &-indicatorsContainer {
+                    display: flex;
+                    overflow: hidden;
+                    position: absolute;
+                    flex: 0 0 auto;
+                    left: 47px;
+                    top: 417px;
+                    width: 443px;
+                    flex-wrap: nowrap;
+                        
                     border: 1px solid green;
+
+                    &-indicators {
+                        bottom: 0;
+                        position: relative;
+                        flex-wrap: nowrap;
+                        flex: 0 0 auto;
+                        justify-content: flex-start;
+                        // width: 443px;
+                        margin: 0;
+                        padding: 0;
+                        height: 68px;
+                        
+                        // border: 1px solid green;
+    
+                        &-item {
+                            margin: 0 7px 0 0;
+                            width: 68px;
+                            height: 68px;
+                            background-color: $gallery-tabs-border;
+                        }
+                    }
                 }
+                
             }
         }
     }

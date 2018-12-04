@@ -107,3 +107,8 @@ function unsetStarsClass(limit, elem, className) {
         navContainer: '.feedback-indicators',
     });
 })();  
+
+//tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
