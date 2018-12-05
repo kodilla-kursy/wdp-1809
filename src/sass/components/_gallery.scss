@@ -41,7 +41,7 @@
     //content for tabs
     .gallery-tabContent {
         width: 100%;
-        height: 100%;   // why?
+        // height: 100%;   // why?
         background-color: $gallery-tabs-active;
         border: 1px solid red;
 
@@ -66,14 +66,14 @@
                             
 
                             &-outlines {
+                                display: flex;
                                 padding: 10px;
                                 flex-direction: column;  
-                                // align-items: center;
+                                justify-content: center;
                                 
                                 &-btnContainer {
                                     padding: 5px 0;
-                                    
-                                    
+                                              
                                 }
                             }    
                             
@@ -82,10 +82,11 @@
                 }
 
                 %control {
+                    position: relative;
                     margin: 7px;
                     width: 33px;
                     height: 68px;
-                    top: 410px;
+                    // top: 410px;
                     z-index: 500;
                     background-color: $text-color;
                 }
@@ -104,10 +105,10 @@
                 &-indicatorsContainer {
                     display: flex;
                     overflow: hidden;
-                    position: absolute;
+                    // position: absolute;
                     flex: 0 0 auto;
-                    left: 47px;
-                    top: 417px;
+                    // left: 47px;
+                    // top: 417px;
                     width: 443px;
                     flex-wrap: nowrap;
                         
