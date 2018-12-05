@@ -16,6 +16,8 @@
       justify-content: center;
       align-items: center;
       border: 1px solid #b6b6b6;
+      transition: color $hover-element-transition ease-out;
+      transition: background-color $hover-bg-transition ease-out;
     }
 
     &::before {
@@ -38,6 +40,7 @@
     color: rgb(42,42,42);
     margin-top: -0.5rem;
     letter-spacing: 1px;
+    transition: color $hover-element-transition ease-out;
 
     h5 {
       font-weight: 600;
@@ -53,6 +56,7 @@
   &:hover {
     i {
       @extend %hover-bg;
+      @extend %hover-element;
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;

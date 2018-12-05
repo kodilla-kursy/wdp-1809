@@ -19,6 +19,7 @@ footer {
             font-size: 14px;
             line-height: 30px;
             color: rgb(169,169,169);
+            transition: color $hover-element-transition ease-out;
 
             &:hover {
               @extend %hover-element;
@@ -69,6 +70,7 @@ footer {
           a {
             color: rgb(169,169,169);
             text-decoration: none;
+            transition: color $hover-element-transition ease-out;
 
             &:hover {
               @extend %hover-element;
