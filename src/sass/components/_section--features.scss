@@ -133,16 +133,28 @@
     }
     .furniture {
       max-height: 490px;
-      background: url('../images/features/sofa.jpg');
-      background-size: cover;
-      background-position: center;
+      height: 490px;
       padding: 0;
-      &:hover {
-        .price {
-          .btn-main-small {
+      &:hover .price .btn-main-small {
             background-color: $primary;
-          }
-        }  
+      }  
+      .fur1 {
+        background: url('../images/features/sofa.jpg');
+      }
+      .fur2 {
+        background: url('../images/features/outdoor.jpeg');
+      }
+      .fur3 {
+        background: url('../images/features/decorations.jpeg');
+      }
+      .carousel-inner {
+        height: 100%;
+        .carousel-item {
+          height: 100%;
+          margin-top: 0;
+          background-size: cover;
+          background-position: center;
+        }
       }
       .content {
         color: white;
@@ -176,7 +188,7 @@
         position: relative;
         background: $footer-claim-bg;
         height: 40px;
-        top: 100px;
+        top: -40px;
         .btn-main {
           height: 40px;
           border: none;
