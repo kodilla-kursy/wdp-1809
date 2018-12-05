@@ -1,0 +1,33 @@
+@media (max-width: 1025px) {
+    [class*="col-"] {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .hide_desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    [class*="col-"] {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .hide_tablet {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+        ;
+    }
+
+    .hide_mobile {
+        display: none;
+    }
+}

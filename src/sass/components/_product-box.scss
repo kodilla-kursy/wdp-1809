@@ -6,6 +6,7 @@
   .photo {
     position: relative;
     padding: 0;
+
     background: {
       color: #f4f5f7;
       size: contain;
@@ -15,6 +16,10 @@
 
     overflow: hidden;
     align-items: flex-end;
+
+    .img-fluid {
+      width: 100%;
+    }
 
     .sale {
       position: absolute;
