@@ -34,6 +34,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "event-stream": "3.3.4"
+    "event-stream": "3.3.4",
+    "tiny-slider": "^2.8.8"
   }
 }
