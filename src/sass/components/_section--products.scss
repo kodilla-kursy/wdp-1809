@@ -6,6 +6,7 @@
             }
         }
 
+
         .products-carousel {
             
             &-wrapper {
@@ -32,13 +33,12 @@
                     height: 13px;
                     border-radius: 6px;
                     background-color: #e1e1e1;
-                    
                     &:active,
                     &:hover {
                         cursor: pointer;
                         background-color: $primary;
                     }
-                    
+                  
                     &:focus {
                         outline: none;
                     }
