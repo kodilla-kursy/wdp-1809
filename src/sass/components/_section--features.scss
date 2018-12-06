@@ -156,10 +156,11 @@
           background-position: center;
         }
       }
+      .contentBox {
+        padding-top: 145px;
       .content {
         color: white;
         text-transform: uppercase;
-        margin-top: 145px;
         padding: 55px 0 45px 0;
         background: rgba(42, 42, 42, 0.8);
         position: relative;
@@ -184,6 +185,7 @@
           }
         }
       }
+    }
       .buttons {
         position: relative;
         background: $footer-claim-bg;
@@ -198,6 +200,7 @@
         }
       }
     }
+    
   }
 }
 
