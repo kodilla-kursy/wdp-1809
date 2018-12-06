@@ -137,6 +137,12 @@ header {
           list-style: none;
           display: flex;
           align-items: stretch;
+          &:hover {
+            @extend %hover-border;
+            a {
+              border-top-color: $text-color;
+            }
+          }
 
           a {
             color: $text-color;
@@ -147,22 +153,18 @@ header {
             display: flex;
             align-items: center;
             border-top: 4px solid #ffffff;
+            border-color: #ffffff;
             font-weight: 500;
             letter-spacing: 1px;
             transition: color $hover-element-transition ease-out;
             transition: background-color $hover-bg-transition ease-out;
+            transition: border-color $hover-border-transition ease-out;
 
             &:hover,
             &.active {
-              @extend %hover-element;
-              @extend %hover-bg;
+              @extend %hover-bg, %hover-element;
               background-color: $primary;
               color: #ffffff;
-              border-color: $primary;
-            }
-
-            &.active {
-              border-color: $text-color;
             }
           }
         }

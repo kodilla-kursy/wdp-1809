@@ -5,3 +5,7 @@
 %hover-bg {
     transition: background-color $hover-bg-transition ease-in;
 }
+
+%hover-border {
+    transition: border-top-color $hover-border-transition ease-in;
+}
