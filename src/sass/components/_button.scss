@@ -22,6 +22,13 @@
   line-height: 24px;
   padding: 5px 10px;
   font-weight: 400;
+  opacity: 0;
+  transition: .7s ease;
+}
+
+.price {
+  opacity: 1;
+  transition: .7s ease;
 }
 
 .btn-outline {
@@ -39,5 +46,13 @@
     @extend %hover-bg;
     background-color: #2a2a2a;
     color: #ffffff;
+  }
+  &.active {
+      background-color: $primary;
+      color: #ffffff;
+    &:hover {
+      background-color: #ffffff;
+      color: $header-topbar-bg ;
+    }
   }
 }

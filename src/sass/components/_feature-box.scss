@@ -1,4 +1,5 @@
 .feature-box {
+  height: 142px;
   border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
@@ -54,14 +55,15 @@
 
   &:active,
   &:hover {
-    i {
+    .fas {
       @extend %hover-bg;
       @extend %hover-element;
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
     }
-    a {
+
+    .feature-link {
       @extend %hover-element;
       text-decoration: none;
     }

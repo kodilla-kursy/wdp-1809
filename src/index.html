@@ -23,8 +23,8 @@
           </div>
           <div class="col text-right">
             <ul>
-              <li><a href="#"><i class="fas fa-user"></i> Login</a></li>
-              <li><a href="#"><i class="fas fa-lock"></i> Register</a></li>
+              <li><a href="#"><i class="fas fa-user"></i><span class="top-bar-text">Login</span></a></li>
+              <li><a href="#"><i class="fas fa-lock"></i><span class="top-bar-text">Register</span></a></li>
               <li><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
           </div>
@@ -34,34 +34,50 @@
     <div class="company-claim">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col text-left phone-number">
+          <div class="col text-left phone-number lowresolution-hide">
             <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
           </div>
           <div class="col text-center">
             <a href="#"><img src="./images/logo.png"></a>
           </div>
-          <div class="col text-right cart">
-            <a href="#" class="cart-box">
-              <div class="cart-icon">
-                <i class="fas fa-shopping-basket"></i>
-              </div>
-              <div class="cart-counter">0</div>
-            </a>
+          <div class="col text-right">
+            <div class="cart">
+              <a href="#" class="cart-box">
+                <div class="cart-icon">
+                  <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="cart-counter">0</div>
+              </a>
+            </div>
+            <div class="col text-left phone-number lowresolution-show">
+              <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
+           </div>
           </div>
         </div>
       </div>
     </div>
     <div class="menu-bar">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col">
+        <div class="d-flex flex-row flex-md-column-reverse flex-lg-row align-items-center">
+          <div class="col-10 col-md-12 col-lg-6 d-flex flex-column-reverse flex-md-row">
             <form action="" class="search-form">
-              <div class="category">
-                <i class="fas fa-list-ul"></i>
-                <select name="" id="">
-                  <option value="">Select a category</option>
-                </select>
-                <i class="fas fa-caret-down"></i>
+              <div class="select-category">
+                <ul class="select-category__list">
+                  <li class="select-category__item">
+                    <i class="fas fa-list-ul"></i>
+                    <span class="select-category__text">Select a category</span>
+                    <i class="fas fa-caret-down"></i>
+                    
+                    <ul class="menu-categories">
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bed</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Chair</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Table</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Sofa</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bedroom</a></li>
+                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Dinning</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
               <div class="search-field">
                 <input placeholder="Search products..." type="text">
@@ -69,7 +85,20 @@
               </div>
             </form>
           </div>
-          <div class="col-auto menu">
+          <div class="menu-mobile col-auto d-flex d-md-none">
+            <button class="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#" class="active">Home</a>
+              <a class="dropdown-item" href="#">Furniture</a>
+              <a class="dropdown-item" href="#">Chair</a>
+              <a class="dropdown-item" href="#">Table</a>
+              <a class="dropdown-item" href="#">Sofa</a>
+              <a class="dropdown-item" href="#">Bedroom</a>
+              <a class="dropdown-item" href="#">Blog</a>
+            </div>
+          </div>    
+
+          <div class="menu col-auto col-md-12 col-lg-6 d-none d-md-block">
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">Furniture</a></li>
@@ -87,22 +116,20 @@
   <div class="section--features">
     <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="feature-box">
-            <a href="#">
-              <div class="icon">
-                <i class="fas fa-truck"></i>
-              </div>
-              <div class="content">
-                <h5>Free shipping</h5>
-                <p>All orders</p>
-              </div>
-            </a>
-          </div>  
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <div class="feature-box active">
+            <div class="icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="content">
+              <h5>Free shipping</h5>
+              <p>All orders</p>
+            </div>
+          </div>
         </div>
-        <div class="col">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
           <div class="feature-box">
-            <a href="#">
+            <a class="feature-link" href="#">
               <div class="icon">
                 <i class="fas fa-headphones"></i>
               </div>
@@ -113,9 +140,9 @@
             </a>
           </div>
         </div>
-        <div class="col">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
           <div class="feature-box">
-            <a href="#">
+            <a class="feature-link" href="#">
               <div class="icon">
                 <i class="fas fa-reply-all"></i>
               </div>
@@ -126,9 +153,9 @@
             </a>
           </div>
         </div>
-        <div class="col">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
           <div class="feature-box">
-            <a href="#">
+            <a class="feature-link" href="#">
               <div class="icon">
                 <i class="fas fa-bullhorn"></i>
               </div>
@@ -168,9 +195,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/01.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -190,18 +218,20 @@
             <div class="line"></div>
             <div class="actions">
               <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
-                <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
+                <a href="#" class="btn-outline active"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline active"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="price__oldprice">$ 50.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/02.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -225,14 +255,16 @@
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="price__oldprice">$ 50.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/03.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -252,18 +284,19 @@
             <div class="line"></div>
             <div class="actions">
               <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
-                <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
+                <a href="#" class="btn-outline active"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline active"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/04.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -283,18 +316,20 @@
             <div class="line"></div>
             <div class="actions">
               <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline active"><i class="far fa-heart"></i></a>
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="price__oldprice">$ 50.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/05.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -314,18 +349,19 @@
             <div class="line"></div>
             <div class="actions">
               <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline active"><i class="far fa-heart"></i></a>
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/06.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -346,17 +382,18 @@
             <div class="actions">
               <div class="outlines">
                 <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
-                <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
+                <a href="#" class="btn-outline active"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/07.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -380,14 +417,16 @@
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="price__oldprice">$ 50.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="product-box">
             <div class="photo">
+              <img class="photo__image" src="./images/new/bed/08.jpg">
               <div class="sale">sale</div>
               <div class="buttons">
                 <a href="#" class="btn-main-small">Quick View</a>
@@ -407,11 +446,11 @@
             <div class="line"></div>
             <div class="actions">
               <div class="outlines">
-                <a href="#" class="btn-outline"><i class="far fa-heart"></i></a>
+                <a href="#" class="btn-outline active"><i class="far fa-heart"></i></a>
                 <a href="#" class="btn-outline"><i class="fas fa-exchange-alt"></i></a>
               </div>
               <div class="price">
-                <div class="btn-main-small no-hover">$ 30.00</div>
+                <div class="btn-main-small no-hover price">$ 30.00</div>
               </div>
             </div>
           </div>
@@ -437,71 +476,80 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-4">
-          <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <a class="post-box-link" href="#">
+            <div class="post-box">
+              <div class="cover">
+                <img class="cover__image" src="./images/blog/01.jpg">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+              </div>
+              <div class="post-info">
+                <h5 class="post-info__header">Products That Fight Static </h5>
+                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="post-info__more">
+                  <span class="btn-main post-info__btn-more">Read more</span>
                 </div>
               </div>
             </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
-        <div class="col-4">
-          <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <a class="post-box-link" href="#">
+            <div class="post-box">
+              <div class="cover">
+                <img class="cover__image" src="./images/blog/02.jpg">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+              </div>
+              <div class="post-info">
+                <h5 class="post-info__header">Products That Fight Static </h5>
+                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="post-info__more">
+                  <span class="btn-main post-info__btn-more">Read more</span>
                 </div>
               </div>
             </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
-        <div class="col-4">
-          <div class="post-box">
-            <div class="cover">
-              <div class="details">
-                <div class="date">
-                  <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <a class="post-box-link" href="#">
+            <div class="post-box">
+              <div class="cover">
+                <img class="cover__image" src="./images/blog/03.jpg">
+                <div class="details">
+                  <div class="date">
+                    <i class="fas fa-calendar-alt"></i> 15 Jan 2016
+                  </div>
+                  <div class="comments">
+                    <i class="fas fa-comments"></i> 4 Comments
+                  </div>
                 </div>
-                <div class="comments">
-                  <i class="fas fa-comments"></i> 4 Comments
+              </div>
+              <div class="post-info">
+                <h5 class="post-info__header">Products That Fight Static </h5>
+                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
+                  vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
+                <div class="post-info__more">
+                  <span class="btn-main post-info__btn-more">Read more</span>
                 </div>
               </div>
             </div>
-            <div class="post-info">
-              <h5>Products That Fight Static </h5>
-              <p>Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
-                vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
-              <div class="more">
-                <a href="#" class="btn-main">Read more</a>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

@@ -67,6 +67,11 @@ header {
       }
     }
 
+    .lowresolution-show {
+      display: none;
+    }
+
+
     .cart {
 
       .cart-box {
@@ -86,14 +91,15 @@ header {
           transition: background-color $hover-bg-transition ease-out;
 
           i {
-            margin-right: 5px;
-          }
+            margin-right: 10px;
+            }
         }
 
         .cart-counter {
-          width: 28px;
+          width: auto;
           height: 27px;
-          border-radius: 14px;
+          padding: 0 9px;          
+          border-radius: 40px;
           background-color: $header-bg;
           display: flex;
           align-items: center;
@@ -103,9 +109,9 @@ header {
           position: absolute;
           top: 50%;
           right: 0;
-          transform: translate(50%, -50%);
+          transform: translate(70%, -50%);
         }
-
+        
         &:hover {
           .cart-icon {
             @extend %hover-element;
@@ -119,12 +125,79 @@ header {
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1,2,2,0.2);
     background-color: #ffffff;
-
+    
     .container > .row {
       height: 84px;
     }
+    
+    .select-category {
+      border-right: 1px solid $form-border-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      &__list, .menu-categories {
+        line-height: 43px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      &__item {
+        display: inline-block;
+        height: 43px;
+        width: 198px;
+        text-align: center;
+        
+        &:hover {
+          background: $primary;
+          color: #ffffff;
+          cursor: pointer;
+          
+          .menu-categories {
+            display: block;
+            position: absolute;
+            margin-left: -1px;
+            color: $primary;
+            background: #ffffff;
+            z-index: 100;
+          }
+        }
+      }
+      
+      &__text {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+    }
+
+    .menu-categories {
+      display: none;
+      
+      &__item-link {
+        border: solid 1px $form-border-color;
+        border-top: none;
+        font-size: 14px;
+        display: inline-block;
+        height: 44px;
+        width: 200px;
+        line-height: 44px;
+        padding-left: 30px;
+        text-align: left;
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $primary;
+          color: #ffffff;
+        }
+      }
+    }
 
     .menu {
+      @media (min-width: 768px) and (max-width: 991px) {
+        margin: auto;   
+      }
       display: flex;
       align-self: stretch;
 
@@ -171,7 +244,30 @@ header {
       }
     }
 
+    .menu-mobile {
+      align-self: stretch;
+      padding: 0;
+      min-width: 45px;
+      &:hover,
+      &.active {
+        background-color: $primary;
+        border-color: $primary;
+        button {
+          color: #ffffff;
+        }
+      }
+      button {
+        margin: auto;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+      }
+    }
+
     .search-form {
+      @media (min-width: 768px) and (max-width: 991px) {
+        margin: auto;   
+      }
       border: 1px solid $form-border-color;
       display: inline-flex;
       height: 45px;
@@ -212,12 +308,18 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
 
         input {
           border: 0;
           padding-left: 10px;
           font-size: 14px;
           outline: none;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
 
           &::placeholder {
             color: $text-color;
@@ -233,3 +335,59 @@ header {
     }
   }
 }
+
+@media (max-width: 767px) {
+  header .top-bar {
+    .col.text-left {
+    min-width: 70%; 
+    padding-right: 5px;
+    }
+    .col.text-right {
+      padding-left: 5px;
+    }
+    .text-left ul li {
+      margin-right: 0.2rem;
+    }
+    .text-right ul li {
+      margin-left: 0.2rem;
+    }
+  }
+    .top-bar-text {
+    display: none;
+  }
+  
+  header .company-claim {
+    .col.text-right {
+      padding-left: 5px;
+    }
+    .col.text-center {
+      padding-right: 5px;
+    }
+    .cart {
+      position: relative;
+      top: 10px;
+    }
+    .phone-number {
+      p {
+        font-size: 3.5vw;
+        float: right;
+        i {
+          font-size: 20px;
+          margin-top: -3px;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+    .lowresolution-hide {
+      display: none;
+    }
+    .lowresolution-show {
+      display: block;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+ 
+}
+
+
