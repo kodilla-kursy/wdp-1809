@@ -109,3 +109,33 @@
     background-color: $primary; 
   }
 }
+
+.js-productsLink {
+  cursor: pointer;
+}
+
+.js-productsBox--disable,
+.js-productsDots--disable {
+  display: none;
+}
+
+.js-productsBox--show,
+.js-productsDots--show {
+  display: flex;
+  animation: fade $hover-bg-transition forwards;
+}
+
+.js-productsBox--hide,
+.js-productsDots--hide {
+  animation: reverse fade $hover-bg-transition forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
