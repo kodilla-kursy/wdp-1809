@@ -14,8 +14,10 @@ header {
         a {
           color: #ffffff;
           font-size: 13px;
+          transition: color $hover-element-transition ease-out;
 
           &:hover {
+            @extend %hover-element;
             color: $primary;
             text-decoration: none;
           }
@@ -86,6 +88,7 @@ header {
           align-items: center;
           justify-content: center;
           font-size: 20px;
+          transition: background-color $hover-bg-transition ease-out;
 
           i {
             margin-right: 10px;
@@ -111,6 +114,7 @@ header {
         
         &:hover {
           .cart-icon {
+            @extend %hover-element;
             background-color: lighten($primary, 10%);
           }
         }
@@ -206,6 +210,12 @@ header {
           list-style: none;
           display: flex;
           align-items: stretch;
+          &:hover {
+            @extend %hover-border;
+            a {
+              border-top-color: $text-color;
+            }
+          }
 
           a {
             color: $text-color;
@@ -216,18 +226,18 @@ header {
             display: flex;
             align-items: center;
             border-top: 4px solid #ffffff;
+            border-color: #ffffff;
             font-weight: 500;
             letter-spacing: 1px;
+            transition: color $hover-element-transition ease-out;
+            transition: background-color $hover-bg-transition ease-out;
+            transition: border-color $hover-border-transition ease-out;
 
             &:hover,
             &.active {
+              @extend %hover-bg, %hover-element;
               background-color: $primary;
               color: #ffffff;
-              border-color: $primary;
-            }
-
-            &.active {
-              border-color: $text-color;
             }
           }
         }
