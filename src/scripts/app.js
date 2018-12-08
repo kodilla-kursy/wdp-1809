@@ -106,4 +106,19 @@ function unsetStarsClass(limit, elem, className) {
         controls: false,
         navContainer: '.feedback-indicators',
     });
+
+    const brandsSlider = tns({
+        container: '.brands-slider',
+        loop: true,
+        items: 6,
+        slideBy: 'page',
+        nav: false,    
+        autoplay: true,
+        speed: 400,
+        autoplayButtonOutput: false,
+        mouseDrag: true,
+        lazyload: true,
+        controlsContainer: ".brands-carousel-controls",
+      });
+
 })();  
