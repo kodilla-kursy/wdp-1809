@@ -1,5 +1,6 @@
 .section--features {
   padding: 5rem 0;
+  
   a {
     text-decoration:none;
     i {
@@ -24,4 +25,10 @@
       }
     }
   }
+  @media (max-width: 480px) {
+    [class*="col-"] {
+      flex: 0 0 50%;
+      max-width: 100%;
+    }
+  }  
 }
