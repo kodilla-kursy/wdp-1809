@@ -132,6 +132,18 @@
         position: absolute;
       }
     }
+  }
+}
 
+@media(max-width: 380px) {
+
+  .panel-bar {
+
+    .menu {
+
+      ul {
+        width: 280px;
+      }
+    }
   }
 }
