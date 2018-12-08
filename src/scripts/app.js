@@ -110,7 +110,7 @@ function unsetStarsClass(limit, elem, className) {
     const brandsSlider = tns({
         container: '.brands-slider',
         loop: true,
-        items: 6,
+        items: 1,
         slideBy: 'page',
         nav: false,    
         autoplay: true,
@@ -119,6 +119,20 @@ function unsetStarsClass(limit, elem, className) {
         mouseDrag: true,
         lazyload: true,
         controlsContainer: ".brands-carousel-controls",
+        responsive: {
+            450: {
+                items: 2,
+            },
+            640: {
+                items: 3,
+            },
+            768: {
+                items: 4,
+            },
+            995: {
+                items: 6,
+            }
+        }
       });
 
 })();  
