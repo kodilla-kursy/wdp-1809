@@ -26,18 +26,18 @@ You can see a preview of the project here - [https://romantic-volhard-ce5aef.net
 
 # Convention and good practices 
 
-## html classes
-Generally there is no restriction when choosing class names, but in some cases we use standarized classes:
+## HTML classes
+Generally there is no restriction when choosing class names, but **in some cases we use standarized classes**:
 - for sections we use classes like section--brands, section--featured etc. 
 - for backgrounds we use separated classes like .bg1, .bg2, bg3.../.cov1, .cov2, .cov3... etc.
 
-## .scss files structure
+## Styles (.scss) files structure
 The src/sass folder is to keep all .scss files.
 1. /bootstrap - for bootstrap styles - we do not edit files here;
 2. /components - for all page components (named like _header.scss) and sections styles (named from section classes like _section--brands.scss)
 
-## commits description
-We use standard good practises when giving names to commits. It means:
+## Commits description
+We use **standard good practices** when giving names to commits. It means:
 - descriptions are in English;
 - descriptions start with simple verb like "add", "do", "fix";
 - we avoid overall descriptions like "add styles" or "fix bugs", we prefer detailed descriptions like "add styles for footer";
