@@ -21,10 +21,12 @@ $ npm install
 
 # Most important tasks
 
-1. `npm run prewatch` - run this scripts if you're willing to have 
+1. `npm run prewatch` - run this scripts to get stable release of project.
+- it copies all necessary files from your current working directory to /dist catalogue, where you'll find ready-to-be-published version of site. 
 
 2. `npm run watch` - run this scripts during development:
-- this script is watching for changes in .scss files and converts it into .css file. 
+- it's watching for changes in .scss files and converts it into .css file. 
+- it runs current, test version of site in your browser via BrowserSync.
 
 # Preview
 
