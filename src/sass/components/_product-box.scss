@@ -110,32 +110,19 @@
   }
 }
 
-.js-productsLink {
-  cursor: pointer;
-}
-
-.js-productsBox--disable,
-.js-productsDots--disable {
-  display: none;
-}
-
-.js-productsBox--show,
-.js-productsDots--show {
+.tab-content > .active {
   display: flex;
-  animation: fade $hover-bg-transition forwards;
 }
 
-.js-productsBox--hide,
-.js-productsDots--hide {
-  animation: reverse fade $hover-bg-transition forwards;
+.tab-box {
+  position: relative;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.tab-dots {
+  position: absolute;
+  display: inline-block;
+  width: auto;
+  right: 0px;
+  top: -58px;
+  padding: 0;
 }
