@@ -12,12 +12,16 @@ In order to start the project:
 $ git clone https://github.com/Varenthein/wdp-1811-03.git
 ```
 
-2. Install depedencies
+2. Use npm to run all tasks. In order to run npm install Node.js - you can download it's newest, stable version [from here](https://nodejs.org/en/).
+
+3. Install depedencies
 
 ```sh
 $ cd wdp-1811-03
 $ npm install
 ```
+
+4. Run task `npm run prewatch` in your terminal to get site's production release. It will be located in **dist** directory.
 
 # Preview
 
