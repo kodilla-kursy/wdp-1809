@@ -1,0 +1,32 @@
+.promo-box, .promo-box-small {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .rebate {
+      
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #292929;
+        border-radius: 50%;
+        color: #ffffff;
+        padding: 30px 15px 5px 15px;
+    }
+}
+
+.promo-box {
+  height: 430px;
+}
+
+.promo-box-small {
+  height: 199px;
+}
