@@ -134,6 +134,19 @@ function unsetStarsClass(limit, elem, className) {
 
 })();  
 
+
+// Mobile swipe for features carousel - task WDP181103-23
+$(".carousel").swipe({
+
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) { 
+      if (direction == 'left') {$(this).carousel('next')};
+      if (direction == 'right') {$(this).carousel('prev')};
+    },
+    allowPageScroll:"vertical"
+  
+  });
+
+
 //tooltips
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
