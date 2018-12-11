@@ -5,9 +5,14 @@ function Stars() {
     function toggleStar(event) {
         var child = event.target;
         var parent = child.parentNode;
+        var children = parent.children;
         var starCounter = 0;
         // sprawdź czy element ma klasę ".star"
         if (child.classList.contains('star')) {
+            // usuń klasę .full na wszystkich gwiazdkach
+            for (var i = 0; i < children.length; i++) {
+                children[i].classList.remove('full');
+            }
             // policz liczbę gwiazdek, która mają być zaznaczone
             while ((child = child.previousElementSibling) != null) starCounter++;
             //zaznacz gwiazdki  
