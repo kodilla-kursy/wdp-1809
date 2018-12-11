@@ -1,0 +1,17 @@
+.tooltip {
+    margin-left: 5px;
+}
+
+.tooltip-inner {
+    background-color: $text-color;
+    border-radius: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bs-tooltip-right{
+    .arrow {
+        &::before {
+            border-right-color: $text-color;
+        }
+    }
+}

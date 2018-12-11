@@ -133,3 +133,8 @@ function unsetStarsClass(limit, elem, className) {
       });
 
 })();  
+
+//tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
