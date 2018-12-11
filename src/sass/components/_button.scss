@@ -5,8 +5,11 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+  transition: color $hover-element-transition ease-out;
+  transition: background-color $hover-bg-transition ease-out;
 
   &:not(.no-hover):hover {
+    @extend %hover-bg;
     color: #ffffff !important;
     background-color: $primary;
     text-decoration: none;
@@ -35,9 +38,21 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
+  transition: color $hover-element-transition ease-out;
+  transition: background-color $hover-bg-transition ease-out;
 
   &:hover {
+    @extend %hover-element;
+    @extend %hover-bg;
     background-color: #2a2a2a;
     color: #ffffff;
+  }
+  &.active {
+      background-color: $primary;
+      color: #ffffff;
+    &:hover {
+      background-color: #ffffff;
+      color: $header-topbar-bg ;
+    }
   }
 }

@@ -91,6 +91,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .price {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &__oldprice {
+        padding: 0 10px;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+    }
   }
 
   &:hover .btn-main-small{
@@ -100,4 +112,21 @@
   &:hover .no-hover {
     background-color: $primary; 
   }
+}
+
+.tab-content > .active {
+  display: flex;
+}
+
+.tab-box {
+  position: relative;
+}
+
+.tab-dots {
+  position: absolute;
+  display: inline-block;
+  width: auto;
+  right: 0px;
+  top: -58px;
+  padding: 0;
 }

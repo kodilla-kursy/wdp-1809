@@ -29,10 +29,12 @@
 
   .menu {
     text-align: center;
+    padding-right: 87px;
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+      justify-content: center;
       li {
         display: inline-block;
         margin: 0 0.5rem;
@@ -44,9 +46,13 @@
           text-decoration: none;
           font-size: 18px;
           display: block;
+          &::before {
+            transition: all $hover-element-transition ease-out;
+          }
 
           &.active,
           &:hover {
+            @extend %hover-element;
             &::before {
               content: '';
               position: absolute;
@@ -62,6 +68,8 @@
   }
 
   .dots {
+    padding: 0;
+
     ul {
       margin: 0;
       padding: 0 0 0 1rem;
@@ -82,6 +90,7 @@
 
           &.active,
           &:hover {
+            @extend %hover-bg;
             background-color: $primary;
           }
         }
