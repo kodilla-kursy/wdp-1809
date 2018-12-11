@@ -103,9 +103,38 @@ function unsetStarsClass(limit, elem, className) {
         controls: false,
         navContainer: '.feedback-indicators',
     });
+
+    const brandsSlider = tns({
+        container: '.brands-slider',
+        loop: true,
+        items: 1,
+        slideBy: 'page',
+        nav: false,    
+        autoplay: true,
+        speed: 400,
+        autoplayButtonOutput: false,
+        mouseDrag: true,
+        lazyload: true,
+        controlsContainer: ".brands-carousel-controls",
+        responsive: {
+            450: {
+                items: 2,
+            },
+            640: {
+                items: 3,
+            },
+            768: {
+                items: 4,
+            },
+            995: {
+                items: 6,
+            }
+        }
+      });
+
 })();  
 
 //tooltips
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-})
+});
