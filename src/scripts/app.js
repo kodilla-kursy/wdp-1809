@@ -145,3 +145,9 @@ $(".carousel").swipe({
     allowPageScroll:"vertical"
   
   });
+
+
+//tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
