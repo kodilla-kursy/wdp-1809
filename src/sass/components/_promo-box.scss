@@ -21,24 +21,89 @@
     left: 28px;
     top: -403px;
     background-color: #292929;
-    opacity: 0.5;
+    opacity: 0.4;
     color: #ffffff;
   }
   .rebate-info {
     width: 50%;
     position: relative;
-    left: 56px;
+    left: 50px;
     top: -630px;
     color: white;
-    opacity: 0.9;
-    border: 1px solid red;
-
+    opacity: 0.95;
+    
     p { 
       font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 0;
+      padding: 0;
+      &.product-name {
+        font-size: 58px;
+        margin-top: -25px;
+      }
+      &.product-rebate {
+        width: 145px;
+        padding: 0 10px;;
+        font-size: 48px;
+        font-weight: 500;
+        border: 5px solid white;
+      }
     }
   }
 }
 
 .promo-box-small {
   height: 199px;
+  
+  .collection {
+    width: 40%;
+    position: relative;
+    left: 160px;
+    top: -160px;
+      
+    p {
+      font-weight: 400;
+      margin-bottom: 0;
+
+      &.collection-title {
+        font-size: 30px;
+        letter-spacing: 1px;
+      }
+      &.collection-subtitle {
+        margin-top: -5px;
+        font-size: 20px;
+        letter-spacing: 2.5px;
+        font-weight: bold;
+      }
+      &.collection-price {
+        margin-top: -5px;
+        font-size: 36px;
+        font-weight: 500;
+        color: $primary;
+      }
+    }
+  }
+  
+  .special-collection {
+    width: 50%;
+    position: relative;
+    left: 270px;
+    top: -120px;
+
+    p {
+      font-weight: 400;
+
+      &.special-collection-title {
+       font-size: 22px;
+       letter-spacing: 1.5px;
+       color: $primary;
+      }
+      &.special-collection-subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: -10px;
+        padding-left: 13px;
+      }
+    }
+  }
 }
