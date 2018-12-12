@@ -92,9 +92,13 @@
           &:hover {
             @extend %hover-bg;
             background-color: $primary;
-          }
+            }
         }
       }
+    }
+
+    .blog-slider-dots .tns-nav-active .blog-slider-dots__link {
+      background-color: $primary;
     }
   }
 }
