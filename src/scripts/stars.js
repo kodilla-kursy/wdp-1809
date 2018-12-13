@@ -2,6 +2,8 @@
 
 function Stars() {
 
+    var allStars = document.getElementsByClassName('star');
+
     function toggleStar(event) {
         var child = event.target;
         var parent = child.parentNode;
@@ -30,7 +32,7 @@ function Stars() {
         if (child.classList.contains('star')) {
             // usuń klasy .markedStar i .full na wszystkich gwiazdkach
             for (var i = 0; i < children.length; i++) {
-                children[i].classList.remove('markedStar','full');
+                children[i].classList.remove('markedStar', 'full');
             }
         }
     };
@@ -43,20 +45,23 @@ function Stars() {
         } else return;
     };
 
-    document.addEventListener('mouseover', function (event) {
-        starMouseOverAndOut(event);
-    }, false);
+    // ustaw nasłuchiwanie eventów dla wszystkich gwiazdek
+    for (var i = 0; i < allStars.length; i++) {
 
-    document.addEventListener('mouseout', function (event) {
-        starMouseOverAndOut(event);
-    }, false);
+        allStars[i].addEventListener('mouseover', function (event) {
+            starMouseOverAndOut(event);
+        }, false);
 
-    document.addEventListener('click', function (event) {
-        clearAllStars(event)
-        toggleStar(event);
-        event.target.parentElement.classList.add('highlightedStars');
-    }, false);
+        allStars[i].addEventListener('mouseout', function (event) {
+            starMouseOverAndOut(event);
+        }, false);
 
+        allStars[i].addEventListener('click', function (event) {
+            clearAllStars(event)
+            toggleStar(event);
+            event.target.parentElement.classList.add('highlightedStars');
+        }, false);
+    }
 }
 
 Stars();
