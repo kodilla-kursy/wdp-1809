@@ -62,6 +62,10 @@
         &.full {
           @extend .fas;
         }
+        &.markedStar {
+          @extend .fas;
+          color: $primary;
+        }
       }
     }
   }
@@ -108,4 +112,21 @@
   &:hover .no-hover {
     background-color: $primary; 
   }
+}
+
+.tab-content > .active {
+  display: flex;
+}
+
+.tab-box {
+  position: relative;
+}
+
+.tab-dots {
+  position: absolute;
+  display: inline-block;
+  width: auto;
+  right: 0px;
+  top: -58px;
+  padding: 0;
 }
