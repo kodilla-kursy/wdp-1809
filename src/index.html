@@ -41,18 +41,13 @@
           <div class="col text-center">
             <a href="#"><img src="./images/logo.png"></a>
           </div>
-          <div class="col text-right">
-            <div class="cart">
-              <a href="#" class="cart-box">
-                <div class="cart-icon">
-                  <i class="fas fa-shopping-basket"></i>
-                </div>
-                <div class="cart-counter">0</div>
-              </a>
-            </div>
-            <div class="col text-left phone-number lowresolution-show">
-              <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
-            </div>
+          <div class="col text-right cart">
+            <a href="#" class="cart-box">
+              <div class="cart-icon">
+                <i class="fas fa-shopping-basket"></i>
+              </div>
+              <div class="cart-counter">0</div>
+            </a>
           </div>
         </div>
       </div>
@@ -62,23 +57,12 @@
         <div class="row align-items-center">
           <div class="col">
             <form action="" class="search-form">
-              <div class="select-category">
-                <ul class="select-category__list">
-                  <li class="select-category__item">
-                    <i class="fas fa-list-ul"></i>
-                    <span class="select-category__text">Select a category</span>
-                    <i class="fas fa-caret-down"></i>
-
-                    <ul class="menu-categories">
-                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bed</a></li>
-                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Chair</a></li>
-                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Table</a></li>
-                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Sofa</a></li>
-                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Bedroom</a></li>
-                      <li class="menu-categories__item"><a class="menu-categories__item-link" href="#">Dinning</a></li>
-                    </ul>
-                  </li>
-                </ul>
+              <div class="category">
+                <i class="fas fa-list-ul"></i>
+                <select name="" id="">
+                  <option value="">Select a category</option>
+                </select>
+                <i class="fas fa-caret-down"></i>
               </div>
               <div class="search-field">
                 <input placeholder="Search products..." type="text">
@@ -86,20 +70,7 @@
               </div>
             </form>
           </div>
-          <div class="menu-mobile col-auto d-flex d-md-none">
-            <button class="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#" class="active">Home</a>
-              <a class="dropdown-item" href="#">Furniture</a>
-              <a class="dropdown-item" href="#">Chair</a>
-              <a class="dropdown-item" href="#">Table</a>
-              <a class="dropdown-item" href="#">Sofa</a>
-              <a class="dropdown-item" href="#">Bedroom</a>
-              <a class="dropdown-item" href="#">Blog</a>
-            </div>
-          </div>
-
-          <div class="menu col-auto col-md-12 col-lg-6 d-none d-md-block">
+          <div class="col-auto menu">
             <ul>
               <li><a href="#" class="active">Home</a></li>
               <li><a href="#">Furniture</a></li>
@@ -158,53 +129,6 @@
             <div class="content">
               <h5>Member discount</h5>
               <p>First order</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section--promotions">
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <div class="promo-box">
-            <img class="promo-box-img" src="./images/new/bed/09.jpg">
-            <div class="rebate">
-            </div>
-            <div class="rebate-info">
-              <p class="rebate-info-title">GUEST ROOM</p>
-              <p class="product-name">SOFA</p>
-              <p class="product-rebate">-20%</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="row">
-            <div class="col-12">
-              <div class="promo-box-small top">
-                <div class="collection">
-                  <p class="collection-title">
-                    <span class="promo-bold">OFFICE</span>
-                    CHAIR
-                  </p>
-                  <p class="collection-subtitle">COLLECTION</p>
-                  <p class="collection-price">$ 200.00</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="promo-box-small down">
-                <div class="special-collection">
-                  <p class="special-collection-title">
-                    <span class="promo-bold">SPECIAL</span>
-                    COLLECTION
-                  </p>
-                  <p class="special-collection-subtitle">SAVE UP TO 45% ON FURNITURE</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -653,8 +577,7 @@
               </div>
               <div class="post-info">
                 <h5 class="post-info__header">Products That Fight Static </h5>
-                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
-                  Nullam euismod leo
+                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
                   vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
                 <div class="post-info__more">
                   <span class="btn-main post-info__btn-more">Read more</span>
@@ -679,8 +602,7 @@
               </div>
               <div class="post-info">
                 <h5 class="post-info__header">Products That Fight Static </h5>
-                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
-                  Nullam euismod leo
+                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
                   vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
                 <div class="post-info__more">
                   <span class="btn-main post-info__btn-more">Read more</span>
@@ -730,8 +652,7 @@
               </div>
               <div class="post-info">
                 <h5 class="post-info__header">Products That Fight Static </h5>
-                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
-                  Nullam euismod leo
+                <p class="post-info__text">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo
                   vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.</p>
                 <div class="post-info__more">
                   <span class="btn-main post-info__btn-more">Read more</span>
