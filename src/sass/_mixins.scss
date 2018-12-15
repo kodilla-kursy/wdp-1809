@@ -22,3 +22,8 @@
     border-left: 30px solid transparent;
     margin: -1px;
 }
+
+%btn-outline-transition {
+    transition: color $hover-border-transition ease-in,
+        border $hover-border-transition ease-in;
+}
