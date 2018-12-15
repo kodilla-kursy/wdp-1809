@@ -1,9 +1,9 @@
 .section--features {
-  padding: 5rem 0;
+  padding: 0 0 1.875rem 0;
 
   .features {
     height: 530px;
-    padding: 15px 0;
+    padding: 0 30px;
     .hot-deals {
       .top-bar {
         background: $footer-claim-bg;
@@ -15,15 +15,14 @@
         padding: 7px 30px;
         position: relative;
         .dots {
-          position: absolute;
-          top: 8px;
-          right: 30px;
+          position: relative;
+          top: 20px;
+          right: -120px;
           li {
             width: 15px;
             height: 15px;
             background: $text-inactive-color;
-            display: inline-block;
-            margin: 2px;
+            margin: 4px;
             border-radius: 50%;
             &:hover {
               background: $primary;
@@ -34,8 +33,10 @@
           }
         }
       }
+      .ph1 {background-image: url('../images/features/armchair.jpg');}
+      .ph2 {background-image: url('../images/features/desk.png');}
+      .ph3 {background-image: url('../images/features/sofa2.png');}
       .photo {
-        background-image: url('../images/features/armchair.jpg');
         background-size: cover;
         background-position: center;
         height: 300px;
@@ -131,42 +132,60 @@
     }
     .furniture {
       max-height: 490px;
-      background: url('../images/features/sofa.jpg');
-      background-size: cover;
-      background-position: center;
+      height: 490px;
       padding: 0;
-      &:hover {
-        .price {
-          .btn-main-small {
+      &:hover .price .btn-main-small {
             background-color: $primary;
-          }
-        }  
+      }  
+      .fur1 {
+        background: url('../images/features/sofa.jpg');
       }
-      .content {
-        color: white;
-        text-transform: uppercase;
-        margin-top: 145px;
-        padding: 55px 0 45px 0;
-        background: rgba(42, 42, 42, 0.8);
-        position: relative;
-        h1, h2 {
-          font-weight: 400;
+      .fur2 {
+        background: url('../images/features/outdoor.jpeg');
+      }
+      .fur3 {
+        background: url('../images/features/decorations.jpeg');
+      }
+      .carousel {
+        &-inner {
+        height: 100%;
         }
-        h1 span {
-            font-weight: 600;
+        &-item {
+          height: 100%;
+          margin-top: 0;
+          background-size: cover;
+          background-position: center;
         }
-        .btn-main {
-          position: absolute;
-          bottom: -20px;
-          left: 40%;
-          border-radius: 3px;
-          border: 1px solid white;
-          background: white;
-          line-height: 30px;
-          color: $footer-claim-bg;
-          transition: .2s;
-          &:hover {
-            background: $footer-claim-bg;
+      }
+      .contentBox {
+        padding-top: 145px;
+        .content {
+          color: white;
+          text-transform: uppercase;
+          padding: 55px 0 45px 0;
+          background: rgba(42, 42, 42, 0.8);
+          position: relative;
+          h1, h2 {
+            font-weight: 400;
+          }
+          h1 span {
+              font-weight: 600;
+          }
+          .btn-main {
+            width: 180px;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-90px);
+            border-radius: 3px;
+            border: 1px solid white;
+            background: white;
+            line-height: 30px;
+            color: $footer-claim-bg;
+            transition: .2s;
+            &:hover {
+              background: $footer-claim-bg;
+            }
           }
         }
       }
@@ -174,7 +193,7 @@
         position: relative;
         background: $footer-claim-bg;
         height: 40px;
-        top: 100px;
+        top: -40px;
         .btn-main {
           height: 40px;
           border: none;
@@ -192,3 +211,13 @@
     padding: 1rem 0 3rem 0;
   }
 }
+@media(max-width:1200px) {
+  .section--features .features .hot-deals .photo .hover {
+    opacity: 1;
+    .btn-main {
+      position: relative;
+      top: 150px;
+    }
+  }
+}
+

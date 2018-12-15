@@ -103,4 +103,51 @@ function unsetStarsClass(limit, elem, className) {
         controls: false,
         navContainer: '.feedback-indicators',
     });
+
+    const brandsSlider = tns({
+        container: '.brands-slider',
+        loop: true,
+        items: 1,
+        slideBy: 'page',
+        nav: false,    
+        autoplay: true,
+        speed: 400,
+        autoplayButtonOutput: false,
+        mouseDrag: true,
+        lazyload: true,
+        controlsContainer: ".brands-carousel-controls",
+        responsive: {
+            450: {
+                items: 2,
+            },
+            640: {
+                items: 3,
+            },
+            768: {
+                items: 4,
+            },
+            995: {
+                items: 6,
+            }
+        }
+      });
+
 })();  
+
+
+// Mobile swipe for features carousel - task WDP181103-23
+$(".carousel").swipe({
+
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) { 
+      if (direction == 'left') {$(this).carousel('next')};
+      if (direction == 'right') {$(this).carousel('prev')};
+    },
+    allowPageScroll:"vertical"
+  
+  });
+
+
+//tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
