@@ -26,6 +26,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-:focus {
+*:focus,  button:focus {
   outline: 0;
 }
