@@ -62,6 +62,10 @@
         &.full {
           @extend .fas;
         }
+        &.markedStar {
+          @extend .fas;
+          color: $primary;
+        }
       }
     }
   }
