@@ -21,8 +21,19 @@
     "prebuild": "npm run clean",
     "build": "npm-run-all -p copy build:*",
     "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css",
+    "code-quality": "npm-run-all format lint",
     "lint": "eslint src/",
     "format": "prettier --write \"src/**/*.{js,html,scss}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -35,6 +46,8 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^5.2.0",
