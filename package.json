@@ -22,8 +22,8 @@
     "build": "npm-run-all -p copy build:*",
     "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css",
     "code-quality": "npm-run-all format lint",
-    "lint": "eslint src/",
-    "format": "prettier --write \"src/**/*.{js,html,scss}\""
+    "format": "prettier --write \"src/**/*.{js,html,scss}\"",
+    "lint": "eslint src/"
   },
   "husky": {
     "hooks": {
