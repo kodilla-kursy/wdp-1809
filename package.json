@@ -21,7 +21,7 @@
     "prebuild": "npm run clean",
     "build": "npm-run-all -p copy build:*",
     "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css",
-    "lint": "prettier"
+    "format": "prettier --write \"src/**/*.{js,html,scss}\""
   },
   "author": "",
   "license": "ISC",
