@@ -2,11 +2,11 @@
 
 ## Opis projektu
 
-TODO: uzupełnią kursanci
+DO UZUPEŁNIENIA
 
 ## Demo
 
-TODO: uzupełnią kursanci
+DO UZUPEŁNIENIA
 
 ## Inicjacja projektu
 
@@ -34,4 +34,4 @@ dla plików, które zostały wybrane do za-commit'owania.
 
 ## Konwencje i dobre praktyki
 
-TODO: uzupełnią kursanci
+DO UZUPEŁNIENIA
