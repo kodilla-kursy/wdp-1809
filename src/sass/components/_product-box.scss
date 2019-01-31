@@ -78,5 +78,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .price {
+      display: flex;
+      justify-content: row;
+      align-items: center;
+      .old-price {
+        font-size: 13px;
+        margin-right: 5px;
+        color: $secondary;
+        position: relative;
+        line-height: normal;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          border-bottom: 1px solid $dark;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
 }
