@@ -27,11 +27,11 @@
     }
 
     .buttons {
-      display: flex;
+      visibility: hidden;
       justify-content: space-between;
+      display: flex;
     }
   }
-
   .content {
     text-align: center;
     padding: 20px;
@@ -78,5 +78,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .price {
+      .btn-main-small {
+        background-color: $primary;
+      }
+    }
   }
 }
