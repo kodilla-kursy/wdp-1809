@@ -1,5 +1,11 @@
 .post-box {
   margin-bottom: 2rem;
+  a {
+    color: $secondary;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   .cover {
     padding: 70% 25px 0 25px;
@@ -33,7 +39,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: $dark;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -49,6 +55,19 @@
     .more {
       text-align: center;
       padding-top: 30px;
+      button {
+        color: $light;
+        border: none;
+      }
+    }
+  }
+
+  &:hover {
+    h5 {
+      color: $primary;
+    }
+    .more button {
+      background-color: $primary;
     }
   }
 }
