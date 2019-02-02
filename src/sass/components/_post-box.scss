@@ -52,12 +52,22 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 992px) and (max-width: 1200px) {
+  .section--blog-posts {
+    .cover {
+      .details {
+        padding: 15px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
   .post-box {
     .cover {
-      padding: 70% 10px 0 10px;
-    }
-    .details {
+      .details {
+        padding: 15px 10px;
+      }
     }
   }
   .col-xs {
