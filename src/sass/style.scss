@@ -22,3 +22,7 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.transition {
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
