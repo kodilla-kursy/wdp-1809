@@ -8,7 +8,15 @@
       size: cover;
       position: center;
     }
-
+    &-1 {
+      background-image: url("../images/blog/b1.jpg");
+    }
+    &-2 {
+      background-image: url("../images/blog/b2.jpg");
+    }
+    &-3 {
+      background-image: url("../images/blog/b3.jpg");
+    }
     .details {
       padding: 15px 20px;
       display: flex;

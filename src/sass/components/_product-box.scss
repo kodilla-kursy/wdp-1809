@@ -7,7 +7,7 @@
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: #f4f5f7;
+      color: transparent;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -29,6 +29,30 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+    }
+    &-1 {
+      background-image: url("../images/products/1.jpg");
+    }
+    &-2 {
+      background-image: url("../images/products/2.jpg");
+    }
+    &-3 {
+      background-image: url("../images/products/3.jpg");
+    }
+    &-4 {
+      background-image: url("../images/products/4.jpg");
+    }
+    &-5 {
+      background-image: url("../images/products/5.jpg");
+    }
+    &-6 {
+      background-image: url("../images/products/6.jpg");
+    }
+    &-7 {
+      background-image: url("../images/products/7.jpg");
+    }
+    &-8 {
+      background-image: url("../images/products/8.jpg");
     }
   }
 
