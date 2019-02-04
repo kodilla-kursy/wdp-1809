@@ -11,7 +11,6 @@ function isOverflown (element) {
   } else {
     // Decrease font size
     cartFontSize--;
-    console.log(cartFontSize);
     cartCounter.style.fontSize = cartFontSize + 'px';
     cartCounter.style.paddingLeft = '3px';
     setTimeout(function () {
