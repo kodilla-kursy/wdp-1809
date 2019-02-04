@@ -1,24 +1,20 @@
 console.log('hello');
 
-/* Resising cart counter font  if  text overflows div element */
-
-function isOverflown (element) {
-  return element.scrollWidth > element.clientWidth;
-}
-
+/* Resising cart counter font size when text is overflowing */
 let cartCounter = document.querySelector('.cart-counter');
 cartCounter.style.fontSize = '14px';
-
 let cartFontSize = parseInt(cartCounter.style.fontSize);
-console.log(cartFontSize);
-for (let i = cartFontSize; i >= 0; i--) {
-  let counterOverflown = isOverflown(cartCounter);
-  if (!counterOverflown) {
-    console.log('no overflow');
+
+function isOverflown (element) {
+  if (!(element.scrollWidth > element.clientWidth)) {
+    return 0;
   } else {
+    // Decrease font size
     cartFontSize--;
     console.log(cartFontSize);
     cartCounter.style.fontSize = cartFontSize + 'px';
-    cartCounter.style.paddingLeft = '2px';
+    cartCounter.style.paddingLeft = '3px';
+    setTimeout(isOverflown(element), 5000);
   }
 }
+isOverflown(cartCounter);
