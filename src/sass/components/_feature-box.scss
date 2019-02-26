@@ -49,7 +49,10 @@
     }
   }
 
-  &.active {
+  &.active,
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
     i {
       background-color: $primary;
       color: #ffffff;
