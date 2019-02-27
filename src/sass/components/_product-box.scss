@@ -30,10 +30,13 @@
       justify-content: space-between;
       opacity: 0;
     }
-    &:hover {
-      .buttons {
-        opacity: 1;
-      }
+  }
+  &:hover {
+    .buttons {
+      opacity: 1;
+    }
+    .price [class*="btn-"] {
+      background-color: $primary;
     }
   }
 
