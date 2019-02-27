@@ -87,7 +87,7 @@ header {
         }
 
         .cart-counter {
-          width: 28px;
+          min-width: 28px;
           height: 27px;
           border-radius: 14px;
           background-color: $header-bg;
@@ -96,6 +96,7 @@ header {
           justify-content: center;
           font-size: 14px;
           color: rgb(224, 227, 237);
+          padding: 2px;
           position: absolute;
           top: 50%;
           right: 0;
