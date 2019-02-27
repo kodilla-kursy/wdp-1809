@@ -25,10 +25,15 @@
       color: #ffffff;
       padding: 30px 15px 5px 15px;
     }
-
     .buttons {
       display: flex;
       justify-content: space-between;
+      opacity: 0;
+    }
+    &:hover {
+      .buttons {
+        opacity: 1;
+      }
     }
   }
 
