@@ -2,6 +2,12 @@
 
 const shoppingCartCounter = document.querySelector('.cart-counter');
 
+// Opcja z ingerencją w style CSS, określająca max. wskaźnik
+if (shoppingCartCounter.innerText > 99999) {
+  shoppingCartCounter.innerHTML = 99999;
+}
+
+/* Opcja w pełni JS, bez ingerencji w style CSS
 function adjustCartCounterDisplay () {
   let shoppingCartItemsCount = shoppingCartCounter.innerText.length;
 
@@ -21,3 +27,4 @@ function adjustCartCounterDisplay () {
 }
 
 shoppingCartCounter.addEventListener('change', adjustCartCounterDisplay());
+*/
