@@ -25,6 +25,7 @@
       color: #ffffff;
       padding: 30px 15px 5px 15px;
     }
+
     .buttons {
       display: flex;
       justify-content: space-between;
@@ -35,6 +36,7 @@
     .buttons {
       opacity: 1;
     }
+
     .price [class*="btn-"] {
       background-color: $primary;
     }
