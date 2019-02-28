@@ -1,0 +1,16 @@
+%time-hover-animation {
+  transition: $universal-transition-timing;
+  -webkit-transition: $universal-transition-timing;
+}
+
+%bg-primary-hover-animation {
+  background-color: $primary;
+}
+
+%color-wh-hover-animation {
+  color: #fff;
+}
+
+%color-primary-hover-animation {
+  color: $primary;
+}

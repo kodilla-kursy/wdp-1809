@@ -21,7 +21,10 @@ footer {
             color: rgb(169, 169, 169);
 
             &:hover {
-              color: #ffffff;
+              @extend %time-hover-animation;
+              @extend %color-wh-hover-animation;
+              background-color: transparent;
+              text-decoration: none;
             }
           }
         }
@@ -70,7 +73,8 @@ footer {
             text-decoration: none;
 
             &:hover {
-              color: $primary;
+              @extend %time-hover-animation;
+              @extend %color-primary-hover-animation;
             }
           }
         }

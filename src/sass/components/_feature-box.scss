@@ -51,8 +51,9 @@
 
   &.active {
     i {
-      background-color: $primary;
-      color: #ffffff;
+      @extend %time-hover-animation;
+      @extend %color-wh-hover-animation;
+      @extend %bg-primary-hover-animation;
       border-color: $primary;
     }
 

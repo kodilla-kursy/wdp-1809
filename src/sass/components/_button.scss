@@ -7,8 +7,9 @@
   padding: 10px 30px;
 
   &:not(.no-hover):hover {
-    color: #ffffff !important;
-    background-color: $primary;
+    @extend %time-hover-animation;
+    @extend %color-wh-hover-animation;
+    @extend %bg-primary-hover-animation;
     text-decoration: none;
   }
 }
@@ -30,7 +31,8 @@
   line-height: 22px;
 
   &:hover {
+    @extend %time-hover-animation;
+    @extend %color-wh-hover-animation;
     background-color: #2a2a2a;
-    color: #ffffff;
   }
 }

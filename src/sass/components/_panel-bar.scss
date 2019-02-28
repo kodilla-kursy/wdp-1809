@@ -44,15 +44,19 @@
           text-decoration: none;
           font-size: 18px;
           display: block;
-
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            border-bottom: 0px solid $primary;
+            @extend %time-hover-animation;
+          }
           &.active,
           &:hover {
             &::before {
-              content: "";
-              position: absolute;
               bottom: -4px;
-              left: 0;
-              width: 100%;
               border-bottom: 4px solid $primary;
             }
           }
@@ -82,7 +86,8 @@
 
           &.active,
           &:hover {
-            background-color: $primary;
+            @extend %time-hover-animation;
+            @extend %bg-primary-hover-animation;
           }
         }
       }
