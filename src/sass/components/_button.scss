@@ -1,13 +1,13 @@
 .btn-main {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $darkgrey-color;
+  color: $white-color;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.no-hover):hover {
-    color: #ffffff !important;
+    color: $white-color !important;
     background-color: $primary;
     text-decoration: none;
   }
@@ -24,14 +24,14 @@
 .btn-outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $darkgrey-color;
+  color: $darkgrey-color;
   font-size: 13px;
   line-height: 22px;
 
   &:hover,
-  &--active {
-    background-color: #2a2a2a;
-    color: #ffffff;
+  &.active {
+    background-color: $darkgrey-color;
+    color: $white-color;
   }
 }
