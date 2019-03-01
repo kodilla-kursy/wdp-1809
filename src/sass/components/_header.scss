@@ -135,7 +135,7 @@ header {
           align-items: stretch;
 
           a {
-            color: $text-color;
+            color: $base-color;
             text-transform: uppercase;
             font-size: 12px;
             padding: 1rem;
@@ -154,7 +154,7 @@ header {
             }
 
             &.active {
-              border-color: $text-color;
+              border-color: $base-color;
             }
           }
         }
@@ -165,7 +165,7 @@ header {
       border: 1px solid $form-border-color;
       display: inline-flex;
       height: 45px;
-      color: $text-color;
+      color: $base-color;
 
       .category {
         border-right: 1px solid $form-border-color;
@@ -210,7 +210,7 @@ header {
           outline: none;
 
           &::placeholder {
-            color: $text-color;
+            color: $base-color;
           }
         }
 
