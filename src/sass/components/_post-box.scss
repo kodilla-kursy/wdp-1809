@@ -1,21 +1,19 @@
 .post-box-container {
-  display: block;
-
   .post-box {
     margin-bottom: 2rem;
 
     .cover {
       padding: 70% 25px 0 25px;
       background: {
-        color: #f4f5f7;
+        color: $post-box-cover-bg;
         size: cover;
-        position: center;
+        position: 50%;
       }
 
       .details {
         padding: 15px 20px;
         display: flex;
-        background-color: #ffffff;
+        background-color: $post-box-bg;
         font-size: 14px;
         color: $text-color;
 
@@ -47,7 +45,7 @@
       p {
         font-size: 14px;
         line-height: 24px;
-        color: rgb(103, 103, 103);
+        color: $post-info-text-color;
         text-align: justify;
       }
 
@@ -61,6 +59,7 @@
       }
     }
   }
+
   &:hover {
     text-decoration: none;
 
