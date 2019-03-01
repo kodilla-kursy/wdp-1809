@@ -28,7 +28,7 @@
 
     .buttons {
       display: flex;
-      justify-content: space-between;
+      visibility: hidden;
     }
   }
 
@@ -92,5 +92,16 @@
         display: flex;
       }
     }
+  }
+}
+
+.product-box:hover {
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    visibility: visible;
+  }
+  .no-hover {
+    background-color: $primary;
   }
 }
