@@ -37,6 +37,16 @@ header {
       i {
         margin-right: 5px;
       }
+
+      a span {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      .text-right ul li a span {
+        display: inline;
+      }
     }
   }
 
