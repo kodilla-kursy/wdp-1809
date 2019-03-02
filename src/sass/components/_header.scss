@@ -201,6 +201,13 @@ header {
             color: transparent;
             text-shadow: 0 0 0 #000;
           }
+
+          &:hover {
+            cursor: pointer;
+            ~ i {
+              color: $primary;
+            }
+          }
         }
       }
 
