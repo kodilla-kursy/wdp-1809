@@ -16,8 +16,7 @@ header {
           font-size: 13px;
 
           &:hover {
-            @extend %color-primary-hover-animation;
-            @extend %time-hover-animation;
+            @extend %color-timing-hover-animation;
             text-decoration: none;
           }
         }
@@ -105,7 +104,7 @@ header {
 
         &:hover {
           .cart-icon {
-            @extend %time-hover-animation;
+            @extend %bg-hover-animation;
             background-color: lighten($primary, 10%);
           }
         }
@@ -149,15 +148,13 @@ header {
 
             &:hover,
             &.active {
-              @extend %time-hover-animation;
-              @extend %bg-primary-hover-animation;
-              @extend %color-wh-hover-animation;
+              @extend %buttons-hover-animation;
               border-color: $primary;
             }
 
             &.active {
-              @extend %time-hover-animation;
-              @extend %bg-primary-hover-animation;
+              transition: $hover-transition-timing;
+              color: $button-hover-color;
               border-color: $text-color;
             }
           }

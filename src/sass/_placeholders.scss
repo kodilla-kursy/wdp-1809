@@ -1,16 +1,15 @@
-%time-hover-animation {
-  transition: $universal-transition-timing;
-  -webkit-transition: $universal-transition-timing;
-}
-
-%bg-primary-hover-animation {
+%bg-hover-animation {
+  transition: $hover-transition-timing;
   background-color: $primary;
 }
 
-%color-wh-hover-animation {
-  color: #fff;
+%buttons-hover-animation {
+  transition: $hover-transition-timing;
+  color: $button-hover-color;
+  background-color: $primary;
 }
 
-%color-primary-hover-animation {
+%color-timing-hover-animation {
   color: $primary;
+  transition: $hover-transition-timing;
 }

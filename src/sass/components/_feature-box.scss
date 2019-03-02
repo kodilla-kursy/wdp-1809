@@ -51,9 +51,7 @@
 
   &.active {
     i {
-      @extend %time-hover-animation;
-      @extend %color-wh-hover-animation;
-      @extend %bg-primary-hover-animation;
+      @extend %buttons-hover-animation;
       border-color: $primary;
     }
 

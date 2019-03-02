@@ -29,21 +29,24 @@
 
   .menu {
     text-align: center;
+
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+
       li {
         display: inline-block;
         margin: 0 0.5rem;
         font-weight: 600;
 
         a {
-          color: rgb(42, 42, 42);
+          color: $text-color;
           position: relative;
           text-decoration: none;
           font-size: 18px;
           display: block;
+
           &::before {
             content: "";
             position: absolute;
@@ -51,8 +54,9 @@
             left: 0;
             width: 100%;
             border-bottom: 0px solid $primary;
-            @extend %time-hover-animation;
+            transition: $hover-transition-timing;
           }
+
           &.active,
           &:hover {
             &::before {
@@ -86,8 +90,7 @@
 
           &.active,
           &:hover {
-            @extend %time-hover-animation;
-            @extend %bg-primary-hover-animation;
+            @extend %bg-hover-animation;
           }
         }
       }
