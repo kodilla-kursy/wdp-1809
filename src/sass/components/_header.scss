@@ -113,11 +113,93 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+
     background-color: #ffffff;
 
     .container > .row {
       height: 84px;
     }
+
+    ///////////////////////////////////////////////////////
+
+    .category {
+      -webkit-appearance: none;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      padding: 5px 30px 5px 35px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .Menu_Poziome {
+      background-color: #ffffff;
+      text-align: center;
+      margin: auto;
+      margin-top: -3px;
+    }
+
+    .Menu_Poziome li {
+      min-width: 80px;
+      padding: 0;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .category a {
+      height: 40px;
+      display: block;
+      width: auto;
+      line-height: 40px;
+      font-size: 12;
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    .category ul li ul li a:hover {
+      background-color: $primary;
+      color: #ffffff;
+      border-color: $primary;
+    }
+
+    .category ul li ul li a {
+      width: 190px;
+      text-align: left;
+      padding-left: 5px;
+    }
+
+    .category:hover .Menu_Pionowe {
+      display: block;
+      top: 45px;
+      left: 0px;
+      position: absolute;
+      background-color: #ffffff;
+    }
+
+    .category ul ul li {
+      display: block;
+    }
+
+    .category ul ul {
+      text-align: center;
+      display: none;
+    }
+
+    .category .fas:hover .Menu_Pionowe {
+      display: block;
+      position: absolute;
+      background-color: #ffffff;
+    }
+
+    ////////////////////////////////////////////////////////////
 
     .menu {
       display: flex;
