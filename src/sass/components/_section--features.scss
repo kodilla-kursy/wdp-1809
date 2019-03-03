@@ -1,3 +1,8 @@
 .section--features {
   padding: 5rem 0;
+
+  .features-row {
+    display: flex;
+    justify-content: space-between;
+  }
 }
