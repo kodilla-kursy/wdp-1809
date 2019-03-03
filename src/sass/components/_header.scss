@@ -72,12 +72,17 @@ header {
 
     .container > .row {
       height: 145px;
+      flex-wrap: wrap-reverse;
     }
 
     .phone-number {
+      text-align: right;
+      align-self: flex-end;
+      justify-self: right;
+
       p {
         margin: 0;
-        font-size: 17px;
+        font-size: 14px;
         line-height: 42px;
         color: rgb(216, 216, 216);
         font-weight: 500;
@@ -93,6 +98,9 @@ header {
     }
 
     .cart {
+      align-self: flex-end;
+      margin-top: 10px;
+
       .cart-box {
         display: inline-block;
         position: relative;
@@ -135,6 +143,21 @@ header {
             background-color: lighten($primary, 10%);
           }
         }
+      }
+    }
+
+    //media queries here
+    @include media-breakpoint-up(sm) {
+      .phone-number {
+        align-self: center;
+        text-align: left;
+        p {
+          font-size: 17px;
+        }
+      }
+
+      .cart {
+        align-self: auto;
       }
     }
   }
