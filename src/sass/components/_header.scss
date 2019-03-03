@@ -23,29 +23,46 @@ header {
       }
     }
 
-    .text-left ul li {
-      margin-right: 1.5rem;
+    .text-left {
+      padding-right: 0;
 
-      i {
-        margin-left: 5px;
+      ul li {
+        margin-right: 0.5rem;
+        padding-right: 0;
+
+        i {
+          margin-left: 5px;
+        }
       }
     }
 
-    .text-right ul li {
-      margin-left: 1.5rem;
+    .text-right {
+      padding-left: 0;
 
-      i {
-        margin-right: 5px;
-      }
+      ul li {
+        margin-left: 0.5rem;
 
-      a span {
-        display: none;
+        i {
+          margin-right: 5px;
+        }
+
+        a span {
+          display: none;
+        }
       }
     }
 
     @include media-breakpoint-up(sm) {
-      .text-right ul li a span {
-        display: inline;
+      .text-left ul li {
+        margin-right: 1.5rem;
+      }
+
+      .text-right ul li a {
+        margin-right: 1.5rem;
+
+        span {
+          display: inline;
+        }
       }
     }
   }
