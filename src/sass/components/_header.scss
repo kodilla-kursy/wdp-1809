@@ -105,6 +105,7 @@ header {
         display: inline-block;
         position: relative;
         color: #ffffff;
+        text-decoration: none;
 
         .cart-icon {
           background-color: $primary;
@@ -146,11 +147,11 @@ header {
       }
     }
 
-    //media queries here
     @include media-breakpoint-up(sm) {
       .phone-number {
         align-self: center;
         text-align: left;
+
         p {
           font-size: 17px;
         }
