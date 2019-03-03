@@ -120,8 +120,6 @@ header {
       height: 84px;
     }
 
-    ///////////////////////////////////////////////////////
-
     .category {
       -webkit-appearance: none;
       border: 0;
@@ -132,74 +130,72 @@ header {
       position: relative;
       z-index: 1;
       cursor: pointer;
+
+      .horizontal-menu {
+        background-color: $header-search-form;
+        text-align: center;
+        margin: auto;
+        margin-top: -3px;
+
+        li {
+          min-width: 80px;
+          padding: 0;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+
+      a {
+        height: 40px;
+        display: block;
+        width: auto;
+        line-height: 40px;
+        font-size: 12;
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      .furniture-item {
+        width: 190px;
+        text-align: left;
+        padding-left: 5px;
+      }
+
+      .furniture-item:hover {
+        background-color: $primary;
+        color: $header-search-form;
+        border-color: $primary;
+      }
+
+      .fas:hover .vertical-menu {
+        display: block;
+        position: absolute;
+        background-color: $header-search-form;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        ul {
+          text-align: center;
+          display: none;
+
+          li {
+            display: block;
+          }
+        }
+      }
     }
 
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-    }
-
-    .Menu_Poziome {
-      background-color: #ffffff;
-      text-align: center;
-      margin: auto;
-      margin-top: -3px;
-    }
-
-    .Menu_Poziome li {
-      min-width: 80px;
-      padding: 0;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .category a {
-      height: 40px;
-      display: block;
-      width: auto;
-      line-height: 40px;
-      font-size: 12;
-      color: $text-color;
-      text-decoration: none;
-    }
-
-    .category ul li ul li a:hover {
-      background-color: $primary;
-      color: #ffffff;
-      border-color: $primary;
-    }
-
-    .category ul li ul li a {
-      width: 190px;
-      text-align: left;
-      padding-left: 5px;
-    }
-
-    .category:hover .Menu_Pionowe {
+    .category:hover .vertical-menu {
       display: block;
       top: 45px;
       left: 0px;
       position: absolute;
-      background-color: #ffffff;
+      background-color: $header-search-form;
     }
-
-    .category ul ul li {
-      display: block;
-    }
-
-    .category ul ul {
-      text-align: center;
-      display: none;
-    }
-
-    .category .fas:hover .Menu_Pionowe {
-      display: block;
-      position: absolute;
-      background-color: #ffffff;
-    }
-
-    ////////////////////////////////////////////////////////////
 
     .menu {
       display: flex;
