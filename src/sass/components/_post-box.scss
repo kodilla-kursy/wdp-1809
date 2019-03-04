@@ -3,10 +3,23 @@
 
   .cover {
     padding: 70% 25px 0 25px;
+
     background: {
       color: #f4f5f7;
       size: cover;
       position: center;
+    }
+
+    &.chair-photo {
+      background-image: url("../images/blog/chairs-993853_640-min.png");
+    }
+
+    &.kitchen-photo {
+      background-image: url("../images/blog/kitchen-1940177_640-min.png");
+    }
+
+    &.second-kit-photo {
+      background-image: url("../images/blog/kitchen-2486092_640-min.png");
     }
 
     .details {

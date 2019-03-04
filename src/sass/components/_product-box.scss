@@ -14,8 +14,36 @@
       repeat: no-repeat;
     }
 
-    .first-bed {
-      background-image: url("../../images/beds/bed-1358198_640-min.png");
+    &.first-bed {
+      background-image: url("../images/beds/bed-1358198_640-min.png");
+    }
+
+    &.second-bed {
+      background-image: url("../images/beds/bed-1839184_640-min.png");
+    }
+
+    &.third-bed {
+      background-image: url("../images/beds/bedroom-413706_640-min.png");
+    }
+
+    &.fourth-bed {
+      background-image: url("../images/beds/bedroom-665811_640-min.png");
+    }
+
+    &.bedroom {
+      background-image: url("../images/beds/bedroom-3498911_640-min.png");
+    }
+
+    &.second-bedroom {
+      background-image: url("../images/beds/pexels-photo-1034584.png");
+    }
+
+    &.third-bedroom {
+      background-image: url("../images/beds/hotel-3102375_640-min.png");
+    }
+
+    &.fourth-bedroom {
+      background-image: url("../images/beds/furniture-2387636_640-min.png");
     }
 
     overflow: hidden;
