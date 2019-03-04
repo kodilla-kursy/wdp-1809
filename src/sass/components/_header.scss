@@ -115,9 +115,14 @@ header {
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
+    height: 150px;
 
     .container > .row {
       height: 84px;
+    }
+
+    .toogler {
+      display: none;
     }
 
     .menu {
@@ -224,5 +229,47 @@ header {
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@include media-breakpoint-between(md, lg) {
+  .menu-bar {
+    .container > .row {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .col {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .menu {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-between(xs, sm) {
+  header {
+    .menu-bar {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+
+      .toogler {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .search-form {
+        .category {
+          display: none;
+        }
+      }
+    }
+  }
 }
