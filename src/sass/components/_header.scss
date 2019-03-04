@@ -117,108 +117,173 @@ header {
 
     .container > .row {
       height: 84px;
+      @include media-breakpoint-between(md, lg) {
+        height: 126px;
+      }
     }
+  }
 
-    .menu {
+  .menu {
+    display: flex;
+    align-self: stretch;
+
+    ul {
+      margin: 0;
+      padding: 0;
       display: flex;
-      align-self: stretch;
 
-      ul {
-        margin: 0;
-        padding: 0;
+      li {
+        list-style: none;
         display: flex;
+        align-items: stretch;
 
-        li {
-          list-style: none;
+        a {
+          color: $text-color;
+          text-transform: uppercase;
+          font-size: 12px;
+          padding: 1rem;
+          text-decoration: none;
           display: flex;
-          align-items: stretch;
+          align-items: center;
+          border-top: 4px solid #ffffff;
+          font-weight: 500;
+          letter-spacing: 1px;
 
-          a {
-            color: $text-color;
-            text-transform: uppercase;
-            font-size: 12px;
-            padding: 1rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            border-top: 4px solid #ffffff;
-            font-weight: 500;
-            letter-spacing: 1px;
+          &:hover,
+          &.active {
+            background-color: $primary;
+            color: #ffffff;
+            border-color: $primary;
+          }
 
-            &:hover,
-            &.active {
-              background-color: $primary;
-              color: #ffffff;
-              border-color: $primary;
-            }
-
-            &.active {
-              border-color: $text-color;
-            }
+          &.active {
+            border-color: $text-color;
           }
         }
       }
     }
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      top: 200px;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .search-form {
+    border: 1px solid $form-border-color;
+    display: inline-flex;
+    height: 45px;
+    color: $text-color;
+    margin: 20px 0;
 
-    .search-form {
-      border: 1px solid $form-border-color;
-      display: inline-flex;
-      height: 45px;
-      color: $text-color;
+    .category {
+      border-right: 1px solid $form-border-color;
+      display: flex;
+      align-items: center;
+      position: relative;
 
-      .category {
-        border-right: 1px solid $form-border-color;
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        i:first-child {
-          color: $primary;
-          position: absolute;
-          left: 10px;
-          z-index: 0;
-        }
-
-        i:last-child {
-          position: absolute;
-          right: 10px;
-          z-index: 0;
-        }
-
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
-          z-index: 1;
-        }
+      i:first-child {
+        color: $primary;
+        position: absolute;
+        left: 10px;
+        z-index: 0;
       }
 
-      .search-field {
-        display: flex;
-        align-items: center;
+      i:last-child {
+        position: absolute;
+        right: 10px;
+        z-index: 0;
+      }
+
+      select {
+        -webkit-appearance: none;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        padding: 5px 30px 5px 35px;
+        font-size: 14px;
         position: relative;
+        z-index: 1;
+      }
+    }
 
-        input {
-          border: 0;
-          padding-left: 10px;
-          font-size: 14px;
-          outline: none;
+    .search-field {
+      display: flex;
+      align-items: center;
+      position: relative;
 
-          &::placeholder {
-            color: $text-color;
-          }
+      input {
+        border: 0;
+        padding-left: 10px;
+        font-size: 14px;
+        outline: none;
+
+        &::placeholder {
+          color: $text-color;
         }
+      }
+      button {
+        border: 0;
+        background-color: transparent;
+        outline: none;
+      }
+    }
+    @include media-breakpoint-between(md, lg) {
+      position: relative;
+      margin-top: 60px;
+    }
+  }
+  .menu-button {
+    color: $primary;
+    padding: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    position: static;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}
+.dropdown-menu {
+  display: none;
+  position: fixed;
+  width: 100%;
 
-        button {
-          border: 0;
-          background-color: transparent;
-          outline: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    li {
+      list-style: none;
+      a {
+        color: $text-color;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 1rem;
+        text-decoration: none;
+        display: block;
+        align-items: center;
+        border-top: 4px solid #ffffff;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        &:hover,
+        &.active {
+          background-color: $primary;
+          color: #ffffff;
+          border-color: $primary;
+        }
+        &.active {
+          border-color: $text-color;
         }
       }
     }
   }
+}
+.show {
+  display: block;
+  position: relative;
+  top: 10px;
+  margin-top: 10px;
 }
