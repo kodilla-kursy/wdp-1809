@@ -240,6 +240,7 @@ header {
         justify-content: center;
         margin-top: 10px;
       }
+
       .menu {
         justify-content: center;
       }
@@ -255,17 +256,23 @@ header {
       align-items: center;
       height: 100px;
 
-      .toogler {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-      }
-
       .menu {
         display: none;
       }
 
+      .toogler {
+        display: flex;
+        align-items: center;
+      }
+
+      .col {
+        max-width: 300px;
+      }
+
       .search-form {
+        font-size: 10px;
+        height: 35px;
+
         .category {
           display: none;
         }
