@@ -51,8 +51,7 @@
 
   &.active {
     i {
-      background-color: $primary;
-      color: #ffffff;
+      @extend %buttons-hover-animation;
       border-color: $primary;
     }
 
