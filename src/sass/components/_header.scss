@@ -174,26 +174,15 @@ header {
 
         i:first-child {
           color: $primary;
-          position: absolute;
           left: 10px;
-          z-index: 0;
+          z-index: 1;
+          margin-right: 10px;
         }
 
         i:last-child {
-          position: absolute;
           right: 10px;
-          z-index: 0;
-        }
-
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
           z-index: 1;
+          margin-left: 10px;
         }
       }
 
@@ -207,7 +196,6 @@ header {
           padding-left: 10px;
           font-size: 14px;
           outline: none;
-
           &::placeholder {
             color: $text-color;
           }
@@ -217,6 +205,74 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+        }
+      }
+
+      nav {
+        text-align: center;
+        font-size: 1rem;
+        z-index: 1;
+        ul {
+          text-align: center;
+          background: $white;
+          list-style: none;
+          position: relative;
+          display: inline-table;
+          margin: 0;
+          padding: 0;
+          li {
+            min-width: 240px;
+            a {
+              display: block;
+              padding: 0px 20px;
+              text-decoration: none;
+              line-height: 43px;
+              color: $form-border-color;
+              &:hover > i:first-child {
+                color: white;
+              }
+            }
+            &:hover > ul,
+            nav ul li:hover > ul li a {
+              display: block;
+              color: $form-border-color;
+            }
+            &:hover > a {
+              background: $primary;
+              color: white;
+              // Dlaczego 'Color: white' działa na 'fa-caret-down' a nie dziala na 'fa-list-ul'?
+              i:first-child {
+                color: white;
+              }
+            }
+          }
+          ul {
+            display: none;
+            margin: 0;
+            border: 1px solid $form-border-color;
+            background: white;
+            border-radius: 0px;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+            left: -1px;
+            li {
+              float: none;
+              min-width: 240px;
+              position: relative;
+            }
+            ul {
+              position: absolute;
+              left: 100%;
+              top: 0;
+            }
+          }
+          &:after {
+            content: "";
+            clear: both;
+            display: block;
+            color: white;
+          }
         }
       }
     }
