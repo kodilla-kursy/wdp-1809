@@ -73,6 +73,14 @@
     }
   }
 
+  .stars .star1:hover {
+    color: red;
+  }
+
+  .stars .star2:hover .stars a .star1 {
+    color: red;
+  }
+
   .line {
     margin: 0 10px;
     border-bottom: 1px solid #2a2a2a;
