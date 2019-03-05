@@ -195,6 +195,19 @@ header {
           font-size: 14px;
           position: relative;
           z-index: 1;
+
+          &:focus,
+          &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+          }
+
+          &:hover {
+            cursor: pointer;
+            ~ i {
+              color: $primary;
+            }
+          }
         }
       }
 
