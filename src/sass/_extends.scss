@@ -1,5 +1,3 @@
 %hover-transition {
-  transition: background-color 250ms;
-  transition: color 250ms;
-  transition: opacity 250ms;
+  transition: color 250ms, background-color 250ms, opacity 250ms;
 }
