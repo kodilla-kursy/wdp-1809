@@ -1,9 +1,14 @@
+$gallery-border: 1px solid $container-border-color;
+
 .section--gallery {
   display: block;
-  max-height: 650px;
+  height: 650px;
   width: 100%;
+  border: 1px solid red;
 
   .panel-bar {
+    border: 1px solid green;
+
     .heading {
       width: 100%;
     }
@@ -18,29 +23,81 @@
         flex-direction: row;
         margin: 0;
         padding: 0;
+        border-bottom: $gallery-border;
+
         .tab-list-element {
           width: 25%;
-          height: 39px;
           display: flex;
+          display: block;
           justify-content: center;
           align-items: center;
-          border: 1px solid $container-border-color;
+          margin-bottom: -1px;
+          position: relative;
+
           a {
-            // do poprawy border
+            margin-right: 1px;
+            line-height: 1.42;
             display: block;
             width: 100%;
+            height: 100%;
             text-align: center;
             padding: 8px 10px;
             font-weight: 550;
             font-size: 0.9rem;
             color: $text-color;
             text-decoration: none;
+            border: $gallery-border;
+            border-right: 0px;
+            border-left: $gallery-border;
           }
-          &:hover {
-            background-color: #ccc;
-            border-top: 3px solid $primary;
+
+          &.active > a {
             color: $primary;
-            height: 38px;
+            background-color: $galllery-bg-color;
+            border-top: 3px solid $primary;
+            border-left: 0px;
+            border-bottom-color: transparent;
+          }
+
+          &.active ~ li.tab-list-element > a {
+            border-right: $gallery-border;
+            border-left: 0px;
+          }
+        }
+      }
+
+      .tab-content {
+        border: $gallery-border;
+        border-top-color: transparent;
+        min-height: 400px;
+        background-color: $galllery-bg-color;
+        display: block;
+        position: relative;
+
+        #featured {
+          //
+        }
+
+        .tabpanel-content {
+          .presentation-outlines {
+            position: absolute;
+            left: 6px;
+            display: flex;
+            flex-direction: column;
+            top: 25%;
+
+            .btn-outline {
+              margin-bottom: 5px;
+            }
+          }
+
+          .product-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 100px;
           }
         }
       }
