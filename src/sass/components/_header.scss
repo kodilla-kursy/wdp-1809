@@ -114,7 +114,7 @@ header {
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
 
-    background-color: #ffffff;
+    background-color: $header-search-form;
 
     .container > .row {
       height: 84px;
@@ -143,6 +143,14 @@ header {
           text-align: center;
           cursor: pointer;
         }
+      }
+
+      &:hover .vertical-menu {
+        display: block;
+        top: 45px;
+        left: 0px;
+        position: absolute;
+        background-color: $header-search-form;
       }
 
       a {
@@ -187,14 +195,6 @@ header {
           }
         }
       }
-    }
-
-    .category:hover .vertical-menu {
-      display: block;
-      top: 45px;
-      left: 0px;
-      position: absolute;
-      background-color: $header-search-form;
     }
 
     .menu {
