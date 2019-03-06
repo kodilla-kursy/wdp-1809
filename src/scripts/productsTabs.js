@@ -9,7 +9,6 @@ function checkResolutionOfScreen (event) {
   const tabPanelId = targetTab.substring(1, targetTab.length);
   const tabPanel = document.getElementById(tabPanelId);
   const tabPanelProductElements = tabPanel.children[0].children.length;
-
   const width = window.innerWidth;
   const height = window.innerHeight;
   let orientation;
@@ -21,22 +20,6 @@ function checkResolutionOfScreen (event) {
   }
 
   detectScreenMode(orientation, width, tabPanelProductElements);
-}
-
-function createDots (number) {
-  var dotMenu = document.querySelector('#dots-container');
-
-  while (dotMenu.firstChild) {
-    dotMenu.innerHTML = '';
-  }
-
-  for (let i = 0; i < number; i++) {
-    var liElement = document.createElement('li');
-    var aElement = document.createElement('a');
-    aElement.setAttribute('href', '#');
-    liElement.appendChild(aElement);
-    dotMenu.appendChild(liElement);
-  }
 }
 
 function detectScreenMode (orientation, width, tabPanelProductElements) {
@@ -56,5 +39,21 @@ function detectScreenMode (orientation, width, tabPanelProductElements) {
     createDots(tabPanelProductElements / 1);
   } else if (portraitMiddleMode) {
     createDots(tabPanelProductElements / 3);
+  }
+}
+
+function createDots (number) {
+  var dotMenu = document.querySelector('#dots-container');
+  console.log(number);
+  while (dotMenu.firstChild) {
+    dotMenu.innerHTML = '';
+  }
+
+  for (let i = 0; i < number; i++) {
+    var liElement = document.createElement('li');
+    var aElement = document.createElement('a');
+    aElement.setAttribute('href', '#');
+    liElement.appendChild(aElement);
+    dotMenu.appendChild(liElement);
   }
 }
