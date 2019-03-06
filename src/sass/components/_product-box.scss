@@ -27,6 +27,7 @@
     }
 
     .buttons {
+      @extend %hover-transition;
       display: flex;
       justify-content: space-between;
       opacity: 0;
