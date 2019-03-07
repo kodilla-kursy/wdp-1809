@@ -6,12 +6,46 @@
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
+
     background: {
       color: #f4f5f7;
       size: contain;
       position: center;
       repeat: no-repeat;
     }
+
+    &.bed-photo {
+      background-image: url("../images/beds/bed-1358198_640-min.png");
+    }
+
+    &.second-bed-photo {
+      background-image: url("../images/beds/bed-1839184_640-min.png");
+    }
+
+    &.third-bed-photo {
+      background-image: url("../images/beds/hotel-3102375_640-min.png");
+    }
+
+    &.fourth-bed-photo {
+      background-image: url("../images/beds/pexels-photo-1034584.png");
+    }
+
+    &.bedroom {
+      background-image: url("../images/beds/furniture-2387636_640-min.png");
+    }
+
+    &.second-bedroom {
+      background-image: url("../images/beds/bedroom-3498911_640-min.png");
+    }
+
+    &.third-bedroom {
+      background-image: url("../images/beds/bedroom-413706_640-min.png");
+    }
+
+    &.fourth-bedroom {
+      background-image: url("../images/beds/bedroom-665811_640-min.png");
+    }
+
     overflow: hidden;
     align-items: flex-end;
 
@@ -78,6 +112,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .old-price {
       display: none;
       justify-content: center;
@@ -88,6 +123,7 @@
       margin-left: 30px;
       font-family: "Poppins", sans-serif;
       font-weight: 300;
+
       &.show-price {
         display: flex;
       }
@@ -101,6 +137,7 @@
     justify-content: space-between;
     visibility: visible;
   }
+
   .no-hover {
     background-color: $primary;
   }
