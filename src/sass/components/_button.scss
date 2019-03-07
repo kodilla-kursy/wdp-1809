@@ -1,4 +1,5 @@
 .btn-main {
+  @extend %hover-transition;
   background-color: $base-color;
   color: $font-color;
   font-size: 16px;
@@ -15,6 +16,7 @@
 
 .btn-main-small {
   @extend .btn-main;
+  // @extend %hover-transition;
   font-size: 13px;
   line-height: 24px;
   padding: 5px 10px;
@@ -22,6 +24,7 @@
 }
 
 .btn-outline {
+  @extend %hover-transition;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid $base-color;
