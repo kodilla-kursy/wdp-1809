@@ -1,13 +1,29 @@
 $gallery-border: 1px solid $container-border-color;
+$carousel-control-bg: #2a2a2a;
+$gallery-right-box-color: #e8edf7;
+$gallery-green-color: #79ae30;
+
+%triangle-base {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+%gallery-box-shadow {
+  -webkit-box-shadow: 1px 4px 10px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 1px 4px 10px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.35);
+}
 
 .section--gallery {
   display: block;
   height: 650px;
   width: 100%;
-  border: 1px solid red;
 
   .panel-bar {
-    border: 1px solid green;
+    width: 550px;
+    padding-right: 15px;
 
     .heading {
       width: 100%;
@@ -19,6 +35,7 @@ $gallery-border: 1px solid $container-border-color;
       padding: 0;
 
       .tab-list {
+        width: 100%;
         display: flex;
         flex-direction: row;
         margin: 0;
@@ -67,9 +84,11 @@ $gallery-border: 1px solid $container-border-color;
       }
 
       .tab-content {
+        overflow: hidden;
         border: $gallery-border;
         border-top-color: transparent;
-        min-height: 400px;
+        min-height: 500px;
+        width: 100%;
         background-color: $galllery-bg-color;
         display: block;
         position: relative;
@@ -79,12 +98,18 @@ $gallery-border: 1px solid $container-border-color;
         }
 
         .tabpanel-content {
+          z-index: 1;
+          position: relative;
+          min-height: 500px;
+          width: 100%;
+
           .presentation-outlines {
+            z-index: 3;
             position: absolute;
             left: 6px;
             display: flex;
             flex-direction: column;
-            top: 25%;
+            top: 20%;
 
             .btn-outline {
               margin-bottom: 5px;
@@ -92,14 +117,202 @@ $gallery-border: 1px solid $container-border-color;
           }
 
           .product-info {
+            z-index: 3;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             width: 250px;
             height: 100px;
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            bottom: 25%;
+            @extend %gallery-box-shadow;
+
+            .price-circle {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              color: #fff;
+              background-color: #7b7b7ce3;
+              border-radius: 50%;
+              height: 100px;
+              width: 100px;
+              bottom: 80%;
+
+              .new-price {
+                font-size: 20px;
+              }
+
+              .old-price {
+                font-size: 16px;
+                text-decoration: line-through;
+              }
+
+              h5 {
+                font-size: 16px;
+              }
+            }
+
+            &::after {
+              @extend %triangle-base;
+              border-top: 30px solid #000;
+              border-right: 30px solid transparent;
+              top: 0;
+              left: 0;
+            }
+
+            &::before {
+              @extend %triangle-base;
+              border-bottom: 30px solid #000;
+              border-left: 30px solid transparent;
+              bottom: 0;
+              right: 0;
+            }
+          }
+
+          .img-box {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            bottom: 20%;
+            right: 0;
+            background-image: url("../images/black-crown.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+
+          //carousel
+          .product-carousel {
+            position: absolute;
+            bottom: 0;
+            max-height: 100px;
+            max-width: 100%;
+            background-color: #fff;
+            border-top: $gallery-border;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+
+            .carousel-inner {
+              max-width: 90%;
+              max-height: 70px;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              margin: 0 5px;
+
+              .item {
+                max-width: 70px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ccc;
+                margin: 0 5px;
+                padding: 5px;
+
+                img {
+                  max-width: 60px;
+                }
+              }
+            }
+
+            .carousel-control {
+              position: absolute;
+              top: 10px;
+              bottom: 10px;
+              width: 5%;
+              font-size: 20px;
+              color: #fff;
+              text-align: center;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+              background: $carousel-control-bg;
+            }
+            .carousel-control.left {
+              left: 5px;
+              font-size: 20px;
+
+              .left-control {
+                display: block;
+                position: absolute;
+                width: 15px;
+                top: 50%;
+                transform: translateY(-10px);
+                height: 20px;
+                color: #fff;
+                background-color: #fff;
+              }
+            }
+            .carousel-control.right {
+              right: 5px;
+
+              .right-control {
+                //
+              }
+            }
           }
         }
+      }
+    }
+  }
+
+  .gallery-presentation-image {
+    position: relative;
+    background-color: $gallery-right-box-color;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15% 15%;
+
+    .presentation-header-top {
+      color: #000;
+      font-size: 1.2em;
+      z-index: 2;
+
+      .presentation-price {
+        font-size: 2.7rem;
+        color: $gallery-green-color;
+      }
+    }
+
+    .presentation-header-bottom {
+      font-size: 2.6em;
+      color: $primary;
+      z-index: 2;
+    }
+
+    .presentation-shop-now-button {
+      margin-top: 15px;
+      background-color: $gallery-green-color;
+      padding: 15px 25px;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.8em;
+      z-index: 2;
+    }
+
+    .gallery-right-img-container {
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      bottom: 5%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 1;
+
+      .gallery-right-bg-img {
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
       }
     }
   }
