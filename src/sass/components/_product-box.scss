@@ -1,3 +1,42 @@
+.tab-content .test {
+  height: 10px;
+}
+
+.tab-content .dots {
+  position: relative;
+  top: -30px;
+  text-align: right;
+  width: 15%;
+  margin-left: 85%;
+  padding-bottom: 10px;
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+    background-color: #ffffff;
+    transform: translateY(-12px);
+
+    li {
+      display: inline-block;
+      margin-left: 0.5rem;
+
+      a {
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #e1e1e1;
+
+        &.active,
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
 .product-box {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
@@ -71,14 +110,6 @@
         }
       }
     }
-  }
-
-  .stars .star1:hover {
-    color: red;
-  }
-
-  .stars .star2:hover .stars a .star1 {
-    color: red;
   }
 
   .line {
