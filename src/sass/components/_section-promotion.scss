@@ -209,13 +209,34 @@
   }
 
   .promotion-title {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    text-align: center;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0.3;
+      background: $base-color;
+    }
 
     // background-color:$form-border-color;
+    // .opacity-curtain {
+    //   position: absolute;
+    //   opacity: 0.3;
+    //   background: $base-color;
+    //   width: 100%;
+    //   top: 0;
+    //   bottom: 50px;
+    // }
+    .shop-button {
+      display: inline;
+      background: $base-color;
+      color: $font-color;
+    }
   }
 }
