@@ -116,6 +116,11 @@ $carousel-controls-color: #fff;
 
             .btn-outline {
               margin-bottom: 5px;
+              background-color: transparent;
+
+              &:hover {
+                @extend %gallery-buttons-hover-animation;
+              }
             }
           }
 
@@ -248,7 +253,6 @@ $carousel-controls-color: #fff;
 
                 &.active {
                   opacity: 1;
-                  border: 2px solid $primary;
                 }
 
                 &:not(.active) {
@@ -267,6 +271,10 @@ $carousel-controls-color: #fff;
               text-align: center;
               background: $carousel-control-bg;
               text-decoration: none;
+
+              &:hover {
+                @extend %bg-hover-animation;
+              }
             }
 
             .carousel-control.left {
