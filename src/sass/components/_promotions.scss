@@ -27,7 +27,7 @@
 
       h1 {
         padding: 123px 0 0 20px;
-        color: #ffffff;
+        color: $post-box-bg;
         font-size: 36px;
         font-weight: 700;
         line-height: 54px;
@@ -39,7 +39,7 @@
           left: 20px;
           font-size: 60px;
           text-transform: uppercase;
-          color: #fff;
+          color: $post-box-bg;
         }
       }
 
@@ -49,11 +49,11 @@
         bottom: 21px;
         width: 160px;
         height: 83px;
-        border: 5px solid #ffffff;
+        border: 5px solid $post-box-bg;
         text-align: center;
 
         h2 {
-          color: #ffffff;
+          color: $post-box-bg;
           font-family: "Poppins - Semi Bold";
           font-size: 50px;
           font-weight: 700;
@@ -102,7 +102,7 @@
         }
 
         h2 {
-          color: #d58e32;
+          color: $primary;
           font-size: 36px;
           font-weight: 600;
           line-height: 54px;
@@ -116,7 +116,7 @@
         background-size: cover;
 
         h2 {
-          color: #d58e32;
+          color: $primary;
           font-size: 24px;
           font-weight: 400;
           text-transform: uppercase;
