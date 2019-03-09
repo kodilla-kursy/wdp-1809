@@ -1,5 +1,6 @@
 .section--sale {
   height: 450px;
+  margin-bottom: 40px;
 
   .sale-row {
     display: flex;
@@ -11,8 +12,7 @@
       background: url("https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
         no-repeat bottom / cover;
       height: 450px;
-      margin: 10px;
-      margin-right: 0;
+      margin: 10px 0 10px 10px;
 
       &::before {
         position: absolute;
@@ -39,14 +39,15 @@
           h2 {
             font-size: 3rem;
             font-weight: bolder;
+            line-height: 0.8;
           }
 
           p {
             border: 2px solid $font-color;
-            font-size: 40px;
-            padding: 5px;
-            width: 70%;
-            height: auto;
+            font-size: 2.8rem;
+            margin-bottom: 0;
+            text-align: center;
+            width: 120px;
           }
         }
       }
@@ -80,6 +81,7 @@
 
             h2 {
               font-size: 1.5rem;
+              line-height: 0.5;
             }
 
             p {
