@@ -10,6 +10,12 @@ $product-info-triangle-color: #000;
 $carousel-bg-color: #fff;
 $carousel-controls-color: #fff;
 
+%center-flex-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 %triangle-base {
   content: "";
   width: 0;
@@ -21,6 +27,19 @@ $carousel-controls-color: #fff;
   -webkit-box-shadow: 1px 4px 10px 0px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 1px 4px 10px 0px rgba(0, 0, 0, 0.35);
   box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+%gallery-img-selected {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 20%;
+  right: 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .section--gallery {
@@ -50,11 +69,8 @@ $carousel-controls-color: #fff;
         border-bottom: $gallery-border;
 
         .tab-list-element {
+          @extend %center-flex-display;
           width: 25%;
-          display: flex;
-          display: block;
-          justify-content: center;
-          align-items: center;
           margin-bottom: -1px;
           position: relative;
 
@@ -86,6 +102,10 @@ $carousel-controls-color: #fff;
           &.active ~ li.tab-list-element > a {
             border-right: $gallery-border;
             border-left: 0;
+          }
+
+          &:nth-of-type(1).active > a {
+            border-left: $gallery-border;
           }
         }
       }
@@ -125,10 +145,8 @@ $carousel-controls-color: #fff;
           }
 
           .product-info {
+            @extend %center-flex-display;
             z-index: 3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
             width: 250px;
             height: 100px;
@@ -139,10 +157,8 @@ $carousel-controls-color: #fff;
             @extend %gallery-box-shadow;
 
             .price-circle {
-              display: flex;
+              @extend %center-flex-display;
               flex-direction: column;
-              justify-content: center;
-              align-items: center;
               position: absolute;
               color: $price-circle-text-color;
               background-color: $price-circle-bg-color;
@@ -196,21 +212,6 @@ $carousel-controls-color: #fff;
             }
           }
 
-          .img-box {
-            display: block;
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            left: 0;
-            bottom: 20%;
-            right: 0;
-            background-image: url("../images/black-crown.png");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
-
-          //carousel
           .product-carousel {
             position: absolute;
             bottom: 0;
@@ -239,9 +240,8 @@ $carousel-controls-color: #fff;
               .item {
                 max-width: 70px;
                 height: 100%;
+                @extend %center-flex-display;
                 display: inline-flex;
-                justify-content: center;
-                align-items: center;
                 background-color: $product-slider-bg-color;
                 margin: 0 5px;
                 padding: 5px;
@@ -278,22 +278,46 @@ $carousel-controls-color: #fff;
             }
 
             .carousel-control.left {
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @extend %center-flex-display;
               left: 5px;
               @extend .fas;
               @extend .fa-chevron-left;
             }
 
             .carousel-control.right {
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @extend %center-flex-display;
               right: 5px;
               @extend .fas;
               @extend .fa-chevron-right;
             }
+          }
+        }
+
+        #featured {
+          .img-box {
+            @extend %gallery-img-selected;
+            background-image: url("../images/rocker-recliner.png");
+          }
+        }
+
+        #top-seller {
+          .img-box {
+            @extend %gallery-img-selected;
+            background-image: url("../images/black-crown.png");
+          }
+        }
+
+        #sale-off {
+          .img-box {
+            @extend %gallery-img-selected;
+            background-image: url("../images/gray-chair.png");
+          }
+        }
+
+        #top-rated {
+          .img-box {
+            @extend %gallery-img-selected;
+            background-image: url("../images/thumbimag.png");
           }
         }
       }
