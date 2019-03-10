@@ -6,10 +6,23 @@
 
     .cover {
       padding: 70% 25px 0 25px;
+
       background: {
         color: $post-box-cover-bg;
         size: cover;
         position: 50%;
+      }
+
+      &.chair {
+        background-image: url("../images/blog/chairs-993853_640-min.png");
+      }
+
+      &.kitchen {
+        background-image: url("../images/blog/kitchen-1940177_640-min.png");
+      }
+
+      &.second-kitchen {
+        background-image: url("../images/blog/kitchen-2486092_640-min.png");
       }
 
       .details {
