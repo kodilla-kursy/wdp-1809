@@ -281,9 +281,119 @@ header {
     }
   }
 }
+
 .show {
   display: block;
   position: relative;
   top: 10px;
   margin-top: 10px;
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  header {
+    .top-bar {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          line-height: 55px;
+
+          a {
+            color: #ffffff;
+            font-size: 13px;
+            margin-right: 5px;
+
+            &:hover {
+              color: $primary;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .text-left {
+        padding-left: 5px;
+        padding-right: 0;
+
+        .top-bar-left-menu {
+          display: flex;
+          justify-content: space-around;
+
+          .top-bar-left-menu-el {
+            margin-right: 0;
+
+            i {
+              margin-left: 2px;
+            }
+          }
+        }
+      }
+
+      .text-right {
+        max-width: 120px;
+        padding-right: 5px;
+        padding-left: 0;
+        .top-bar-right-menu {
+          .top-bar-right-menu-el {
+            margin-left: 0;
+
+            i {
+              margin-right: 15px;
+            }
+
+            .top-bar-menu-el-text {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .company-claim {
+      background-color: $header-bg;
+
+      .container > .row {
+        height: 145px;
+        position: relative;
+      }
+
+      .banner-logo-container {
+        order: -1;
+        position: absolute;
+        width: 50%;
+      }
+
+      .phone-number {
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+        width: 50%;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+
+        p {
+          font-size: 14px;
+
+          i {
+            font-size: 25px;
+          }
+        }
+      }
+
+      .cart {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        padding-right: 0;
+        width: 50%;
+      }
+    }
+  }
+
 }
