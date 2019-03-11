@@ -1,7 +1,14 @@
 .feature-box {
-  border: 1px solid #b6b6b6;
-  text-align: center;
   margin-top: 40px;
+
+  .wrapper {
+    border: 1px solid #b6b6b6;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
 
   .icon {
     transform: translateY(-50%);
@@ -11,7 +18,7 @@
       height: 60px;
       border-radius: 100%;
       position: relative;
-      color: $text-color;
+      color: $base-color;
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -49,7 +56,10 @@
     }
   }
 
-  &.active {
+  &.active,
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
     i {
       background-color: $primary;
       color: #ffffff;

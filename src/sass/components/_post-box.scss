@@ -1,8 +1,22 @@
 .post-box {
   margin-bottom: 2rem;
 
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    .post-title {
+      color: $primary;
+    }
+
+    .more {
+      background-color: $primary;
+    }
+  }
+
   .cover {
-    padding: 70% 25px 0 25px;
+    padding: 25px 25px 0 25px;
     background: {
       color: #f4f5f7;
       size: cover;
@@ -27,13 +41,18 @@
         text-align: right;
       }
     }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
 
   .post-info {
     padding: 25px;
 
-    h5 {
-      color: $primary;
+    .post-title {
+      color: $base-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -47,8 +66,7 @@
     }
 
     .more {
-      text-align: center;
-      padding-top: 30px;
+      display: inline;
     }
   }
 }
