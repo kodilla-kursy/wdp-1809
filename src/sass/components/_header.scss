@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $font-color;
           font-size: 13px;
 
           &:hover {
@@ -104,8 +104,8 @@ header {
       .cart-box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
         text-decoration: none;
+        color: $font-color;
 
         .cart-icon {
           background-color: $primary;
@@ -165,7 +165,8 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $font-color;
+    height: 150px;
 
     .container > .row {
       height: 84px;
@@ -174,6 +175,10 @@ header {
     .menu {
       display: flex;
       align-self: stretch;
+
+      .toggle {
+        display: none;
+      }
 
       ul {
         margin: 0;
@@ -193,14 +198,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $font-color;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: $font-color;
               border-color: $primary;
             }
 
@@ -246,6 +251,19 @@ header {
           font-size: 14px;
           position: relative;
           z-index: 1;
+
+          &:focus,
+          &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+          }
+
+          &:hover {
+            cursor: pointer;
+            ~ i {
+              color: $primary;
+            }
+          }
         }
       }
 
@@ -272,5 +290,90 @@ header {
         }
       }
     }
+  }
+}
+
+@include media-breakpoint-between(md, lg) {
+  .menu-bar {
+    .container > .row {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .col {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .menu {
+        justify-content: center;
+      }
+    }
+  }
+
+  .toggler {
+    display: none;
+  }
+}
+
+@include media-breakpoint-between(xs, sm) {
+  header {
+    .menu-bar {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+
+      .search-form {
+        .category {
+          display: none;
+        }
+
+        .search-field {
+          input {
+            font-size: 10px;
+            padding-left: 5px;
+          }
+
+          button {
+            font-size: 10px;
+            padding-left: 0;
+          }
+        }
+      }
+
+      .menu {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+
+        .menu-list {
+          display: none;
+          z-index: 9999;
+          width: 100%;
+          background-color: $primary;
+          border: none;
+
+          li {
+            width: 100%;
+            border: none;
+
+            a {
+              width: 100%;
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+        .toggle {
+          display: flex;
+          align-self: center;
+          padding: 15px;
+        }
+      }
+    }
+  }
+  header .toggle:hover + .menu-list,
+  .menu-list:hover {
+    display: block;
   }
 }

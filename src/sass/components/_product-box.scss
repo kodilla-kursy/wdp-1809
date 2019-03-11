@@ -40,12 +40,12 @@
     .price [class*="btn-"] {
       background-color: $primary;
     }
+  }
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .content {
@@ -94,5 +94,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .old-price {
+      text-decoration: line-through;
+      font-size: 12px;
+      color: $furniture-old-price;
+    }
   }
 }
