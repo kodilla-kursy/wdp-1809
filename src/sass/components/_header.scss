@@ -2,23 +2,23 @@ header {
   .top-bar {
     background-color: $header-topbar-bg;
 
-    ul {
+    .top-bar-menu {
       list-style: none;
       margin: 0;
       padding: 0;
+    }
 
-      li {
-        display: inline-block;
-        line-height: 55px;
+    .top-bar-menu_item {
+      display: inline-block;
+      line-height: 55px;
 
-        a {
-          color: $font-color;
-          font-size: 13px;
+      a {
+        color: $font-color;
+        font-size: 13px;
 
-          &:hover {
-            color: $primary;
-            text-decoration: none;
-          }
+        &:hover {
+          color: $primary;
+          text-decoration: none;
         }
       }
     }
@@ -26,7 +26,7 @@ header {
     .text-left {
       padding-right: 0;
 
-      ul li {
+      .top-bar-menu_item {
         margin-right: 0.5rem;
         padding-right: 0;
 
@@ -39,28 +39,32 @@ header {
     .text-right {
       padding-left: 0;
 
-      ul li {
+      .top-bar-menu_item {
         margin-left: 0.5rem;
 
         i {
           margin-right: 5px;
         }
+      }
 
-        a span {
-          display: none;
-        }
+      .icon-label {
+        display: none;
       }
     }
 
     @include media-breakpoint-up(sm) {
-      .text-left ul li {
-        margin-right: 1.5rem;
+      .text-left {
+        .top-bar-menu_item {
+          margin-right: 1.5rem;
+        }
       }
 
-      .text-right ul li a {
-        margin-right: 1.5rem;
+      .text-right {
+        .top-bar-menu_item {
+          margin-right: 1.5rem;
+        }
 
-        span {
+        .icon-label {
           display: inline;
         }
       }
