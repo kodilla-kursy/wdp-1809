@@ -1,7 +1,7 @@
 const createCarousel = (carouselContainer, navContainer) => {
   const carouselOptions = {
     container: carouselContainer,
-    mode: 'gallery',
+    mode: 'carousel',
     autoplay: false,
     controls: false,
     items: 1,
