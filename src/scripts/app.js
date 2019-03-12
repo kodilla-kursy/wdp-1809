@@ -4,6 +4,7 @@ const createCarousel = (carouselContainer, navContainer) => {
     mode: 'gallery',
     autoplay: false,
     controls: false,
+    mouseDrag: true,
     items: 1,
     navContainer: navContainer,
     responsive: {
@@ -21,12 +22,13 @@ const createCarousel = (carouselContainer, navContainer) => {
   const carousel = tns(carouselOptions);
   const info = carousel.getInfo();
 
-  hideInactiveNavs(info.navItems, info.pages);
+  prepareNavs(info.navItems, info.pages);
 };
 
-const hideInactiveNavs = (navs, pageCount) => {
+const prepareNavs = (navs, pageCount) => {
   for (let i = 0; i < navs.length; i++) {
     const element = navs[i];
+    element.addEventListener('click', event => event.preventDefault());
     if (i >= pageCount) element.style = 'display: none';
   }
 };
