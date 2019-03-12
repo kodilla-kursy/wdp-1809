@@ -73,7 +73,7 @@
         display: inline-block;
         margin-left: 0.5rem;
 
-        span {
+        a {
           display: block;
           width: 13px;
           height: 13px;
@@ -89,7 +89,7 @@
     }
 
     .tns-nav-active {
-      span {
+      a {
         background-color: $primary;
       }
     }
