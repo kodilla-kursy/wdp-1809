@@ -1,27 +1,38 @@
-const createCarousel = (carouselContainer, navContainer) => {
-  const carouselOptions = {
-    container: carouselContainer,
-    mode: 'carousel',
-    autoplay: false,
-    controls: false,
-    items: 1,
-    navContainer: navContainer,
+function Slider(
+  carouselContainer,
+  navContainer,
+  controls,
+  controlsContainer,
+  autoplay
+) {
+  this.container = carouselContainer;
+  this.autoplay = autoplay;
+  this.controls = false;
+  this.mouseDrag = true;
+  this.items = 1;
+  this.navContainer = navContainer;
+  this.autoplayButtonOutput = false;
+  this.controls = controls;
+  this.controlsContainer = controlsContainer;
+  this.edgePadding = 0;
+  this.gutter = 0;
+}
 
-    navAsThumbnails: false
-  };
+var hotDealsSlider = new Slider(
+  '.carousel-hot-deals',
+  '.hot-deals-carousel-nav',
+  false,
+  false,
+  true
+);
 
-  // eslint-disable-next-line no-undef
-  const carousel = tns(carouselOptions);
-  const info = carousel.getInfo();
+var promotionalSlider = new Slider(
+  '.promotional-slider',
+  false,
+  true,
+  '.slider-row',
+  false
+);
 
-  hideInactiveNavs(info.navItems, info.pages);
-};
-
-const hideInactiveNavs = (navs, pageCount) => {
-  for (let i = 0; i < navs.length; i++) {
-    const element = navs[i];
-    if (i >= pageCount) element.style = 'display: none';
-  }
-};
-
-createCarousel('.carousel-hot-deals', '.hot-deals-carousel-nav');
+tns(hotDealsSlider);
+tns(promotionalSlider);
