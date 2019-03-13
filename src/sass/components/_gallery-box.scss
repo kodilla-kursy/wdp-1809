@@ -7,6 +7,7 @@ $product-info-bg-color: #fff;
 $price-circle-text-color: #fff;
 $price-circle-bg-color: #7b7b7ce3;
 $product-info-triangle-color: #000;
+$button-shop-now-color: #fff;
 $carousel-bg-color: #fff;
 $carousel-controls-color: #fff;
 
@@ -48,8 +49,7 @@ $carousel-controls-color: #fff;
   width: 100%;
 
   .panel-bar {
-    width: 550px;
-    padding-right: 15px;
+    width: 100%;
 
     .heading {
       width: 100%;
@@ -74,16 +74,15 @@ $carousel-controls-color: #fff;
           margin-bottom: -1px;
           position: relative;
 
-          a {
+          .tab-category-button {
             margin-right: 1px;
-            line-height: 1.42;
             display: block;
             width: 100%;
             height: 100%;
             text-align: center;
             padding: 8px 10px;
             font-weight: 550;
-            font-size: 0.9rem;
+            font-size: 0.8em;
             color: $text-color;
             text-decoration: none;
             border: $gallery-border;
@@ -91,7 +90,7 @@ $carousel-controls-color: #fff;
             border-left: $gallery-border;
           }
 
-          &.active > a {
+          &.active > .tab-category-button {
             color: $primary;
             background-color: $galllery-bg-color;
             border-top: 3px solid $primary;
@@ -99,13 +98,17 @@ $carousel-controls-color: #fff;
             border-bottom-color: transparent;
           }
 
-          &.active ~ li.tab-list-element > a {
+          &.active ~ li.tab-list-element > .tab-category-button {
             border-right: $gallery-border;
             border-left: 0;
           }
 
-          &:nth-of-type(1).active > a {
+          &:nth-of-type(1).active > .tab-category-button {
             border-left: $gallery-border;
+          }
+
+          &:nth-of-type(4) > .tab-category-button {
+            margin-right: 0;
           }
         }
       }
@@ -115,7 +118,7 @@ $carousel-controls-color: #fff;
         border: $gallery-border;
         border-top-color: transparent;
         min-height: 500px;
-        width: 100%;
+        max-width: 100%;
         background-color: $galllery-bg-color;
         display: block;
         position: relative;
@@ -146,6 +149,7 @@ $carousel-controls-color: #fff;
 
           .product-info {
             @extend %center-flex-display;
+            @extend %gallery-box-shadow;
             z-index: 3;
             flex-direction: column;
             width: 250px;
@@ -154,7 +158,6 @@ $carousel-controls-color: #fff;
             position: absolute;
             right: 0;
             bottom: 25%;
-            @extend %gallery-box-shadow;
 
             .price-circle {
               @extend %center-flex-display;
@@ -200,10 +203,10 @@ $carousel-controls-color: #fff;
 
             .stars {
               a {
-                text-decoration: none;
-                color: $text-color;
                 @extend .far;
                 @extend .fa-star;
+                text-decoration: none;
+                color: $text-color;
 
                 &.full {
                   @extend .fas;
@@ -212,112 +215,112 @@ $carousel-controls-color: #fff;
             }
           }
 
-          .product-carousel {
+          // flickity
+          .carousel-section {
             position: absolute;
+            width: 100%;
             bottom: 0;
-            max-height: 100px;
-            max-width: 100%;
+            height: 80px;
             background-color: $carousel-bg-color;
             border-top: $gallery-border;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
+            padding: 5px 0;
 
-            .carousel-inner {
-              max-width: 90%;
-              max-height: 70px;
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              align-items: center;
-              margin: 0 5px;
-              overflow-x: auto;
+            .main-carousel {
+              max-width: 100%;
+              height: 66px;
+              padding: 0 40px;
 
-              &::-webkit-scrollbar {
-                display: none;
-              }
-
-              .item {
-                max-width: 70px;
-                height: 100%;
+              .carousel-cell {
                 @extend %center-flex-display;
-                display: inline-flex;
+                width: 67px;
+                height: 66px;
                 background-color: $product-slider-bg-color;
+                display: inline-flex;
                 margin: 0 5px;
-                padding: 5px;
+                padding: 4px;
                 cursor: pointer;
 
                 img {
-                  max-width: 60px;
+                  max-width: 100%;
+                  height: auto;
                 }
 
-                &.active {
-                  opacity: 1;
-                }
-
-                &:not(.active) {
+                &.is-selected {
                   opacity: 0.3;
                 }
+
+                &:not(.is-selected) {
+                  opacity: 0.3;
+                }
+
+                &.is-clicked,
+                &:hover {
+                  transition: $hover-transition-timing;
+                  opacity: 1;
+                }
               }
             }
 
-            .carousel-control {
-              position: absolute;
-              top: 10px;
-              bottom: 10px;
-              width: 5%;
-              font-size: 14px;
-              color: $carousel-controls-color;
-              text-align: center;
-              background: $carousel-control-bg;
-              text-decoration: none;
-
-              &:hover {
-                @extend %bg-hover-animation;
-              }
+            .flickity-button {
+              background: $text-color;
+              padding: 0;
             }
 
-            .carousel-control.left {
-              @extend %center-flex-display;
+            .flickity-button:hover {
+              @extend %bg-hover-animation;
+            }
+
+            .flickity-prev-next-button {
+              width: 30px;
+              height: 100%;
+              border-radius: 0;
+            }
+
+            .flickity-button-icon {
+              fill: $carousel-controls-color;
+            }
+
+            .flickity-prev-next-button.previous {
               left: 5px;
-              @extend .fas;
-              @extend .fa-chevron-left;
             }
 
-            .carousel-control.right {
-              @extend %center-flex-display;
+            .flickity-prev-next-button.next {
               right: 5px;
-              @extend .fas;
-              @extend .fa-chevron-right;
             }
+          }
+        }
+
+        #featured,
+        #top-seller,
+        #sale-off,
+        #top-rated {
+          .img-box {
+            @extend %gallery-img-selected;
+            background-size: 70%;
           }
         }
 
         #featured {
           .img-box {
-            @extend %gallery-img-selected;
-            background-image: url("../images/rocker-recliner.png");
+            background-image: url("../images/furniture/rocker-recliner.png");
           }
         }
 
         #top-seller {
           .img-box {
-            @extend %gallery-img-selected;
-            background-image: url("../images/black-crown.png");
+            background-image: url("../images/furniture/black-crown.png");
           }
         }
 
         #sale-off {
           .img-box {
-            @extend %gallery-img-selected;
-            background-image: url("../images/gray-chair.png");
+            background-image: url("../images/furniture/gray-chair.png");
           }
         }
 
         #top-rated {
           .img-box {
-            @extend %gallery-img-selected;
-            background-image: url("../images/thumbimag.png");
+            background-image: url("../images/furniture/thumbimag.png");
           }
         }
       }
@@ -354,11 +357,16 @@ $carousel-controls-color: #fff;
       margin-top: 15px;
       background-color: $gallery-green-color;
       padding: 15px 25px;
-      color: #fff;
+      color: $button-shop-now-color;
       border-radius: 5px;
       font-size: 0.8em;
       z-index: 2;
       cursor: pointer;
+      transition: $hover-transition-timing;
+
+      &:hover {
+        background-color: $primary;
+      }
     }
 
     .gallery-right-img-container {
@@ -376,6 +384,66 @@ $carousel-controls-color: #fff;
         margin: 0 auto;
         max-width: 90%;
       }
+    }
+  }
+}
+
+.tooltip-inner {
+  border-radius: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #feature-tab-button,
+  #top-seller-tab-button,
+  #top-rated-tab-button,
+  #sale-off-tab-button {
+    font-size: 0.7em;
+  }
+
+  .gallery-slider-container {
+    width: 100%;
+    margin: 0 auto;
+
+    .carousel-cell {
+      width: 35.33%;
+    }
+  }
+
+  .gallery-presentation-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #feature-tab-button,
+  #top-seller-tab-button,
+  #top-rated-tab-button,
+  #sale-off-tab-button {
+    font-size: 0.7em;
+  }
+
+  .product-info {
+    .price-circle {
+      height: 80px;
+      width: 80px;
+      right: 10%;
+
+      .new-price {
+        font-size: 18px;
+      }
+
+      .old-price {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .gallery-slider-container {
+    width: 100%;
+    margin: 0 auto;
+
+    .carousel-cell {
+      width: 33.33%;
     }
   }
 }
