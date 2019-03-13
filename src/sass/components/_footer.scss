@@ -14,6 +14,7 @@ footer {
         margin: 0 0 1.5rem 0;
         padding: 0;
         list-style: none;
+
         li {
           a {
             font-size: 14px;
@@ -21,7 +22,9 @@ footer {
             color: rgb(169, 169, 169);
 
             &:hover {
-              color: #ffffff;
+              @extend %buttons-hover-animation;
+              background-color: transparent;
+              text-decoration: none;
             }
           }
         }
@@ -70,11 +73,23 @@ footer {
             text-decoration: none;
 
             &:hover {
+              transition: $hover-transition-timing;
               color: $primary;
             }
           }
         }
       }
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .copyright {
+    p {
+      text-align: left;
+    }
+  }
+  .left-placeholder {
+    text-align: center;
   }
 }
