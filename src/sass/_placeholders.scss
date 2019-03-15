@@ -1,0 +1,15 @@
+%bg-hover-animation {
+  transition: $hover-transition-timing;
+  background-color: $primary;
+}
+
+%buttons-hover-animation {
+  transition: $hover-transition-timing;
+  color: $button-hover-color;
+  background-color: $primary;
+}
+
+%color-timing-hover-animation {
+  color: $primary;
+  transition: $hover-transition-timing;
+}
