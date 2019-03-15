@@ -1,4 +1,6 @@
 const furnitureCategoryTabs = document.querySelectorAll('.category-tab-select');
+const portMode = 'portrait';
+const landMode = 'landscape';
 
 furnitureCategoryTabs.forEach(function (tab) {
   tab.addEventListener('click', checkResolutionOfScreen);
@@ -6,28 +8,27 @@ furnitureCategoryTabs.forEach(function (tab) {
 
 function checkResolutionOfScreen (event) {
   const targetTab = event.currentTarget.getAttribute('href');
-  const tabPanelId = targetTab.substring(1, targetTab.length);
-  const tabPanel = document.getElementById(tabPanelId);
+  const tabPanel = document.querySelector(targetTab);
   const tabPanelProductElements = tabPanel.children[0].children.length;
   const width = window.innerWidth;
   const height = window.innerHeight;
   let orientation;
 
   if (width > height) {
-    orientation = 'landscape';
+    orientation = landMode;
   } else if (width < height) {
-    orientation = 'portrait';
+    orientation = portMode;
   }
 
   detectScreenMode(orientation, width, tabPanelProductElements);
 }
 
 function detectScreenMode (orientation, width, tabPanelProductElements) {
-  const landscapeLargeMode = orientation === 'landscape' && width > 1024;
-  const landscapeMiddleMode = orientation === 'landscape' && width > 995 < 1024;
-  const landscapeSmallMode = orientation === 'landscape' && width > 568 < 768;
-  const portraitSmallMode = orientation === 'portrait' && width > 320 < 568;
-  const portraitMiddleMode = orientation === 'portrait' && width > 767 < 996;
+  const landscapeLargeMode = orientation === landMode && width > 1024;
+  const landscapeMiddleMode = orientation === landMode && (width > 995 && width < 1024);
+  const landscapeSmallMode = orientation === landMode && (width > 568 && width < 768);
+  const portraitSmallMode = orientation === portMode && (width > 320 && width < 568);
+  const portraitMiddleMode = orientation === portMode && (width > 767 && width < 996);
 
   if (landscapeLargeMode) {
     createDots(tabPanelProductElements / 4);
@@ -44,10 +45,7 @@ function detectScreenMode (orientation, width, tabPanelProductElements) {
 
 function createDots (number) {
   var dotMenu = document.querySelector('#dots-container');
-  console.log(number);
-  while (dotMenu.firstChild) {
-    dotMenu.innerHTML = '';
-  }
+  dotMenu.innerHTML = '';
 
   for (let i = 0; i < number; i++) {
     var liElement = document.createElement('li');
