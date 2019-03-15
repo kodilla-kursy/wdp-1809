@@ -39,6 +39,7 @@
         font-weight: 600;
 
         a {
+          @extend %hover-transition;
           color: rgb(42, 42, 42);
           position: relative;
           text-decoration: none;
@@ -74,12 +75,13 @@
       display: inline-block;
       margin-left: 0.5rem;
 
-      a {
-        display: block;
-        width: 13px;
-        height: 13px;
-        border-radius: 6px;
-        background-color: #e1e1e1;
+        a {
+          @extend %hover-transition;
+          display: block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: #e1e1e1;
 
         &.active,
         &:hover {
