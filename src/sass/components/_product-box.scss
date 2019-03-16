@@ -80,3 +80,40 @@
     align-items: center;
   }
 }
+.flickity-viewport {
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 2rem;
+}
+
+.flickity-page-dots {
+  z-index: 3;
+  right: 0;
+  top: -40px;
+  background: white;
+  width: auto;
+  height: 20px;
+  padding: 0 10px;
+  .dot {
+    width: 13px;
+    height: 13px;
+    margin: 0 6px;
+    opacity: 1;
+    background: #e2e2e2;
+    &:hover,
+    &.is-selected {
+      background: $primary;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // Dodalem dodatkowy styl dla mniejszych rozdzielczosci zeby kropki nie zakrywaly menu kotre jest nad nimi
+  .flickity-viewport {
+    margin-top: 20px;
+  }
+  .flickity-page-dots {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
