@@ -28,7 +28,6 @@ const createCarousel = (carouselContainer, navContainer) => {
 const prepareNavs = (navs, pageCount) => {
   for (let i = 0; i < navs.length; i++) {
     const element = navs[i];
-    element.addEventListener('click', event => event.preventDefault());
     if (i >= pageCount) element.style = 'display: none';
   }
 };
