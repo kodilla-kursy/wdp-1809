@@ -3,6 +3,11 @@
   background-color: $primary;
 }
 
+%gallery-buttons-hover-animation {
+  transition: $hover-transition-timing;
+  color: $primary;
+  border-color: $primary;
+}
 %buttons-hover-animation {
   transition: $hover-transition-timing;
   color: $button-hover-color;
