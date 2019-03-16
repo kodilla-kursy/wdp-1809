@@ -1,20 +1,24 @@
 <div class="section-featured">
   <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 left-side">
         <div class="product-box">
-          <div class="featured-header">
-            Hot Deals
-            <div class="hot-deals-points">
-              <div class="hot-deals-point active"></div>
-              <div class="hot-deals-point"></div>
-              <div class="hot-deals-point"></div>
+          <div class="featured-header">Hot Deals</div>
+          <div class="carousel-hot-deals" data-flickity="{ &quot;autoPlay&quot;: true}">
+            <div class="carousel-cell" id="carousel-cell1">
+              <img class="hot-deals-images" src="images/chair.jpg" />
+            </div>
+            <div class="carousel-cell" id="carousel-cell2">
+              <img class="hot-deals-images" src="images/chair.jpg" />
+            </div>
+            <div class="carousel-cell" id="carousel-cell3">
+              <img class="hot-deals-images" src="images/chair.jpg" />
             </div>
           </div>
-          <div class="featured-photo">
-            <a class="btn-main cart-btn" href="#">
-              <i class="fa fa-shopping-basket"></i> ADD TO CART
-            </a>
+          <a class="btn-main cart-btn" href="#"
+            ><i class="fa fa-shopping-basket"></i>ADD TO CART</a
+          >
+          <div class="counters-wrapper">
             <div class="counters">
               <div class="counter">
                 <div class="counter-number">23</div>
@@ -53,25 +57,31 @@
           </div>
         </div>
       </div>
-      <div class="col-8">
-        <div class="photo">
-          <img alt="" class="featured-image" src="images/featured-sofa.jpg" />
-          <div class="overlay">
-            <div class="content">
-              <p class="text-uppercase">Indoor<b>furniture</b></p>
-              <break> </break>
-              <p class="text-uppercase caption">save up to 50% of all furniture</p>
-              <break></break> <button name="button" type="button">Shop now</button>
-            </div>
+      <div class="col-lg-8 col-md-12 right-side">
+        <div
+          class="carousel"
+          data-flickity="{ &quot;cellAlign&quot;: &quot;left&quot;, &quot;contain&quot;: true }"
+        >
+          <div class="carousel-cell" id="carousel-cell1">
+            <img class="featured-images" src="images/sofa.jpg" />
+          </div>
+          <div class="carousel-cell" id="carousel-cell2">
+            <img class="featured-images" src="images/sofa.jpg" />
+          </div>
+          <div class="carousel-cell" id="carousel-cell3">
+            <img class="featured-images" src="images/sofa.jpg" />
+          </div>
+          <div class="carousel-cell" id="carousel-cell4">
+            <img class="featured-images" src="images/sofa.jpg" />
           </div>
         </div>
-        <div class="featured-buttons">
-          <button class="featured-btn" name="button" type="button">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="featured-btn" name="button" type="button">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+        <div class="overlay">
+          <div class="content">
+            <p class="text-uppercase">Indoor<b>furniture</b></p>
+            <break></break>
+            <p class="text-uppercase caption">save up to 50% of all furniture</p>
+            <break></break> <button name="button" type="button">Shop now</button>
+          </div>
         </div>
       </div>
     </div>

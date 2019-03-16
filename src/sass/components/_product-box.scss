@@ -1,9 +1,11 @@
+
 .panel-bar {
   .row {
     .menu {
       .menu-tab-list {
         display: block;
       }
+
     }
   }
 }
@@ -126,6 +128,7 @@
         }
       }
 
+
       .actions {
         padding: 15px 10px 10px 10px;
         display: flex;
@@ -148,6 +151,7 @@
           }
         }
       }
+
 
       &:hover {
         .buttons {
