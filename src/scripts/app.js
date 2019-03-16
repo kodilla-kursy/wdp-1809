@@ -8,8 +8,6 @@ function Slider (
   this.container = carouselContainer;
   this.autoplay = autoplay;
   this.controls = false;
-  this.mouseDrag = true;
-  this.items = 1;
   this.navContainer = navContainer;
   this.autoplayButtonOutput = false;
   this.controls = controls;
