@@ -1,4 +1,4 @@
-function Slider(
+function Slider (
   carouselContainer,
   navContainer,
   controls,
@@ -34,5 +34,7 @@ var promotionalSlider = new Slider(
   false
 );
 
+/*eslint-disable */
 tns(hotDealsSlider);
 tns(promotionalSlider);
+/*eslint-disable */

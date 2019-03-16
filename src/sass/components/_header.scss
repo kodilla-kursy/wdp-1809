@@ -2,40 +2,72 @@ header {
   .top-bar {
     background-color: $header-topbar-bg;
 
-    ul {
+    .top-bar-menu {
       list-style: none;
       margin: 0;
       padding: 0;
+    }
 
-      li {
-        display: inline-block;
-        line-height: 55px;
+    .top-bar-menu_item {
+      display: inline-block;
+      line-height: 55px;
 
-        a {
-          color: $font-color;
-          font-size: 13px;
+      a {
+        @extend %hover-transition;
+        color: $font-color;
+        font-size: 13px;
 
-          &:hover {
-            color: $primary;
-            text-decoration: none;
-          }
+        &:hover {
+          color: $primary;
+          text-decoration: none;
         }
       }
     }
 
-    .text-left ul li {
-      margin-right: 1.5rem;
+    .text-left {
+      padding-right: 0;
 
-      i {
-        margin-left: 5px;
+      .top-bar-menu_item {
+        margin-right: 0.5rem;
+        padding-right: 0;
+
+        i {
+          margin-left: 5px;
+        }
       }
     }
 
-    .text-right ul li {
-      margin-left: 1.5rem;
+    .text-right {
+      padding-left: 0;
 
-      i {
-        margin-right: 5px;
+      .top-bar-menu_item {
+        margin-left: 0.5rem;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+
+      .icon-label {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      .text-left {
+        .top-bar-menu_item {
+          margin-right: 1.5rem;
+        }
+      }
+
+      .text-right {
+        .top-bar-menu_item {
+          margin-right: 1.5rem;
+        }
+
+        .icon-label {
+          display: inline;
+        }
       }
     }
   }
@@ -45,12 +77,17 @@ header {
 
     .container > .row {
       height: 145px;
+      flex-wrap: wrap-reverse;
     }
 
     .phone-number {
+      text-align: right;
+      align-self: flex-end;
+      justify-self: right;
+
       p {
         margin: 0;
-        font-size: 17px;
+        font-size: 14px;
         line-height: 42px;
         color: rgb(216, 216, 216);
         font-weight: 500;
@@ -66,12 +103,17 @@ header {
     }
 
     .cart {
+      align-self: flex-end;
+      margin-top: 10px;
+
       .cart-box {
         display: inline-block;
         position: relative;
+        text-decoration: none;
         color: $font-color;
 
         .cart-icon {
+          @extend %hover-transition;
           background-color: $primary;
           width: 55px;
           height: 50px;
@@ -110,15 +152,104 @@ header {
         }
       }
     }
+
+    @include media-breakpoint-up(sm) {
+      .phone-number {
+        align-self: center;
+        text-align: left;
+
+        p {
+          font-size: 17px;
+        }
+      }
+
+      .cart {
+        align-self: auto;
+      }
+    }
   }
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: $font-color;
-    height: 150px;
-
     .container > .row {
       height: 84px;
+    }
+
+    .category {
+      -webkit-appearance: none;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      padding: 5px 30px 5px 35px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+
+      .horizontal-menu {
+        background-color: $header-search-form;
+        text-align: center;
+        margin: auto;
+        margin-top: -3px;
+
+        li {
+          min-width: 80px;
+          padding: 0;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+
+      &:hover .vertical-menu {
+        display: block;
+        top: 45px;
+        left: 0px;
+        position: absolute;
+        background-color: $header-search-form;
+      }
+
+      a {
+        height: 40px;
+        display: block;
+        width: auto;
+        line-height: 40px;
+        font-size: 12;
+        color: $base-color;
+        text-decoration: none;
+      }
+
+      .furniture-item {
+        width: 190px;
+        text-align: left;
+        padding-left: 5px;
+      }
+
+      .furniture-item:hover {
+        background-color: $primary;
+        color: $header-search-form;
+        border-color: $primary;
+      }
+
+      .fas:hover .vertical-menu {
+        display: block;
+        position: absolute;
+        background-color: $header-search-form;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        ul {
+          text-align: center;
+          display: none;
+
+          li {
+            display: block;
+          }
+        }
+      }
     }
 
     .menu {
@@ -140,6 +271,7 @@ header {
           align-items: stretch;
 
           a {
+            @extend %hover-transition;
             color: $base-color;
             text-transform: uppercase;
             font-size: 12px;
@@ -192,6 +324,7 @@ header {
         }
 
         select {
+          @extend %hover-transition;
           -webkit-appearance: none;
           border: 0;
           background-color: transparent;
