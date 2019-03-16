@@ -14,8 +14,7 @@ function Slider (
   this.autoplayButtonOutput = false;
   this.controls = controls;
   this.controlsContainer = controlsContainer;
-  this.edgePadding = 0;
-  this.gutter = 0;
+  this.autoplayTimeout = 3000;
 }
 
 var hotDealsSlider = new Slider(
@@ -30,7 +29,7 @@ var promotionalSlider = new Slider(
   '.promotional-slider',
   false,
   true,
-  '.slider-row',
+  '.control-row',
   false
 );
 

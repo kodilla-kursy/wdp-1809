@@ -113,22 +113,6 @@
     }
   }
 
-  .line {
-    margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 50%;
-      width: 30px;
-      border-bottom: 4px solid $primary;
-      transform: translateX(-50%);
-    }
-  }
-
   .actions {
     padding: 15px 10px 10px 10px;
     display: flex;
@@ -139,5 +123,21 @@
       font-size: 12px;
       color: $furniture-old-price;
     }
+  }
+}
+
+.line {
+  margin: 0 10px;
+  border-bottom: 1px solid #2a2a2a;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 30px;
+    border-bottom: 4px solid $primary;
+    transform: translateX(-50%);
   }
 }

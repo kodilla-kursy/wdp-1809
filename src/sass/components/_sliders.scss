@@ -1,0 +1,12 @@
+/*sliders style */
+
+.tns-visually-hidden,
+.tns-nav {
+  display: none;
+}
+
+.tns-nav-active {
+  a {
+    background-color: $primary !important;
+  }
+}
