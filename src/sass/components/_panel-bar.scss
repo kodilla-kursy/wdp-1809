@@ -89,5 +89,11 @@
         }
       }
     }
+
+    .tns-nav-active {
+      a {
+        background-color: $primary;
+      }
+    }
   }
 }
