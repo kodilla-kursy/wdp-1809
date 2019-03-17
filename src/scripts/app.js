@@ -3,7 +3,8 @@ function Slider (
   navContainer,
   controls,
   controlsContainer,
-  autoplay
+  autoplay,
+  responsive
 ) {
   this.container = carouselContainer;
   this.autoplay = autoplay;
@@ -13,14 +14,21 @@ function Slider (
   this.controls = controls;
   this.controlsContainer = controlsContainer;
   this.autoplayTimeout = 3000;
+  this.responsive = responsive;
 }
 
+var responsiveSettings = {
+  992: {
+    touch: false
+  }
+};
 var hotDealsSlider = new Slider(
   '.carousel-hot-deals',
   '.hot-deals-carousel-nav',
   false,
   false,
-  true
+  true,
+  false
 );
 
 var promotionalSlider = new Slider(
@@ -28,7 +36,8 @@ var promotionalSlider = new Slider(
   false,
   true,
   '.control-row',
-  false
+  false,
+  responsiveSettings
 );
 
 /*eslint-disable */

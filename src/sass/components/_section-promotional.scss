@@ -159,10 +159,15 @@
     .promotional-slider {
       position: relative;
 
-      img {
+      .slide-img {
         max-height: 400px;
-        width: 100%;
-        object-fit: content;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          vertical-align: bottom;
+        }
       }
     }
   }
@@ -174,16 +179,18 @@
     top: 35%;
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
+    margin: -35px -35px 0 0;
   }
 
   .promotional-title {
     position: absolute;
     top: 40%;
-    left: 25%;
     text-align: center;
     color: $font-color;
     text-transform: uppercase;
     font-weight: 200;
+    margin: -35px -35px 0 0;
+    width: 100%;
 
     a {
       background-color: $font-color;
@@ -227,5 +234,19 @@
         }
       }
     }
+  }
+}
+
+.hot-deals-section {
+  display: none;
+}
+
+@include media-breakpoint-up(md) {
+  .hot-deals-section {
+    display: block;
+  }
+
+  .slide-img {
+    max-height: 380px;
   }
 }
