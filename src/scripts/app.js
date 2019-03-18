@@ -19,9 +19,13 @@ function Slider (
 
 var responsiveSettings = {
   992: {
-    touch: false
+    mouseDrag: false
+  },
+  576: {
+    mouseDrag: true
   }
 };
+
 var hotDealsSlider = new Slider(
   '.carousel-hot-deals',
   '.hot-deals-carousel-nav',

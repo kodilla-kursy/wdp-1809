@@ -1,5 +1,5 @@
 .section-promotional {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .product-card {
@@ -93,7 +93,7 @@
       width: 65px;
       height: 65px;
       background-color: $form-border-color;
-      color: whitesmoke;
+      color: $font-color;
       border-radius: 50px;
       display: flex;
       justify-content: center;
@@ -103,10 +103,6 @@
   }
 
   .promotional-border {
-    border-left: 1px solid $wrapper-border-color;
-    border-right: 1px solid $wrapper-border-color;
-    border-bottom: 1px solid $wrapper-border-color;
-
     .actions {
       padding: 15px 10px 10px 10px;
       display: flex;
@@ -152,86 +148,85 @@
 }
 
 .slider {
-  .promotional-wrapper {
-    height: auto;
-    overflow: hidden;
+  margin: 0px auto;
+  max-height: 460px;
+  width: 100%;
 
-    .promotional-slider {
-      position: relative;
+  .promotional-slider {
+    position: relative;
 
-      .slide-img {
-        max-height: 400px;
+    .slide-img {
+      overflow: hidden;
+      max-height: 420px;
 
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          vertical-align: bottom;
-        }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
       }
     }
   }
+}
 
-  .promotional-slider:before {
-    content: "";
-    position: absolute;
-    height: 38%;
-    top: 35%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    margin: -35px -35px 0 0;
+.promotional-slider:before {
+  content: "";
+  position: absolute;
+  height: 35%;
+  top: 42%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.promotional-title {
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  color: $font-color;
+  text-transform: uppercase;
+  font-weight: 200;
+  width: 100%;
+  padding-right: 20px;
+
+  a {
+    background-color: $font-color;
+    color: $form-border-color;
   }
 
-  .promotional-title {
-    position: absolute;
-    top: 40%;
-    text-align: center;
+  a:hover {
+    background-color: $form-border-color;
     color: $font-color;
-    text-transform: uppercase;
-    font-weight: 200;
-    margin: -35px -35px 0 0;
-    width: 100%;
-
-    a {
-      background-color: $font-color;
-      color: $form-border-color;
-    }
-
-    a:hover {
-      background-color: $form-border-color;
-      color: $font-color;
-      text-decoration: none;
-    }
-
-    .promotional-slogan {
-      font-weight: 200;
-      span {
-        font-weight: bold;
-      }
-    }
+    text-decoration: none;
   }
 
-  .control-row {
+  .promotional-slogan {
+    font-weight: 200;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.control-row {
+  width: 100%;
+  overflow: hidden;
+
+  a {
+    display: inline-block;
     width: 100%;
-    overflow: hidden;
+    background-color: $form-border-color;
+    text-align: center;
+    font-size: 24px;
 
-    a {
-      display: inline-block;
-      width: 100%;
+    i {
+      color: $font-color;
       background-color: $form-border-color;
-      text-align: center;
-      font-size: 24px;
+    }
 
+    &:hover {
+      background-color: $primary;
       i {
-        color: $font-color;
-        background-color: $form-border-color;
-      }
-
-      &:hover {
         background-color: $primary;
-        i {
-          background-color: $primary;
-        }
       }
     }
   }
@@ -239,14 +234,20 @@
 
 .hot-deals-section {
   display: none;
+  border-left: 1px solid $wrapper-border-color;
+  border-right: 1px solid $wrapper-border-color;
+  border-bottom: 1px solid $wrapper-border-color;
+  padding: 0px;
+  float: left;
+  max-height: 460px !important;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .hot-deals-section {
     display: block;
   }
 
-  .slide-img {
-    max-height: 380px;
+  .slider {
+    float: left;
   }
 }
