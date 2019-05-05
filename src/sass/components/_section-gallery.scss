@@ -1,0 +1,327 @@
+.section-gallery {
+  display: flex;
+
+  .left-section {
+    width: 50%;
+    margin-right: 15px;
+
+    .panel-bar {
+      .heading {
+        width: 100%;
+      }
+    }
+    .container-menu-content-sllider {
+      border: 2px solid $border-section-gallery;
+
+      .menu-gallery {
+        ul {
+          display: flex;
+          list-style: none;
+          padding: 0;
+
+          & > li {
+            position: relative;
+            width: 25%;
+            text-align: center;
+            padding: 8px 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: 0.5s;
+            border-right: 1px solid $border-section-gallery;
+
+            &:last-child {
+              border: none;
+            }
+
+            &::after {
+              content: "";
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 3px;
+              background: $primary;
+              transition: 0.5s;
+            }
+
+            &:hover {
+              background: $left-section-bg;
+              color: $primary;
+              cursor: pointer;
+
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .content-gallery {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        margin-top: -16px;
+        background: $left-section-bg;
+        display: flex;
+        align-items: center;
+
+        & > .outlines {
+          display: inline-flex;
+          flex-direction: column;
+          margin-left: 5px;
+
+          & > .btn-outline {
+            transition: 0.5s;
+            position: relative;
+            margin-top: 5px;
+
+            .alert {
+              opacity: 0;
+              position: absolute;
+              font-weight: 300;
+              top: 0;
+              left: 0;
+              transition: 0.5s;
+
+              &::after {
+                content: "Add To Card";
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                height: 25px;
+                background: $alert-bg-section-gallery;
+                color: #fff;
+                font-size: 10px;
+                font-family: Poppins;
+                top: 3px;
+                left: 42px;
+              }
+
+              &::before {
+                position: absolute;
+                content: "";
+                top: 8px;
+                left: 40px;
+                width: 15px;
+                height: 15px;
+                background: $alert-bg-section-gallery;
+                transform: rotate(45deg);
+              }
+            }
+
+            &:hover {
+              border-color: $primary;
+              background: none;
+              color: $primary;
+
+              .alert {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .img-content {
+          width: 350px;
+          margin-left: 20px;
+        }
+
+        .prince-content {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          top: 130px;
+          right: 80px;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          z-index: 2;
+
+          .present-price {
+            font-size: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+          }
+
+          .old-prince {
+            margin-top: -10px;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 12px;
+              right: 0;
+              height: 1px;
+              width: 50px;
+              background: #fff;
+            }
+          }
+        }
+
+        .title-content {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          bottom: 20px;
+          right: 0;
+          width: 270px;
+          height: 100px;
+          background: #fff;
+          justify-content: center;
+          overflow: hidden;
+          box-shadow: 2px #000;
+
+          .title-product-content {
+            font-weight: 600;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            transform: rotate(45deg);
+            width: 40px;
+            height: 40px;
+            background: #000;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            transform: rotate(45deg);
+            width: 40px;
+            height: 40px;
+            background: #000;
+          }
+        }
+      }
+
+      .slider {
+        display: flex;
+        margin: 5px;
+
+        .left-arrow-gallery,
+        .right-arrow-gallery {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          background: $arrow-slider-bg;
+
+          &:hover {
+            .fas {
+              color: $primary;
+            }
+          }
+
+          .fas {
+            color: #fff;
+            transition: 0.5s;
+          }
+        }
+
+        .content-slider-gallery {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+
+          .overlay-image-slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 60px;
+            background: #ccc;
+            margin: 0 5px;
+
+            .image-gallery-slider {
+              padding: 5px;
+              width: 60px;
+              height: 50px;
+              opacity: 0.5;
+            }
+
+            .activ-slider {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-section {
+    position: relative;
+    width: 50%;
+    background: $right-section-bg;
+    margin-left: 15px;
+
+    .text {
+      padding: 50px;
+
+      .text-horizontal {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        color: #000;
+
+        .from-text-gallery {
+          position: relative;
+          text-transform: uppercase;
+          font-weight: 700;
+          align-self: flex-end;
+          bottom: -5px;
+        }
+
+        .text-prince {
+          color: $button-text-right-section;
+          font-size: 40px;
+          font-weight: 600;
+          margin: 0;
+        }
+      }
+
+      .text-title {
+        font-weight: 600;
+        font-size: 45px;
+        color: $title-right-section;
+      }
+
+      button {
+        position: absolute;
+        border: none;
+        padding: 15px 20px;
+        text-transform: uppercase;
+        background: $button-text-right-section;
+        color: $button-right-section-text-color;
+        font-weight: 500;
+        transition: 0.5s;
+        z-index: 1;
+
+        &:hover {
+          cursor: pointer;
+          background: $button-hv-right-section;
+        }
+      }
+    }
+
+    .right-image-section {
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+      width: 500px;
+    }
+  }
+}
