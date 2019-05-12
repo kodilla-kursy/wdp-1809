@@ -1,0 +1,49 @@
+.brands-container {
+  display: flex;
+  height: 140px;
+  padding: 25px 0;
+  border-top: $brands-border;
+  border-bottom: $brands-border;
+  margin-bottom: 50px;
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .carousel-inner {
+      overflow-x: hidden;
+      width: auto;
+      margin: 0 5%;
+
+      .tns-outer {
+        margin: 0 3%;
+        > button {
+          display: none;
+        }
+      }
+
+      .carousel-item {
+        justify-content: space-between;
+
+        .img-brand {
+          box-sizing: border-box;
+          border: $brands-border;
+          width: 100%;
+          height: auto;
+          max-height: 70px;
+        }
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: #000;
+      width: 30px;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.section-sale {
+  padding-bottom: 40px;
+  text-transform: uppercase;
+
+  .sale-container {
+    position: relative;
+    background: url("https://images.pexels.com/photos/276566/pexels-photo-276566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=420&w=500")
+      no-repeat bottom / cover;
+    height: 420px;
+    display: flex;
+    align-items: flex-end;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      width: 94%;
+      height: 94%;
+      left: 3%;
+      top: 3%;
+    }
+  }
+
+  .text-left-sale {
+    color: $whiteText;
+    padding: 0 0 25px 35px;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 54px;
+
+      .bg-text {
+        font-size: 3.5rem;
+        font-weight: 700;
+      }
+    }
+
+    h3 {
+      font-size: 2.7rem;
+      border: 5px solid $whiteText;
+      width: 70%;
+      padding: 10px;
+    }
+  }
+
+  .office-container {
+    background: url("https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=198&w=200")
+      no-repeat bottom / cover;
+    height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      span {
+        line-height: 26px;
+        font-weight: 600;
+        color: $whiteText;
+        font-size: 2rem;
+      }
+
+      font-weight: 300;
+      color: $primary;
+    }
+
+    h4 {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: $whiteText;
+      letter-spacing: 3.6px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 2.2rem;
+      color: $primary;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  .special-container {
+    background: url("https://images.pexels.com/photos/439227/pexels-photo-439227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=195&w=500")
+      no-repeat bottom / cover;
+    height: 195px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .text-special {
+    margin-right: 25px;
+    line-height: 54px;
+
+    h3 {
+      font-size: 1.5rem;
+      color: $primary;
+      font-weight: 300;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      color: $whiteText;
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-sale {
+    .office-container {
+      margin-top: 30px;
+    }
+  }
+}

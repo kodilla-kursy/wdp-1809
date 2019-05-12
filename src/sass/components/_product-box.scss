@@ -5,15 +5,15 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
     overflow: hidden;
     align-items: flex-end;
+
+    img {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+    }
 
     .sale {
       position: absolute;
@@ -29,6 +29,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      opacity: 0;
     }
   }
 
@@ -44,12 +45,18 @@
     }
 
     .stars {
+      display: inline;
       a {
         text-decoration: none;
         color: rgb(42, 42, 42);
+        cursor: pointer;
         @extend .far;
         @extend .fa-star;
-
+        &.active,
+        &.hoverEffect {
+          color: $primary !important;
+          font-weight: 900;
+        }
         &.full {
           @extend .fas;
         }
@@ -78,5 +85,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .price {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      line-height: 24px;
+      padding: 5px 10px;
+      font-weight: 400;
+
+      .sale-price {
+        text-decoration: line-through #000000;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  &:hover {
+    .photo {
+      .buttons {
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    .no-hover {
+      background-color: $primary;
+      color: #ffffff;
+      transition: 0.5s ease-in-out;
+    }
   }
 }
+
+.temp{
+  display: none;
+}
+
+
+
+.animation {
+  animation: fadein 5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

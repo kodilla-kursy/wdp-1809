@@ -6,7 +6,7 @@ DO UZUPEŁNIENIA
 
 ## Demo
 
-DO UZUPEŁNIENIA
+https://cranky-crane.netlify.com
 
 ## Inicjacja projektu
 
@@ -24,6 +24,13 @@ Dostępne są 3 główne skrypty przyspieszające pracę:
 - `watch`: odpala `browser-sync`, obserwuje zmiany w folderze `src` i przebudowuje projekt
 - `code-quality`: skrypt dokonuje automatycznego formatowania plików w folderze `src/`
   zgodnie z przyjętą konwencją formatowania kodu i sprawdza błędy w JS.
+
+**!!! UWAGA:** Wprowadziliśmy eksperymentalny podział całego HTMLa na mniejsze części.
+Niestety nasz skrypt budujący obserwuje **jedynie** zmiany w pliku `index.html`.
+W związku z tym faktem, dla taska `watch`, każda zmiana w plikach z folderu `src/partials`
+wymaga również zmiany w głównym pliku `index.html`.
+Może to być jakakolwiek zmiana (np. dodanie/usunięcie spacji, komentarza itp.)
+Przepraszamy za utrudnienia; pracujemy nad lepszym rozwiązaniem.
 
 ## Git Hooks
 

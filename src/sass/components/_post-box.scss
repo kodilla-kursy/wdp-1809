@@ -2,11 +2,11 @@
   margin-bottom: 2rem;
 
   .cover {
-    padding: 70% 25px 0 25px;
-    background: {
-      color: #f4f5f7;
-      size: cover;
-      position: center;
+    img {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
     }
 
     .details {
@@ -14,6 +14,7 @@
       display: flex;
       background-color: #ffffff;
       font-size: 14px;
+      color: $black;
 
       & > * {
         flex: 1 1 auto;
@@ -33,7 +34,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: $black;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -49,6 +50,43 @@
     .more {
       text-align: center;
       padding-top: 30px;
+
+      .btn-main {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+  &:hover {
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .details {
+      color: $blog-post-details-color;
+    }
+    h5 {
+      color: $primary;
+    }
+    .btn-main {
+      background-color: $primary;
+      color: #fff;
+    }
+  }
+  &:hover {
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .details {
+      color: $blog-post-details-color;
+    }
+    h5 {
+      color: $primary;
+    }
+    .btn-main {
+      background-color: $primary;
+      color: #fff;
     }
   }
 }
