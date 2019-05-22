@@ -71,6 +71,10 @@ header {
         position: relative;
         color: #ffffff;
 
+        @media screen and (max-width: 600px) {
+          left: -22px;
+        }
+
         .cart-icon {
           background-color: $primary;
           width: 55px;
