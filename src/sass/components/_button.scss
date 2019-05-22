@@ -34,3 +34,15 @@
     color: #ffffff;
   }
 }
+
+.btn-active {
+  background-color: $primary;
+  color: #fff;
+  border-color: $primary;
+
+  @media not all and (hover: none) {
+    &:hover {
+      border-color: $text-color;
+    }
+  }
+}
