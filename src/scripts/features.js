@@ -4,12 +4,12 @@ console.log(features);
 features[0].classList.add('active');
 
 features.forEach(function (item) {
-  let link = createElement('a');
-  link.href = '#';
-
-  link.insertAdjacentElement('afterbegin', item.childNodes[1]);
-  link.appendChild(item.childNodes[2]);
+  let link = createElement('a', '#');
+  for (let i = 1; i <= 2; i++) {
+    appendChild(link, item.childNodes[i]);
+  }
   appendChild(item, link);
+
   item.addEventListener('mouseover', function (event) {
     event.preventDefault();
     features[0].classList.remove('active');
@@ -24,8 +24,10 @@ features.forEach(function (item) {
   });
 });
 
-function createElement (itemName) {
-  return document.createElement(itemName);
+function createElement (itemName, tag) {
+  let link = document.createElement(itemName);
+  link.href = tag;
+  return link;
 }
 
 function appendChild (parentNode, childNode) {
