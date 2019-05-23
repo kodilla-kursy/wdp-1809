@@ -222,3 +222,56 @@ header {
     }
   }
 }
+
+@media (max-width: 768px) {
+  header .company-claim {
+    .row {
+      position: relative;
+    }
+    .phone-number {
+      position: absolute;
+      right: 15px;
+      bottom: 10%;
+      padding: 0;
+
+      p {
+        font-size: 14px;
+        text-align: right;
+      }
+    }
+
+    .logo {
+      order: 1;
+    }
+
+    .cart {
+      order: 2;
+      position: relative;
+      top: -15px;
+      right: 15px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .top-bar .text-right {
+    max-width: 150px;
+
+    ul li {
+      width: 13px;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  header .company-claim .row {
+    .phone-number {
+      bottom: 0;
+    }
+  }
+}
