@@ -49,8 +49,10 @@
       font-weight: 300;
     }
   }
+}
 
-  &.active {
+.link {
+  &:hover {
     i {
       background-color: $primary;
       color: #ffffff;
