@@ -9,6 +9,7 @@
     "prebuild": "npm run clean",
     "build": "parcel build src/index.html",
     "clean": "rimraf dist",
+    "clean-cache": "rimraf .cache",
     "code-quality": "npm run format && npm run lint",
     "format": "prettier --write \"src/**/*.{js,html,scss}\"",
     "lint": "eslint src/"
