@@ -19,6 +19,8 @@ footer {
             font-size: 14px;
             line-height: 30px;
             color: rgb(169, 169, 169);
+            @extend .color-animation;
+            @extend .background-color-animation;
 
             &:hover {
               color: #ffffff;
@@ -68,6 +70,8 @@ footer {
           a {
             color: rgb(169, 169, 169);
             text-decoration: none;
+            @extend .color-animation;
+            @extend .background-color-animation;
 
             &:hover {
               color: $primary;
