@@ -30,6 +30,21 @@
       display: flex;
       justify-content: space-between;
     }
+
+    .old-price {
+      font-size: 14px;
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      line-height: 55px;
+      border-radius: 50%;
+      height: 55px;
+      width: 55px;
+      background: $primary;
+      text-decoration: line-through;
+      text-align: center;
+    }
   }
 
   .content {
