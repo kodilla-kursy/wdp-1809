@@ -143,14 +143,10 @@ header {
         margin-top: $grid-base * 3;
         z-index: 0;
       }
-      @include medium-down {
-        top: 50%;
-        transform: translate(0, -50%);
-        outline: none;
-        position: absolute;
-      }
+
       @include small-up {
-        top: $grid-base * 7.4;
+        top: $grid-base * 6.2;
+        position: absolute;
         display: flex;
         justify-content: center;
       }
@@ -171,7 +167,7 @@ header {
 
       ul {
         @include small-up {
-          margin-top: $grid-base * 13.4;
+          margin-top: $grid-base * 4.7;
         }
 
         margin: 0;
