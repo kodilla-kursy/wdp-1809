@@ -85,11 +85,13 @@ footer {
     }
   }
 }
+
 @media (max-width: 768px) {
   .bottom-bar {
     .copyright {
       order: 2;
     }
+
     .placeholder {
       padding-top: 10px;
       width: 100%;
@@ -97,6 +99,7 @@ footer {
       text-align: center;
       margin-bottom: 15px;
     }
+
     .socialmedia {
       order: 3;
     }
