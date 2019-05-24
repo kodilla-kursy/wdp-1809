@@ -77,6 +77,8 @@ typings/
 
 # Serverless directories
 .serverless
-
-
+src/sass/components/.navbar-button.css.map
+src/sass/components/.navbar-button.css
+src/sass/style.css
+src/sass/style.css.map
 # End of https://www.gitignore.io/api/node
