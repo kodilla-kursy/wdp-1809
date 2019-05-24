@@ -78,6 +78,7 @@ typings/
 # Serverless directories
 .serverless
 node_modules/*
+src/sass/.sass-cache/*
 
 
 # End of https://www.gitignore.io/api/node
