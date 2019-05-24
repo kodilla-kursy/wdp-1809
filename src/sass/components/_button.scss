@@ -8,7 +8,7 @@
 
   &:not(.no-hover):hover {
     color: #ffffff !important;
-    background-color: white;
+    background-color: $primary;
     text-decoration: none;
   }
 }
