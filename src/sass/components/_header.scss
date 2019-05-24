@@ -224,10 +224,11 @@ header {
 }
 
 @media (max-width: 768px) {
-  header .company-claim {
+  .company-claim {
     .row {
       position: relative;
     }
+
     .phone-number {
       position: absolute;
       right: 15px;
@@ -247,6 +248,7 @@ header {
     }
   }
 }
+
 @media (max-width: 576px) {
   .top-bar .text-right {
     max-width: 150px;
@@ -264,9 +266,7 @@ header {
 }
 
 @media (max-width: 370px) {
-  header .company-claim .row {
-    .phone-number {
-      bottom: 0;
-    }
+  header .company-claim .row .phone-number {
+    bottom: 0;
   }
 }
