@@ -1,11 +1,35 @@
+//Kolor
+$white: #fff;
+$black: #000;
 $header-topbar-bg: #864343;
 $header-bg: #723636;
-
 $footer-claim-bg: #2a2a2a;
 $footer-bg: #363636;
-
 $primary: #d58e32;
-
 $text-color: #2a2a2a;
-
 $form-border-color: #292929;
+
+//Tekst
+$font-base-size: 1rem; //16px
+$font-size-1: $font-base-size * 3; //~48px
+$font-size-2: $font-base-size * 1.5; //24px
+$font-size-3: $font-base-size * 1.125; // 18px
+$font-size-4: $font-base-size * 1; //16px
+$font-size-5: $font-base-size * 0.875; //14px
+$font-size-6: $font-base-size * 0.75; //12px
+$font-size-7: $font-base-size * 0.625; //10px
+$font-size-8: $font-base-size * 4; //~`64px
+$font-size-9: $font-base-size * 2; //32px
+// line-height
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+$line-height-lg: 1.8;
+
+//Grid
+$grid-base: 10px;
+$gutter: $grid-base * 1.5;
+//Breakpoint
+$bp-medium: "800px";
+$bp-medium-height: "1199px";
+$bp-large: "1200px";
+$bp-medium-small: "576px";

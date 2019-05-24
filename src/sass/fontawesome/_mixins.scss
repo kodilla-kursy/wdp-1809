@@ -23,6 +23,8 @@
 }
 
 
+
+
 // Only display content to screen readers. A la Bootstrap 4.
 //
 // See: http://a11yproject.com/posts/how-to-hide-content/
@@ -53,5 +55,54 @@
     overflow: visible;
     position: static;
     width: auto;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @content;
+  }
+}
+
+
+@mixin medium-high {
+  @media (min-width: #{$bp-medium-height}) and (max-width: #{$bp-medium-height} )  {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @media (min-width: 300px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+
+@mixin small-up {
+  @media (min-width: 300px) and (max-width: 542px) {
+    @content;
+  }
+}
+
+//for large breakpoint'
+
+@mixin large-up {
+  @media(min-width: #{$bp-large}) {
+    @content;
+  }
+}
+
+@mixin centererPos($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
   }
 }

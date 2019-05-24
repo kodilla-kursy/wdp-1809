@@ -123,17 +123,57 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $white;
 
+    @include tablet {
+      padding: $grid-base * 5;
+    }
+
+    @include small-up {
+      padding-bottom: $grid-base * 4.9;
+    }
+    position: relative;
     .container > .row {
       height: 84px;
     }
 
+    &--left {
+      @include tablet {
+        @include centererPos();
+        margin-top: $grid-base * 3;
+        z-index: 0;
+      }
+      @include medium-down {
+        top: 50%;
+        transform: translate(0, -50%);
+        outline: none;
+        position: absolute;
+      }
+      @include small-up {
+        top: $grid-base * 7.4;
+        display: flex;
+        justify-content: center;
+      }
+      outline: none;
+    }
+
     .menu {
-      display: flex;
       align-self: stretch;
+      @include tablet {
+        margin: -40px auto;
+        @include centererPos();
+      }
+
+      @include medium-down {
+        top: $grid-base * 8.7;
+        position: relative;
+      }
 
       ul {
+        @include small-up {
+          margin-top: $grid-base * 13.4;
+        }
+
         margin: 0;
         padding: 0;
         display: flex;
@@ -146,14 +186,22 @@ header {
           a {
             color: $text-color;
             text-transform: uppercase;
-            font-size: 12px;
-            padding: 1rem;
+            @include medium-down {
+              font-size: $grid-base * 2.2;
+              width: 100%;
+            }
+            font-size: $grid-base * 1.2;
+            @include large-up {
+              padding: 1rem;
+            }
+            padding: 0.515rem;
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $white;
             font-weight: 500;
             letter-spacing: 1px;
+            justify-content: center;
 
             &:hover,
             &.active {
@@ -175,6 +223,16 @@ header {
       display: inline-flex;
       height: 45px;
       color: $text-color;
+
+      @include tablet {
+        display: flex;
+        justify-content: end;
+      }
+
+      @include small-up {
+        justify-content: center;
+        display: flex;
+      }
 
       .category {
         border-right: 1px solid $form-border-color;
@@ -217,6 +275,7 @@ header {
           padding-left: 10px;
           font-size: 14px;
           outline: none;
+          width: 100%;
 
           &::placeholder {
             color: $text-color;

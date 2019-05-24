@@ -1,0 +1,41 @@
+.navbar-nav {
+  @include tablet {
+    flex-direction: row;
+  }
+
+  a {
+    @include medium-down {
+      background-color: $primary;
+      text-align: center;
+      margin: 0;
+      z-index: 999;
+    }
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgb(114, 54, 54);
+  border-color: $primary;
+  position: absolute;
+  right: 12%;
+  @include small-up {
+    top: $grid-base - 2;
+  }
+}
+
+.navbar-toggler-icon {
+  background-color: #0b2e13;
+}
+
+.collapse:not(.show) {
+  display: block;
+  @include medium-down {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  @include tablet {
+    display: none;
+  }
+}
