@@ -55,3 +55,80 @@
     width: auto;
   }
 }
+
+//Custome mixin :
+
+//for small tablet
+
+@mixin medium-small {
+  @media (max-width: #{$bp-small}) {
+    @content;
+  }
+}
+
+//for middle breakpoint'
+
+
+@mixin medium-400 {
+  @media(max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media(min-width: #{$bp-medium}) {
+    @content;
+  }
+}
+
+@mixin medium-high2 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medium-high {
+  @media (min-width: 992px)  and (max-width: 1199px )  {
+    @content;
+  }
+}
+
+@mixin medium-992 {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin medium-small {
+  @media (min-width:768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+//for large breakpoint'
+
+@mixin large-up {
+  @media(min-width: #{$bp-large}) {
+    @content;
+  }
+}
+
+
+
+
+// Center items
+
+@mixin centererPos($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

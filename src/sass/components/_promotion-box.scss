@@ -1,0 +1,63 @@
+.promotion-box {
+  &__photo {
+    @extend .partial_photo;
+    background: {
+      image: url("/images/s-promotion/furniture-promo.jpg");
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+  }
+
+  &__site {
+    position: relative;
+    top: $grid-base * 1.7;
+    left: -$grid-base * 1.5;
+  }
+
+  &--overlay {
+    @include centererPos();
+    color: white;
+    background: $gray-light;
+    opacity: 0.7;
+    width: 90%;
+    padding: 3% 0;
+    z-index: 1000;
+  }
+
+  &__content {
+    padding: 13%;
+    top: $grid-base * 3.8;
+    position: relative;
+  }
+
+  &__rate {
+    display: block;
+    border: 1px solid;
+    padding: $grid-base - 5;
+    font-size: $grid-base * 2.5;
+    text-align: center;
+    width: 31%;
+  }
+}
+
+.image {
+  img {
+    width: $grid-base * 32;
+    margin-bottom: $grid-base * 3.2;
+    position: relative;
+    top: -4px;
+  }
+}
+
+.partial_photo {
+  position: relative;
+  padding: 31% 0;
+  top: $grid-base * 1.2;
+  overflow: hidden;
+  align-items: flex-end;
+}
+
+.section--promotion {
+  margin-bottom: $grid-base * 5;
+}
