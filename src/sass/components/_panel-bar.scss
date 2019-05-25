@@ -89,3 +89,42 @@
     }
   }
 }
+.products-carousel {
+  .flickity-button {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .flickity-page-dots {
+    position: absolute;
+    width: auto;
+    height: 13px;
+    top: -39px;
+    right: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 1;
+    padding: 0 0 0 1rem;
+    background-color: #ffffff;
+
+    .dot {
+      display: inline-block;
+      margin: 0 8px;
+      opacity: 1;
+      cursor: pointer;
+      width: 13px;
+      height: 13px;
+      border-radius: 6px;
+      background-color: #e1e1e1;
+
+      &.active,
+      &:hover {
+        background-color: $primary;
+      }
+    }
+    .is-selected {
+      background-color: $primary;
+    }
+  }
+}
