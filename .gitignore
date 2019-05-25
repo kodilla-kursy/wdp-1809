@@ -80,5 +80,5 @@ typings/
 src/sass/bootstrap/.sass-cache/*
 node_modules
 src/sass/.sass-cache/*
-
+src/sass/style.css
 # End of https://www.gitignore.io/api/node
