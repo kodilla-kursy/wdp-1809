@@ -14,8 +14,7 @@ header {
         a {
           color: #ffffff;
           font-size: 13px;
-          @extend .color-animation;
-          @extend .background-color-animation;
+          @extend .animation-transition;
 
           &:hover {
             color: $primary;
@@ -72,8 +71,7 @@ header {
         display: inline-block;
         position: relative;
         color: #ffffff;
-        @extend .color-animation;
-        @extend .background-color-animation;
+        @extend .animation-transition;
 
         .cart-icon {
           background-color: $primary;
@@ -148,8 +146,7 @@ header {
             border-top: 4px solid #ffffff;
             font-weight: 500;
             letter-spacing: 1px;
-            @extend .color-animation;
-            @extend .background-color-animation;
+            @extend .animation-transition;
 
             &:hover,
             &.active {

@@ -44,8 +44,7 @@
           text-decoration: none;
           font-size: 18px;
           display: block;
-          @extend .color-animation;
-          @extend .background-color-animation;
+          @extend .animation-transition;
 
           &.active,
           &:hover {
@@ -81,8 +80,7 @@
           height: 13px;
           border-radius: 6px;
           background-color: #e1e1e1;
-          @extend .color-animation;
-          @extend .background-color-animation;
+          @extend .animation-transition;
 
           &.active,
           &:hover {

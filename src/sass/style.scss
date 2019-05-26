@@ -1,5 +1,4 @@
 @import "variables";
-@import "mixins";
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
@@ -19,6 +18,7 @@
 @import "components/product-box";
 
 @import "components/section--features";
+@import "components/animation-transition";
 
 body {
   font-family: "Poppins", sans-serif;

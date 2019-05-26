@@ -5,8 +5,7 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
-  @extend .color-animation;
-  @extend .background-color-animation;
+  @extend .animation-transition;
 
   &:not(.no-hover):hover {
     color: #ffffff !important;
@@ -30,8 +29,7 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
-  @extend .color-animation;
-  @extend .background-color-animation;
+  @extend .animation-transition;
 
   &:hover {
     background-color: #2a2a2a;
