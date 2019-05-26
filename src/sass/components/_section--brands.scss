@@ -1,0 +1,40 @@
+.section--brands {
+  padding: 1rem 0;
+}
+
+.brand-photo {
+  width: 15%;
+  border: 1px solid #e1e1e1;
+  margin: 20px 10px;
+  background-size: cover;
+  position: center;
+}
+
+.brands-panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  i {
+    line-height: 100px;
+    color: #fff;
+    margin-left: 7px;
+  }
+}
+
+.brands-button {
+  height: 100px;
+  width: 30px;
+  margin: 20px 0;
+  background: black;
+  //padding-left: 6px;
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.next {
+  margin-left: 10px;
+}
