@@ -4,6 +4,7 @@
 
 @import "bootstrap/bootstrap.scss";
 @import "fontawesome/fontawesome";
+@import "flickity.min";
 @import "fontawesome/solid";
 @import "fontawesome/brands";
 @import "fontawesome/regular";
@@ -17,6 +18,7 @@
 @import "components/post-box";
 @import "components/product-box";
 
+@import "components/section--blog-posts";
 @import "components/section--features";
 
 body {
