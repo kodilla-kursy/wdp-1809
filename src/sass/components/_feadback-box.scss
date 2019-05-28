@@ -53,6 +53,11 @@
       }
     }
   }
+
+  .flickity-button,
+  .flickity-page-dots {
+    display: none;
+  }
 }
 
 .carousel-cell {
@@ -62,7 +67,7 @@
   margin-right: $grid-base;
   background-size: cover;
   opacity: 0.8;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .flickity-button-iconOne {
@@ -93,9 +98,4 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
-}
-
-.flickity-button,
-.flickity-page-dots {
-  display: none;
 }
