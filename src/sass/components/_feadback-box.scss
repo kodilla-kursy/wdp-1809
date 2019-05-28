@@ -1,0 +1,101 @@
+.section--feadback {
+  margin: 30px auto 60px;
+
+  blockquote {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 50px auto 0;
+    padding: 1.2em 30px 1.2em 75px;
+    position: relative;
+    vertical-align: super;
+    z-index: 0;
+
+    &::before {
+      color: $text-color;
+      content: "\201C";
+      font-size: 9em;
+      left: 0;
+      @include centererPos();
+      top: 100%;
+    }
+  }
+
+  .feadback-box {
+    &_text {
+      p {
+        text-align: center;
+        line-height: 1.9;
+      }
+    }
+
+    &__media {
+      img {
+        @include medium-small {
+          float: right;
+        }
+        width: $grid-base * 7.5;
+        height: $grid-base * 7.5;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    &__signature {
+      p {
+        line-height: 1;
+        padding: $grid-base;
+        margin: 1px auto -10px;
+        display: block;
+        text-align: center;
+        @include medium-small {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .flickity-button,
+  .flickity-page-dots {
+    display: none;
+  }
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 50vh;
+  min-height: $grid-base * 25;
+  margin-right: $grid-base;
+  background-size: cover;
+  opacity: 0.8;
+  background-color: $white;
+}
+
+.flickity-button-iconOne {
+  li {
+    background-color: #e1e1e1;
+    width: $grid-base * 1.3;
+    height: $grid-base * 1.3;
+    border-radius: $grid-base - 4;
+
+    &:hover {
+      background-color: #d58e32;
+    }
+
+    &.active {
+      background-color: #d58e32;
+    }
+  }
+}
+
+.flickity-viewport {
+  @include medium-up {
+    height: $grid-base * 36 !important;
+  }
+}
+
+.col-xs-12 {
+  @include medium-high1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

@@ -71,6 +71,10 @@ header {
         position: relative;
         color: #ffffff;
 
+        @media screen and (max-width: 600px) {
+          left: -22px;
+        }
+
         .cart-icon {
           background-color: $primary;
           width: 55px;
@@ -100,6 +104,12 @@ header {
           top: 50%;
           right: 0;
           transform: translate(50%, -50%);
+
+          &__value {
+            text-align: left;
+            margin-left: 10px;
+            width: 28px;
+          }
         }
 
         &:hover {
