@@ -79,4 +79,11 @@
     justify-content: space-between;
     align-items: center;
   }
+  .old-price {
+    color: rgba(165, 165, 165);
+    font-size: 14px;
+    text-align: right;
+    text-decoration: line-through black;
+    width: 65px;
+  }
 }

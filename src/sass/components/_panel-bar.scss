@@ -48,6 +48,9 @@
           &.active,
           &:hover {
             &::before {
+              @extend .hover-bg;
+              @extend .hover-text;
+              @extend .hover-duration;
               content: "";
               position: absolute;
               bottom: -4px;
@@ -82,7 +85,9 @@
 
           &.active,
           &:hover {
-            background-color: $primary;
+            @extend .hover-bg;
+            @extend .hover-text;
+            @extend .hover-duration;
           }
         }
       }
