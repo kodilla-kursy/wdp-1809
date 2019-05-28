@@ -1,0 +1,62 @@
+.section--brands {
+  padding: 1rem 0;
+}
+
+.carousel-cell {
+  width: 15%;
+  height: 100px;
+  border: 1px solid #e1e1e1;
+  margin: 20px 10px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.brands-panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  i {
+    line-height: 100px;
+    color: #fff;
+    margin-left: 7px;
+  }
+}
+
+.brands-button {
+  height: 100px;
+  width: 30px;
+  margin: 20px 0;
+  background: black;
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.next {
+  margin-left: 10px;
+}
+
+.flickity-button {
+  background: #000;
+  border-radius: 0;
+  opacity: 1;
+  width: 30px;
+  height: 100px;
+}
+
+.flickity-prev-next-button {
+}
+
+.flickity-button-icon {
+  fill: white;
+}
+
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  right: -40px;
+}
