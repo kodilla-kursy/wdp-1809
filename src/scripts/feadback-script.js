@@ -70,7 +70,6 @@ const slajdData = [
         slaiders[i].classList.remove('active');
       }
 
-      // item.classList.remove('active');
       this.classList.add('active');
       let slider = this.getAttribute('data-move');
       slajd.select(slider);
