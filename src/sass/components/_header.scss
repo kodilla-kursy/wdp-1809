@@ -46,66 +46,64 @@ header {
     .container > .row {
       height: 145px;
     }
+  }
 
-    .phone-number {
-      p {
-        margin: 0;
-        font-size: 17px;
-        line-height: 42px;
-        color: rgb(216, 216, 216);
-        font-weight: 500;
+  .phone-number {
+    margin: 0;
+    font-size: 17px;
+    line-height: 42px;
+    color: rgb(216, 216, 216);
+    font-weight: 500;
+
+    i {
+      font-size: 32px;
+      color: $primary;
+      vertical-align: middle;
+      margin-top: -3px;
+      margin-right: 0.8rem;
+    }
+  }
+
+  .cart {
+    .cart-box {
+      display: inline-block;
+      position: relative;
+      color: #ffffff;
+
+      .cart-icon {
+        background-color: $primary;
+        width: 55px;
+        height: 50px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
 
         i {
-          font-size: 32px;
-          color: $primary;
-          vertical-align: middle;
-          margin-top: -3px;
-          margin-right: 0.8rem;
+          margin-right: 5px;
         }
       }
-    }
 
-    .cart {
-      .cart-box {
-        display: inline-block;
-        position: relative;
-        color: #ffffff;
+      .cart-counter {
+        width: 28px;
+        height: 27px;
+        border-radius: 14px;
+        background-color: $header-bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: rgb(224, 227, 237);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
 
+      &:hover {
         .cart-icon {
-          background-color: $primary;
-          width: 55px;
-          height: 50px;
-          border-radius: 3px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 20px;
-
-          i {
-            margin-right: 5px;
-          }
-        }
-
-        .cart-counter {
-          width: 28px;
-          height: 27px;
-          border-radius: 14px;
-          background-color: $header-bg;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 14px;
-          color: rgb(224, 227, 237);
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translate(50%, -50%);
-        }
-
-        &:hover {
-          .cart-icon {
-            background-color: lighten($primary, 10%);
-          }
+          background-color: lighten($primary, 10%);
         }
       }
     }
@@ -230,14 +228,14 @@ header {
     }
 
     .phone-number {
-      position: absolute;
-      right: 15px;
-      bottom: 10%;
-      padding: 0;
+      font-size: 14px;
+      text-align: right;
 
-      p {
-        font-size: 14px;
-        text-align: right;
+      &-wrapper {
+        position: absolute;
+        right: 15px;
+        bottom: 10%;
+        padding: 0;
       }
     }
 
@@ -250,10 +248,8 @@ header {
 }
 
 @media (max-width: 576px) {
-  .top-bar .text-right {
-    max-width: 150px;
-
-    ul li {
+  .text-right {
+    li {
       width: 13px;
       overflow: hidden;
       white-space: nowrap;
@@ -266,7 +262,7 @@ header {
 }
 
 @media (max-width: 370px) {
-  header .company-claim .row .phone-number {
+  .company-claim .phone-number-wrapper {
     bottom: 0;
   }
 }
