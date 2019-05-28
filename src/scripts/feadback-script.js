@@ -1,6 +1,7 @@
 /* jshint ignore:start */
 /* --ignore-pattern Mustashe Flickity( */
 /* --ignore-pattern '!mustache.js' */
+// eslint-disable-line no-unused-vars`
 import * as Mustache from 'mustache';
 import Flickity from 'flickity';
 
@@ -62,7 +63,7 @@ const slajdData = [
 
   let slaiders = document.querySelectorAll('#sliaders li');
 
-  slaiders.forEach(function (item, index) {
+  slaiders.forEach(function (item) {
     item.addEventListener('click', function (e) {
       e.preventDefault();
 
