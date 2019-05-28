@@ -1,6 +1,10 @@
+//Kolory
 $header-topbar-bg: #864343;
 $header-bg: #723636;
 
+$white: #fff;
+$white-light: #f4f5f7;
+$black: #000;
 $footer-claim-bg: #2a2a2a;
 $footer-bg: #363636;
 
@@ -9,3 +13,29 @@ $primary: #d58e32;
 $text-color: #2a2a2a;
 
 $form-border-color: #292929;
+$gray-light: #666;
+//Tekst
+$font-base-size: 1rem; //16px
+$font-size-1: $font-base-size * 3; //~48px
+$font-size-2: $font-base-size * 1.5; //24px
+$font-size-3: $font-base-size * 1.125; // 18px
+$font-size-4: $font-base-size * 1; //16px
+$font-size-5: $font-base-size * 0.875; //14px
+$font-size-6: $font-base-size * 0.75; //12px
+$font-size-7: $font-base-size * 0.625; //10px
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+$line-height-lg: 1.8;
+
+//Grid
+$grid-base: 10px;
+$gutter: $grid-base * 1.5;
+
+//Zaokoglenie
+$border-radius: $grid-base * 0.5;
+
+//Breakpoint
+$bp-medium: "800px";
+$bp-large: "1200px";
+$bp-small: "991px";
