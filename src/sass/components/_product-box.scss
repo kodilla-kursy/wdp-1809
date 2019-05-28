@@ -1,17 +1,7 @@
-.product-box .buttons {
-  display: flex;
-  justify-content: space-between;
-  opacity: 0;
-}
-
 .product-box {
-  background-color: #fff;
+  background-color: $product-box-bg;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
-
-  &:hover .buttons {
-    opacity: 1;
-  }
 
   &:hover .no-hover {
     background: $primary;
@@ -38,6 +28,16 @@
       border-radius: 50%;
       color: #ffffff;
       padding: 30px 15px 5px 15px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+    }
+
+    &:hover .buttons {
+      opacity: 1;
     }
   }
 
