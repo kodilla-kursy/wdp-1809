@@ -1,6 +1,10 @@
 $header-topbar-bg: #864343;
 $header-bg: #723636;
 
+$promoted-counter: #3e3e3e;
+$promoted-icon-grey: #b4b4b4;
+$promoted-line-grey: #dfe6e9;
+
 $footer-claim-bg: #2a2a2a;
 $footer-bg: #363636;
 
@@ -9,3 +13,9 @@ $primary: #d58e32;
 $text-color: #2a2a2a;
 
 $form-border-color: #292929;
+
+%transition-duration {
+  transition: 250ms /* edit this one to change overall animation time*/,
+  background-color 250ms /* edit this one to change bg animation time*/,
+  color 250ms /* edit this one to change text animation time*/;
+}

@@ -1,7 +1,33 @@
+.active {
+  background-color: $primary;
+  border-color: $primary;
+
+  i {
+    background-color: $primary;
+    color: #ffffff !important;
+    border-color: $primary;
+  }
+
+  .icon::before {
+    border-color: $primary;
+  }
+
+  .content {
+    color: #ffffff !important;
+  }
+}
+
 .feature-box {
+  width: inherit;
+  height: 100%;
   border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+  }
 
   .icon {
     transform: translateY(-50%);
@@ -49,7 +75,7 @@
     }
   }
 
-  &.active {
+  &:hover {
     i {
       background-color: $primary;
       color: #ffffff;
@@ -59,5 +85,9 @@
     .content {
       color: $primary;
     }
+  }
+
+  &:active {
+    @extend .active;
   }
 }

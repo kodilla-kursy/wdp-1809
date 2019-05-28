@@ -1,19 +1,23 @@
 .product-box {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+  margin-bottom: 50px;
+  margin-right: 30px;
+  width: 250px;
 
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
+
     background: {
       color: #f4f5f7;
-      size: contain;
       position: center;
       repeat: no-repeat;
     }
+
     overflow: hidden;
-    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
 
     .sale {
       position: absolute;
@@ -29,7 +33,64 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;
     }
+  }
+
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+
+    .price {
+      .btn-main-small {
+        margin: 0;
+        color: #fff;
+        background-color: $primary;
+        text-decoration: none;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        background-color: #2a2a2a;
+      }
+    }
+  }
+
+  .pic-1 {
+    background-image: url("../images/product01.jpg");
+  }
+
+  .pic-2 {
+    background-image: url("../images/product02.jpg");
+  }
+
+  .pic-3 {
+    background-image: url("../images/product03.jpg");
+  }
+
+  .pic-4 {
+    background-image: url("../images/product04.jpg");
+  }
+
+  .pic-5 {
+    background-image: url("../images/product05.jpg");
+  }
+
+  .pic-6 {
+    background-image: url("../images/product06.jpg");
+  }
+
+  .pic-7 {
+    background-image: url("../images/product07.jpg");
+  }
+
+  .pic-8 {
+    background-image: url("../images/product08.jpg");
+  }
+
+  .old-price {
+    text-decoration: line-through;
   }
 
   .content {
@@ -49,7 +110,11 @@
         color: rgb(42, 42, 42);
         @extend .far;
         @extend .fa-star;
-
+        &.star.is-active,
+        &.star-rated {
+          color: #d58e32;
+          @extend .full;
+        }
         &.full {
           @extend .fas;
         }

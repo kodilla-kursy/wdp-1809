@@ -18,10 +18,14 @@
         <div class="col text-right">
           <ul>
             <li>
-              <a href="#"><i class="fas fa-user"></i> Login</a>
+              <a href="#">
+                <i class="fas fa-user"></i><span class="icon-label"> Login</span>
+              </a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-lock"></i> Register</a>
+              <a href="#">
+                <i class="fas fa-lock"></i><span class="icon-label"> Register</span>
+              </a>
             </li>
             <li>
               <a href="#"><i class="fas fa-bars"></i></a>
@@ -34,17 +38,39 @@
   <div class="company-claim">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col text-left phone-number">
+        <div class="col-12 col-sm-5 col-lg-3 phone-number">
           <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
         </div>
-        <div class="col text-center">
+        <div class="col-6 col-sm-5 col-lg-7 text-center">
+          <a href="#"><img src="./images/logo.png"/></a>
+        </div>
+        <div class="col-6 col-sm-2 text-right cart">
+          <a href="#" class="cart-box">
+            <div class="cart-container">
+              <div class="cart-icon"><i class="fas fa-shopping-basket"></i></div>
+              <div class="cart-counter">123</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="company-claim-mobile">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col text-left">
           <a href="#"><img src="./images/logo.png"/></a>
         </div>
         <div class="col text-right cart">
           <a href="#" class="cart-box">
-            <div class="cart-icon"><i class="fas fa-shopping-basket"></i></div>
-            <div class="cart-counter">0</div>
+            <div class="cart-container">
+              <div class="cart-icon"><i class="fas fa-shopping-basket"></i></div>
+              <div class="cart-counter">123</div>
+            </div>
           </a>
+          <div class="phone-number">
+            <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
+          </div>
         </div>
       </div>
     </div>
@@ -55,11 +81,20 @@
         <div class="col">
           <form action="" class="search-form">
             <div class="category">
-              <i class="fas fa-list-ul"></i>
-              <select name="" id="">
-                <option value="">Select a category</option>
-              </select>
-              <i class="fas fa-caret-down"></i>
+              <ul>
+                <li>
+                  <i class="fas fa-list-ul"></i> Select a category
+                  <i class="fas fa-caret-down"></i>
+                  <ul>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Chair</a></li>
+                    <li><a href="#">Table</a></li>
+                    <li><a href="#">Sofa</a></li>
+                    <li><a href="#">Bedroom</a></li>
+                    <li><a href="#">Blog</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div class="search-field">
               <input placeholder="Search products..." type="text" />
@@ -80,5 +115,86 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="menu-bar-tablet">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-auto menu">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Chair</a></li>
+            <li><a href="#">Table</a></li>
+            <li><a href="#">Sofa</a></li>
+            <li><a href="#">Bedroom</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <form action="" class="search-form">
+            <div class="category">
+              <i class="fas fa-list-ul"></i>
+              <select name="" id="">
+                <option value="">Select a category</option>
+              </select>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="search-field">
+              <input placeholder="Search products..." type="text" />
+              <button><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-bar-mobile">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <form action="" class="search-form">
+            <div class="search-field">
+              <input placeholder="Search products..." type="text" />
+              <button><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+          <a href="#" id="hamburger-on-mobile">
+            <svg
+              class="icon-hamburger"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar" id="toggle-menu">
+    <ul>
+      <a href="#" id="hamburger-toggle">
+        <svg
+          class="icon-hamburger-toggle"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+          />
+        </svg>
+      </a>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Furniture</a></li>
+      <li><a href="#">Chair</a></li>
+      <li><a href="#">Table</a></li>
+      <li><a href="#">Sofa</a></li>
+      <li><a href="#">Bedroom</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
   </div>
 </header>

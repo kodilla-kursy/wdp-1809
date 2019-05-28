@@ -25,39 +25,53 @@
       width: 45px;
       border-bottom: 4px solid $primary;
     }
+
+    @media screen and (max-width: 850px) {
+      text-align: center;
+    }
   }
 
   .menu {
     text-align: center;
+    margin-right: 0;
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+
       li {
         display: inline-block;
         margin: 0 0.5rem;
         font-weight: 600;
 
         a {
+          @extend %transition-duration;
           color: rgb(42, 42, 42);
           position: relative;
           text-decoration: none;
           font-size: 18px;
           display: block;
-
+          &::before {
+            @extend %transition-duration;
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            border-bottom: 4px solid $primary;
+            opacity: 0;
+          }
           &.active,
           &:hover {
             &::before {
-              content: "";
-              position: absolute;
-              bottom: -4px;
-              left: 0;
-              width: 100%;
-              border-bottom: 4px solid $primary;
+              opacity: 1;
             }
           }
         }
       }
+    }
+    @media (min-width: 1200px) {
+      margin-right: 120px;
     }
   }
 
@@ -74,6 +88,7 @@
         margin-left: 0.5rem;
 
         a {
+          @extend %transition-duration;
           display: block;
           width: 13px;
           height: 13px;
@@ -87,5 +102,9 @@
         }
       }
     }
+  }
+
+  @media screen and (max-width: 850px) {
+    text-align: center;
   }
 }

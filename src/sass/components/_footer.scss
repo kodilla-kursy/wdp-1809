@@ -1,9 +1,17 @@
 footer {
   .footer-menu {
+    text-align: center;
     background-color: $footer-bg;
     padding: 3rem 0;
 
+    .payment-card {
+      width: 100%;
+      text-align: center;
+    }
+
     .menu-wrapper {
+      width: 100%;
+
       h6 {
         color: #ffffff;
         text-transform: uppercase;
@@ -14,8 +22,13 @@ footer {
         margin: 0 0 1.5rem 0;
         padding: 0;
         list-style: none;
+
         li {
+          width: 100%;
+          white-space: nowrap;
+
           a {
+            @extend %transition-duration;
             font-size: 14px;
             line-height: 30px;
             color: rgb(169, 169, 169);
@@ -66,6 +79,7 @@ footer {
           margin-left: 1rem;
 
           a {
+            @extend %transition-duration;
             color: rgb(169, 169, 169);
             text-decoration: none;
 

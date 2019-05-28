@@ -1,0 +1,18 @@
+.flickity-page-dots {
+  margin-bottom: 30px;
+  .dot {
+    width: 13px;
+    height: 13px;
+    background-color: $primary;
+  }
+  @media (min-width: 1200px) {
+    position: absolute;
+    top: -39px;
+    width: auto;
+    right: 0;
+  }
+}
+
+.flickity-prev-next-button.next {
+  z-index: 10;
+}
