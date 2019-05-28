@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $white;
           font-size: 13px;
 
           &:hover {
@@ -22,21 +22,21 @@ header {
         }
       }
     }
+  }
 
-    .text-left ul li {
-      margin-right: 1.5rem;
+  .dropdown-menu__item {
+    margin-right: 1.5rem;
 
-      i {
-        margin-left: 5px;
-      }
+    i {
+      margin-left: 5px;
     }
+  }
 
-    .text-right ul li {
-      margin-left: 1.5rem;
+  .user-menu__item {
+    margin-left: 1.5rem;
 
-      i {
-        margin-right: 5px;
-      }
+    i {
+      margin-right: 5px;
     }
   }
 
@@ -68,7 +68,7 @@ header {
     .cart-box {
       display: inline-block;
       position: relative;
-      color: #ffffff;
+      color: $white;
 
       .cart-icon {
         background-color: $primary;
@@ -111,7 +111,7 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $white;
 
     .container > .row {
       height: 84px;
@@ -139,14 +139,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $white;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: $white;
               border-color: $primary;
             }
 
@@ -221,7 +221,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@include media-breakpoint-down(sm) {
   .company-claim {
     .row {
       position: relative;
@@ -234,7 +234,7 @@ header {
       &-wrapper {
         position: absolute;
         right: 15px;
-        bottom: 10%;
+        bottom: 0;
         padding: 0;
       }
     }
@@ -247,22 +247,26 @@ header {
   }
 }
 
-@media (max-width: 576px) {
-  .text-right {
-    li {
-      width: 13px;
-      overflow: hidden;
-      white-space: nowrap;
-
-      &:first-of-type {
-        margin-left: 0;
-      }
-    }
+@include media-breakpoint-down(xs) {
+  header .dropdown-menu__item {
+    margin-right: 1rem;
   }
-}
 
-@media (max-width: 370px) {
-  .company-claim .phone-number-wrapper {
-    bottom: 0;
+  .text-right {
+    padding-left: 0;
+  }
+
+  .user-menu__list {
+    white-space: nowrap;
+  }
+
+  .user-menu__item {
+    width: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 }
