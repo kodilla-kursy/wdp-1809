@@ -13,7 +13,7 @@ header {
 
         a {
           color: $white;
-          font-size: $grid-base * 1.3;
+          font-size: $grid-base * 1.4;
 
           &:hover {
             color: $primary;
@@ -51,12 +51,12 @@ header {
       p {
         margin: 0;
         font-size: $grid-base * 1.7;
-        line-height: $grid-base * 4.2;
+        line-height: $grid-base * 4;
         color: $featured-phoneNumber;
         font-weight: 500;
 
         i {
-          font-size: $grid-base * 3.2;
+          font-size: $grid-base * 3;
           color: $primary;
           vertical-align: middle;
           margin-top: -3px;
@@ -72,7 +72,7 @@ header {
         color: $white;
 
         @media screen and (max-width: 600px) {
-          left: -$grid-base * 2.2;
+          left: -$grid-base * 2;
         }
 
         .cart-icon {
@@ -83,7 +83,7 @@ header {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: $grid-base * 2;
+          font-size: $grid-base * 2.2;
 
           i {
             margin-right: 5px;
@@ -93,7 +93,7 @@ header {
         .cart-counter {
           width: $grid-base * 2.8;
           height: $grid-base * 2.7;
-          border-radius: $grid-base * 1.4;
+          border-radius: $grid-base;
           background-color: $header-bg;
           display: flex;
           align-items: center;
@@ -126,7 +126,7 @@ header {
     background-color: $white;
 
     .container > .row {
-      height: $grid-base * 8.4;
+      height: $grid-base * 8;
     }
 
     .menu {
@@ -146,7 +146,7 @@ header {
           a {
             color: $text-color;
             text-transform: uppercase;
-            font-size: $grid-base * 1;
+            font-size: $grid-base * 1.4;
             padding: 1rem;
             text-decoration: none;
             display: flex;
@@ -185,7 +185,7 @@ header {
         i:first-child {
           color: $primary;
           position: absolute;
-          left: 10px;
+          left: $grid-base;
           z-index: 0;
         }
 
@@ -201,7 +201,7 @@ header {
           background-color: transparent;
           outline: none;
           padding: 5px $grid-base * 3 5px $grid-base * 3.5;
-          font-size: $grid-base * 1.4;
+          font-size: $grid-base;
           position: relative;
           z-index: 1;
         }
