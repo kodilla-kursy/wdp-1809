@@ -3,21 +3,43 @@
 }
 
 .hot-deals {
+  position: relative;
+
   &__header {
     width: 100%;
     height: 50px;
     background-color: $text-color;
     position: relative;
+
+    &--text {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: 13px;
+      margin: 0;
+    }
   }
 
-  &__circle {
-    background-color: red;
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
+  &__dots {
     position: absolute;
     top: calc(50% - 7px);
+    right: 5%;
+    line-height: 1;
+
+    &--dot {
+      background-color: $white;
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      margin: 0 4px;
+
+      @media not all and (hover: none) {
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
   }
 
   &__photo {
@@ -27,6 +49,12 @@
 
   &__product {
     margin: 0;
+  }
+
+  &__button {
+    position: absolute;
+    top: 30%;
+    left: 35%;
   }
 }
 
@@ -44,20 +72,22 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
 
-    &--prev {
-      display: inline-block;
-      width: 50%;
-      height: 100%;
-      border: 0;
-    }
+  &__buttons {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    border: 0;
+    float: right;
+    background-color: $text-color;
+    color: $white;
+    font-size: 26px;
 
-    &--next {
-      float: right;
-      border: 0;
-      display: inline-block;
-      width: 50%;
-      height: 100%;
+    @media not all and (hover: none) {
+      &:hover {
+        background-color: $primary;
+      }
     }
   }
 }
@@ -68,6 +98,19 @@
   top: 35%;
   width: 100%;
   height: 30%;
+  color: $white;
+  text-align: center;
+
+  &__header {
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: 200;
+    font-size: 50px;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
 
   &__button {
     position: absolute;
@@ -76,5 +119,30 @@
     left: 35%;
     height: 40px;
     border: 0;
+    background-color: $white;
+    color: $text-color;
+    font-weight: 700;
+  }
+}
+
+.counter {
+  position: absolute;
+  bottom: 150px;
+  height: 60px;
+  width: 100%;
+  margin-left: 2%;
+
+  &__value {
+    text-align: center;
+    color: $white;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $text-color;
+    float: left;
+    margin-left: 10px;
+    padding: 10px;
+    text-transform: uppercase;
   }
 }
