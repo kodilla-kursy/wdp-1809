@@ -77,9 +77,6 @@ typings/
 
 # Serverless directories
 .serverless
-src/.sass-cache/
-src/sass/.sass-cache/
-src/style.css
-
+package-lock.json
 
 # End of https://www.gitignore.io/api/node
