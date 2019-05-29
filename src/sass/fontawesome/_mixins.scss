@@ -55,3 +55,11 @@
     width: auto;
   }
 }
+
+//Custom mixin
+
+@mixin medium-up {
+  @media(min-width: #{$bp-medium}) {
+    @content;
+  }
+}
