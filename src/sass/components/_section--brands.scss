@@ -4,18 +4,26 @@
 
 .brand-photo {
   width: 15%;
-  border: 1px solid #e1e1e1;
+  border: 1px solid $brands-border-color;
   margin: 20px 10px;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+}
+
+.brand-1 {
+  background-image: url("../images/placeholder-1.jpeg");
+}
+.brand-2 {
+  background-image: url("../images/placeholder-2.png");
 }
 
 .brands-panel {
   width: 100%;
   display: flex;
   justify-content: center;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid $brands-border-color;
+  border-bottom: 1px solid $brands-border-color;
+
   i {
     line-height: 100px;
     color: #fff;
