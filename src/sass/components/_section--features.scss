@@ -2,7 +2,7 @@
   padding: 5rem 0;
 }
 
-@media (max-width: 1199px) {
+@include media-breakpoint-down(lg) {
   .feature-box-wrapper {
     padding-bottom: 10px;
     height: 100%;
