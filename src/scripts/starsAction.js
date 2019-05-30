@@ -1,38 +1,31 @@
 export function starsAction () {
-  var ratingContainers = document.querySelectorAll('.stars');
-
-  var containerWithBool = [];
-  for (var i = 0; i < ratingContainers.length; i++) {
-    var currentContainer = ratingContainers[i];
-    containerWithBool.push(
-      Object.assign(
-        {},
-        {
-          stars: currentContainer,
-          toggle: true
-        }
-      )
-    );
-  }
+  const ratingContainers = document.querySelectorAll('.stars');
+  const containerWithBool = Array.from(ratingContainers).map(stars => ({
+    stars,
+    toggle: true
+  }));
 
   containerWithBool.forEach(function (item, index) {
-    for (var i = 0; i < item.stars.children.length; i++) {
-      item.stars.children[i].addEventListener('click', function (e) {
-        e.preventDefault();
-        var self = this;
-        self.style.color = '#d58e32';
-        self.style.fontWeight = 900;
-        onClick(this);
-        containerWithBool[index].toggle = !containerWithBool[index].toggle;
-        if (containerWithBool[index].toggle) {
-          addEventsNext(self);
-          addEventsPrev(self);
-        }
-      });
+    for (let i = 0; i < item.stars.children.length; i++) {
+      addOnClickEvents(item.stars.children[i], index);
       item.stars.children[i].addEventListener('mouseenter', eventMouseIn);
       item.stars.children[i].addEventListener('mouseleave', eventMouseOut);
     }
   });
+
+  function addOnClickEvents (element, index) {
+    element.addEventListener('click', function (e) {
+      e.preventDefault();
+      element.style.color = '#d58e32';
+      element.style.fontWeight = 900;
+      onClick(element);
+      containerWithBool[index].toggle = !containerWithBool[index].toggle;
+      if (containerWithBool[index].toggle) {
+        addEventsNext(this);
+        addEventsPrev(this);
+      }
+    });
+  }
 
   function onClick (element) {
     ratingOnClick(element);
