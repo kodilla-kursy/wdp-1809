@@ -18,7 +18,20 @@
 @import "components/product-box";
 
 @import "components/section--features";
+@import "components/section--brands";
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 1096px) {
+  .carousel-cell {
+    width: 31%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .carousel-cell {
+    width: 45%;
+  }
 }
