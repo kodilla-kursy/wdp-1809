@@ -52,7 +52,7 @@ header {
     margin: 0;
     font-size: 17px;
     line-height: 42px;
-    color: rgb(216, 216, 216);
+    color: $phone-number;
     font-weight: 500;
 
     i {
@@ -94,7 +94,7 @@ header {
         align-items: center;
         justify-content: center;
         font-size: 14px;
-        color: rgb(224, 227, 237);
+        color: $cart-counter;
         position: absolute;
         top: 50%;
         right: 0;
