@@ -71,14 +71,6 @@ header {
         position: relative;
         color: $white;
 
-        @media screen and (max-width: 600px) {
-          left: -$grid-base * 2.2;
-        }
-
-        @media screen and (max-width: 600px) {
-          left: -22px;
-        }
-
         .cart-icon {
           background-color: $primary;
           width: $grid-base * 5.5;
@@ -107,12 +99,12 @@ header {
           position: absolute;
           top: 50%;
           right: 0;
-          transform: translate(50%, -50%);
+          transform: $featured-cartCouter;
 
           &__value {
             text-align: left;
-            margin-left: 10px;
-            width: 28px;
+            margin-left: $grid-base;
+            width: $grid-base * 3;
           }
         }
 
@@ -130,7 +122,7 @@ header {
     background-color: $white;
 
     .container > .row {
-      height: $grid-base * 8.4;
+      height: $grid-base * 8;
     }
 
     .menu {
@@ -175,7 +167,7 @@ header {
     }
 
     .category {
-      top: -$grid-base * 2.2;
+      top: -$grid-base * 2;
       left: $grid-base * 3;
       display: flex;
       align-items: center;
@@ -243,10 +235,12 @@ header {
 
         li {
           border: 1px solid $form-border-color;
-          height: $grid-base * 4.5;
+          height: $grid-base * 4;
 
           &:hover > ul {
-            display: block;
+            @include medium-up {
+              display: block;
+            }
           }
         }
 
@@ -265,15 +259,23 @@ header {
           }
 
           a {
-            line-height: 120%;
-            padding: $grid-base $grid-base * 6.5;
-            margin: 0;
+            padding: 7px $grid-base * 6.5;
             white-space: nowrap;
             color: $white;
             width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             outline: none;
-            top: $grid-base;
-            position: relative;
+          }
+
+          &.show {
+            display: block;
+            max-height: $grid-base * 12.9;
+            @include transition(max-height 1s ease-in-out);
+            @include transform(scaleY(1));
           }
 
           ul {
@@ -285,14 +287,14 @@ header {
     }
 
     .col-offset-2 {
-      top: $grid-base * 1;
+      top: $grid-base;
       position: relative;
     }
 
     .search-form {
       border: 1px solid $form-border-color;
       display: inline-flex;
-      height: $grid-base * 4.5;
+      height: $grid-base * 4;
       color: $text-color;
 
       .search-field {
@@ -318,5 +320,11 @@ header {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cart {
+    left: -$grid-base * 2.2;
   }
 }
