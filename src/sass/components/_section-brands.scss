@@ -3,17 +3,21 @@
 }
 
 .carousel-cell {
+  margin: 0 10px;
+}
+
+.brand-photo {
   width: 150px;
   height: 100px;
-  border: 1px solid $brands-border-color;
-  margin: 0 10px;
   background-size: cover;
   background-position: center center;
+  border: 1px solid $brands-border-color;
 }
 
 .brand-1 {
   background-image: url("../images/placeholder-1.jpeg");
 }
+
 .brand-2 {
   background-image: url("../images/placeholder-2.png");
 }
@@ -34,18 +38,20 @@
   height: 100px;
   background: $brands-buttons-color;
   border-radius: 0;
+
   &:hover {
     background: $primary;
   }
 }
 
 .flickity-button-icon {
-  fill: white;
+  fill: $brands-buttons-fill;
 }
 
 .flickity-prev-next-button.previous {
   left: 0;
 }
+
 .flickity-prev-next-button.next {
   right: 0;
 }
