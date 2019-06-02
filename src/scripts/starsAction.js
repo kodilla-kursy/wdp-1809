@@ -16,11 +16,12 @@ export function starsAction () {
   function addOnClickEvents (element, index) {
     element.addEventListener('click', function (e) {
       e.preventDefault();
-      element.style.color = '#d58e32';
-      element.style.fontWeight = 900;
+      element.classList.add('active');
       onClick(element);
       containerWithBool[index].toggle = !containerWithBool[index].toggle;
       if (containerWithBool[index].toggle) {
+        clearSiblins(this);
+        clearSiblinsNxt(this);
         addEventsNext(this);
         addEventsPrev(this);
       }
@@ -34,28 +35,32 @@ export function starsAction () {
   }
 
   function changeSiblings (element) {
-    element.style.color = '#d58e32';
-    element.style.fontWeight = 900;
+    element.classList.add('active');
     if (element.previousElementSibling) {
       changeSiblings(element.previousElementSibling);
     }
   }
 
   function clearSiblins (element) {
-    if (element.classList.contains('full')) {
-      element.style.color = '#2a2a2a';
-      element.style.fontWeight = 900;
-    } else {
-      element.style.color = '';
-      element.style.fontWeight = 400;
+    if (element.classList.contains('active')) {
+      element.classList.remove('active');
     }
     if (element.previousElementSibling) {
       clearSiblins(element.previousElementSibling);
     }
   }
 
+  function clearSiblinsNxt (element) {
+    if (element.classList.contains('active')) {
+      element.classList.remove('active');
+    }
+    if (element.nextElementSibling) {
+      clearSiblinsNxt(element.nextElementSibling);
+    }
+  }
+
   function ratingOnClick (element) {
-    element.style.color = '#d58e32';
+    element.classList.add('active');
     if (element.previousElementSibling) {
       ratingOnClick(element.previousElementSibling);
     }
