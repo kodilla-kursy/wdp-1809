@@ -29,10 +29,12 @@
 
   .menu {
     text-align: center;
+
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+
       li {
         display: inline-block;
         margin: 0 0.5rem;
@@ -87,5 +89,24 @@
         }
       }
     }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .panel-bar {
+    .heading {
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .dots,
+  .menu {
+    display: none;
   }
 }
