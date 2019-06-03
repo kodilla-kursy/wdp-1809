@@ -5,19 +5,31 @@
 .hot-deals {
   position: relative;
 
+  @media not all and (hover: none) {
+    &:hover {
+      .counter {
+        display: block;
+      }
+
+      .hot-deals__button {
+        display: block;
+      }
+    }
+  }
+
   &__header {
     width: 100%;
     height: 50px;
     background-color: $text-color;
     position: relative;
+  }
 
-    &--text {
-      color: $text-hover;
-      text-transform: uppercase;
-      font-size: 20px;
-      padding: 13px;
-      margin: 0;
-    }
+  &__header-text {
+    color: $text-hover;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 13px;
+    margin: 0;
   }
 
   &__dots {
@@ -25,19 +37,19 @@
     top: calc(50% - 7px);
     right: 5%;
     line-height: 1;
+  }
 
-    &--dot {
-      background-color: $text-hover;
-      display: inline-block;
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      margin: 0 4px;
+  &__dot {
+    background-color: $text-hover;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin: 0 4px;
 
-      @media not all and (hover: none) {
-        &:hover {
-          background-color: $primary;
-        }
+    @media not all and (hover: none) {
+      &:hover {
+        background-color: $primary;
       }
     }
   }
@@ -55,6 +67,7 @@
     position: absolute;
     top: 30%;
     left: 35%;
+    display: none;
   }
 }
 
@@ -100,6 +113,7 @@
   height: 30%;
   color: $text-hover;
   text-align: center;
+  text-transform: uppercase;
 
   &__header {
     display: inline-block;
@@ -114,6 +128,7 @@
 
   &__button {
     position: absolute;
+    text-transform: uppercase;
     bottom: -20px;
     width: 30%;
     left: 35%;
@@ -131,18 +146,19 @@
   height: 60px;
   width: 100%;
   margin-left: 2%;
+  display: none;
 
   &__value {
     text-align: center;
     color: $text-hover;
-    display: inline-block;
+    display: block;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     background-color: $text-color;
     float: left;
     margin-left: 10px;
-    padding: 10px;
+    padding: 14px;
     text-transform: uppercase;
   }
 }
