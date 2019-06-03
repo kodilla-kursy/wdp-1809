@@ -52,7 +52,7 @@ header {
         margin: 0;
         font-size: 17px;
         line-height: 42px;
-        color: $featured-phoneNumber;
+        color: $featured-phone-number;
         font-weight: 500;
 
         i {
@@ -95,11 +95,11 @@ header {
           align-items: center;
           justify-content: center;
           font-size: $grid-base * 1.4;
-          color: $featured-cardCounter;
+          color: $featured-card-counter;
           position: absolute;
           top: 50%;
           right: 0;
-          transform: $featured-cartCouter;
+          transform: $featured-couter;
 
           &__value {
             text-align: left;
@@ -118,7 +118,7 @@ header {
   }
 
   .menu-bar {
-    box-shadow: 2px 3.464px 6px $featured-menuBar;
+    box-shadow: 2px 3.464px 6px $featured-menu-bar;
     background-color: $white;
 
     .container > .row {
@@ -207,14 +207,6 @@ header {
 
           &:hover {
             @include medium-up {
-              -webkit-text-shadow: 0 0 2px white;
-              -moz-text-shadow: 0 0 2px white;
-              -o-text-shadow: 0 0 2px white;
-              -ms-text-shadow: 0 0 2px white;
-              -webkit-transition: all 150ms linear;
-              -moz-transition: all 150ms linear;
-              -ms-transition: all 150ms linear;
-              -o-transition: all 150ms linear;
               transition: all 150ms linear;
               outline: none;
             }

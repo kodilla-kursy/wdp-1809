@@ -1,19 +1,23 @@
-function detectmob () {
-  if (window.innerWidth <= 800 && window.innerHeight <= 600) {
-    const category = document.querySelectorAll('.dropdown');
-    category.forEach(function (el) {
-      let button = el.querySelector('a[data-toggle="dropdown"]');
+let menu = '';
 
-      let menu = el.querySelector('.dropdown-menu');
-      button.addEventListener('click', function (event) {
-        if (menu.className !== 'show') {
-          menu.classList.toggle('show');
-          event.preventDefault();
-          event.stopPropagation();
-        }
-      });
+function detectmob () {
+  if (window.innerHeight <= 600 && window.innerWidth <= 800) {
+    const category = document.querySelectorAll('.dropdown');
+    category.forEach(function (item) {
+      const button = item.querySelector('a[data-toggle="dropdown"]');
+      menu = item.querySelector('.dropdown-menu');
+      button.addEventListener('click', MenuClick, true);
     });
   }
 }
 
-detectmob();
+const MenuClick = function (event) {
+  if (menu.className !== 'show') {
+    menu.classList.toggle('show');
+  }
+
+  event.preventDefault();
+  event.stopPropagation();
+};
+
+export default detectmob;
