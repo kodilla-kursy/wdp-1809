@@ -5,19 +5,24 @@ $white: #fff;
 $black: #000;
 $footer-claim-bg: #2a2a2a;
 $footer-bg: #363636;
+$footer-text: #a9a9a9;
 $featured-phone-number: rgb(216, 216, 216);
 $featured-card-counter: rgb(224, 227, 237);
 $featured-menu-bar: rgba(1, 2, 2, 0.2);
 $featured-box: #b6b6b6;
 $featured-content: rgb(42, 42, 42);
-$primary: #d58e32;
-$text-hover: #fff;
-$text-color: #2a2a2a;
-$product-box-bg: #fff;
-$text-color: #2a2a2a;
 $form-border-color: #292929;
+$primary: #d58e32;
+$cart-counter: #e0e3ed;
+$phone-number: #d8d8d8;
 $menu-category: #b07324;
-
+$panel-border-grey: #e2e2e2;
+$dot-bg: #e1e1e1;
+//Plase change this on white
+$product-box-bg: #fff;
+$text-hover: #fff;
+//Double this same color, pls. decided which variables is prefer
+$text-color: #2a2a2a;
 // Transform
 $featured-couter: translate(50%, -50%);
 // Text
@@ -42,3 +47,5 @@ $grid-base: 10px;
 $bp-medium: "768px";
 $bp-large: "1200px";
 $bp-small: "991px";
+
+

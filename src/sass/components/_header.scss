@@ -17,7 +17,6 @@ header {
         a {
           color: $white;
           font-size: $font-size-6;
-
           &:hover {
             color: $primary;
             text-decoration: none;
@@ -25,21 +24,21 @@ header {
         }
       }
     }
+  }
 
-    .text-left ul li {
-      margin-right: 1.5rem;
+  .dropdown-menu__item {
+    margin-right: 1.5rem;
 
-      i {
-        margin-left: 5px;
-      }
+    i {
+      margin-left: 5px;
     }
+  }
 
-    .text-right ul li {
-      margin-left: 1.5rem;
+  .user-menu__item {
+    margin-left: 1.5rem;
 
-      i {
-        margin-right: 5px;
-      }
+    i {
+      margin-right: 5px;
     }
   }
 
@@ -49,13 +48,14 @@ header {
     .container > .row {
       height: $grid-base * 14.5;
     }
+  }
 
     .phone-number {
       p {
         margin: 0;
         font-size: $font-size-4 + 1;
         padding: $grid-base * 4.2 0;
-        color: $featured-phone-number;
+        color: $phone-number;
         font-weight: 500;
 
         i {
@@ -64,17 +64,33 @@ header {
           vertical-align: middle;
           margin-top: -3px;
           margin-right: 0.8rem;
-        }
-      }
-    }
-
-    .cart {
+  
+  .cart {
       .cart-box {
         display: inline-block;
         position: relative;
         color: $white;
 
+      .cart-counter {
+        width: 28px;
+        height: 27px;
+        border-radius: 14px;
+        background-color: $header-bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: $cart-counter;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
+
+      &:hover {
         .cart-icon {
+
           background-color: $primary;
           width: $grid-base * 5.5;
           height: $grid-base * 5;
@@ -311,8 +327,59 @@ header {
   }
 }
 
+
 @media screen and (max-width: 600px) {
   .cart {
     left: -$grid-base * 2.2;
+  }
+  }
+
+@include media-breakpoint-down(sm) {
+  .company-claim {
+    .row {
+      position: relative;
+    }
+
+    .phone-number {
+      font-size: 14px;
+      text-align: right;
+
+      &-wrapper {
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        padding: 0;
+      }
+    }
+
+    .cart {
+      position: relative;
+      top: -15px;
+      right: 15px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  header .dropdown-menu__item {
+    margin-right: 1rem;
+  }
+
+  .text-right {
+    padding-left: 0;
+  }
+
+  .user-menu__list {
+    white-space: nowrap;
+  }
+
+  .user-menu__item {
+    width: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 }
