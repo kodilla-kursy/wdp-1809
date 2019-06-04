@@ -81,6 +81,14 @@
   transform: $transforms;
 }
 
+@mixin box-shadow($top, $left, $blur, $size, $color) {
+  -webkit-box-shadow: $top $left $blur $size $color;
+  -moz-box-shadow: $top $left $blur $size $color;
+  -o-box-shadow: $top $left $blur $size $color;
+  box-shadow: $top $left $blur $size $color;
+}
+
+
 //braekpoint
 
 // Medium devices (tablets, 768px and up)
