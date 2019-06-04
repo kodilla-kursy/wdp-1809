@@ -132,3 +132,22 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .panel-bar {
+    .heading {
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .dots,
+  .menu {
+    display: none;
+  }
+}

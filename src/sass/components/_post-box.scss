@@ -3,6 +3,7 @@
 
   .cover {
     padding: 70% 25px 0 25px;
+
     background: {
       color: #f4f5f7;
       size: cover;
@@ -77,5 +78,11 @@
         background-color: $primary;
       }
     }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .post-box .cover .details {
+    font-size: 12px;
   }
 }
