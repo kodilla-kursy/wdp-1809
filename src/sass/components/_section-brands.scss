@@ -1,0 +1,48 @@
+.section--brands {
+  padding: 1rem 0;
+}
+
+.brand-photo {
+  width: 15%;
+  border: 1px solid $brands-border-color;
+  margin: 20px 10px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.brand-1 {
+  background-image: url("../images/placeholder-1.jpeg");
+}
+
+.brand-2 {
+  background-image: url("../images/placeholder-2.png");
+}
+
+.brands-panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid $brands-border-color;
+  border-bottom: 1px solid $brands-border-color;
+
+  i {
+    line-height: 100px;
+    color: #fff;
+    margin-left: 7px;
+  }
+}
+
+.brands-button {
+  height: 100px;
+  width: 30px;
+  margin: 20px 0;
+  background: black;
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.next {
+  margin-left: 10px;
+}
