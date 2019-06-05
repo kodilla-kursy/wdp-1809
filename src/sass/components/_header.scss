@@ -53,7 +53,10 @@ header {
     .phone-number {
       p {
         margin: 0;
-        font-size: $font-size-4 + 1;
+        @include large-up {
+          font-size: $font-size-4 + 1;
+        }
+        font-size: $font-size-6;
         padding: $grid-base * 4.2 0;
         color: $featured-phone-number;
         font-weight: 500;
