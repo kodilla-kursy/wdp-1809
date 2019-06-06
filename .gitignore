@@ -74,23 +74,9 @@ typings/
 
 # vuepress build output
 .vuepress/dist
-package-lock.json
-src/.sass-cache/
-src/sass/.sass-cache/
-src/sass/bootstrap/.sass-cache/
-src/sass/style.css
-src/sass/style.css.map
-src/style.css
-src/sass/bootstrap/*
-src/sass/fontawesome/.sass-cache/
-src/sass/fontawesome/v4-shims.css
-src/sass/fontawesome/v4-shims.css.map
+
 src/scripts/flickity.pkgd.js
 
 # Serverless directories
-.serverless
-bootstrap/.sass-cache
-sass/style.css
-sass/style.css.map
-sass/.sass-cache
+.serverles
 # End of https://www.gitignore.io/api/node
