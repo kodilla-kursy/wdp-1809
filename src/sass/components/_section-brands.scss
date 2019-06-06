@@ -40,7 +40,7 @@
   background: $brands-buttons-color;
   border-radius: 0;
 
-  &:hover {
+  @media not all and (hover: none) {
     background: $primary;
   }
 }
