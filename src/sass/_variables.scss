@@ -17,7 +17,7 @@ $white: #fff;
 $text-hover: #fff;
 $post-info: rgb(103, 103, 103);
 $text-color: #2a2a2a;
-
+$menu-bar: rgba(1, 2, 2, 0.2);
 $product-box-bg: #fff;
 
 $form-border-color: #292929;
@@ -38,6 +38,15 @@ $font-size-4: $font-base-size * 1; //16px
 $font-size-5: $font-base-size * 0.875; //14px
 $font-size-6: $font-base-size * 0.75; //12px
 $font-size-7: $font-base-size * 0.625; //10px
+$font-size-8: 13px;
+$font-size-9: 17px;
+$font-size-10: 32px;
+$font-size-11: 20px;
+
+//Transform
+$cart-counter: translate(50%, -50%);
+
+// Line height
 
 $line-height-base: 1.5;
 $line-height-sm: 1.2;
