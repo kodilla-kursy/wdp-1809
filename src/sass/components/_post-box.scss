@@ -2,7 +2,7 @@
   margin-bottom: 2rem;
 
   .cover {
-    padding: 70% 25px 0 25px;
+    padding: 70% $grid-base * 2.5 0 $grid-base * 2.5;
 
     background: {
       color: #f4f5f7;
@@ -11,10 +11,10 @@
     }
 
     .details {
-      padding: 15px 20px;
+      padding: $grid-base * 1.5 $grid-base * 2;
       display: flex;
-      background-color: #ffffff;
-      font-size: 14px;
+      background-color: $white;
+      font-size: $font-size-5;
 
       & > * {
         flex: 1 1 auto;
@@ -33,33 +33,33 @@
   }
 
   .post-info {
-    padding: 25px;
+    padding: $grid-base * 2.5;
 
     h5 {
       color: $text-color;
-      font-size: 16px;
+      font-size: $font-size-4;
       line-height: 24px;
       letter-spacing: 1px;
     }
 
     p {
-      font-size: 14px;
+      font-size: $font-size-5;
       line-height: 24px;
-      color: rgb(103, 103, 103);
+      color: $post-info;
       text-align: justify;
     }
 
     .more {
       text-align: center;
-      padding-top: 30px;
+      padding-top: $grid-base * 3;
 
       &-btn {
         background-color: $text-color;
         color: $text-hover;
-        font-size: 16px;
+        font-size: $font-size-4;
         line-height: 24px;
         font-weight: 600;
-        padding: 10px 30px;
+        padding: $grid-base $grid-base * 3;
       }
     }
   }
