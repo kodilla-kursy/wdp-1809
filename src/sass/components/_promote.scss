@@ -47,6 +47,10 @@
     border-radius: 50%;
     margin: 0 4px;
 
+    &.active {
+      background-color: $primary;
+    }
+
     @media not all and (hover: none) {
       &:hover {
         background-color: $primary;
@@ -55,8 +59,9 @@
   }
 
   &__photo {
-    max-height: 100%;
+    max-height: 350px;
     max-width: 100%;
+    object-fit: cover;
   }
 
   &__product {
@@ -69,10 +74,6 @@
     left: 35%;
     display: none;
   }
-
-  //    &__carousel {
-  //        max-height: 400px;
-  //    }
 }
 
 .distinguish {
@@ -80,8 +81,10 @@
   height: 100%;
 
   &__image {
+    object-fit: fill;
     max-width: 100%;
-    min-height: 100%;
+    height: 100%;
+    max-height: 500px;
   }
 
   &__nav {
@@ -100,6 +103,7 @@
     background-color: $text-color;
     color: $text-hover;
     font-size: 26px;
+
     &:focus {
       outline: none;
     }
@@ -174,7 +178,14 @@
   text-transform: uppercase;
 }
 
-//.carousel-cell {
-//    max-height: 100%;
-//    max-width: 100%;
-//}
+.hot-deals-slider {
+  & .carousel-cell {
+    width: 100%;
+  }
+}
+
+.distinguish-slider {
+  & .carousel-cell {
+    width: 100%;
+  }
+}
