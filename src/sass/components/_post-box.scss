@@ -3,6 +3,7 @@
 
   .cover {
     padding: 70% 25px 0 25px;
+
     background: {
       color: #f4f5f7;
       size: cover;
@@ -21,10 +22,12 @@
 
       .date {
         text-align: left;
+        color: $text-color;
       }
 
       .comments {
         text-align: right;
+        color: $text-color;
       }
     }
   }
@@ -33,7 +36,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: $text-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -49,6 +52,37 @@
     .more {
       text-align: center;
       padding-top: 30px;
+
+      &-btn {
+        background-color: $text-color;
+        color: $text-hover;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        padding: 10px 30px;
+      }
     }
+  }
+}
+
+.blog-link {
+  @media not all and (hover: none) {
+    &:hover {
+      text-decoration: none;
+
+      & .post-info h5 {
+        color: $primary;
+      }
+
+      & .more-btn {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .post-box .cover .details {
+    font-size: 12px;
   }
 }
