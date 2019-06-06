@@ -2,7 +2,7 @@
   margin-bottom: 30px;
 
   .row > * {
-    border-bottom: 4px solid #e2e2e2;
+    border-bottom: 4px solid $panel-border-grey;
   }
 
   .heading {
@@ -29,10 +29,15 @@
 
   .menu {
     text-align: center;
+    margin-right: 86px;
+
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+      border-bottom: none;
+      justify-content: center;
+
       li {
         display: inline-block;
         margin: 0 0.5rem;
@@ -45,6 +50,8 @@
           font-size: 18px;
           display: block;
           @extend .animation-transition;
+          border: none;
+          padding: 5px 0;
 
           &.active,
           &:hover {
@@ -65,9 +72,9 @@
   .dots {
     ul {
       margin: 0;
-      padding: 0 0 0 1rem;
+      padding-left: 1rem;
       list-style: none;
-      background-color: #ffffff;
+      background-color: $white;
       transform: translateY(15px);
 
       li {
@@ -79,8 +86,7 @@
           width: 13px;
           height: 13px;
           border-radius: 6px;
-          background-color: #e1e1e1;
-          @extend .animation-transition;
+          background-color: $dot-bg;
 
           &.active,
           &:hover {
@@ -89,5 +95,61 @@
         }
       }
     }
+  }
+}
+
+.tab-content {
+  position: relative;
+
+  .dots {
+    position: absolute;
+    top: -60px;
+    right: 0;
+
+    ul {
+      margin: 0;
+      padding-left: 1rem;
+      list-style: none;
+      background-color: $white;
+      transform: translateY(15px);
+
+      li {
+        display: inline-block;
+        margin-left: 0.5rem;
+
+        a {
+          display: block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          @extend .animation-transition;
+          background-color: $dot-bg;
+
+          &.active,
+          &:hover {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .panel-bar {
+    .heading {
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .dots,
+  .menu {
+    display: none;
   }
 }

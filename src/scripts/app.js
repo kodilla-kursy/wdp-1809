@@ -1,1 +1,3 @@
-console.log('hello');
+import { starsAction } from '/scripts/starsAction';
+
+starsAction();
