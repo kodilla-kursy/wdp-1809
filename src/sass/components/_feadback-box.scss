@@ -1,11 +1,11 @@
 .section--feadback {
-  margin: 30px auto 60px;
+  margin: $grid-base * 3 auto $grid-base * 6;
 
   blockquote {
     font-size: 1.1em;
     line-height: 1.6;
-    margin: 50px auto 0;
-    padding: 1.2em 30px 1.2em 75px;
+    margin: $grid-base * 5 auto 0;
+    padding: 1.2em $grid-base * 3 1.2em $grid-base * 7.5;
     position: relative;
     vertical-align: super;
     z-index: 0;
@@ -62,7 +62,7 @@
 
 .carousel-cell {
   width: 100%;
-  height: 50vh;
+  height: $carousel-cel;
   min-height: $grid-base * 25;
   margin-right: $grid-base;
   background-size: cover;
@@ -70,23 +70,24 @@
   background-color: $white;
 }
 
-.flickity-button-iconOne {
+.flickity-button-icon {
   li {
-    background-color: #e1e1e1;
+    background-color: $flickity-button-icon;
     width: $grid-base * 1.3;
     height: $grid-base * 1.3;
     border-radius: $grid-base - 4;
 
     &:hover {
-      background-color: #d58e32;
+      background-color: $feadback-hover;
     }
 
     &.active {
-      background-color: #d58e32;
+      background-color: $feadback-hover;
     }
   }
 }
 
+/*Important to custom this viewport*/
 .flickity-viewport {
   @include medium-up {
     height: $grid-base * 36 !important;

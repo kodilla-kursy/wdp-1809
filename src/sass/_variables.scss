@@ -11,10 +11,11 @@ $black: #000;
 $footer-claim-bg: #2a2a2a;
 $footer-bg: #363636;
 $footer-text: #a9a9a9;
-
+$feadback-hover: #d58e32;
+$flickity-button-icon: #e1e1e1;
 $primary: #d58e32;
 $white: #fff;
-$menu-bar:  rgba(1, 2, 2, .2);
+$menu-bar: rgba(1, 2, 2, 0.2);
 $text-hover: #fff;
 
 $text-color: #2a2a2a;
@@ -22,6 +23,9 @@ $text-color: #2a2a2a;
 $product-box-bg: #fff;
 $form-border-color: #292929;
 $gray-light: #666;
+
+//Height
+$carousel-cel: 50vh;
 
 //Tekst
 $font-base-size: 1rem; //16px
@@ -64,4 +68,3 @@ $brands-chevron-color: #fff;
 
 $panel-border-grey: #e2e2e2;
 $dot-bg: #e1e1e1;
-
