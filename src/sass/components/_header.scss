@@ -14,6 +14,7 @@ header {
         a {
           color: $white;
           font-size: 13px;
+          @extend .animation-transition;
 
           &:hover {
             color: $primary;
@@ -69,11 +70,12 @@ header {
       display: inline-block;
       position: relative;
       color: $white;
-      
+      @extend .animation-transition;
+
       @media screen and (max-width: 600px) {
         left: -22px;
       }
-      
+
       .cart-icon {
         background-color: $primary;
         width: 55px;
@@ -146,6 +148,7 @@ header {
             border-top: 4px solid $white;
             font-weight: 500;
             letter-spacing: 1px;
+            @extend .animation-transition;
 
             &:hover,
             &.active {
