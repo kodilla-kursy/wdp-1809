@@ -136,7 +136,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .panel-bar {
+  .section--products {
     .heading {
       margin-bottom: 20px;
     }
