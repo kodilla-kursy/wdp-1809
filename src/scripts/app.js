@@ -1,4 +1,6 @@
 import flickitySlider from './sliders';
+import { starsAction } from '/scripts/starsAction';
+console.log('hello');
 
 flickitySlider('.brands-slider', {
   wrapAround: true,
@@ -10,3 +12,5 @@ flickitySlider('.brands-slider', {
 
 flickitySlider('.blog-slider', { wrapAround: true });
 // for new flickity use function flickitySlider( carousel-element, { flickity options })
+starsAction();
+
