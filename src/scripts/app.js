@@ -1,6 +1,11 @@
 import flickitySlider from './sliders';
 import $ from 'jquery';
 import './bootstrap.min.js';
+import { starsAction } from '/scripts/starsAction';
+
+flickitySlider('.blog-slider', { wrapAround: true });
+// for new flickity use function flickitySlider( carousel-element, { flickity options })
+starsAction();
 
 // Product section sliders in tabs
 
