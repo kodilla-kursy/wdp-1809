@@ -1,10 +1,5 @@
 .section--brands {
-  padding: 5rem 0;
-}
-
-.carousel-cell {
-  margin: 0 10px;
-  width: 150px;
+  padding: 1rem 0;
 }
 
 .brand-photo {
@@ -30,29 +25,54 @@
   border-bottom: 1px solid $brands-border-color;
 }
 
-.wrap {
+.brands-slider {
   padding: 0 50px;
-}
 
-.flickity-prev-next-button {
-  width: 30px;
-  height: 100px;
-  background: $brands-buttons-color;
-  border-radius: 0;
+  & .carousel-cell {
+    margin: 0 10px;
+    width: 150px;
+  }
 
-  @media not all and (hover: none) {
-    background: $primary;
+  & .flickity-prev-next-button {
+    width: 30px;
+    height: 100px;
+    background: $brands-buttons-color;
+    border-radius: 0;
+
+    @media not all and (hover: none) {
+      &:hover {
+        background: $primary;
+      }
+    }
+  }
+
+  & .flickity-button-icon {
+    fill: $brands-buttons-fill;
+  }
+
+  & .flickity-prev-next-button.previous {
+    left: 0;
+  }
+
+  & .flickity-prev-next-button.next {
+    right: 0;
   }
 }
 
-.flickity-button-icon {
-  fill: $brands-buttons-fill;
+@media screen and (max-width: 1096px) {
+  .brands-slider .carousel-cell {
+    width: 31%;
+  }
 }
 
-.flickity-prev-next-button.previous {
-  left: 0;
-}
+@media screen and (max-width: 990px) {
+  .brands-slider {
+    & .carousel-cell {
+      width: 45%;
+    }
 
-.flickity-prev-next-button.next {
-  right: 0;
+    & .flickity-prev-next-button:hover {
+      background: $brands-buttons-color;
+    }
+  }
 }

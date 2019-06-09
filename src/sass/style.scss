@@ -23,23 +23,3 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-
-//  MEDIA QUERIES  \\
-
-//  section-brands \\
-
-@media screen and (max-width: 1096px) {
-  .carousel-cell {
-    width: 31%;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .carousel-cell {
-    width: 45%;
-  }
-
-  .flickity-prev-next-button:hover {
-    background: $brands-buttons-color;
-  }
-}
