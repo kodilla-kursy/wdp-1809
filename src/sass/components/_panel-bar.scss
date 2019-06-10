@@ -50,6 +50,7 @@
           font-size: 18px;
           display: block;
           @extend .animation-transition;
+
           border: none;
           padding: 5px 0;
 
@@ -123,6 +124,7 @@
           height: 13px;
           border-radius: 6px;
           @extend .animation-transition;
+
           background-color: $dot-bg;
 
           &.active,
