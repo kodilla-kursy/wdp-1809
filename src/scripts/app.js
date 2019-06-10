@@ -13,3 +13,4 @@ flickitySlider('.brands-slider', {
 flickitySlider('.blog-slider', { wrapAround: true });
 // for new flickity use function flickitySlider( carousel-element, { flickity options })
 starsAction();
+
