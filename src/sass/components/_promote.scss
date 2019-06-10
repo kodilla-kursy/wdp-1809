@@ -22,14 +22,14 @@
     height: 50px;
     background-color: $text-color;
     position: relative;
-  }
 
-  &__header-text {
-    color: $text-hover;
-    text-transform: uppercase;
-    font-size: 20px;
-    padding: 13px;
-    margin: 0;
+    &--text {
+      color: $text-hover;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: 13px;
+      margin: 0;
+    }
   }
 
   &__dots {
@@ -66,8 +66,7 @@
   &__button {
     position: absolute;
     top: 30%;
-    left: 35%;
-    display: none;
+    left: 32%;
   }
 }
 
@@ -81,7 +80,7 @@
   }
 
   &__nav {
-    height: 50px;
+    height: 40px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -108,18 +107,18 @@
 .overlay {
   background-color: rgba(0, 0, 0, 0.45);
   position: absolute;
-  top: 35%;
+  top: 30%;
   width: 100%;
-  height: 30%;
+  height: 40%;
   color: $text-hover;
   text-align: center;
-  text-transform: uppercase;
 
   &__header {
     display: inline-block;
-    margin-top: 40px;
     font-weight: 200;
     font-size: 50px;
+    line-height: 0;
+    margin-top: 12%;
 
     &--bold {
       font-weight: 600;
@@ -128,12 +127,14 @@
 
   &__button {
     position: absolute;
-    text-transform: uppercase;
-    bottom: -20px;
+    bottom: -30px;
     width: 30%;
     left: 35%;
-    height: 40px;
+    height: 60px;
     border: 0;
+    border-radius: 3px;
+    line-height: 18px;
+    text-transform: uppercase;
     background-color: $text-hover;
     color: $text-color;
     font-weight: 700;
@@ -142,27 +143,83 @@
 
 .counter {
   position: absolute;
-  bottom: 150px;
+  bottom: 180px;
   height: 60px;
   width: 100%;
-  margin-left: 2%;
-  display: none;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+
 
   &__value {
     text-align: center;
     color: $text-hover;
-    display: block;
+    display: inline-block;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     background-color: $text-color;
-    float: left;
-    margin-left: 10px;
-    padding: 14px;
+    margin: 2px;
+    padding: 10px;
     text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
-.buttons {
-  text-transform: uppercase;
+@media (max-width: 996px) {
+  .overlay__header {
+    margin-top: 35px;
+  }
+
+  .overlay__header--bold {
+    margin-top: 15px;
+  }
+
+  .hot-deals__button {
+    left: 22%;
+  }
+
+  .counter {
+    bottom: 165px;
+
+    &__value {
+      line-height: 18px;
+      font-size: 14px;
+      width: 50px;
+      height: 50px;
+      margin: 1px;
+      padding: 5px 0 2px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hot-deals {
+    display: none;
+  }
+
+  .overlay__header {
+    margin-top: 10%;
+  }
+
+  .overlay__header--bold {
+    margin-top: 15px;
+  }
+
+  .distinguish {
+    height: 400px;
+  }
+
+  .overlay__button {
+    bottom: -40px;
+  }
+}
+
+@media (max-width: 355px) {
+  .overlay__button {
+    font-size: 14px;
+    bottom: -45px;
+    height: 50px;
+  }
 }
