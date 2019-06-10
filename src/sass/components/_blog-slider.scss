@@ -26,6 +26,7 @@
       height: 13px;
       border-radius: 6px;
       background-color: $dot-bg;
+      @extend .animation-transition;
 
       &.active,
       &:hover {
