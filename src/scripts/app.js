@@ -1,5 +1,7 @@
 import flickitySlider from './sliders';
-console.log('hello');
+import $ from 'jquery';
+import './bootstrap.min.js';
+import { starsAction } from '/scripts/starsAction';
 
 const hotDealsSlider = flickitySlider('.hot-deals-slider', {
   wrapAround: true,
@@ -41,3 +43,48 @@ distinguishSliderNavPrev.addEventListener('click', () =>
 );
 
 distinguishSliderNavNext.addEventListener('click', () => distinguishSlider.next(true));
+
+flickitySlider('.brands-slider', {
+  wrapAround: true,
+  pageDots: false,
+  groupCells: '100%',
+  cellAlign: 'center',
+  contain: true
+});
+
+flickitySlider('.blog-slider', { wrapAround: true });
+
+starsAction();
+
+// Product section sliders in tabs
+
+const bedSlider = flickitySlider('#bed', { wrapAround: true });
+const chairSlider = flickitySlider('#chair', { wrapAround: true });
+const sofaSlider = flickitySlider('#sofa', { wrapAround: true });
+const tableSlider = flickitySlider('#table', { wrapAround: true });
+const diningSlider = flickitySlider('#dining', { wrapAround: true });
+
+$(document).ready(function () {
+  $('.nav-tabs a').click(function () {
+    $(this).tab('show');
+  });
+  $('.nav-tabs a').on('shown.bs.tab', function (e) {
+    const slider = e.target.dataset.slider;
+    switch (slider) {
+      case 'bedSlider':
+        bedSlider.resize();
+        break;
+      case 'chairSlider':
+        chairSlider.resize();
+        break;
+      case 'sofaSlider':
+        sofaSlider.resize();
+        break;
+      case 'tableSlider':
+        tableSlider.resize();
+        break;
+      case 'diningSlider':
+        diningSlider.resize();
+    }
+  });
+});
