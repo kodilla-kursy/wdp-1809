@@ -177,7 +177,7 @@ header {
         color: $primary;
         top: -1px;
         position: absolute;
-        left: 0;
+        left: $grid-base * 1.8;
         padding: $grid-base * 1.6;
         z-index: 0;
       }
