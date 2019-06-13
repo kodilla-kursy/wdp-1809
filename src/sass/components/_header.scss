@@ -45,14 +45,14 @@ header {
     background-color: $header-bg;
 
     .container > .row {
-      height: 145px;
+      height: $grid-base * 14.5;
     }
   }
 
   .phone-number {
     margin: 0;
     font-size: 17px;
-    line-height: 42px;
+    line-height: $grid-base * 4.2;
     color: $phone-number;
     font-weight: 500;
 
@@ -73,13 +73,13 @@ header {
       @extend .animation-transition;
 
       @media screen and (max-width: 600px) {
-        left: -22px;
+        left: -$grid-base * 2.2;
       }
 
       .cart-icon {
         background-color: $primary;
-        width: 55px;
-        height: 50px;
+        width: $grid-base * 5.5;
+        height: $grid-base * 5;
         border-radius: 3px;
         display: flex;
         align-items: center;
@@ -92,8 +92,8 @@ header {
       }
 
       .cart-counter {
-        width: 28px;
-        height: 27px;
+        width: $grid-base * 2.8;
+        height: $grid-base * 2.7;
         border-radius: 14px;
         background-color: $header-bg;
         display: flex;
@@ -104,7 +104,7 @@ header {
         position: absolute;
         top: 50%;
         right: 0;
-        transform: translate(50%, -50%);
+        transform: $cart-counter-transform;
       }
 
       &:hover {
@@ -116,11 +116,11 @@ header {
   }
 
   .menu-bar {
-    box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+    box-shadow: 2px 3.464px 6px $featured-menu-bar;
     background-color: $white;
 
     .container > .row {
-      height: 84px;
+      height: $grid-base * 8.4;
     }
 
     .menu {
@@ -304,7 +304,7 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
-          padding: 5px 30px 5px 35px;
+          padding: 5px $grid-base * 3 5px $grid-base * 3.5;
           font-size: 14px;
           position: relative;
           z-index: 1;
@@ -318,7 +318,7 @@ header {
 
         input {
           border: 0;
-          padding-left: 10px;
+          padding-left: $grid-base;
           font-size: 14px;
           outline: none;
 
@@ -349,7 +349,7 @@ header {
 
       &-wrapper {
         position: absolute;
-        right: 15px;
+        right: $grid-base * 1.5;
         bottom: 0;
         padding: 0;
       }
@@ -357,8 +357,8 @@ header {
 
     .cart {
       position: relative;
-      top: -15px;
-      right: 15px;
+      top: -$grid-base * 1.5;
+      right: $grid-columns * 1.5;
     }
   }
 }
@@ -377,7 +377,7 @@ header {
   }
 
   .user-menu__item {
-    width: 13px;
+    width: $grid-base * 1.3;
     overflow: hidden;
     white-space: nowrap;
 
