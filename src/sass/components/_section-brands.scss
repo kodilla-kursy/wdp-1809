@@ -3,11 +3,11 @@
 }
 
 .brand-photo {
-  width: 15%;
-  border: 1px solid $brands-border-color;
-  margin: 20px 10px;
+  width: 100%;
+  height: 100px;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  border: 1px solid $brands-border-color;
 }
 
 .brand-1 {
@@ -20,29 +20,59 @@
 
 .brands-panel {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  padding: 20px 0;
   border-top: 1px solid $brands-border-color;
   border-bottom: 1px solid $brands-border-color;
+}
 
-  i {
-    line-height: 100px;
-    color: #fff;
-    margin-left: 7px;
+.brands-slider {
+  padding: 0 50px;
+
+  & .carousel-cell {
+    margin: 0 10px;
+    width: 150px;
+  }
+
+  & .flickity-prev-next-button {
+    width: 30px;
+    height: 100px;
+    background: $brands-buttons-color;
+    border-radius: 0;
+
+    @media not all and (hover: none) {
+      &:hover {
+        background: $primary;
+      }
+    }
+  }
+
+  & .flickity-button-icon {
+    fill: $brands-buttons-fill;
+  }
+
+  & .flickity-prev-next-button.previous {
+    left: 0;
+  }
+
+  & .flickity-prev-next-button.next {
+    right: 0;
   }
 }
 
-.brands-button {
-  height: 100px;
-  width: 30px;
-  margin: 20px 0;
-  background: black;
+@media screen and (max-width: 1096px) {
+  .brands-slider .carousel-cell {
+    width: 31%;
+  }
 }
 
-.prev {
-  margin-right: 10px;
-}
+@media screen and (max-width: 990px) {
+  .brands-slider {
+    & .carousel-cell {
+      width: 45%;
+    }
 
-.next {
-  margin-left: 10px;
+    & .flickity-prev-next-button:hover {
+      background: $brands-buttons-color;
+    }
+  }
 }

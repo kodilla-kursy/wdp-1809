@@ -29,7 +29,7 @@
 
   .menu {
     text-align: center;
-    margin-right: 86px;
+    margin-right: 162px;
 
     ul {
       margin: 0;
@@ -49,6 +49,8 @@
           text-decoration: none;
           font-size: 18px;
           display: block;
+          @extend .animation-transition;
+
           border: none;
           padding: 5px 0;
 
@@ -97,56 +99,21 @@
   }
 }
 
-.tab-content {
-  position: relative;
-
-  .dots {
-    position: absolute;
-    top: -60px;
-    right: 0;
-
-    ul {
-      margin: 0;
-      padding-left: 1rem;
-      list-style: none;
-      background-color: $white;
-      transform: translateY(15px);
-
-      li {
-        display: inline-block;
-        margin-left: 0.5rem;
-
-        a {
-          display: block;
-          width: 13px;
-          height: 13px;
-          border-radius: 6px;
-          background-color: $dot-bg;
-
-          &.active,
-          &:hover {
-            background-color: $primary;
-          }
-        }
-      }
-    }
+@include media-breakpoint-down(md) {
+  .panel-bar .menu {
+    margin-right: 0;
   }
 }
 
 @include media-breakpoint-down(sm) {
-  .panel-bar {
+  .section--products {
     .heading {
-      margin-bottom: 20px;
-    }
-
-    .menu {
-      text-align: left;
+      margin-bottom: 10px;
     }
   }
 }
 
 @include media-breakpoint-down(xs) {
-  .dots,
   .menu {
     display: none;
   }
