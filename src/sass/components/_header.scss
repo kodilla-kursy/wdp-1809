@@ -6,17 +6,16 @@ header {
       list-style: none;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
 
       li {
-        display: block;
-        padding: $grid-base 0;
+        display: inline-block;
+        line-height: 55px;
 
         a {
           color: $white;
-          font-size: $font-size-6;
+          font-size: 13px;
+          @extend .animation-transition;
+
           &:hover {
             color: $primary;
             text-decoration: none;
@@ -46,28 +45,23 @@ header {
     background-color: $header-bg;
 
     .container > .row {
-      height: $grid-base * 14.5;
+      height: 145px;
     }
   }
 
   .phone-number {
-    p {
-      margin: 0;
-      @include large-up {
-        font-size: $font-size-4 + 1;
-      }
-      font-size: $font-size-6;
-      padding: $grid-base * 4.2 0;
-      color: $phone-number;
-      font-weight: 500;
+    margin: 0;
+    font-size: 17px;
+    line-height: 42px;
+    color: $phone-number;
+    font-weight: 500;
 
-      i {
-        font-size: $font-size-7 * 3;
-        color: $primary;
-        vertical-align: middle;
-        margin-top: -3px;
-        margin-right: 0.8rem;
-      }
+    i {
+      font-size: 32px;
+      color: $primary;
+      vertical-align: middle;
+      margin-top: -3px;
+      margin-right: 0.8rem;
     }
   }
 
@@ -76,76 +70,57 @@ header {
       display: inline-block;
       position: relative;
       color: $white;
+      @extend .animation-transition;
+
+      @media screen and (max-width: 600px) {
+        left: -22px;
+      }
+
+      .cart-icon {
+        background-color: $primary;
+        width: 55px;
+        height: 50px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+
+        i {
+          margin-right: 5px;
+        }
+      }
 
       .cart-counter {
-        width: $grid-base * 2.8;
-        height: $grid-base * 2.7;
+        width: 28px;
+        height: 27px;
         border-radius: 14px;
         background-color: $header-bg;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: $font-size-5;
+        font-size: 14px;
         color: $cart-counter;
         position: absolute;
         top: 50%;
         right: 0;
-        transform: $featured-couter;
+        transform: translate(50%, -50%);
       }
 
       &:hover {
         .cart-icon {
-          background-color: $primary;
-          width: $grid-base * 5.5;
-          height: $grid-base * 5;
-          border-radius: 3px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: $font-size-7 * 2;
-
-          i {
-            margin-right: 5px;
-          }
-        }
-
-        .cart-counter {
-          width: $grid-base * 2.8;
-          height: $grid-base * 2.7;
-          border-radius: $grid-base * 1.4;
-          background-color: $header-bg;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: $font-size-7 * 1.4;
-          color: $featured-card-counter;
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: $featured-couter;
-
-          &__value {
-            text-align: left;
-            margin-left: $grid-base;
-            width: $grid-base * 3;
-          }
-        }
-
-        &:hover {
-          .cart-icon {
-            background-color: lighten($primary, 10%);
-          }
+          background-color: lighten($primary, 10%);
         }
       }
     }
   }
 
   .menu-bar {
-    box-shadow: 2px 3.464px 6px $featured-menu-bar;
+    box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: $white;
 
     .container > .row {
-      height: $grid-base * 8;
+      height: 84px;
     }
 
     .menu {
@@ -165,7 +140,7 @@ header {
           a {
             color: $text-color;
             text-transform: uppercase;
-            font-size: $font-size-6;
+            font-size: 12px;
             padding: 1rem;
             text-decoration: none;
             display: flex;
@@ -173,6 +148,7 @@ header {
             border-top: 4px solid $white;
             font-weight: 500;
             letter-spacing: 1px;
+            @extend .animation-transition;
 
             &:hover,
             &.active {
@@ -190,17 +166,18 @@ header {
     }
 
     .category {
-      top: -$grid-base * 2;
+      top: -2px;
       left: $grid-base * 3;
       display: flex;
       align-items: center;
       position: relative;
+      padding: $grid-base * 2 0;
 
       i:first-child {
         color: $primary;
-        top: 0;
+        top: -1px;
         position: absolute;
-        left: $grid-base;
+        left: 0;
         padding: $grid-base * 1.6;
         z-index: 0;
       }
@@ -209,6 +186,7 @@ header {
         position: absolute;
         right: $grid-base;
         z-index: 0;
+        top: $grid-base * 1.4;
       }
 
       ul {
@@ -225,6 +203,8 @@ header {
           margin-right: -7px;
           padding: $grid-base;
           width: 68%;
+          top: 3px;
+          position: relative;
           color: $form-border-color;
           outline: none;
 
@@ -243,7 +223,7 @@ header {
 
         li {
           border: 1px solid $form-border-color;
-          height: $grid-base * 4;
+          height: $grid-base * 4.5;
 
           &:hover > ul {
             @include medium-up {
@@ -297,10 +277,10 @@ header {
     .search-form {
       border: 1px solid $form-border-color;
       display: inline-flex;
-      height: $grid-base * 4;
+      height: 45px;
       color: $text-color;
 
-      &.category {
+      .category {
         border-right: 1px solid $form-border-color;
         display: flex;
         align-items: center;
@@ -309,14 +289,25 @@ header {
         i:first-child {
           color: $primary;
           position: absolute;
-          left: $grid-base;
+          left: 10px;
           z-index: 0;
         }
 
         i:last-child {
           position: absolute;
-          right: $grid-base;
+          right: 10px;
           z-index: 0;
+        }
+
+        select {
+          -webkit-appearance: none;
+          border: 0;
+          background-color: transparent;
+          outline: none;
+          padding: 5px 30px 5px 35px;
+          font-size: 14px;
+          position: relative;
+          z-index: 1;
         }
       }
 
@@ -327,8 +318,8 @@ header {
 
         input {
           border: 0;
-          padding-left: $grid-base;
-          font-size: $grid-base * 1.4;
+          padding-left: 10px;
+          font-size: 14px;
           outline: none;
 
           &::placeholder {
@@ -346,12 +337,6 @@ header {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .cart {
-    left: -$grid-base * 2.2;
-  }
-}
-
 @include media-breakpoint-down(sm) {
   .company-claim {
     .row {
@@ -359,12 +344,12 @@ header {
     }
 
     .phone-number {
-      font-size: $font-size-5;
+      font-size: 14px;
       text-align: right;
 
       &-wrapper {
         position: absolute;
-        right: $grid-base * 1.5;
+        right: 15px;
         bottom: 0;
         padding: 0;
       }
@@ -372,8 +357,8 @@ header {
 
     .cart {
       position: relative;
-      top: -$grid-base * 1.5;
-      right: $grid-base * 1.5;
+      top: -15px;
+      right: 15px;
     }
   }
 }
@@ -392,7 +377,7 @@ header {
   }
 
   .user-menu__item {
-    width: $grid-base * 1.3;
+    width: 13px;
     overflow: hidden;
     white-space: nowrap;
 

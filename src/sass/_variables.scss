@@ -22,6 +22,7 @@ $form-border-color: #292929;
 $brands-border-color: #e1e1e1;
 $brands-chevron-color: #fff;
 $panel-border-grey: #e2e2e2;
+$select-color: #000;
 $dot-bg: #e1e1e1;
 //Plase change this on white
 $product-box-bg: #fff;
@@ -46,7 +47,6 @@ $line-height-base: 1.5;
 $line-height-sm: 1.2;
 $line-height-lg: 1.8;
 
-
 //Grid
 $grid-base: 10px;
 $border-radius: 10px;
@@ -56,6 +56,8 @@ $bp-medium: "768px";
 $bp-large: "1200px";
 $bp-small: "991px";
 
-
-
-
+//Animation
+$color-animation-duration: 250ms;
+$background-color-animation-duration: 250ms;
+$brands-border-color: #e1e1e1;
+$brands-chevron-color: #fff;
