@@ -300,6 +300,26 @@ header {
       height: $grid-base * 4;
       color: $text-color;
 
+      &.category {
+        border-right: 1px solid $form-border-color;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        i:first-child {
+          color: $primary;
+          position: absolute;
+          left: $grid-base;
+          z-index: 0;
+        }
+
+        i:last-child {
+          position: absolute;
+          right: $grid-base;
+          z-index: 0;
+        }
+      }
+
       .search-field {
         display: flex;
         align-items: center;
