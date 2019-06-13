@@ -1,0 +1,86 @@
+.promotion-box {
+  &__photo {
+    @extend .partial_photo;
+    background: {
+      image: url("/images/s-promotion/furniture-promo.jpg");
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    width: 100%;
+    max-height: $grid-base * 20;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+
+  &__site {
+    position: relative;
+    top: $grid-base * 1.7;
+    left: -$grid-base * 1.5;
+  }
+
+  &__overlay {
+    color: $white;
+    background: $gray-light;
+    opacity: 0.7;
+    width: 90%;
+    height: 90%;
+    padding: 3% 0;
+    position: absolute;
+    top: $grid-base * 2;
+    z-index: 1;
+  }
+
+  &__content {
+    padding: 13%;
+    top: $grid-base * 3.8;
+    position: relative;
+  }
+
+  &__rate {
+    display: block;
+    border: 1px solid;
+    padding: 5px;
+    font-size: $grid-base * 2.5;
+    text-align: center;
+    @include medium-small {
+      width: 51%;
+    }
+    width: 31%;
+  }
+}
+
+.image {
+  img {
+    @include medium-high2 {
+      margin-bottom: $grid-base * 3;
+    }
+    @include mobile {
+      margin: 0.5rem auto;
+    }
+    width: $grid-base * 32;
+    position: relative;
+    top: -4px;
+  }
+}
+
+.partial_photo {
+  position: relative;
+  @include large-up {
+    padding: 31% 0;
+  }
+
+  @include medium-small {
+    padding: 51% 0;
+  }
+  padding: 37% 0;
+  top: $grid-base;
+  overflow: hidden;
+  align-items: flex-end;
+}
+
+.section--promotion {
+  margin-bottom: $grid-base * 5;
+}
