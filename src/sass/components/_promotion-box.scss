@@ -18,7 +18,7 @@
   &__site {
     position: relative;
     top: $grid-base * 1.7;
-    left: -$grid-base * 1.5;
+    left: -$grid-base * 2.8;
   }
 
   &__overlay {
@@ -34,21 +34,38 @@
   }
 
   &__content {
-    padding: 13%;
-    top: $grid-base * 3.8;
+    padding: 13% 13% 0;
+    top: 8px;
     position: relative;
+    outline: none;
+    margin-bottom: $grid-base * 1.8;
+    clear: both;
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 35px;
+      font-weight: 600;
+      color: $white;
+    }
+
+    h3 {
+      font-size: 52px;
+      font-weight: bold;
+    }
   }
 
   &__rate {
     display: block;
-    border: 1px solid;
+    border: 5px solid;
     padding: 5px;
-    font-size: $grid-base * 2.5;
     text-align: center;
+    letter-spacing: -2px;
+    width: 159px;
+    height: 85px;
+    font-size: 48px;
     @include medium-small {
       width: 51%;
     }
-    width: 31%;
   }
 }
 
@@ -63,6 +80,13 @@
     width: $grid-base * 32;
     position: relative;
     top: -4px;
+  }
+}
+
+.promotion-box__images {
+  @include mobile {
+    left: 14px;
+    position: relative;
   }
 }
 
