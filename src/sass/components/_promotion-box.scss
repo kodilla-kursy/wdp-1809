@@ -1,4 +1,5 @@
 .promotion-box {
+  position: relative;
   &__photo {
     @extend .partial_photo;
     background: {
@@ -15,10 +16,116 @@
     flex-direction: row-reverse;
   }
 
-  &__site {
+  &--content {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    top: 29px;
     position: relative;
-    top: $grid-base * 1.7;
-    left: -$grid-base * 2.8;
+
+    &.down {
+      h3 {
+        font-size: 26px;
+        color: #d58e32;
+        right: 6%;
+        position: absolute;
+        text-align: right;
+      }
+
+      h4 {
+        font-size: 14px;
+        left: 316px;
+      }
+    }
+
+    h3 {
+      font-size: 27px;
+      text-align: center;
+      span {
+        font-size: 28px;
+        font-weight: bolder;
+      }
+    }
+
+    h4 {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 185px;
+      letter-spacing: 1px;
+      font-size: 19px;
+    }
+  }
+
+  &__images {
+    &--bg {
+      background-color: #f4f5f7;
+      position: relative;
+      left: -16px;
+      height: 144px;
+      padding-bottom: 1px;
+    }
+
+    &--img1 {
+      background: {
+        image: url("/images/s-promotion/armchair.png");
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      height: $grid-base * 14.4;
+      width: $grid-base * 55.5;
+      @include grayscale_element(5%);
+      margin-bottom: 29px;
+    }
+
+    &--img2 {
+      background: {
+        image: url("/images/s-promotion/chairoffice.png");
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      height: $grid-base * 16.5;
+      width: $grid-base * 55.5;
+      @include grayscale_element(5%);
+      left: -4px;
+      position: relative;
+      top: 0;
+
+      div {
+        left: 3px;
+        width: 100%;
+        height: 80px;
+      }
+    }
+
+    @include mobile {
+      left: $grid-base * 1.4;
+      position: relative;
+    }
+
+    &-price {
+      position: absolute;
+      top: $grid-base * 4.5;
+      left: $grid-base * 18.6;
+      font-size: $grid-base * 3.4;
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    top: -2px;
+    left: 12px;
+    width: 100%;
+  }
+
+  &__site {
+    //position: relative;
+    top: 9px;
+    left: 16px;
   }
 
   &__overlay {
@@ -70,23 +177,16 @@
 }
 
 .image {
-  img {
-    @include medium-high2 {
-      margin-bottom: $grid-base * 3;
-    }
-    @include mobile {
-      margin: 0.5rem auto;
-    }
-    width: $grid-base * 32;
-    position: relative;
-    top: -4px;
-  }
-}
+  display: flex;
+  outline: none;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  clear: both;
 
-.promotion-box__images {
-  @include mobile {
-    left: 14px;
-    position: relative;
+  &:last-child {
+    left: -13px;
+    top: 28px;
   }
 }
 
