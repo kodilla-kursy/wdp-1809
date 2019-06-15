@@ -93,6 +93,12 @@
   }
 }
 
+@mixin smartfon {
+  @media (min-width: 516px )  {
+    @content;
+  }
+}
+
 
 @mixin medium-high {
   @media (min-width: 992px)  and (max-width: 1199px )  {
@@ -106,11 +112,21 @@
   }
 }
 
-@mixin medium-small {
-  @media (min-width:768px) and (max-width: 991px) {
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 991px) {
     @content;
   }
 }
+
+//for max: 1199px to 992px
+
+@mixin desktop {
+  @media (min-width:992px) and (max-width: 1199px)  {
+    @content;
+  }
+}
+
+
 
 //for large breakpoint'
 
@@ -126,6 +142,27 @@
   filter: grayscale($value);
 }
 
+
+
+$breakpoints: (
+        small: 767px,
+        medium: 992px,
+        large: 1200px
+);
+
+// _mixins.scss
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
 
 
 

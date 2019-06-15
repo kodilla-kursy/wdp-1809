@@ -17,24 +17,55 @@
   }
 
   &--content {
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    top: 29px;
+    top: 20px;
     position: relative;
+
+    @include medium-high2 {
+      display: block;
+      flex-direction: column;
+      justify-content: center;
+      top: $grid-base * 2.9;
+      position: relative;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      left: 30%;
+
+      @include desktop {
+        display: flex;
+        justify-content: center;
+        left: -$grid-base * 3;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    &-sm {
+      margin-left: $grid-base * 13.4;
+    }
 
     &.down {
       h3 {
         font-size: 26px;
-        color: #d58e32;
-        right: 6%;
-        position: absolute;
-        text-align: right;
+        color: $primary;
+        @include medium-high2 {
+          right: 6%;
+          position: absolute;
+          text-align: right;
+        }
       }
 
       h4 {
         font-size: 14px;
-        left: 316px;
+        @include large-up {
+          left: $grid-base * 30.4;
+        }
+        @include medium-high2 {
+          right: 6%;
+          white-space: nowrap;
+        }
       }
     }
 
@@ -50,19 +81,40 @@
     h4 {
       display: block;
       position: absolute;
-      top: 30px;
-      left: 185px;
+      top: $grid-base * 3;
+      @include large-up {
+        left: $grid-base * 18.5;
+      }
+
       letter-spacing: 1px;
-      font-size: 19px;
+      font-size: $grid-base * 1.9;
     }
   }
 
   &__images {
+    left: 0;
+    position: relative;
+
+    div {
+      @include desktop {
+        width: $grid-base * 45;
+        left: -$grid-base * 1.2;
+      }
+
+      @include tablet {
+        width: $grid-base * 33.3;
+        height: $grid-base * 12.1;
+        left: -13px;
+      }
+    }
+
     &--bg {
-      background-color: #f4f5f7;
+      background-color: $white-light;
       position: relative;
-      left: -16px;
-      height: 144px;
+      @include large-up {
+        left: -$grid-base * 1.6;
+      }
+      height: $grid-base * 14.4;
       padding-bottom: 1px;
     }
 
@@ -74,9 +126,19 @@
         repeat: no-repeat;
       }
       height: $grid-base * 14.4;
-      width: $grid-base * 55.5;
+      @include medium-high2 {
+        width: $grid-base * 53.9;
+      }
+      @include smartfon {
+        width: $grid-base * 51.5;
+      }
+
+      width: $grid-base * 48.6;
+
       @include grayscale_element(5%);
-      margin-bottom: 29px;
+      @include medium-high2 {
+        margin-bottom: $grid-base * 2.9;
+      }
     }
 
     &--img2 {
@@ -87,28 +149,35 @@
         repeat: no-repeat;
       }
       height: $grid-base * 16.5;
-      width: $grid-base * 55.5;
+      @include smartfon {
+        width: $grid-base * 51.5;
+      }
+
+      width: $grid-base * 48.6;
+      @include medium-high2 {
+        width: $grid-base * 55.5;
+      }
       @include grayscale_element(5%);
-      left: -4px;
-      position: relative;
-      top: 0;
+      @include large-up {
+        width: $grid-base * 54;
+      }
 
       div {
         left: 3px;
         width: 100%;
-        height: 80px;
+        height: $grid-base * 8;
       }
-    }
-
-    @include mobile {
-      left: $grid-base * 1.4;
-      position: relative;
     }
 
     &-price {
       position: absolute;
       top: $grid-base * 4.5;
-      left: $grid-base * 18.6;
+      @include large-up {
+        left: $grid-base * 18.6;
+      }
+      @include tablet {
+        left: 86px;
+      }
       font-size: $grid-base * 3.4;
       color: $primary;
       font-weight: 600;
@@ -116,16 +185,25 @@
   }
 
   &__box {
-    position: absolute;
+    @include medium-high2 {
+      position: absolute;
+    }
+    position: relative;
     top: -2px;
-    left: 12px;
+    @include medium-high2 {
+      left: 12px;
+    }
+    left: 0;
     width: 100%;
   }
 
   &__site {
-    //position: relative;
-    top: 9px;
-    left: 16px;
+    top: $grid-base * 1.9;
+
+    @include medium-high2 {
+      top: 9px;
+      left: $grid-base * 1.6;
+    }
   }
 
   &__overlay {
@@ -133,7 +211,10 @@
     background: $gray-light;
     opacity: 0.7;
     width: 90%;
-    height: 90%;
+    @include medium-high2 {
+      height: 90%;
+    }
+    height: 85%;
     padding: 3% 0;
     position: absolute;
     top: $grid-base * 2;
@@ -142,7 +223,10 @@
 
   &__content {
     padding: 13% 13% 0;
-    top: 8px;
+    @include large-up {
+      top: 8px;
+    }
+    top: -$grid-base * 2.2;
     position: relative;
     outline: none;
     margin-bottom: $grid-base * 1.8;
@@ -151,12 +235,19 @@
     h4 {
       text-transform: uppercase;
       font-size: 35px;
+      @include tablet {
+        font-size: 18px;
+      }
       font-weight: 600;
       color: $white;
+      white-space: nowrap;
     }
 
     h3 {
-      font-size: 52px;
+      @include large-up {
+        font-size: 52px;
+      }
+      font-size: 35px;
       font-weight: bold;
     }
   }
@@ -167,9 +258,16 @@
     padding: 5px;
     text-align: center;
     letter-spacing: -2px;
-    width: 159px;
-    height: 85px;
+    width: $grid-base * 15.9;
+    height: $grid-base * 8.5;
     font-size: 48px;
+
+    @include tablet {
+      padding: 15px;
+      max-height: $grid-base * 7.5;
+      font-size: 28px;
+    }
+
     @include medium-small {
       width: 51%;
     }
@@ -185,8 +283,23 @@
   clear: both;
 
   &:last-child {
-    left: -13px;
-    top: 28px;
+    @include medium-high2 {
+      left: -13px;
+    }
+
+    top: 14px;
+    @include tablet {
+      left: -28px;
+    }
+
+    @include large-up {
+      top: 28px;
+    }
+
+    @include tablet {
+      top: 5px;
+      height: $grid-base * 17;
+    }
   }
 }
 
@@ -195,9 +308,8 @@
   @include large-up {
     padding: 31% 0;
   }
-
-  @include medium-small {
-    padding: 51% 0;
+  @include medium-high {
+    padding: 34% 0;
   }
   padding: 37% 0;
   top: $grid-base;
@@ -207,4 +319,26 @@
 
 .section--promotion {
   margin-bottom: $grid-base * 5;
+}
+
+.img1 {
+  &.image {
+    @include large-up {
+      left: -15px;
+    }
+  }
+
+  h4 {
+    @include tablet {
+      left: $grid-base * 8.2;
+    }
+  }
+}
+
+.img2.image {
+  div {
+    @include tablet {
+      left: 0;
+    }
+  }
 }
