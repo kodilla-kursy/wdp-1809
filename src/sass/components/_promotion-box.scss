@@ -17,7 +17,7 @@
   }
 
   &--content {
-    top: 20px;
+    top: $grid-base * 2;
     position: relative;
 
     div {
@@ -37,7 +37,7 @@
         text-align: right;
 
         h3 {
-          font-size: 26px;
+          font-size: $font-size-11 + 6;
           color: $primary;
           top: 0;
           position: relative;
@@ -54,10 +54,10 @@
     }
 
     h3 {
-      font-size: 27px;
+      font-size: $font-size-11 + 7;
       text-align: center;
       span {
-        font-size: 28px;
+        font-size: $font-size-11 + 8;
         font-weight: bolder;
       }
     }
@@ -65,7 +65,7 @@
     h4 {
       display: block;
       position: absolute;
-      left: 180px;
+      left: $grid-base * 18;
       top: $grid-base * 3;
       letter-spacing: 1px;
       font-size: $grid-base * 1.9;
@@ -149,14 +149,14 @@
 
     h4 {
       text-transform: uppercase;
-      font-size: 35px;
+      font-size: $font-size-10 + 3;
       font-weight: 600;
       color: $white;
       white-space: nowrap;
     }
 
     h3 {
-      font-size: 52px;
+      font-size: $font-size-12;
       font-weight: bold;
     }
   }
