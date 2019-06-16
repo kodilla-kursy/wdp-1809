@@ -82,19 +82,31 @@
 }
 
 @mixin medium-high2 {
-  @media (min-width: 768px) {
+  @media (min-width: $bp-small) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: 768px) {
+  @media (min-width: 432px) and (max-width: $bp-small) {
     @content;
   }
 }
 
 @mixin smartfon {
-  @media (min-width: 516px )  {
+  @media (min-width: 432px) and (max-width: $bp-very-small ) {
+    @content;
+  }
+}
+
+@mixin smartfonS {
+  @media (min-width: 360px) and (max-width: 431px )  {
+    @content;
+  }
+}
+
+@mixin smartfonS1 {
+  @media (min-width: 200px) and (max-width: 359px )  {
     @content;
   }
 }
