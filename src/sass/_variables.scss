@@ -50,6 +50,7 @@ $font-size-8: 13px;
 $font-size-9: 17px;
 $font-size-10: 32px;
 $font-size-11: 20px;
+$font-size-12: 52px;
 
 //Transform
 $cart-counter: translate(50%, -50%);
@@ -70,4 +71,10 @@ $border-radius: $grid-base * 0.5;
 //Breakpoint
 $bp-medium: "800px";
 $bp-large: "1200px";
+$bp-desktop: "1199px";
 $bp-small: "991px";
+$bp-middle: "992px";
+$bp-small: "768px";
+$bp-very-small: "511px";
+$bp-small2: "432px";
+$bp-very-small1: "400px";
