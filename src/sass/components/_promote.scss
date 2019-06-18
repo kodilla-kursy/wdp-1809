@@ -22,14 +22,14 @@
     height: 50px;
     background-color: $text-color;
     position: relative;
+  }
 
-    &--text {
-      color: $text-hover;
-      text-transform: uppercase;
-      font-size: 20px;
-      padding: 13px;
-      margin: 0;
-    }
+  &__header-text {
+    color: $text-hover;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 13px;
+    margin: 0;
   }
 
   &__dots {
@@ -47,6 +47,10 @@
     border-radius: 50%;
     margin: 0 4px;
 
+    &.active {
+      background-color: $primary;
+    }
+
     @media not all and (hover: none) {
       &:hover {
         background-color: $primary;
@@ -55,8 +59,9 @@
   }
 
   &__photo {
-    max-height: 100%;
+    max-height: 350px;
     max-width: 100%;
+    object-fit: cover;
   }
 
   &__product {
@@ -66,7 +71,8 @@
   &__button {
     position: absolute;
     top: 30%;
-    left: 32%;
+    left: 35%;
+    display: none;
   }
 }
 
@@ -75,12 +81,13 @@
   height: 100%;
 
   &__image {
+    object-fit: fill;
     max-width: 100%;
-    min-height: 100%;
+    max-height: 500px;
   }
 
   &__nav {
-    height: 40px;
+    height: 50px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -95,6 +102,10 @@
     background-color: $text-color;
     color: $text-hover;
     font-size: 26px;
+
+    &:focus {
+      outline: none;
+    }
 
     @media not all and (hover: none) {
       &:hover {
@@ -112,13 +123,13 @@
   height: 40%;
   color: $text-hover;
   text-align: center;
+  text-transform: uppercase;
 
   &__header {
     display: inline-block;
+    margin-top: 60px;
     font-weight: 200;
     font-size: 50px;
-    line-height: 0;
-    margin-top: 12%;
 
     &--bold {
       font-weight: 600;
@@ -127,14 +138,12 @@
 
   &__button {
     position: absolute;
-    bottom: -30px;
+    text-transform: uppercase;
+    bottom: -20px;
     width: 30%;
     left: 35%;
-    height: 60px;
+    height: 40px;
     border: 0;
-    border-radius: 3px;
-    line-height: 18px;
-    text-transform: uppercase;
     background-color: $text-hover;
     color: $text-color;
     font-weight: 700;
@@ -143,82 +152,40 @@
 
 .counter {
   position: absolute;
-  bottom: 180px;
+  bottom: 150px;
   height: 60px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  opacity: 0.8;
+  margin-left: 2%;
+  display: none;
+  opacity: 0.85;
 
   &__value {
     text-align: center;
     color: $text-hover;
-    display: inline-block;
+    display: block;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     background-color: $text-color;
-    margin: 2px;
-    padding: 10px;
+    float: left;
+    margin-left: 10px;
+    padding: 14px;
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 22px;
   }
 }
 
-@media (max-width: 996px) {
-  .overlay__header {
-    margin-top: 35px;
-  }
+.buttons {
+  text-transform: uppercase;
+}
 
-  .overlay__header--bold {
-    margin-top: 15px;
-  }
-
-  .hot-deals__button {
-    left: 22%;
-  }
-
-  .counter {
-    bottom: 165px;
-
-    &__value {
-      line-height: 18px;
-      font-size: 14px;
-      width: 50px;
-      height: 50px;
-      margin: 1px;
-      padding: 5px 0 2px 0;
-    }
+.hot-deals-slider {
+  & .carousel-cell {
+    width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .hot-deals {
-    display: none;
-  }
-
-  .overlay__header {
-    margin-top: 10%;
-  }
-
-  .overlay__header--bold {
-    margin-top: 15px;
-  }
-
-  .distinguish {
-    height: 400px;
-  }
-
-  .overlay__button {
-    bottom: -40px;
-  }
-}
-
-@media (max-width: 355px) {
-  .overlay__button {
-    font-size: 14px;
-    bottom: -45px;
-    height: 50px;
+.distinguish-slider {
+  & .carousel-cell {
+    width: 100%;
   }
 }

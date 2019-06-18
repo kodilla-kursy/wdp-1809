@@ -1,23 +1,23 @@
 //Colors
 $header-topbar-bg: #864343;
 $header-bg: #723636;
+$cart-counter: #e0e3ed;
+$phone-number: #d8d8d8;
+
 $white: #fff;
+$white-light: #f4f5f7;
 $black: #000;
 $footer-claim-bg: #2a2a2a;
 $footer-bg: #363636;
 $footer-text: #a9a9a9;
-$featured-phone-number: rgb(216, 216, 216);
-$featured-card-counter: rgb(224, 227, 237);
-$featured-menu-bar: rgba(1, 2, 2, 0.2);
-$featured-box: #b6b6b6;
-$featured-content: rgb(42, 42, 42);
-$form-border-color: #292929;
+
 $primary: #d58e32;
 $white: #fff;
 
 $text-hover: #fff;
-
+$post-info: rgb(103, 103, 103);
 $text-color: #2a2a2a;
+$menu-bar: rgba(1, 2, 2, 0.2);
 $old-price-color: #999;
 
 $product-box-bg: #fff;
@@ -39,18 +39,9 @@ $background-color-animation-duration: 250ms;
 $panel-border-grey: #e2e2e2;
 $select-color: #000;
 $dot-bg: #e1e1e1;
-//transform
-$cart-counter-transform: translate(50%, -50%);
+$gray-light: #666;
 
-//Plase change this on white
-$product-box-bg: #fff;
-$text-hover: #fff;
-
-//Double this same color, pls. decided which variables is prefer
-$text-color: #2a2a2a;
-// Transform
-$featured-couter: translate(50%, -50%);
-// Text
+//Text
 $font-base-size: 1rem; //16px
 $font-size-1: $font-base-size * 3; //~48px
 $font-size-2: $font-base-size * 1.5; //24px
@@ -59,23 +50,35 @@ $font-size-4: $font-base-size * 1; //16px
 $font-size-5: $font-base-size * 0.875; //14px
 $font-size-6: $font-base-size * 0.75; //12px
 $font-size-7: $font-base-size * 0.625; //10px
+$font-size-8: 13px;
+$font-size-9: 17px;
+$font-size-10: 32px;
+$font-size-11: 20px;
+$font-size-12: 52px;
 
-//line-height
+//Transform
+$cart-counter: translate(50%, -50%);
+
+// Line height
+
 $line-height-base: 1.5;
 $line-height-sm: 1.2;
 $line-height-lg: 1.8;
 
 //Grid
 $grid-base: 10px;
-$border-radius: 10px;
+$gutter: $grid-base * 1.5;
+
+//Circle
+$border-radius: $grid-base * 0.5;
 
 //Breakpoint
-$bp-medium: "768px";
+$bp-medium: "800px";
 $bp-large: "1200px";
+$bp-desktop: "1199px";
 $bp-small: "991px";
-
-//Animation
-$color-animation-duration: 250ms;
-$background-color-animation-duration: 250ms;
-$brands-border-color: #e1e1e1;
-$brands-chevron-color: #fff;
+$bp-middle: "992px";
+$bp-small: "768px";
+$bp-very-small: "511px";
+$bp-small2: "432px";
+$bp-very-small1: "400px";
