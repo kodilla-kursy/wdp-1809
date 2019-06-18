@@ -1,6 +1,6 @@
 let menu = '';
 
-function detectmob (event) {
+function detectmob () {
   if (window.innerHeight <= 600 && window.innerWidth <= 800) {
     const category = document.querySelectorAll('.dropdown');
     category.forEach(function (item) {
@@ -9,8 +9,6 @@ function detectmob (event) {
       button.addEventListener('click', MenuClick, true);
     });
   }
-  event.preventDefault();
-  event.stopPropagation();
 }
 
 const MenuClick = function (event) {
